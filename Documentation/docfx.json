@@ -32,6 +32,12 @@
   "build": {
     "content": [
       {
+        "src": "Documentation",
+        "files": [
+        "**/*.md",
+        "**/toc.yml"
+      ]
+    },
         "files": [
           "sortedapi/**.yml",
             "sortedapi/index.md",
