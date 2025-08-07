@@ -30,6 +30,7 @@
     }
   ],
   "build": {
+    "basePath": "/MOSAIC",
     "content": [
       {
         "files": [
