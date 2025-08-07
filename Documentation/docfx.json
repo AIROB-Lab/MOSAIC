@@ -32,12 +32,6 @@
   "build": {
     "content": [
       {
-        "src": "Documentation",
-        "files": [
-        "**/*.md",
-        "**/toc.yml"
-      ]
-    },
         "files": [
           "sortedapi/**.yml",
             "sortedapi/index.md",
@@ -68,8 +62,8 @@
       "templates/singulinkfx"
     ],
     "globalMetadata": {
-    "_appTitle": "MOSAIC",
-    "_appName": "MOSAIC",
+    "_appTitle": "AIROB MOSAIC",
+    "_appName": "AIROB MOSAIC",
     "_appFaviconPath": "images/logo.png",
     "_appLogoPath": "images/logo.png",
     "_appFooter": "<strong>squishy humans / solid research ♥</strong>",
