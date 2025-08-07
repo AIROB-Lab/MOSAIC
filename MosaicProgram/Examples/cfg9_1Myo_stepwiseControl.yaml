@@ -1,0 +1,73 @@
+﻿# ---------------------------------------------------------------------
+# Stepwise Control
+# ---------------------------------------------------------------------
+# Description:
+# - Real-time EMG-based control using the Myo armband or HannesReceiver
+# - Stepwise myocontrol using incremental Ridge Regression
+# - Output to Blender arm (visual) and Hannes prosthesis (hardware)
+# ---------------------------------------------------------------------
+
+# ----------- Signal acquisition and preprocessing
+# Timer for EMG sampling at 200 Hz
+timer_hannes: { Type: ScheduledTimer, DesiredRate: 200 }
+
+# EMG source:
+# Option A: HannesReceiver (uncomment if needed)
+# raw_EMG: { Type: HannesReceiver, Inputs: [ timer_hannes ], Params: ['9000', '6'] }  # [port, num_emg_channels]
+
+# Option B: Myo armband (from file)
+raw_EMG: { Type: Myo, Inputs: [ timer_hannes ], Path: 'c:\temp' }
+
+# Preprocessing: amplify, rectify, low-pass filter
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+# 2nd-order Butterworth LPF @ 0.3 Hz (Fs = 200 Hz)
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  Params: [ 0.00002206;0.00004412;0.00002206, 1;-1.9867;0.9868 ]
+}
+
+# Downsampling to 25 Hz for ARV signal
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_hannes ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# ----------- Ground truth labeling and incremental learning
+# Trigger: defines ground truth for various hand/wrist actions
+# [ th_flex, th_rot, index, middle, ring, little, wr_flex, wr_ext, wr_pron, wr_sup, wr_ulnar, wr_radial, open ]
+ground_truth: {
+  Type: Trigger,
+  Params: [
+    rest:   0;0;0;0;0;0;0;0;0;0;0;0;0,
+    power:  1;1;1;1;1;1;0;0;0;0;0;0;0,
+    flex:   0;0;0;0;0;0;1;0;0;0;0;0;0,
+    extend: 0;0;0;0;0;0;0;1;0;0;0;0;0,
+    pron:   0;0;0;0;0;0;0;0;1;0;0;0;0,
+    sup:    0;0;0;0;0;0;0;0;0;1;0;0;0,
+    open:   0;0;0;0;0;0;0;0;0;0;0;0;1
+  ]
+}
+
+# Incremental learner: Ridge Regression (8 EMG inputs → 13 output classes)
+# The last class (13th) is "open", used for stepwise control
+incr_learn_prediction: {
+  Type: IncrementalPredictor,
+  Inputs: [ ARV, ground_truth ],
+  Params: [ IncrementalRidgeRegression, 8, 13 ]
+}
+
+# ----------- Control logic and actuation
+# Control algorithm: stepwise control based on predictor output
+controlAlgorithm: {
+  Type: ControlAlgorithm,
+  Inputs: [ incr_learn_prediction ],
+  Params: [ algorithm:StepwiseControl ]
+}
+
+# Visual output: control skin-textured Blender arm model
+blender_skin_arm_ctrl: {
+  Type: BlenderArm,
+  Inputs: [ controlAlgorithm ],
+  Params: [ localhost, 3334 ]
+}

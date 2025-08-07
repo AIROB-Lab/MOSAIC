@@ -1,0 +1,95 @@
+﻿# ---------------------------------------------------------------------
+# Example: Incremental Myocontrol with TAC Test (6 EMG Channels)
+# ---------------------------------------------------------------------
+# - Uses 6 selected EMG channels (via Projector) for more focused control
+# - Incremental learning via Ridge Regression (supports action blending)
+# - Strong LPF (0.3 Hz cutoff) ensures prediction stability
+# - Target Achievement Control (TAC) test evaluates user performance
+# ---------------------------------------------------------------------
+
+# ----------- EMG acquisition and preprocessing
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+
+# Raw Myo signal (8 channels), reduced to 6 channels using a Projector
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ], Params: [ df:68:f3:9a:ed:0e ] }
+raw_EMG_6s: { Type: Projector, Inputs: [ raw_EMG ], Params: [ '1;2;3;5;6;7' ] }
+
+# Preprocessing chain: amplify, rectify, low-pass filter
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG_6s ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  # 2nd-order Butterworth LP @ 0.3 Hz (Fs = 200 Hz)
+  # Used for stability during prediction (increased latency, reduced noise)
+  Params: [ 0.00002206;0.00004412;0.00002206, 1;-1.9867;0.9868 ]
+}
+
+# Downsample filtered signal to 25 Hz
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# ----------- Incremental predictor for skin-textured Blender arm control
+# Ground truth defined via Trigger (12D targets)
+ground_truth: {
+  Type: Trigger,
+  Params: [
+    rest:    0;0;0;0;0;0;0;0;0;0;0;0,
+    power:   1;1;1;1;1;1;0;0;0;0;0;0,
+    flex:    0;0;0;0;0;0;1;0;0;0;0;0,
+    extend:  0;0;0;0;0;0;0;1;0;0;0;0,
+    pron:    0;0;0;0;0;0;0;0;1;0;0;0
+  ]
+}
+
+# Incremental learner: 6D input (EMG) → 12D output (activation vector)
+incr_learn_prediction: {
+  Type: IncrementalPredictor,
+  Inputs: [ ARV, ground_truth ],
+  Params: [ IncrementalRidgeRegression, 6, 12 ]
+}
+
+# Live myocontrol: skin-textured Blender arm receives predicted output
+blender_skin_arm_ctrl: {
+  Type: BlenderArm,
+  Inputs: [ incr_learn_prediction ],
+  Params: [ localhost, 3334 ]
+}
+
+# ----------- Visual stimulus for TAC (white Blender arm)
+# Stimulus presents activation targets with long capture duration (20s)
+# Participant must match and hold each target with the controlled arm
+TAC_stim: {
+  Type: Stimulus,
+  Inputs: [ -timer_subs ],
+  Params: [ 20.0,
+    0.8;0.8;0.8;0.8;0.8;0.8;0;0;0;0;0;0,
+    0;0;0;0;0;0;0.8;0;0;0;0;0,
+    0;0;0;0;0;0;0;0.8;0;0;0;0,
+    0.5;0.5;0.5;0.5;0.5;0.5;0;0;0;0;0;0,
+    0;0;0;0;0;0;0.5;0;0;0;0;0,
+    0;0;0;0;0;0;0;0.5;0;0;0;0,
+    0.7;0.7;0.7;0.7;0.7;0.7;0.5;0;0;0;0;0,
+    0.7;0.7;0.7;0.7;0.7;0.7;0;0.5;0;0;0;0,
+    0.5;0.5;0.5;0.5;0.5;0.5;0.3;0;0;0;0;0,
+    0.5;0.5;0.5;0.5;0.5;0.5;0;0.3;0;0;0;0
+  ]
+}
+
+# Display stimulus via white Blender arm (target reference)
+TAC_stim_tv: { Type: Selector, Inputs: [ TAC_stim ] }
+blender_white_arm_ctrl: {
+  Type: BlenderArm,
+  Inputs: [ TAC_stim_tv ],
+  Params: [ localhost, 3333 ]
+}
+
+# ----------- TAC comparator
+# Compares prediction to stimulus target in real-time
+# Params: [ stimulus source, hold time (s), allowed deviation ]
+increm_learning_TAC: {
+  Type: TAC,
+  Inputs: [ TAC_stim_tv, incr_learn_prediction ],
+  Params: [ TAC_stim, 2.0, 0.2 ]
+}

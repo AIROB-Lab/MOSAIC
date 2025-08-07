@@ -1,0 +1,640 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.DataType
+  commentId: T:mosaic_libary.DataType
+  id: DataType
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.DataType.CTRL_elbow_ext
+  - mosaic_libary.DataType.CTRL_elbow_flex
+  - mosaic_libary.DataType.CTRL_index
+  - mosaic_libary.DataType.CTRL_little
+  - mosaic_libary.DataType.CTRL_middle
+  - mosaic_libary.DataType.CTRL_ring
+  - mosaic_libary.DataType.CTRL_th_flex
+  - mosaic_libary.DataType.CTRL_th_rot
+  - mosaic_libary.DataType.CTRL_wr_flex_ext
+  - mosaic_libary.DataType.CTRL_wr_sup_pron
+  - mosaic_libary.DataType.CTRL_wr_uln_rad
+  - mosaic_libary.DataType.EMG_ARV
+  - mosaic_libary.DataType.EMG_RAW
+  - mosaic_libary.DataType.FMG_ARV
+  - mosaic_libary.DataType.FMG_RAW
+  langs:
+  - csharp
+  - vb
+  name: DataType
+  nameWithType: DataType
+  fullName: mosaic_libary.DataType
+  type: Struct
+  source:
+    id: DataType
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 247
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: 'Intermediate solution for defining the types of data =&gt; ToDo: Change to config file, alternatively set everything in YAML'
+  example: []
+  syntax:
+    content: internal struct DataType
+    content.vb: Friend Structure DataType
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+- uid: mosaic_libary.DataType.EMG_RAW
+  commentId: F:mosaic_libary.DataType.EMG_RAW
+  id: EMG_RAW
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: EMG_RAW
+  nameWithType: DataType.EMG_RAW
+  fullName: mosaic_libary.DataType.EMG_RAW
+  type: Field
+  source:
+    id: EMG_RAW
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 252
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] EMG_RAW
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly EMG_RAW As Byte()
+- uid: mosaic_libary.DataType.EMG_ARV
+  commentId: F:mosaic_libary.DataType.EMG_ARV
+  id: EMG_ARV
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: EMG_ARV
+  nameWithType: DataType.EMG_ARV
+  fullName: mosaic_libary.DataType.EMG_ARV
+  type: Field
+  source:
+    id: EMG_ARV
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 253
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] EMG_ARV
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly EMG_ARV As Byte()
+- uid: mosaic_libary.DataType.CTRL_th_flex
+  commentId: F:mosaic_libary.DataType.CTRL_th_flex
+  id: CTRL_th_flex
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_th_flex
+  nameWithType: DataType.CTRL_th_flex
+  fullName: mosaic_libary.DataType.CTRL_th_flex
+  type: Field
+  source:
+    id: CTRL_th_flex
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 257
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_th_flex
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_th_flex As Byte()
+- uid: mosaic_libary.DataType.CTRL_th_rot
+  commentId: F:mosaic_libary.DataType.CTRL_th_rot
+  id: CTRL_th_rot
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_th_rot
+  nameWithType: DataType.CTRL_th_rot
+  fullName: mosaic_libary.DataType.CTRL_th_rot
+  type: Field
+  source:
+    id: CTRL_th_rot
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 258
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_th_rot
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_th_rot As Byte()
+- uid: mosaic_libary.DataType.CTRL_index
+  commentId: F:mosaic_libary.DataType.CTRL_index
+  id: CTRL_index
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_index
+  nameWithType: DataType.CTRL_index
+  fullName: mosaic_libary.DataType.CTRL_index
+  type: Field
+  source:
+    id: CTRL_index
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 259
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_index
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_index As Byte()
+- uid: mosaic_libary.DataType.CTRL_middle
+  commentId: F:mosaic_libary.DataType.CTRL_middle
+  id: CTRL_middle
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_middle
+  nameWithType: DataType.CTRL_middle
+  fullName: mosaic_libary.DataType.CTRL_middle
+  type: Field
+  source:
+    id: CTRL_middle
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 260
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_middle
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_middle As Byte()
+- uid: mosaic_libary.DataType.CTRL_ring
+  commentId: F:mosaic_libary.DataType.CTRL_ring
+  id: CTRL_ring
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_ring
+  nameWithType: DataType.CTRL_ring
+  fullName: mosaic_libary.DataType.CTRL_ring
+  type: Field
+  source:
+    id: CTRL_ring
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 261
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_ring
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_ring As Byte()
+- uid: mosaic_libary.DataType.CTRL_little
+  commentId: F:mosaic_libary.DataType.CTRL_little
+  id: CTRL_little
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_little
+  nameWithType: DataType.CTRL_little
+  fullName: mosaic_libary.DataType.CTRL_little
+  type: Field
+  source:
+    id: CTRL_little
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 262
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_little
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_little As Byte()
+- uid: mosaic_libary.DataType.CTRL_wr_flex_ext
+  commentId: F:mosaic_libary.DataType.CTRL_wr_flex_ext
+  id: CTRL_wr_flex_ext
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_wr_flex_ext
+  nameWithType: DataType.CTRL_wr_flex_ext
+  fullName: mosaic_libary.DataType.CTRL_wr_flex_ext
+  type: Field
+  source:
+    id: CTRL_wr_flex_ext
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 263
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_wr_flex_ext
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_wr_flex_ext As Byte()
+- uid: mosaic_libary.DataType.CTRL_wr_uln_rad
+  commentId: F:mosaic_libary.DataType.CTRL_wr_uln_rad
+  id: CTRL_wr_uln_rad
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_wr_uln_rad
+  nameWithType: DataType.CTRL_wr_uln_rad
+  fullName: mosaic_libary.DataType.CTRL_wr_uln_rad
+  type: Field
+  source:
+    id: CTRL_wr_uln_rad
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 264
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_wr_uln_rad
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_wr_uln_rad As Byte()
+- uid: mosaic_libary.DataType.CTRL_wr_sup_pron
+  commentId: F:mosaic_libary.DataType.CTRL_wr_sup_pron
+  id: CTRL_wr_sup_pron
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_wr_sup_pron
+  nameWithType: DataType.CTRL_wr_sup_pron
+  fullName: mosaic_libary.DataType.CTRL_wr_sup_pron
+  type: Field
+  source:
+    id: CTRL_wr_sup_pron
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 265
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_wr_sup_pron
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_wr_sup_pron As Byte()
+- uid: mosaic_libary.DataType.CTRL_elbow_flex
+  commentId: F:mosaic_libary.DataType.CTRL_elbow_flex
+  id: CTRL_elbow_flex
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_elbow_flex
+  nameWithType: DataType.CTRL_elbow_flex
+  fullName: mosaic_libary.DataType.CTRL_elbow_flex
+  type: Field
+  source:
+    id: CTRL_elbow_flex
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 266
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_elbow_flex
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_elbow_flex As Byte()
+- uid: mosaic_libary.DataType.CTRL_elbow_ext
+  commentId: F:mosaic_libary.DataType.CTRL_elbow_ext
+  id: CTRL_elbow_ext
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: CTRL_elbow_ext
+  nameWithType: DataType.CTRL_elbow_ext
+  fullName: mosaic_libary.DataType.CTRL_elbow_ext
+  type: Field
+  source:
+    id: CTRL_elbow_ext
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 267
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] CTRL_elbow_ext
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly CTRL_elbow_ext As Byte()
+- uid: mosaic_libary.DataType.FMG_RAW
+  commentId: F:mosaic_libary.DataType.FMG_RAW
+  id: FMG_RAW
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: FMG_RAW
+  nameWithType: DataType.FMG_RAW
+  fullName: mosaic_libary.DataType.FMG_RAW
+  type: Field
+  source:
+    id: FMG_RAW
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 271
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] FMG_RAW
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly FMG_RAW As Byte()
+- uid: mosaic_libary.DataType.FMG_ARV
+  commentId: F:mosaic_libary.DataType.FMG_ARV
+  id: FMG_ARV
+  parent: mosaic_libary.DataType
+  langs:
+  - csharp
+  - vb
+  name: FMG_ARV
+  nameWithType: DataType.FMG_ARV
+  fullName: mosaic_libary.DataType.FMG_ARV
+  type: Field
+  source:
+    id: FMG_ARV
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 272
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static readonly byte[] FMG_ARV
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared ReadOnly FMG_ARV As Byte()
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  name: Equals(object)
+  nameWithType: ValueType.Equals(object)
+  fullName: System.ValueType.Equals(object)
+  nameWithType.vb: ValueType.Equals(Object)
+  fullName.vb: System.ValueType.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.equals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.gethashcode
+  - name: (
+  - name: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.valuetype.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.valuetype
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

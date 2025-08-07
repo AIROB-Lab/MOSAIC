@@ -1,0 +1,42 @@
+# -------------------------------------
+# gather EMG at 200Hz, process it
+# -------------------------------------
+
+# timer, myo, x5, rectify, filter, subsample slow, subsample faster
+#timer_200Hz: { Type: Timer, DesiredRate: 200 }
+#muovi: { Type: Muovi, OutputType: 32d }
+
+timer_muovi: { Type: Timer, DesiredRate: 2000}
+muovi: { Type: Muovi, Inputs: [ timer_muovi ], OutputType: 32d , Params: [0, 1]}
+x5: { Type: Func_Multiplier, Inputs: [ muovi ], Params: [5], OutputType: 32d }
+ddS: { Type: ddS, Inputs: [ x5 ], Params: [ '8;8' ], OutputType: 32d }
+#BP: {
+#    Type: Filter,
+#    Inputs: [ x5 ],
+#     II ord. Butterworth filter, LP@2Hz (assume Fs=200S/s). in matlab:
+#	 format shortg; [num,den] = butter(2,2/(200/2),'low')
+#	 in general, [num,den] = butter(ord,cutoff/(Fs/2),'low')
+#    Params: [ '0,0301;0;-0,0904;0;0,0904;0;-0,0301', '1;-4,4598;8,3124;-8,3748;4,8568;-1,5394;0,2048' ],
+#    OutputType: 32d
+#}
+#MF: {
+#    Type: Filter,
+#    Inputs: [ BP ],
+#     II ord. Butterworth filter, LP@2Hz (assume Fs=200S/s). in matlab:#
+#	 format shortg; [num,den] = butter(2,2/(200/2),'low')#
+#	 in general, [num,den] = butter(ord,cutoff/(Fs/2),'low')
+#    Params: [ 5 ],
+#    OutputType: 32d
+#}
+rectify: { Type: Func_Rectifier, Inputs: [ ddS ], OutputType: 32d }
+LP: {
+    Type: Filter,
+    Inputs: [ rectify ],
+ #   II ord. Butterworth filter, LP@2Hz (assume Fs=200S/s). in matlab:
+#	 format shortg; [num,den] = butter(2,2/(200/2),'low')
+#	 in general, [num,den] = butter(ord,cutoff/(Fs/2),'low')
+    Params: [ '0,00002206;0,00004412;0,00002206', '1;-1,9867;0,9868' ],
+    OutputType: 32d
+}
+timer_fast: { Type: Timer, DesiredRate: 25 }
+subs_fast: { Type: Resampler, Inputs: [ LP, timer_fast ], OutputType: 32d}

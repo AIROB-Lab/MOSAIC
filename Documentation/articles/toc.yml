@@ -1,0 +1,18 @@
+- name: Introduction
+  href: intro.md
+# - name: Setting it up
+#   href: setup.md
+- name: What it is about
+  href: what.md
+- name: Visualizing
+  href: visualizing.md
+- name: The Code
+  href: code.md
+- name: Exmples
+  href: sevensteps.md
+- name: Python Net in iMBlocks
+  href: impython.md
+- name: C# Basics and Resources 
+  href: basics.md
+# - name: Best Coding Practices C#
+#   href: best.md

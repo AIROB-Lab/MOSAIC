@@ -1,0 +1,76 @@
+﻿# ---------------------------------------------------------------------
+# Example 13: Using Two Myo Armbands for Extended EMG Acquisition
+# Incremental myocontrol using 16 channels (2x Myo) + UDP output (e.g. to use it to control a Unity environment)
+# ---------------------------------------------------------------------
+
+# ----------- EMG acquisition and preprocessing pipeline
+timer_hannes: { Type: ScheduledTimer, DesiredRate: 200 }  # EMG sampling at 200 Hz
+
+# Two Myo armbands recording simultaneously (upper and lower arm)
+raw_EMG15_upper: { Type: Myo, Inputs: [ timer_hannes ] }
+raw_EMG16_lower: { Type: Myo, Inputs: [ timer_hannes ] }
+
+# Join the two 8-channel signals into one 16-channel stream
+joiner: {
+  Type: Joiner,
+  DesiredRate: 200,
+  Inputs: [ raw_EMG15_upper, raw_EMG16_lower ],
+  Params: [ timerBlockName: raw_EMG15_upper ],
+  Path: ''
+}
+
+# Standard preprocessing: amplify → rectify → low-pass filter
+amplified_raw_EMG: { Type: Function, Inputs: [ joiner ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+# Apply low-pass filter (2nd-order Butterworth) with cutoff at 0.6 Hz for signal smoothing
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  Params: [8.76555488e-05; 1.75311098e-04; 8.76555488e-05, 1.; -1.97334425; 0.97369487]
+  # Alternate filter options (commented out):
+  # LP@0.3Hz: [ 0.00002206; 0.00004412; 0.00002206, 1; -1.9867; 0.9868 ]
+  # LP@1Hz:   [ 9.4469e-04; 0.001889; 9.4469e-04, 1; -1.9112; 0.9150 ]
+}
+
+# Downsample from 200 Hz to 25 Hz
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_hannes ], DesiredRate: 25 }
+ARV: {
+  Type: Resampler,
+  DesiredRate: 25,
+  Inputs: [ ARV_LPF, timer_subs ],
+  Path: ''
+}
+
+# ----------- Trigger-based model training and prediction
+# Trigger sends labeled ground truth directly to the incremental learner
+ground_truth: { Type: Trigger, Params: [
+    rest:   0;0;0;0;0;0;0;0;0;0;0;0;0,
+    power:  1;1;1;1;1;1;0;0;0;0;0;0;0,
+    flex:   0;0;0;0;0;0;1;0;0;0;0;0;0,
+    extend: 0;0;0;0;0;0;0;1;0;0;0;0;0
+]}
+
+# Train an incremental model (Ridge Regression) using 16-channel ARV input and 13D output
+incr_learn_prediction: {
+  Type: IncrementalPredictor,
+  DesiredRate: 25,
+  Inputs: [ ARV, ground_truth ],
+  Params: [ IncrementalRidgeRegression, 16, 13 ],
+  Path: ''
+}
+
+# ----------- Output prediction via control algorithm and UDP streaming
+# Translate prediction to control outputs
+controlAlgorithm: {
+  Type: ControlAlgorithm,
+  Inputs: [ incr_learn_prediction ],
+  Params: [ algorithm: DirectControl ]
+}
+
+# Send control data, raw EMG, and ARV via UDP (e.g., to remote visualizer or prosthesis interface)
+UDP_sender: {
+  Type: UDP_StreamlinedSender,
+  Inputs: [ controlAlgorithm, joiner, ARV ],
+  Params: [ localhost, 11000 ]
+}

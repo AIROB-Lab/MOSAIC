@@ -1,0 +1,27 @@
+# -------------------------------------
+# simple example #1:
+# generate 10D sinusoidal signal at 200Hz, square it and double it.
+# demonstrate subscribing or not subscribing (doubledSignal does or does not subscribe to sinusoidSignal according to the "-" in the Inputs).
+# rather than using two scheduled timers, use a DecimatorTimer to decimate a fast (2kHz) ScheduledTimer
+# -------------------------------------
+
+# each block is declared as follows:
+# <name>: {
+#    Type: <string>,
+#    DesiredRate: <double>,
+#    Inputs: [ <string>,...,<string> ],
+#    Params: [ <string>,...,<string> ],
+#    Path: <string>
+# }
+
+# if an entry in Inputs starts with '-', we do not subscribe immediately to the entry:
+# try to remove the '-' in the definition of the Inputs to doubledSignal and see what happens.
+# specifying a Path will cause any block to dump its data to Path\name.txt.
+
+timerFast: { Type: ScheduledTimer, DesiredRate: 2000 }
+timerSlow: { Type: DecimatorTimer, DesiredRate: 200, Inputs: [ timerFast ] }
+sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 10 ] }
+# sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 10 ], Path: 'C:\temp' }
+squaredSignal: { Type: Function, Inputs: [ sinusoidSignal ], Params: [ power:2 ] }
+# squaredSignal: { Type: Function, Inputs: [ sinusoidSignal ], Params: [ power:2 ], Path: 'C:\temp' }
+doubledSignal: { Type: Function, Inputs: [ -sinusoidSignal ], Params: [ multiply:2 ] }

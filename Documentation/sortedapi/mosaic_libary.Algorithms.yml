@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Algorithms
+  commentId: T:mosaic_libary.Algorithms
+  id: Algorithms
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Algorithms.DirectControl
+  - mosaic_libary.Algorithms.None
+  - mosaic_libary.Algorithms.StepwiseControl
+  langs:
+  - csharp
+  - vb
+  name: Algorithms
+  nameWithType: Algorithms
+  fullName: mosaic_libary.Algorithms
+  type: Enum
+  source:
+    id: Algorithms
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 31
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Available Control Algorithms supported by the system
+  example: []
+  syntax:
+    content: public enum Algorithms
+    content.vb: Public Enum Algorithms
+- uid: mosaic_libary.Algorithms.None
+  commentId: F:mosaic_libary.Algorithms.None
+  id: None
+  parent: mosaic_libary.Algorithms
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Algorithms.None
+  fullName: mosaic_libary.Algorithms.None
+  type: Field
+  source:
+    id: None
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 33
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: None = 0
+    return:
+      type: mosaic_libary.Algorithms
+- uid: mosaic_libary.Algorithms.DirectControl
+  commentId: F:mosaic_libary.Algorithms.DirectControl
+  id: DirectControl
+  parent: mosaic_libary.Algorithms
+  langs:
+  - csharp
+  - vb
+  name: DirectControl
+  nameWithType: Algorithms.DirectControl
+  fullName: mosaic_libary.Algorithms.DirectControl
+  type: Field
+  source:
+    id: DirectControl
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 34
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: DirectControl = 1
+    return:
+      type: mosaic_libary.Algorithms
+- uid: mosaic_libary.Algorithms.StepwiseControl
+  commentId: F:mosaic_libary.Algorithms.StepwiseControl
+  id: StepwiseControl
+  parent: mosaic_libary.Algorithms
+  langs:
+  - csharp
+  - vb
+  name: StepwiseControl
+  nameWithType: Algorithms.StepwiseControl
+  fullName: mosaic_libary.Algorithms.StepwiseControl
+  type: Field
+  source:
+    id: StepwiseControl
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 35
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: StepwiseControl = 2
+    return:
+      type: mosaic_libary.Algorithms
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.Algorithms
+  commentId: T:mosaic_libary.Algorithms
+  parent: mosaic_libary
+  href: mosaic_libary.Algorithms.html
+  name: Algorithms
+  nameWithType: Algorithms
+  fullName: mosaic_libary.Algorithms

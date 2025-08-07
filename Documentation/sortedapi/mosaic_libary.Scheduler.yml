@@ -1,0 +1,902 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Scheduler
+  commentId: T:mosaic_libary.Scheduler
+  id: Scheduler
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Scheduler.#ctor
+  - mosaic_libary.Scheduler.Add(System.Threading.TimerCallback,System.Double)
+  - mosaic_libary.Scheduler.Finalize
+  - mosaic_libary.Scheduler.Instance
+  - mosaic_libary.Scheduler.MainLoop
+  - mosaic_libary.Scheduler.Remove(System.Threading.TimerCallback)
+  - mosaic_libary.Scheduler._EntryList
+  - mosaic_libary.Scheduler._EntryListLock
+  - mosaic_libary.Scheduler._launchMe
+  - mosaic_libary.Scheduler._shutDown
+  - mosaic_libary.Scheduler._task
+  - mosaic_libary.Scheduler.lazyInstance
+  langs:
+  - csharp
+  - vb
+  name: Scheduler
+  nameWithType: Scheduler
+  fullName: mosaic_libary.Scheduler
+  type: Class
+  source:
+    id: Scheduler
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 18
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Scheduler class to implement accurate timers.
+  example: []
+  syntax:
+    content: public sealed class Scheduler
+    content.vb: Public NotInheritable Class Scheduler
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+- uid: mosaic_libary.Scheduler.lazyInstance
+  commentId: F:mosaic_libary.Scheduler.lazyInstance
+  id: lazyInstance
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: lazyInstance
+  nameWithType: Scheduler.lazyInstance
+  fullName: mosaic_libary.Scheduler.lazyInstance
+  type: Field
+  source:
+    id: lazyInstance
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 23
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: 'After Singelton design pattern: only one scheduler is allowed.'
+  example: []
+  syntax:
+    content: private static readonly Lazy<Scheduler> lazyInstance
+    return:
+      type: System.Lazy{mosaic_libary.Scheduler}
+    content.vb: Private Shared ReadOnly lazyInstance As Lazy(Of Scheduler)
+- uid: mosaic_libary.Scheduler.Instance
+  commentId: P:mosaic_libary.Scheduler.Instance
+  id: Instance
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  nameWithType: Scheduler.Instance
+  fullName: mosaic_libary.Scheduler.Instance
+  type: Property
+  source:
+    id: Instance
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 24
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public static Scheduler Instance { get; }
+    parameters: []
+    return:
+      type: mosaic_libary.Scheduler
+    content.vb: Public Shared ReadOnly Property Instance As Scheduler
+  overload: mosaic_libary.Scheduler.Instance*
+- uid: mosaic_libary.Scheduler._task
+  commentId: F:mosaic_libary.Scheduler._task
+  id: _task
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: _task
+  nameWithType: Scheduler._task
+  fullName: mosaic_libary.Scheduler._task
+  type: Field
+  source:
+    id: _task
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 27
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private readonly Task _task
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Private ReadOnly _task As Task
+- uid: mosaic_libary.Scheduler.#ctor
+  commentId: M:mosaic_libary.Scheduler.#ctor
+  id: '#ctor'
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: Scheduler()
+  nameWithType: Scheduler.Scheduler()
+  fullName: mosaic_libary.Scheduler.Scheduler()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 28
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Scheduler()
+    content.vb: Private Sub New()
+  overload: mosaic_libary.Scheduler.#ctor*
+  nameWithType.vb: Scheduler.New()
+  fullName.vb: mosaic_libary.Scheduler.New()
+  name.vb: New()
+- uid: mosaic_libary.Scheduler._shutDown
+  commentId: F:mosaic_libary.Scheduler._shutDown
+  id: _shutDown
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: _shutDown
+  nameWithType: Scheduler._shutDown
+  fullName: mosaic_libary.Scheduler._shutDown
+  type: Field
+  source:
+    id: _shutDown
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 30
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private volatile bool _shutDown
+    return:
+      type: System.Boolean
+    content.vb: Private _shutDown As Boolean
+- uid: mosaic_libary.Scheduler.Finalize
+  commentId: M:mosaic_libary.Scheduler.Finalize
+  id: Finalize
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: ~Scheduler()
+  nameWithType: Scheduler.~Scheduler()
+  fullName: mosaic_libary.Scheduler.~Scheduler()
+  type: Method
+  source:
+    id: Finalize
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 31
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: protected ~Scheduler()
+    content.vb: 'Protected '
+  overload: mosaic_libary.Scheduler.Finalize*
+  nameWithType.vb: ''
+  fullName.vb: ''
+  name.vb: ''
+- uid: mosaic_libary.Scheduler._EntryList
+  commentId: F:mosaic_libary.Scheduler._EntryList
+  id: _EntryList
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: _EntryList
+  nameWithType: Scheduler._EntryList
+  fullName: mosaic_libary.Scheduler._EntryList
+  type: Field
+  source:
+    id: _EntryList
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 42
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private readonly LinkedList<Scheduler.Entry> _EntryList
+    return:
+      type: System.Collections.Generic.LinkedList{mosaic_libary.Scheduler.Entry}
+    content.vb: Private ReadOnly _EntryList As LinkedList(Of Scheduler.Entry)
+- uid: mosaic_libary.Scheduler._EntryListLock
+  commentId: F:mosaic_libary.Scheduler._EntryListLock
+  id: _EntryListLock
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: _EntryListLock
+  nameWithType: Scheduler._EntryListLock
+  fullName: mosaic_libary.Scheduler._EntryListLock
+  type: Field
+  source:
+    id: _EntryListLock
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 45
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private readonly object _EntryListLock
+    return:
+      type: System.Object
+    content.vb: Private ReadOnly _EntryListLock As Object
+- uid: mosaic_libary.Scheduler.Add(System.Threading.TimerCallback,System.Double)
+  commentId: M:mosaic_libary.Scheduler.Add(System.Threading.TimerCallback,System.Double)
+  id: Add(System.Threading.TimerCallback,System.Double)
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: Add(TimerCallback, double)
+  nameWithType: Scheduler.Add(TimerCallback, double)
+  fullName: mosaic_libary.Scheduler.Add(System.Threading.TimerCallback, double)
+  type: Method
+  source:
+    id: Add
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 46
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void Add(TimerCallback Cb, double Rate)
+    parameters:
+    - id: Cb
+      type: System.Threading.TimerCallback
+    - id: Rate
+      type: System.Double
+    content.vb: Public Sub Add(Cb As TimerCallback, Rate As Double)
+  overload: mosaic_libary.Scheduler.Add*
+  nameWithType.vb: Scheduler.Add(TimerCallback, Double)
+  fullName.vb: mosaic_libary.Scheduler.Add(System.Threading.TimerCallback, Double)
+  name.vb: Add(TimerCallback, Double)
+- uid: mosaic_libary.Scheduler.Remove(System.Threading.TimerCallback)
+  commentId: M:mosaic_libary.Scheduler.Remove(System.Threading.TimerCallback)
+  id: Remove(System.Threading.TimerCallback)
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: Remove(TimerCallback)
+  nameWithType: Scheduler.Remove(TimerCallback)
+  fullName: mosaic_libary.Scheduler.Remove(System.Threading.TimerCallback)
+  type: Method
+  source:
+    id: Remove
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 56
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void Remove(TimerCallback Cb)
+    parameters:
+    - id: Cb
+      type: System.Threading.TimerCallback
+    content.vb: Public Sub Remove(Cb As TimerCallback)
+  overload: mosaic_libary.Scheduler.Remove*
+- uid: mosaic_libary.Scheduler._launchMe
+  commentId: F:mosaic_libary.Scheduler._launchMe
+  id: _launchMe
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: _launchMe
+  nameWithType: Scheduler._launchMe
+  fullName: mosaic_libary.Scheduler._launchMe
+  type: Field
+  source:
+    id: _launchMe
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 75
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Scheduler.Entry _launchMe
+    return:
+      type: mosaic_libary.Scheduler.Entry
+    content.vb: Private _launchMe As Scheduler.Entry
+- uid: mosaic_libary.Scheduler.MainLoop
+  commentId: M:mosaic_libary.Scheduler.MainLoop
+  id: MainLoop
+  parent: mosaic_libary.Scheduler
+  langs:
+  - csharp
+  - vb
+  name: MainLoop()
+  nameWithType: Scheduler.MainLoop()
+  fullName: mosaic_libary.Scheduler.MainLoop()
+  type: Method
+  source:
+    id: MainLoop
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 76
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private void MainLoop()
+    content.vb: Private Sub MainLoop()
+  overload: mosaic_libary.Scheduler.MainLoop*
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Lazy{mosaic_libary.Scheduler}
+  commentId: T:System.Lazy{mosaic_libary.Scheduler}
+  parent: System
+  definition: System.Lazy`1
+  href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  name: Lazy<Scheduler>
+  nameWithType: Lazy<Scheduler>
+  fullName: System.Lazy<mosaic_libary.Scheduler>
+  nameWithType.vb: Lazy(Of Scheduler)
+  fullName.vb: System.Lazy(Of mosaic_libary.Scheduler)
+  name.vb: Lazy(Of Scheduler)
+  spec.csharp:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: <
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: )
+- uid: System.Lazy`1
+  commentId: T:System.Lazy`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  name: Lazy<T>
+  nameWithType: Lazy<T>
+  fullName: System.Lazy<T>
+  nameWithType.vb: Lazy(Of T)
+  fullName.vb: System.Lazy(Of T)
+  name.vb: Lazy(Of T)
+  spec.csharp:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Lazy`1
+    name: Lazy
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.lazy-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: mosaic_libary.Scheduler.Instance*
+  commentId: Overload:mosaic_libary.Scheduler.Instance
+  href: mosaic_libary.Scheduler.html#mosaic_libary_Scheduler_Instance
+  name: Instance
+  nameWithType: Scheduler.Instance
+  fullName: mosaic_libary.Scheduler.Instance
+- uid: mosaic_libary.Scheduler
+  commentId: T:mosaic_libary.Scheduler
+  parent: mosaic_libary
+  href: mosaic_libary.Scheduler.html
+  name: Scheduler
+  nameWithType: Scheduler
+  fullName: mosaic_libary.Scheduler
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: mosaic_libary.Scheduler.#ctor*
+  commentId: Overload:mosaic_libary.Scheduler.#ctor
+  href: mosaic_libary.Scheduler.html#mosaic_libary_Scheduler__ctor
+  name: Scheduler
+  nameWithType: Scheduler.Scheduler
+  fullName: mosaic_libary.Scheduler.Scheduler
+  nameWithType.vb: Scheduler.New
+  fullName.vb: mosaic_libary.Scheduler.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: mosaic_libary.Scheduler.Finalize*
+  commentId: Overload:mosaic_libary.Scheduler.Finalize
+  href: mosaic_libary.Scheduler.html#mosaic_libary_Scheduler_Finalize
+  name: ~Scheduler
+  nameWithType: Scheduler.~Scheduler
+  fullName: mosaic_libary.Scheduler.~Scheduler
+  spec.csharp:
+  - name: "~"
+  - uid: mosaic_libary.Scheduler.Finalize*
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html#mosaic_libary_Scheduler_Finalize
+- uid: System.Collections.Generic.LinkedList{mosaic_libary.Scheduler.Entry}
+  commentId: T:System.Collections.Generic.LinkedList{mosaic_libary.Scheduler.Entry}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.LinkedList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  name: LinkedList<Scheduler.Entry>
+  nameWithType: LinkedList<Scheduler.Entry>
+  fullName: System.Collections.Generic.LinkedList<mosaic_libary.Scheduler.Entry>
+  nameWithType.vb: LinkedList(Of Scheduler.Entry)
+  fullName.vb: System.Collections.Generic.LinkedList(Of mosaic_libary.Scheduler.Entry)
+  name.vb: LinkedList(Of Scheduler.Entry)
+  spec.csharp:
+  - uid: System.Collections.Generic.LinkedList`1
+    name: LinkedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  - name: <
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: .
+  - uid: mosaic_libary.Scheduler.Entry
+    name: Entry
+    href: mosaic_libary.Scheduler.Entry.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.LinkedList`1
+    name: LinkedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: .
+  - uid: mosaic_libary.Scheduler.Entry
+    name: Entry
+    href: mosaic_libary.Scheduler.Entry.html
+  - name: )
+- uid: System.Collections.Generic.LinkedList`1
+  commentId: T:System.Collections.Generic.LinkedList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  name: LinkedList<T>
+  nameWithType: LinkedList<T>
+  fullName: System.Collections.Generic.LinkedList<T>
+  nameWithType.vb: LinkedList(Of T)
+  fullName.vb: System.Collections.Generic.LinkedList(Of T)
+  name.vb: LinkedList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.LinkedList`1
+    name: LinkedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.LinkedList`1
+    name: LinkedList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.linkedlist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: mosaic_libary.Scheduler.Add*
+  commentId: Overload:mosaic_libary.Scheduler.Add
+  href: mosaic_libary.Scheduler.html#mosaic_libary_Scheduler_Add_System_Threading_TimerCallback_System_Double_
+  name: Add
+  nameWithType: Scheduler.Add
+  fullName: mosaic_libary.Scheduler.Add
+- uid: System.Threading.TimerCallback
+  commentId: T:System.Threading.TimerCallback
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.timercallback
+  name: TimerCallback
+  nameWithType: TimerCallback
+  fullName: System.Threading.TimerCallback
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: mosaic_libary.Scheduler.Remove*
+  commentId: Overload:mosaic_libary.Scheduler.Remove
+  href: mosaic_libary.Scheduler.html#mosaic_libary_Scheduler_Remove_System_Threading_TimerCallback_
+  name: Remove
+  nameWithType: Scheduler.Remove
+  fullName: mosaic_libary.Scheduler.Remove
+- uid: mosaic_libary.Scheduler.Entry
+  commentId: T:mosaic_libary.Scheduler.Entry
+  parent: mosaic_libary
+  href: mosaic_libary.Scheduler.html
+  name: Scheduler.Entry
+  nameWithType: Scheduler.Entry
+  fullName: mosaic_libary.Scheduler.Entry
+  spec.csharp:
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: .
+  - uid: mosaic_libary.Scheduler.Entry
+    name: Entry
+    href: mosaic_libary.Scheduler.Entry.html
+  spec.vb:
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: .
+  - uid: mosaic_libary.Scheduler.Entry
+    name: Entry
+    href: mosaic_libary.Scheduler.Entry.html
+- uid: mosaic_libary.Scheduler.MainLoop*
+  commentId: Overload:mosaic_libary.Scheduler.MainLoop
+  href: mosaic_libary.Scheduler.html#mosaic_libary_Scheduler_MainLoop
+  name: MainLoop
+  nameWithType: Scheduler.MainLoop
+  fullName: mosaic_libary.Scheduler.MainLoop

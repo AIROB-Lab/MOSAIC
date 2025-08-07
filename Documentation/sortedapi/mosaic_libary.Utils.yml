@@ -1,0 +1,821 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Utils
+  commentId: T:mosaic_libary.Utils
+  id: Utils
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Utils.Now
+  - mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},System.String)
+  - mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Vector{System.Double},System.String)
+  - mosaic_libary.Utils.Print(System.Object,System.String)
+  - mosaic_libary.Utils.PrintByteArray(System.Byte[],System.String)
+  - mosaic_libary.Utils.dtmRefresh
+  - mosaic_libary.Utils.sw
+  - mosaic_libary.Utils.t0
+  langs:
+  - csharp
+  - vb
+  name: Utils
+  nameWithType: Utils
+  fullName: mosaic_libary.Utils
+  type: Class
+  source:
+    id: Utils
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 341
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Utils - A class with static members only, containing all "helper" functions, not precisely related to any
+
+    specific class. Call them by prepending Utils (e.g. "Utils.Now") or via "using mosaic_libary.Utils".
+  example: []
+  syntax:
+    content: public class Utils
+    content.vb: Public Class Utils
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.Utils.t0
+  commentId: F:mosaic_libary.Utils.t0
+  id: t0
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: t0
+  nameWithType: Utils.t0
+  fullName: mosaic_libary.Utils.t0
+  type: Field
+  source:
+    id: t0
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 343
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static double t0
+    return:
+      type: System.Double
+    content.vb: Private Shared t0 As Double
+- uid: mosaic_libary.Utils.sw
+  commentId: F:mosaic_libary.Utils.sw
+  id: sw
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: sw
+  nameWithType: Utils.sw
+  fullName: mosaic_libary.Utils.sw
+  type: Field
+  source:
+    id: sw
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 344
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static Stopwatch sw
+    return:
+      type: System.Diagnostics.Stopwatch
+    content.vb: Private Shared sw As Stopwatch
+- uid: mosaic_libary.Utils.Now
+  commentId: P:mosaic_libary.Utils.Now
+  id: Now
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: Now
+  nameWithType: Utils.Now
+  fullName: mosaic_libary.Utils.Now
+  type: Property
+  source:
+    id: Now
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 349
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Now - Use the Windows Stopwatch class to obtain precise timestamps
+  example: []
+  syntax:
+    content: public static double Now { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Shared ReadOnly Property Now As Double
+  overload: mosaic_libary.Utils.Now*
+- uid: mosaic_libary.Utils.dtmRefresh
+  commentId: F:mosaic_libary.Utils.dtmRefresh
+  id: dtmRefresh
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: dtmRefresh
+  nameWithType: Utils.dtmRefresh
+  fullName: mosaic_libary.Utils.dtmRefresh
+  type: Field
+  source:
+    id: dtmRefresh
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 364
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    global, slow, windows-based timer for refreshing purposes (block table, control panels, etc.)
+
+    we use a DispatcherTimer because it is used to refresch the GUI. Interval: 50msec (20 frames/s)
+  example: []
+  syntax:
+    content: public static DispatcherTimer dtmRefresh
+    return:
+      type: System.Windows.Threading.DispatcherTimer
+    content.vb: Public Shared dtmRefresh As DispatcherTimer
+- uid: mosaic_libary.Utils.Print(System.Object,System.String)
+  commentId: M:mosaic_libary.Utils.Print(System.Object,System.String)
+  id: Print(System.Object,System.String)
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: Print(object, string)
+  nameWithType: Utils.Print(object, string)
+  fullName: mosaic_libary.Utils.Print(object, string)
+  type: Method
+  source:
+    id: Print
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 395
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Pretty-printing function used to properly dump vectors in SendOutput
+  example: []
+  syntax:
+    content: public static string Print(object o, string timeStamp = "")
+    parameters:
+    - id: o
+      type: System.Object
+      description: >-
+        <code>object</code> to be print 
+
+        <ul><li><span class="term">o == null</span>NaN</li><li><span class="term">o == Vector</span>print in matlab-compatible format
+
+        </li><li><span class="term">o == matrix</span>print it in matlab-compatible format (one row per line)
+
+        </li><li><span class="term">anything else</span>print the standard way <code>$"{o}"</code></li></ul>
+    - id: timeStamp
+      type: System.String
+      description: ''
+    return:
+      type: System.String
+      description: Returns input <code>object o</code> as <code>string</code>. Formatting criteria see above.
+    content.vb: Public Shared Function Print(o As Object, timeStamp As String = "") As String
+  overload: mosaic_libary.Utils.Print*
+  nameWithType.vb: Utils.Print(Object, String)
+  fullName.vb: mosaic_libary.Utils.Print(Object, String)
+  name.vb: Print(Object, String)
+- uid: mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Vector{System.Double},System.String)
+  commentId: M:mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Vector{System.Double},System.String)
+  id: Print(MathNet.Numerics.LinearAlgebra.Vector{System.Double},System.String)
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: Print(Vector<double>, string)
+  nameWithType: Utils.Print(Vector<double>, string)
+  fullName: mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Vector<double>, string)
+  type: Method
+  source:
+    id: Print
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 415
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static string Print(Vector<double> vector, string timeStamp = "")
+    parameters:
+    - id: vector
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    - id: timeStamp
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Private Shared Function Print(vector As Vector(Of Double), timeStamp As String = "") As String
+  overload: mosaic_libary.Utils.Print*
+  nameWithType.vb: Utils.Print(Vector(Of Double), String)
+  fullName.vb: mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Vector(Of Double), String)
+  name.vb: Print(Vector(Of Double), String)
+- uid: mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},System.String)
+  commentId: M:mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},System.String)
+  id: Print(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},System.String)
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: Print(Matrix<double>, string)
+  nameWithType: Utils.Print(Matrix<double>, string)
+  fullName: mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Matrix<double>, string)
+  type: Method
+  source:
+    id: Print
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 422
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static string Print(Matrix<double> matrix, string timeStamp = "")
+    parameters:
+    - id: matrix
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+    - id: timeStamp
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Private Shared Function Print(matrix As Matrix(Of Double), timeStamp As String = "") As String
+  overload: mosaic_libary.Utils.Print*
+  nameWithType.vb: Utils.Print(Matrix(Of Double), String)
+  fullName.vb: mosaic_libary.Utils.Print(MathNet.Numerics.LinearAlgebra.Matrix(Of Double), String)
+  name.vb: Print(Matrix(Of Double), String)
+- uid: mosaic_libary.Utils.PrintByteArray(System.Byte[],System.String)
+  commentId: M:mosaic_libary.Utils.PrintByteArray(System.Byte[],System.String)
+  id: PrintByteArray(System.Byte[],System.String)
+  parent: mosaic_libary.Utils
+  langs:
+  - csharp
+  - vb
+  name: PrintByteArray(byte[], string)
+  nameWithType: Utils.PrintByteArray(byte[], string)
+  fullName: mosaic_libary.Utils.PrintByteArray(byte[], string)
+  type: Method
+  source:
+    id: PrintByteArray
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 432
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static string PrintByteArray(byte[] byteArray, string timeStamp = "")
+    parameters:
+    - id: byteArray
+      type: System.Byte[]
+    - id: timeStamp
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Private Shared Function PrintByteArray(byteArray As Byte(), timeStamp As String = "") As String
+  overload: mosaic_libary.Utils.PrintByteArray*
+  nameWithType.vb: Utils.PrintByteArray(Byte(), String)
+  fullName.vb: mosaic_libary.Utils.PrintByteArray(Byte(), String)
+  name.vb: PrintByteArray(Byte(), String)
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Diagnostics.Stopwatch
+  commentId: T:System.Diagnostics.Stopwatch
+  parent: System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.diagnostics.stopwatch
+  name: Stopwatch
+  nameWithType: Stopwatch
+  fullName: System.Diagnostics.Stopwatch
+- uid: System.Diagnostics
+  commentId: N:System.Diagnostics
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Diagnostics
+  nameWithType: System.Diagnostics
+  fullName: System.Diagnostics
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Diagnostics
+    name: Diagnostics
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.diagnostics
+- uid: mosaic_libary.Utils.Now*
+  commentId: Overload:mosaic_libary.Utils.Now
+  href: mosaic_libary.Utils.html#mosaic_libary_Utils_Now
+  name: Now
+  nameWithType: Utils.Now
+  fullName: mosaic_libary.Utils.Now
+- uid: System.Windows.Threading.DispatcherTimer
+  commentId: T:System.Windows.Threading.DispatcherTimer
+  parent: System.Windows.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.windows.threading.dispatchertimer
+  name: DispatcherTimer
+  nameWithType: DispatcherTimer
+  fullName: System.Windows.Threading.DispatcherTimer
+- uid: System.Windows.Threading
+  commentId: N:System.Windows.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Windows.Threading
+  nameWithType: System.Windows.Threading
+  fullName: System.Windows.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Windows
+    name: Windows
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows
+  - name: .
+  - uid: System.Windows.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.windows.threading
+- uid: mosaic_libary.Utils.Print*
+  commentId: Overload:mosaic_libary.Utils.Print
+  href: mosaic_libary.Utils.html#mosaic_libary_Utils_Print_System_Object_System_String_
+  name: Print
+  nameWithType: Utils.Print
+  fullName: mosaic_libary.Utils.Print
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Matrix`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Matrix<double>
+  nameWithType: Matrix<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<double>
+  nameWithType.vb: Matrix(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of Double)
+  name.vb: Matrix(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix`1
+  isExternal: true
+  name: Matrix<T>
+  nameWithType: Matrix<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<T>
+  nameWithType.vb: Matrix(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of T)
+  name.vb: Matrix(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: mosaic_libary.Utils.PrintByteArray*
+  commentId: Overload:mosaic_libary.Utils.PrintByteArray
+  href: mosaic_libary.Utils.html#mosaic_libary_Utils_PrintByteArray_System_Byte___System_String_
+  name: PrintByteArray
+  nameWithType: Utils.PrintByteArray
+  fullName: mosaic_libary.Utils.PrintByteArray
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

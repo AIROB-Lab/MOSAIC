@@ -1,0 +1,1058 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Edge
+  commentId: T:mosaic_libary.Edge
+  id: Edge
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Edge.#ctor
+  - mosaic_libary.Edge.#ctor(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Double)
+  - mosaic_libary.Edge.OnPropertyChanged(System.String)
+  - mosaic_libary.Edge.PropertyChanged
+  - mosaic_libary.Edge.Text
+  - mosaic_libary.Edge.ToString
+  - mosaic_libary.Edge._text
+  langs:
+  - csharp
+  - vb
+  name: Edge
+  nameWithType: Edge
+  fullName: mosaic_libary.Edge
+  type: Class
+  source:
+    id: Edge
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 66
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: 'public class Edge : EdgeBase<Vertex>, IGraphXEdge<Vertex>, IGraphXCommonEdge, IIdentifiableGraphDataObject, IRoutingInfo, IWeightedEdge<Vertex>, IEdge<Vertex>'
+    content.vb: Public Class Edge Inherits EdgeBase(Of Vertex) Implements IGraphXEdge(Of Vertex), IGraphXCommonEdge, IIdentifiableGraphDataObject, IRoutingInfo, IWeightedEdge(Of Vertex), IEdge(Of Vertex)
+  inheritance:
+  - System.Object
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  implements:
+  - GraphX.Common.Interfaces.IGraphXEdge{mosaic_libary.Vertex}
+  - GraphX.Common.Interfaces.IGraphXCommonEdge
+  - GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+  - GraphX.Common.Interfaces.IRoutingInfo
+  - GraphX.Common.Interfaces.IWeightedEdge{mosaic_libary.Vertex}
+  - QuickGraph.IEdge{mosaic_libary.Vertex}
+  inheritedMembers:
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.SkipProcessing
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.ID
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.IsSelfLoop
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.SourceConnectionPointId
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.TargetConnectionPointId
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.RoutingPoints
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Source
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Target
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Weight
+  - GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.ReversePath
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.Edge._text
+  commentId: F:mosaic_libary.Edge._text
+  id: _text
+  parent: mosaic_libary.Edge
+  langs:
+  - csharp
+  - vb
+  name: _text
+  nameWithType: Edge._text
+  fullName: mosaic_libary.Edge._text
+  type: Field
+  source:
+    id: _text
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 68
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private string _text
+    return:
+      type: System.String
+    content.vb: Private _text As String
+- uid: mosaic_libary.Edge.Text
+  commentId: P:mosaic_libary.Edge.Text
+  id: Text
+  parent: mosaic_libary.Edge
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: Edge.Text
+  fullName: mosaic_libary.Edge.Text
+  type: Property
+  source:
+    id: Text
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 69
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public string Text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Text As String
+  overload: mosaic_libary.Edge.Text*
+- uid: mosaic_libary.Edge.ToString
+  commentId: M:mosaic_libary.Edge.ToString
+  id: ToString
+  parent: mosaic_libary.Edge
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Edge.ToString()
+  fullName: mosaic_libary.Edge.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 70
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: mosaic_libary.Edge.ToString*
+- uid: mosaic_libary.Edge.#ctor
+  commentId: M:mosaic_libary.Edge.#ctor
+  id: '#ctor'
+  parent: mosaic_libary.Edge
+  langs:
+  - csharp
+  - vb
+  name: Edge()
+  nameWithType: Edge.Edge()
+  fullName: mosaic_libary.Edge.Edge()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 73
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public Edge()
+    content.vb: Public Sub New()
+  overload: mosaic_libary.Edge.#ctor*
+  nameWithType.vb: Edge.New()
+  fullName.vb: mosaic_libary.Edge.New()
+  name.vb: New()
+- uid: mosaic_libary.Edge.#ctor(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Double)
+  commentId: M:mosaic_libary.Edge.#ctor(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Double)
+  id: '#ctor(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Double)'
+  parent: mosaic_libary.Edge
+  langs:
+  - csharp
+  - vb
+  name: Edge(Vertex, Vertex, double)
+  nameWithType: Edge.Edge(Vertex, Vertex, double)
+  fullName: mosaic_libary.Edge.Edge(mosaic_libary.Vertex, mosaic_libary.Vertex, double)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 74
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public Edge(Vertex source, Vertex target, double weight = 1)
+    parameters:
+    - id: source
+      type: mosaic_libary.Vertex
+    - id: target
+      type: mosaic_libary.Vertex
+    - id: weight
+      type: System.Double
+    content.vb: Public Sub New(source As Vertex, target As Vertex, weight As Double = 1)
+  overload: mosaic_libary.Edge.#ctor*
+  nameWithType.vb: Edge.New(Vertex, Vertex, Double)
+  fullName.vb: mosaic_libary.Edge.New(mosaic_libary.Vertex, mosaic_libary.Vertex, Double)
+  name.vb: New(Vertex, Vertex, Double)
+- uid: mosaic_libary.Edge.PropertyChanged
+  commentId: E:mosaic_libary.Edge.PropertyChanged
+  id: PropertyChanged
+  parent: mosaic_libary.Edge
+  langs:
+  - csharp
+  - vb
+  name: PropertyChanged
+  nameWithType: Edge.PropertyChanged
+  fullName: mosaic_libary.Edge.PropertyChanged
+  type: Event
+  source:
+    id: PropertyChanged
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 75
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public event PropertyChangedEventHandler PropertyChanged
+    return:
+      type: System.ComponentModel.PropertyChangedEventHandler
+    content.vb: Public Event PropertyChanged As PropertyChangedEventHandler
+- uid: mosaic_libary.Edge.OnPropertyChanged(System.String)
+  commentId: M:mosaic_libary.Edge.OnPropertyChanged(System.String)
+  id: OnPropertyChanged(System.String)
+  parent: mosaic_libary.Edge
+  langs:
+  - csharp
+  - vb
+  name: OnPropertyChanged(string)
+  nameWithType: Edge.OnPropertyChanged(string)
+  fullName: mosaic_libary.Edge.OnPropertyChanged(string)
+  type: Method
+  source:
+    id: OnPropertyChanged
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 76
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void OnPropertyChanged(string name)
+    parameters:
+    - id: name
+      type: System.String
+    content.vb: Public Sub OnPropertyChanged(name As String)
+  overload: mosaic_libary.Edge.OnPropertyChanged*
+  nameWithType.vb: Edge.OnPropertyChanged(String)
+  fullName.vb: mosaic_libary.Edge.OnPropertyChanged(String)
+  name.vb: OnPropertyChanged(String)
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  commentId: T:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  parent: GraphX.Common.Models
+  definition: GraphX.Common.Models.EdgeBase`1
+  href: mosaic_libary.Vertex.html
+  name: EdgeBase<Vertex>
+  nameWithType: EdgeBase<Vertex>
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>
+  nameWithType.vb: EdgeBase(Of Vertex)
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex)
+  name.vb: EdgeBase(Of Vertex)
+  spec.csharp:
+  - uid: GraphX.Common.Models.EdgeBase`1
+    name: EdgeBase
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Models.EdgeBase`1
+    name: EdgeBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: GraphX.Common.Interfaces.IGraphXEdge{mosaic_libary.Vertex}
+  commentId: T:GraphX.Common.Interfaces.IGraphXEdge{mosaic_libary.Vertex}
+  parent: GraphX.Common.Interfaces
+  definition: GraphX.Common.Interfaces.IGraphXEdge`1
+  href: mosaic_libary.Vertex.html
+  name: IGraphXEdge<Vertex>
+  nameWithType: IGraphXEdge<Vertex>
+  fullName: GraphX.Common.Interfaces.IGraphXEdge<mosaic_libary.Vertex>
+  nameWithType.vb: IGraphXEdge(Of Vertex)
+  fullName.vb: GraphX.Common.Interfaces.IGraphXEdge(Of mosaic_libary.Vertex)
+  name.vb: IGraphXEdge(Of Vertex)
+  spec.csharp:
+  - uid: GraphX.Common.Interfaces.IGraphXEdge`1
+    name: IGraphXEdge
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Interfaces.IGraphXEdge`1
+    name: IGraphXEdge
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: GraphX.Common.Interfaces.IGraphXCommonEdge
+  commentId: T:GraphX.Common.Interfaces.IGraphXCommonEdge
+  parent: GraphX.Common.Interfaces
+  isExternal: true
+  name: IGraphXCommonEdge
+  nameWithType: IGraphXCommonEdge
+  fullName: GraphX.Common.Interfaces.IGraphXCommonEdge
+- uid: GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+  commentId: T:GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+  parent: GraphX.Common.Interfaces
+  isExternal: true
+  name: IIdentifiableGraphDataObject
+  nameWithType: IIdentifiableGraphDataObject
+  fullName: GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+- uid: GraphX.Common.Interfaces.IRoutingInfo
+  commentId: T:GraphX.Common.Interfaces.IRoutingInfo
+  parent: GraphX.Common.Interfaces
+  isExternal: true
+  name: IRoutingInfo
+  nameWithType: IRoutingInfo
+  fullName: GraphX.Common.Interfaces.IRoutingInfo
+- uid: GraphX.Common.Interfaces.IWeightedEdge{mosaic_libary.Vertex}
+  commentId: T:GraphX.Common.Interfaces.IWeightedEdge{mosaic_libary.Vertex}
+  parent: GraphX.Common.Interfaces
+  definition: GraphX.Common.Interfaces.IWeightedEdge`1
+  href: mosaic_libary.Vertex.html
+  name: IWeightedEdge<Vertex>
+  nameWithType: IWeightedEdge<Vertex>
+  fullName: GraphX.Common.Interfaces.IWeightedEdge<mosaic_libary.Vertex>
+  nameWithType.vb: IWeightedEdge(Of Vertex)
+  fullName.vb: GraphX.Common.Interfaces.IWeightedEdge(Of mosaic_libary.Vertex)
+  name.vb: IWeightedEdge(Of Vertex)
+  spec.csharp:
+  - uid: GraphX.Common.Interfaces.IWeightedEdge`1
+    name: IWeightedEdge
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Interfaces.IWeightedEdge`1
+    name: IWeightedEdge
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.IEdge{mosaic_libary.Vertex}
+  commentId: T:QuickGraph.IEdge{mosaic_libary.Vertex}
+  parent: QuickGraph
+  definition: QuickGraph.IEdge`1
+  href: mosaic_libary.Vertex.html
+  name: IEdge<Vertex>
+  nameWithType: IEdge<Vertex>
+  fullName: QuickGraph.IEdge<mosaic_libary.Vertex>
+  nameWithType.vb: IEdge(Of Vertex)
+  fullName.vb: QuickGraph.IEdge(Of mosaic_libary.Vertex)
+  name.vb: IEdge(Of Vertex)
+  spec.csharp:
+  - uid: QuickGraph.IEdge`1
+    name: IEdge
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdge`1
+    name: IEdge
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.SkipProcessing
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.SkipProcessing
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.SkipProcessing
+  name: SkipProcessing
+  nameWithType: EdgeBase<Vertex>.SkipProcessing
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.SkipProcessing
+  nameWithType.vb: EdgeBase(Of Vertex).SkipProcessing
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).SkipProcessing
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.ID
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.ID
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.ID
+  name: ID
+  nameWithType: EdgeBase<Vertex>.ID
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.ID
+  nameWithType.vb: EdgeBase(Of Vertex).ID
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).ID
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.IsSelfLoop
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.IsSelfLoop
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.IsSelfLoop
+  name: IsSelfLoop
+  nameWithType: EdgeBase<Vertex>.IsSelfLoop
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.IsSelfLoop
+  nameWithType.vb: EdgeBase(Of Vertex).IsSelfLoop
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).IsSelfLoop
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.SourceConnectionPointId
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.SourceConnectionPointId
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.SourceConnectionPointId
+  name: SourceConnectionPointId
+  nameWithType: EdgeBase<Vertex>.SourceConnectionPointId
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.SourceConnectionPointId
+  nameWithType.vb: EdgeBase(Of Vertex).SourceConnectionPointId
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).SourceConnectionPointId
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.TargetConnectionPointId
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.TargetConnectionPointId
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.TargetConnectionPointId
+  name: TargetConnectionPointId
+  nameWithType: EdgeBase<Vertex>.TargetConnectionPointId
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.TargetConnectionPointId
+  nameWithType.vb: EdgeBase(Of Vertex).TargetConnectionPointId
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).TargetConnectionPointId
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.RoutingPoints
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.RoutingPoints
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.RoutingPoints
+  name: RoutingPoints
+  nameWithType: EdgeBase<Vertex>.RoutingPoints
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.RoutingPoints
+  nameWithType.vb: EdgeBase(Of Vertex).RoutingPoints
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).RoutingPoints
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Source
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Source
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.Source
+  name: Source
+  nameWithType: EdgeBase<Vertex>.Source
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.Source
+  nameWithType.vb: EdgeBase(Of Vertex).Source
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).Source
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Target
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Target
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.Target
+  name: Target
+  nameWithType: EdgeBase<Vertex>.Target
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.Target
+  nameWithType.vb: EdgeBase(Of Vertex).Target
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).Target
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Weight
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.Weight
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.Weight
+  name: Weight
+  nameWithType: EdgeBase<Vertex>.Weight
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.Weight
+  nameWithType.vb: EdgeBase(Of Vertex).Weight
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).Weight
+- uid: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.ReversePath
+  commentId: P:GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}.ReversePath
+  parent: GraphX.Common.Models.EdgeBase{mosaic_libary.Vertex}
+  definition: GraphX.Common.Models.EdgeBase`1.ReversePath
+  name: ReversePath
+  nameWithType: EdgeBase<Vertex>.ReversePath
+  fullName: GraphX.Common.Models.EdgeBase<mosaic_libary.Vertex>.ReversePath
+  nameWithType.vb: EdgeBase(Of Vertex).ReversePath
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of mosaic_libary.Vertex).ReversePath
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GraphX.Common.Models.EdgeBase`1
+  commentId: T:GraphX.Common.Models.EdgeBase`1
+  isExternal: true
+  name: EdgeBase<TVertex>
+  nameWithType: EdgeBase<TVertex>
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>
+  nameWithType.vb: EdgeBase(Of TVertex)
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex)
+  name.vb: EdgeBase(Of TVertex)
+  spec.csharp:
+  - uid: GraphX.Common.Models.EdgeBase`1
+    name: EdgeBase
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Models.EdgeBase`1
+    name: EdgeBase
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: GraphX.Common.Models
+  commentId: N:GraphX.Common.Models
+  isExternal: true
+  name: GraphX.Common.Models
+  nameWithType: GraphX.Common.Models
+  fullName: GraphX.Common.Models
+  spec.csharp:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Models
+    name: Models
+    isExternal: true
+  spec.vb:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Models
+    name: Models
+    isExternal: true
+- uid: GraphX.Common.Interfaces.IGraphXEdge`1
+  commentId: T:GraphX.Common.Interfaces.IGraphXEdge`1
+  isExternal: true
+  name: IGraphXEdge<TVertex>
+  nameWithType: IGraphXEdge<TVertex>
+  fullName: GraphX.Common.Interfaces.IGraphXEdge<TVertex>
+  nameWithType.vb: IGraphXEdge(Of TVertex)
+  fullName.vb: GraphX.Common.Interfaces.IGraphXEdge(Of TVertex)
+  name.vb: IGraphXEdge(Of TVertex)
+  spec.csharp:
+  - uid: GraphX.Common.Interfaces.IGraphXEdge`1
+    name: IGraphXEdge
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Interfaces.IGraphXEdge`1
+    name: IGraphXEdge
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: GraphX.Common.Interfaces
+  commentId: N:GraphX.Common.Interfaces
+  isExternal: true
+  name: GraphX.Common.Interfaces
+  nameWithType: GraphX.Common.Interfaces
+  fullName: GraphX.Common.Interfaces
+  spec.csharp:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Interfaces
+    name: Interfaces
+    isExternal: true
+  spec.vb:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Interfaces
+    name: Interfaces
+    isExternal: true
+- uid: GraphX.Common.Interfaces.IWeightedEdge`1
+  commentId: T:GraphX.Common.Interfaces.IWeightedEdge`1
+  isExternal: true
+  name: IWeightedEdge<TVertex>
+  nameWithType: IWeightedEdge<TVertex>
+  fullName: GraphX.Common.Interfaces.IWeightedEdge<TVertex>
+  nameWithType.vb: IWeightedEdge(Of TVertex)
+  fullName.vb: GraphX.Common.Interfaces.IWeightedEdge(Of TVertex)
+  name.vb: IWeightedEdge(Of TVertex)
+  spec.csharp:
+  - uid: GraphX.Common.Interfaces.IWeightedEdge`1
+    name: IWeightedEdge
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Interfaces.IWeightedEdge`1
+    name: IWeightedEdge
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.IEdge`1
+  commentId: T:QuickGraph.IEdge`1
+  isExternal: true
+  name: IEdge<TVertex>
+  nameWithType: IEdge<TVertex>
+  fullName: QuickGraph.IEdge<TVertex>
+  nameWithType.vb: IEdge(Of TVertex)
+  fullName.vb: QuickGraph.IEdge(Of TVertex)
+  name.vb: IEdge(Of TVertex)
+  spec.csharp:
+  - uid: QuickGraph.IEdge`1
+    name: IEdge
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdge`1
+    name: IEdge
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: QuickGraph
+  commentId: N:QuickGraph
+  isExternal: true
+  name: QuickGraph
+  nameWithType: QuickGraph
+  fullName: QuickGraph
+- uid: GraphX.Common.Models.EdgeBase`1.SkipProcessing
+  commentId: P:GraphX.Common.Models.EdgeBase`1.SkipProcessing
+  isExternal: true
+  name: SkipProcessing
+  nameWithType: EdgeBase<TVertex>.SkipProcessing
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.SkipProcessing
+  nameWithType.vb: EdgeBase(Of TVertex).SkipProcessing
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).SkipProcessing
+- uid: GraphX.Common.Models.EdgeBase`1.ID
+  commentId: P:GraphX.Common.Models.EdgeBase`1.ID
+  isExternal: true
+  name: ID
+  nameWithType: EdgeBase<TVertex>.ID
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.ID
+  nameWithType.vb: EdgeBase(Of TVertex).ID
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).ID
+- uid: GraphX.Common.Models.EdgeBase`1.IsSelfLoop
+  commentId: P:GraphX.Common.Models.EdgeBase`1.IsSelfLoop
+  isExternal: true
+  name: IsSelfLoop
+  nameWithType: EdgeBase<TVertex>.IsSelfLoop
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.IsSelfLoop
+  nameWithType.vb: EdgeBase(Of TVertex).IsSelfLoop
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).IsSelfLoop
+- uid: GraphX.Common.Models.EdgeBase`1.SourceConnectionPointId
+  commentId: P:GraphX.Common.Models.EdgeBase`1.SourceConnectionPointId
+  isExternal: true
+  name: SourceConnectionPointId
+  nameWithType: EdgeBase<TVertex>.SourceConnectionPointId
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.SourceConnectionPointId
+  nameWithType.vb: EdgeBase(Of TVertex).SourceConnectionPointId
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).SourceConnectionPointId
+- uid: GraphX.Common.Models.EdgeBase`1.TargetConnectionPointId
+  commentId: P:GraphX.Common.Models.EdgeBase`1.TargetConnectionPointId
+  isExternal: true
+  name: TargetConnectionPointId
+  nameWithType: EdgeBase<TVertex>.TargetConnectionPointId
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.TargetConnectionPointId
+  nameWithType.vb: EdgeBase(Of TVertex).TargetConnectionPointId
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).TargetConnectionPointId
+- uid: GraphX.Common.Models.EdgeBase`1.RoutingPoints
+  commentId: P:GraphX.Common.Models.EdgeBase`1.RoutingPoints
+  isExternal: true
+  name: RoutingPoints
+  nameWithType: EdgeBase<TVertex>.RoutingPoints
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.RoutingPoints
+  nameWithType.vb: EdgeBase(Of TVertex).RoutingPoints
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).RoutingPoints
+- uid: GraphX.Common.Models.EdgeBase`1.Source
+  commentId: P:GraphX.Common.Models.EdgeBase`1.Source
+  isExternal: true
+  name: Source
+  nameWithType: EdgeBase<TVertex>.Source
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.Source
+  nameWithType.vb: EdgeBase(Of TVertex).Source
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).Source
+- uid: GraphX.Common.Models.EdgeBase`1.Target
+  commentId: P:GraphX.Common.Models.EdgeBase`1.Target
+  isExternal: true
+  name: Target
+  nameWithType: EdgeBase<TVertex>.Target
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.Target
+  nameWithType.vb: EdgeBase(Of TVertex).Target
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).Target
+- uid: GraphX.Common.Models.EdgeBase`1.Weight
+  commentId: P:GraphX.Common.Models.EdgeBase`1.Weight
+  isExternal: true
+  name: Weight
+  nameWithType: EdgeBase<TVertex>.Weight
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.Weight
+  nameWithType.vb: EdgeBase(Of TVertex).Weight
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).Weight
+- uid: GraphX.Common.Models.EdgeBase`1.ReversePath
+  commentId: P:GraphX.Common.Models.EdgeBase`1.ReversePath
+  isExternal: true
+  name: ReversePath
+  nameWithType: EdgeBase<TVertex>.ReversePath
+  fullName: GraphX.Common.Models.EdgeBase<TVertex>.ReversePath
+  nameWithType.vb: EdgeBase(Of TVertex).ReversePath
+  fullName.vb: GraphX.Common.Models.EdgeBase(Of TVertex).ReversePath
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: mosaic_libary.Edge.Text*
+  commentId: Overload:mosaic_libary.Edge.Text
+  href: mosaic_libary.Edge.html#mosaic_libary_Edge_Text
+  name: Text
+  nameWithType: Edge.Text
+  fullName: mosaic_libary.Edge.Text
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: mosaic_libary.Edge.ToString*
+  commentId: Overload:mosaic_libary.Edge.ToString
+  href: mosaic_libary.Edge.html#mosaic_libary_Edge_ToString
+  name: ToString
+  nameWithType: Edge.ToString
+  fullName: mosaic_libary.Edge.ToString
+- uid: mosaic_libary.Edge.#ctor*
+  commentId: Overload:mosaic_libary.Edge.#ctor
+  href: mosaic_libary.Edge.html#mosaic_libary_Edge__ctor
+  name: Edge
+  nameWithType: Edge.Edge
+  fullName: mosaic_libary.Edge.Edge
+  nameWithType.vb: Edge.New
+  fullName.vb: mosaic_libary.Edge.New
+  name.vb: New
+- uid: mosaic_libary.Vertex
+  commentId: T:mosaic_libary.Vertex
+  parent: mosaic_libary
+  href: mosaic_libary.Vertex.html
+  name: Vertex
+  nameWithType: Vertex
+  fullName: mosaic_libary.Vertex
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.ComponentModel.PropertyChangedEventHandler
+  commentId: T:System.ComponentModel.PropertyChangedEventHandler
+  parent: System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.componentmodel.propertychangedeventhandler
+  name: PropertyChangedEventHandler
+  nameWithType: PropertyChangedEventHandler
+  fullName: System.ComponentModel.PropertyChangedEventHandler
+- uid: System.ComponentModel
+  commentId: N:System.ComponentModel
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.ComponentModel
+  nameWithType: System.ComponentModel
+  fullName: System.ComponentModel
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.ComponentModel
+    name: ComponentModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.componentmodel
+- uid: mosaic_libary.Edge.OnPropertyChanged*
+  commentId: Overload:mosaic_libary.Edge.OnPropertyChanged
+  href: mosaic_libary.Edge.html#mosaic_libary_Edge_OnPropertyChanged_System_String_
+  name: OnPropertyChanged
+  nameWithType: Edge.OnPropertyChanged
+  fullName: mosaic_libary.Edge.OnPropertyChanged

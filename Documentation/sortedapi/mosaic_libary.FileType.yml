@@ -1,0 +1,130 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.FileType
+  commentId: T:mosaic_libary.FileType
+  id: FileType
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.FileType.Csv
+  - mosaic_libary.FileType.Matlab
+  - mosaic_libary.FileType.Text
+  - mosaic_libary.FileType.Unknown
+  langs:
+  - csharp
+  - vb
+  name: FileType
+  nameWithType: FileType
+  fullName: mosaic_libary.FileType
+  type: Enum
+  source:
+    id: FileType
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 73
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: internal enum FileType
+    content.vb: Friend Enum FileType
+- uid: mosaic_libary.FileType.Unknown
+  commentId: F:mosaic_libary.FileType.Unknown
+  id: Unknown
+  parent: mosaic_libary.FileType
+  langs:
+  - csharp
+  - vb
+  name: Unknown
+  nameWithType: FileType.Unknown
+  fullName: mosaic_libary.FileType.Unknown
+  type: Field
+  source:
+    id: Unknown
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 75
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Unknown = 0
+    return:
+      type: mosaic_libary.FileType
+- uid: mosaic_libary.FileType.Matlab
+  commentId: F:mosaic_libary.FileType.Matlab
+  id: Matlab
+  parent: mosaic_libary.FileType
+  langs:
+  - csharp
+  - vb
+  name: Matlab
+  nameWithType: FileType.Matlab
+  fullName: mosaic_libary.FileType.Matlab
+  type: Field
+  source:
+    id: Matlab
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 76
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Matlab = 1
+    return:
+      type: mosaic_libary.FileType
+- uid: mosaic_libary.FileType.Text
+  commentId: F:mosaic_libary.FileType.Text
+  id: Text
+  parent: mosaic_libary.FileType
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: FileType.Text
+  fullName: mosaic_libary.FileType.Text
+  type: Field
+  source:
+    id: Text
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 77
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Text = 2
+    return:
+      type: mosaic_libary.FileType
+- uid: mosaic_libary.FileType.Csv
+  commentId: F:mosaic_libary.FileType.Csv
+  id: Csv
+  parent: mosaic_libary.FileType
+  langs:
+  - csharp
+  - vb
+  name: Csv
+  nameWithType: FileType.Csv
+  fullName: mosaic_libary.FileType.Csv
+  type: Field
+  source:
+    id: Csv
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 78
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Csv = 3
+    return:
+      type: mosaic_libary.FileType
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.FileType
+  commentId: T:mosaic_libary.FileType
+  parent: mosaic_libary
+  href: mosaic_libary.FileType.html
+  name: FileType
+  nameWithType: FileType
+  fullName: mosaic_libary.FileType

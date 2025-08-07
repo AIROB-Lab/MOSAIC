@@ -1,0 +1,1195 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  id: mosaic_libary
+  children:
+  - mosaic_libary.AdaptiveFilter
+  - mosaic_libary.Algorithms
+  - mosaic_libary.BatchLearningMachine
+  - mosaic_libary.BatchPredictor
+  - mosaic_libary.BlenderArm
+  - mosaic_libary.Block
+  - mosaic_libary.Block.OutputHandler
+  - mosaic_libary.BlockTable
+  - mosaic_libary.BlockTableArea
+  - mosaic_libary.BlockTable_window
+  - mosaic_libary.Blocks
+  - mosaic_libary.BluetoothLEManager
+  - mosaic_libary.Buffer
+  - mosaic_libary.CfgParser
+  - mosaic_libary.CfgParser.CfgBlock
+  - mosaic_libary.CircularBuffer`1
+  - mosaic_libary.ControlAlgorithm
+  - mosaic_libary.ControlPanel
+  - mosaic_libary.CpDelsys
+  - mosaic_libary.CpFilePlayer
+  - mosaic_libary.DBWriter
+  - mosaic_libary.DLR_ADCBT
+  - mosaic_libary.DOAs
+  - mosaic_libary.DataType
+  - mosaic_libary.DecimatorTimer
+  - mosaic_libary.Delsys
+  - mosaic_libary.DirectControlStrategy
+  - mosaic_libary.Edge
+  - mosaic_libary.FilePlayer
+  - mosaic_libary.FileReader
+  - mosaic_libary.FileReader.ErrorEventArgs
+  - mosaic_libary.FileReader.MatrixEventArgs
+  - mosaic_libary.FileType
+  - mosaic_libary.Filter
+  - mosaic_libary.Function
+  - mosaic_libary.GENERAL_BLE_STATES
+  - mosaic_libary.GXLogicCore
+  - mosaic_libary.GraphData
+  - mosaic_libary.HannesGUI
+  - mosaic_libary.HannesHand
+  - mosaic_libary.HannesHand.CommandParsing
+  - mosaic_libary.HannesHand.ControlModality
+  - mosaic_libary.HannesHand.EMGMDeviceMode
+  - mosaic_libary.HannesHand.JointsActivationIndex
+  - mosaic_libary.HannesHand.RefTable
+  - mosaic_libary.HannesReceiver
+  - mosaic_libary.HeatMapMonitor
+  - mosaic_libary.IControlAlgorithmStrategy
+  - mosaic_libary.IncrementalLDA
+  - mosaic_libary.IncrementalLearningMachine
+  - mosaic_libary.IncrementalPredictor
+  - mosaic_libary.IncrementalRFF
+  - mosaic_libary.IncrementalRidgeRegression
+  - mosaic_libary.Joiner
+  - mosaic_libary.MeanAverageValue
+  - mosaic_libary.Monitor
+  - mosaic_libary.Muovi
+  - mosaic_libary.MuoviSingleProbe
+  - mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  - mosaic_libary.Myo
+  - mosaic_libary.NilsPod
+  - mosaic_libary.PredictingMachine
+  - mosaic_libary.Projector
+  - mosaic_libary.ROS
+  - mosaic_libary.RR_RFF
+  - mosaic_libary.Resampler
+  - mosaic_libary.RidgeRegression
+  - mosaic_libary.SPECIFIC_BLE_STATES
+  - mosaic_libary.ScheduledTimer
+  - mosaic_libary.Scheduler
+  - mosaic_libary.Scheduler.Entry
+  - mosaic_libary.ScopeMonitor
+  - mosaic_libary.Selector
+  - mosaic_libary.SensorItem
+  - mosaic_libary.SimpleProgressBar
+  - mosaic_libary.SinGenerator
+  - mosaic_libary.SlidingWindow
+  - mosaic_libary.SlopeSignChanges
+  - mosaic_libary.SpiderPlotMonitor
+  - mosaic_libary.StepwiseControlStrategy
+  - mosaic_libary.StimTrigger
+  - mosaic_libary.Stimulus
+  - mosaic_libary.StreamInfo
+  - mosaic_libary.StreamManager
+  - mosaic_libary.StreamManager.DataReceivedHandler
+  - mosaic_libary.Switch
+  - mosaic_libary.TAC
+  - mosaic_libary.Timer
+  - mosaic_libary.Trigger
+  - mosaic_libary.UDP_StreamlinedSender
+  - mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+  - mosaic_libary.UdpPayload
+  - mosaic_libary.Utils
+  - mosaic_libary.VectorialFunction
+  - mosaic_libary.Vertex
+  - mosaic_libary.WaveformLength
+  - mosaic_libary.WindowParams
+  - mosaic_libary.WindowType
+  - mosaic_libary.ZeroCrossings
+  - mosaic_libary.cpAdaptiveFilter
+  - mosaic_libary.cpBatchPredictor
+  - mosaic_libary.cpBuffer
+  - mosaic_libary.cpDLR_ADCBT
+  - mosaic_libary.cpFilter
+  - mosaic_libary.cpFunction
+  - mosaic_libary.cpHannes
+  - mosaic_libary.cpHannesReceiver
+  - mosaic_libary.cpIncrementalPredictor
+  - mosaic_libary.cpMeanAverageValue
+  - mosaic_libary.cpMuovi
+  - mosaic_libary.cpMuoviSingleProbe
+  - mosaic_libary.cpMyo
+  - mosaic_libary.cpNilsPod
+  - mosaic_libary.cpResampler
+  - mosaic_libary.cpScheduledTimer
+  - mosaic_libary.cpSinGenerator
+  - mosaic_libary.cpSlidingWindow
+  - mosaic_libary.cpSlopeSignChanges
+  - mosaic_libary.cpStimulus
+  - mosaic_libary.cpSwitch
+  - mosaic_libary.cpTAC
+  - mosaic_libary.cpTrigger
+  - mosaic_libary.cpVectorialFunction
+  - mosaic_libary.cpWaveformLength
+  - mosaic_libary.cpZeroCrossings
+  langs:
+  - csharp
+  - vb
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+  type: Namespace
+  assemblies:
+  - iM
+references:
+- uid: mosaic_libary.Scheduler
+  commentId: T:mosaic_libary.Scheduler
+  parent: mosaic_libary
+  href: mosaic_libary.Scheduler.html
+  name: Scheduler
+  nameWithType: Scheduler
+  fullName: mosaic_libary.Scheduler
+- uid: mosaic_libary.Scheduler.Entry
+  commentId: T:mosaic_libary.Scheduler.Entry
+  parent: mosaic_libary
+  href: mosaic_libary.Scheduler.html
+  name: Scheduler.Entry
+  nameWithType: Scheduler.Entry
+  fullName: mosaic_libary.Scheduler.Entry
+  spec.csharp:
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: .
+  - uid: mosaic_libary.Scheduler.Entry
+    name: Entry
+    href: mosaic_libary.Scheduler.Entry.html
+  spec.vb:
+  - uid: mosaic_libary.Scheduler
+    name: Scheduler
+    href: mosaic_libary.Scheduler.html
+  - name: .
+  - uid: mosaic_libary.Scheduler.Entry
+    name: Entry
+    href: mosaic_libary.Scheduler.Entry.html
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+- uid: mosaic_libary.Block.OutputHandler
+  commentId: T:mosaic_libary.Block.OutputHandler
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block.OutputHandler
+  nameWithType: Block.OutputHandler
+  fullName: mosaic_libary.Block.OutputHandler
+  spec.csharp:
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: .
+  - uid: mosaic_libary.Block.OutputHandler
+    name: OutputHandler
+    href: mosaic_libary.Block.OutputHandler.html
+  spec.vb:
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: .
+  - uid: mosaic_libary.Block.OutputHandler
+    name: OutputHandler
+    href: mosaic_libary.Block.OutputHandler.html
+- uid: mosaic_libary.Blocks
+  commentId: T:mosaic_libary.Blocks
+  parent: mosaic_libary
+  href: mosaic_libary.Blocks.html
+  name: Blocks
+  nameWithType: Blocks
+  fullName: mosaic_libary.Blocks
+- uid: mosaic_libary.CfgParser
+  commentId: T:mosaic_libary.CfgParser
+  href: mosaic_libary.CfgParser.html
+  name: CfgParser
+  nameWithType: CfgParser
+  fullName: mosaic_libary.CfgParser
+- uid: mosaic_libary.CfgParser.CfgBlock
+  commentId: T:mosaic_libary.CfgParser.CfgBlock
+  href: mosaic_libary.CfgParser.html
+  name: CfgParser.CfgBlock
+  nameWithType: CfgParser.CfgBlock
+  fullName: mosaic_libary.CfgParser.CfgBlock
+  spec.csharp:
+  - uid: mosaic_libary.CfgParser
+    name: CfgParser
+    href: mosaic_libary.CfgParser.html
+  - name: .
+  - uid: mosaic_libary.CfgParser.CfgBlock
+    name: CfgBlock
+    href: mosaic_libary.CfgParser.CfgBlock.html
+  spec.vb:
+  - uid: mosaic_libary.CfgParser
+    name: CfgParser
+    href: mosaic_libary.CfgParser.html
+  - name: .
+  - uid: mosaic_libary.CfgParser.CfgBlock
+    name: CfgBlock
+    href: mosaic_libary.CfgParser.CfgBlock.html
+- uid: mosaic_libary.cpAdaptiveFilter
+  commentId: T:mosaic_libary.cpAdaptiveFilter
+  href: mosaic_libary.cpAdaptiveFilter.html
+  name: cpAdaptiveFilter
+  nameWithType: cpAdaptiveFilter
+  fullName: mosaic_libary.cpAdaptiveFilter
+- uid: mosaic_libary.AdaptiveFilter
+  commentId: T:mosaic_libary.AdaptiveFilter
+  parent: mosaic_libary
+  href: mosaic_libary.AdaptiveFilter.html
+  name: AdaptiveFilter
+  nameWithType: AdaptiveFilter
+  fullName: mosaic_libary.AdaptiveFilter
+- uid: mosaic_libary.cpSlidingWindow
+  commentId: T:mosaic_libary.cpSlidingWindow
+  href: mosaic_libary.cpSlidingWindow.html
+  name: cpSlidingWindow
+  nameWithType: cpSlidingWindow
+  fullName: mosaic_libary.cpSlidingWindow
+- uid: mosaic_libary.SlidingWindow
+  commentId: T:mosaic_libary.SlidingWindow
+  parent: mosaic_libary
+  href: mosaic_libary.SlidingWindow.html
+  name: SlidingWindow
+  nameWithType: SlidingWindow
+  fullName: mosaic_libary.SlidingWindow
+- uid: mosaic_libary.WindowParams
+  commentId: T:mosaic_libary.WindowParams
+  parent: mosaic_libary
+  href: mosaic_libary.WindowParams.html
+  name: WindowParams
+  nameWithType: WindowParams
+  fullName: mosaic_libary.WindowParams
+- uid: mosaic_libary.cpWaveformLength
+  commentId: T:mosaic_libary.cpWaveformLength
+  href: mosaic_libary.cpWaveformLength.html
+  name: cpWaveformLength
+  nameWithType: cpWaveformLength
+  fullName: mosaic_libary.cpWaveformLength
+- uid: mosaic_libary.WaveformLength
+  commentId: T:mosaic_libary.WaveformLength
+  parent: mosaic_libary
+  href: mosaic_libary.WaveformLength.html
+  name: WaveformLength
+  nameWithType: WaveformLength
+  fullName: mosaic_libary.WaveformLength
+- uid: mosaic_libary.cpSlopeSignChanges
+  commentId: T:mosaic_libary.cpSlopeSignChanges
+  href: mosaic_libary.cpSlopeSignChanges.html
+  name: cpSlopeSignChanges
+  nameWithType: cpSlopeSignChanges
+  fullName: mosaic_libary.cpSlopeSignChanges
+- uid: mosaic_libary.SlopeSignChanges
+  commentId: T:mosaic_libary.SlopeSignChanges
+  parent: mosaic_libary
+  href: mosaic_libary.SlopeSignChanges.html
+  name: SlopeSignChanges
+  nameWithType: SlopeSignChanges
+  fullName: mosaic_libary.SlopeSignChanges
+- uid: mosaic_libary.cpZeroCrossings
+  commentId: T:mosaic_libary.cpZeroCrossings
+  href: mosaic_libary.cpZeroCrossings.html
+  name: cpZeroCrossings
+  nameWithType: cpZeroCrossings
+  fullName: mosaic_libary.cpZeroCrossings
+- uid: mosaic_libary.ZeroCrossings
+  commentId: T:mosaic_libary.ZeroCrossings
+  parent: mosaic_libary
+  href: mosaic_libary.ZeroCrossings.html
+  name: ZeroCrossings
+  nameWithType: ZeroCrossings
+  fullName: mosaic_libary.ZeroCrossings
+- uid: mosaic_libary.cpMeanAverageValue
+  commentId: T:mosaic_libary.cpMeanAverageValue
+  href: mosaic_libary.cpMeanAverageValue.html
+  name: cpMeanAverageValue
+  nameWithType: cpMeanAverageValue
+  fullName: mosaic_libary.cpMeanAverageValue
+- uid: mosaic_libary.MeanAverageValue
+  commentId: T:mosaic_libary.MeanAverageValue
+  parent: mosaic_libary
+  href: mosaic_libary.MeanAverageValue.html
+  name: MeanAverageValue
+  nameWithType: MeanAverageValue
+  fullName: mosaic_libary.MeanAverageValue
+- uid: mosaic_libary.DOAs
+  commentId: T:mosaic_libary.DOAs
+  parent: mosaic_libary
+  href: mosaic_libary.DOAs.html
+  name: DOAs
+  nameWithType: DOAs
+  fullName: mosaic_libary.DOAs
+- uid: mosaic_libary.Algorithms
+  commentId: T:mosaic_libary.Algorithms
+  parent: mosaic_libary
+  href: mosaic_libary.Algorithms.html
+  name: Algorithms
+  nameWithType: Algorithms
+  fullName: mosaic_libary.Algorithms
+- uid: mosaic_libary.WindowType
+  commentId: T:mosaic_libary.WindowType
+  parent: mosaic_libary
+  href: mosaic_libary.WindowType.html
+  name: WindowType
+  nameWithType: WindowType
+  fullName: mosaic_libary.WindowType
+- uid: mosaic_libary.DirectControlStrategy
+  commentId: T:mosaic_libary.DirectControlStrategy
+  href: mosaic_libary.DirectControlStrategy.html
+  name: DirectControlStrategy
+  nameWithType: DirectControlStrategy
+  fullName: mosaic_libary.DirectControlStrategy
+- uid: mosaic_libary.IControlAlgorithmStrategy
+  commentId: T:mosaic_libary.IControlAlgorithmStrategy
+  parent: mosaic_libary
+  href: mosaic_libary.IControlAlgorithmStrategy.html
+  name: IControlAlgorithmStrategy
+  nameWithType: IControlAlgorithmStrategy
+  fullName: mosaic_libary.IControlAlgorithmStrategy
+- uid: mosaic_libary.StepwiseControlStrategy
+  commentId: T:mosaic_libary.StepwiseControlStrategy
+  href: mosaic_libary.StepwiseControlStrategy.html
+  name: StepwiseControlStrategy
+  nameWithType: StepwiseControlStrategy
+  fullName: mosaic_libary.StepwiseControlStrategy
+- uid: mosaic_libary.ControlAlgorithm
+  commentId: T:mosaic_libary.ControlAlgorithm
+  href: mosaic_libary.ControlAlgorithm.html
+  name: ControlAlgorithm
+  nameWithType: ControlAlgorithm
+  fullName: mosaic_libary.ControlAlgorithm
+- uid: mosaic_libary.CpDelsys
+  commentId: T:mosaic_libary.CpDelsys
+  href: mosaic_libary.CpDelsys.html
+  name: CpDelsys
+  nameWithType: CpDelsys
+  fullName: mosaic_libary.CpDelsys
+- uid: mosaic_libary.Delsys
+  commentId: T:mosaic_libary.Delsys
+  parent: mosaic_libary
+  href: mosaic_libary.Delsys.html
+  name: Delsys
+  nameWithType: Delsys
+  fullName: mosaic_libary.Delsys
+- uid: mosaic_libary.SensorItem
+  commentId: T:mosaic_libary.SensorItem
+  href: mosaic_libary.SensorItem.html
+  name: SensorItem
+  nameWithType: SensorItem
+  fullName: mosaic_libary.SensorItem
+- uid: mosaic_libary.StreamInfo
+  commentId: T:mosaic_libary.StreamInfo
+  parent: mosaic_libary
+  href: mosaic_libary.StreamInfo.html
+  name: StreamInfo
+  nameWithType: StreamInfo
+  fullName: mosaic_libary.StreamInfo
+- uid: mosaic_libary.cpHannes
+  commentId: T:mosaic_libary.cpHannes
+  href: mosaic_libary.cpHannes.html
+  name: cpHannes
+  nameWithType: cpHannes
+  fullName: mosaic_libary.cpHannes
+- uid: mosaic_libary.HannesHand
+  commentId: T:mosaic_libary.HannesHand
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand
+  nameWithType: HannesHand
+  fullName: mosaic_libary.HannesHand
+- uid: mosaic_libary.HannesHand.CommandParsing
+  commentId: T:mosaic_libary.HannesHand.CommandParsing
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.CommandParsing
+  nameWithType: HannesHand.CommandParsing
+  fullName: mosaic_libary.HannesHand.CommandParsing
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.CommandParsing
+    name: CommandParsing
+    href: mosaic_libary.HannesHand.CommandParsing.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.CommandParsing
+    name: CommandParsing
+    href: mosaic_libary.HannesHand.CommandParsing.html
+- uid: mosaic_libary.HannesHand.RefTable
+  commentId: T:mosaic_libary.HannesHand.RefTable
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.RefTable
+  nameWithType: HannesHand.RefTable
+  fullName: mosaic_libary.HannesHand.RefTable
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.RefTable
+    name: RefTable
+    href: mosaic_libary.HannesHand.RefTable.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.RefTable
+    name: RefTable
+    href: mosaic_libary.HannesHand.RefTable.html
+- uid: mosaic_libary.HannesHand.ControlModality
+  commentId: T:mosaic_libary.HannesHand.ControlModality
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.ControlModality
+  nameWithType: HannesHand.ControlModality
+  fullName: mosaic_libary.HannesHand.ControlModality
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.ControlModality
+    name: ControlModality
+    href: mosaic_libary.HannesHand.ControlModality.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.ControlModality
+    name: ControlModality
+    href: mosaic_libary.HannesHand.ControlModality.html
+- uid: mosaic_libary.HannesHand.EMGMDeviceMode
+  commentId: T:mosaic_libary.HannesHand.EMGMDeviceMode
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.EMGMDeviceMode
+  nameWithType: HannesHand.EMGMDeviceMode
+  fullName: mosaic_libary.HannesHand.EMGMDeviceMode
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.EMGMDeviceMode
+    name: EMGMDeviceMode
+    href: mosaic_libary.HannesHand.EMGMDeviceMode.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.EMGMDeviceMode
+    name: EMGMDeviceMode
+    href: mosaic_libary.HannesHand.EMGMDeviceMode.html
+- uid: mosaic_libary.HannesHand.JointsActivationIndex
+  commentId: T:mosaic_libary.HannesHand.JointsActivationIndex
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.JointsActivationIndex
+  nameWithType: HannesHand.JointsActivationIndex
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.JointsActivationIndex
+    name: JointsActivationIndex
+    href: mosaic_libary.HannesHand.JointsActivationIndex.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.JointsActivationIndex
+    name: JointsActivationIndex
+    href: mosaic_libary.HannesHand.JointsActivationIndex.html
+- uid: mosaic_libary.cpMuoviSingleProbe
+  commentId: T:mosaic_libary.cpMuoviSingleProbe
+  href: mosaic_libary.cpMuoviSingleProbe.html
+  name: cpMuoviSingleProbe
+  nameWithType: cpMuoviSingleProbe
+  fullName: mosaic_libary.cpMuoviSingleProbe
+- uid: mosaic_libary.MuoviSingleProbe
+  commentId: T:mosaic_libary.MuoviSingleProbe
+  parent: mosaic_libary
+  href: mosaic_libary.MuoviSingleProbe.html
+  name: MuoviSingleProbe
+  nameWithType: MuoviSingleProbe
+  fullName: mosaic_libary.MuoviSingleProbe
+- uid: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  commentId: T:mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  parent: mosaic_libary
+  href: mosaic_libary.MuoviSingleProbe.html
+  name: MuoviSingleProbe.ProcessNewInput
+  nameWithType: MuoviSingleProbe.ProcessNewInput
+  fullName: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  spec.csharp:
+  - uid: mosaic_libary.MuoviSingleProbe
+    name: MuoviSingleProbe
+    href: mosaic_libary.MuoviSingleProbe.html
+  - name: .
+  - uid: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+    name: ProcessNewInput
+    href: mosaic_libary.MuoviSingleProbe.ProcessNewInput.html
+  spec.vb:
+  - uid: mosaic_libary.MuoviSingleProbe
+    name: MuoviSingleProbe
+    href: mosaic_libary.MuoviSingleProbe.html
+  - name: .
+  - uid: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+    name: ProcessNewInput
+    href: mosaic_libary.MuoviSingleProbe.ProcessNewInput.html
+- uid: mosaic_libary.UdpPayload
+  commentId: T:mosaic_libary.UdpPayload
+  href: mosaic_libary.UdpPayload.html
+  name: UdpPayload
+  nameWithType: UdpPayload
+  fullName: mosaic_libary.UdpPayload
+- uid: mosaic_libary.UDP_StreamlinedSender
+  commentId: T:mosaic_libary.UDP_StreamlinedSender
+  href: mosaic_libary.UDP_StreamlinedSender.html
+  name: UDP_StreamlinedSender
+  nameWithType: UDP_StreamlinedSender
+  fullName: mosaic_libary.UDP_StreamlinedSender
+- uid: mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+  commentId: T:mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+  parent: mosaic_libary
+  href: mosaic_libary.UDP_StreamlinedSender.html
+  name: UDP_StreamlinedSender.SerializeFunc
+  nameWithType: UDP_StreamlinedSender.SerializeFunc
+  fullName: mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+  spec.csharp:
+  - uid: mosaic_libary.UDP_StreamlinedSender
+    name: UDP_StreamlinedSender
+    href: mosaic_libary.UDP_StreamlinedSender.html
+  - name: .
+  - uid: mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+    name: SerializeFunc
+    href: mosaic_libary.UDP_StreamlinedSender.SerializeFunc.html
+  spec.vb:
+  - uid: mosaic_libary.UDP_StreamlinedSender
+    name: UDP_StreamlinedSender
+    href: mosaic_libary.UDP_StreamlinedSender.html
+  - name: .
+  - uid: mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+    name: SerializeFunc
+    href: mosaic_libary.UDP_StreamlinedSender.SerializeFunc.html
+- uid: mosaic_libary.DataType
+  commentId: T:mosaic_libary.DataType
+  href: mosaic_libary.DataType.html
+  name: DataType
+  nameWithType: DataType
+  fullName: mosaic_libary.DataType
+- uid: mosaic_libary.CpFilePlayer
+  commentId: T:mosaic_libary.CpFilePlayer
+  href: mosaic_libary.CpFilePlayer.html
+  name: CpFilePlayer
+  nameWithType: CpFilePlayer
+  fullName: mosaic_libary.CpFilePlayer
+- uid: mosaic_libary.FileType
+  commentId: T:mosaic_libary.FileType
+  parent: mosaic_libary
+  href: mosaic_libary.FileType.html
+  name: FileType
+  nameWithType: FileType
+  fullName: mosaic_libary.FileType
+- uid: mosaic_libary.FileReader
+  commentId: T:mosaic_libary.FileReader
+  parent: mosaic_libary
+  href: mosaic_libary.FileReader.html
+  name: FileReader
+  nameWithType: FileReader
+  fullName: mosaic_libary.FileReader
+- uid: mosaic_libary.FileReader.MatrixEventArgs
+  commentId: T:mosaic_libary.FileReader.MatrixEventArgs
+  parent: mosaic_libary
+  href: mosaic_libary.FileReader.html
+  name: FileReader.MatrixEventArgs
+  nameWithType: FileReader.MatrixEventArgs
+  fullName: mosaic_libary.FileReader.MatrixEventArgs
+  spec.csharp:
+  - uid: mosaic_libary.FileReader
+    name: FileReader
+    href: mosaic_libary.FileReader.html
+  - name: .
+  - uid: mosaic_libary.FileReader.MatrixEventArgs
+    name: MatrixEventArgs
+    href: mosaic_libary.FileReader.MatrixEventArgs.html
+  spec.vb:
+  - uid: mosaic_libary.FileReader
+    name: FileReader
+    href: mosaic_libary.FileReader.html
+  - name: .
+  - uid: mosaic_libary.FileReader.MatrixEventArgs
+    name: MatrixEventArgs
+    href: mosaic_libary.FileReader.MatrixEventArgs.html
+- uid: mosaic_libary.FileReader.ErrorEventArgs
+  commentId: T:mosaic_libary.FileReader.ErrorEventArgs
+  href: mosaic_libary.FileReader.html
+  name: FileReader.ErrorEventArgs
+  nameWithType: FileReader.ErrorEventArgs
+  fullName: mosaic_libary.FileReader.ErrorEventArgs
+  spec.csharp:
+  - uid: mosaic_libary.FileReader
+    name: FileReader
+    href: mosaic_libary.FileReader.html
+  - name: .
+  - uid: mosaic_libary.FileReader.ErrorEventArgs
+    name: ErrorEventArgs
+    href: mosaic_libary.FileReader.ErrorEventArgs.html
+  spec.vb:
+  - uid: mosaic_libary.FileReader
+    name: FileReader
+    href: mosaic_libary.FileReader.html
+  - name: .
+  - uid: mosaic_libary.FileReader.ErrorEventArgs
+    name: ErrorEventArgs
+    href: mosaic_libary.FileReader.ErrorEventArgs.html
+- uid: mosaic_libary.FilePlayer
+  commentId: T:mosaic_libary.FilePlayer
+  parent: mosaic_libary
+  href: mosaic_libary.FilePlayer.html
+  name: FilePlayer
+  nameWithType: FilePlayer
+  fullName: mosaic_libary.FilePlayer
+- uid: mosaic_libary.Joiner
+  commentId: T:mosaic_libary.Joiner
+  href: mosaic_libary.Joiner.html
+  name: Joiner
+  nameWithType: Joiner
+  fullName: mosaic_libary.Joiner
+- uid: mosaic_libary.BlenderArm
+  commentId: T:mosaic_libary.BlenderArm
+  href: mosaic_libary.BlenderArm.html
+  name: BlenderArm
+  nameWithType: BlenderArm
+  fullName: mosaic_libary.BlenderArm
+- uid: mosaic_libary.BluetoothLEManager
+  commentId: T:mosaic_libary.BluetoothLEManager
+  parent: mosaic_libary
+  href: mosaic_libary.BluetoothLEManager.html
+  name: BluetoothLEManager
+  nameWithType: BluetoothLEManager
+  fullName: mosaic_libary.BluetoothLEManager
+- uid: mosaic_libary.GENERAL_BLE_STATES
+  commentId: T:mosaic_libary.GENERAL_BLE_STATES
+  parent: mosaic_libary
+  href: mosaic_libary.GENERAL_BLE_STATES.html
+  name: GENERAL_BLE_STATES
+  nameWithType: GENERAL_BLE_STATES
+  fullName: mosaic_libary.GENERAL_BLE_STATES
+- uid: mosaic_libary.SPECIFIC_BLE_STATES
+  commentId: T:mosaic_libary.SPECIFIC_BLE_STATES
+  parent: mosaic_libary
+  href: mosaic_libary.SPECIFIC_BLE_STATES.html
+  name: SPECIFIC_BLE_STATES
+  nameWithType: SPECIFIC_BLE_STATES
+  fullName: mosaic_libary.SPECIFIC_BLE_STATES
+- uid: mosaic_libary.HannesGUI
+  commentId: T:mosaic_libary.HannesGUI
+  href: mosaic_libary.HannesGUI.html
+  name: HannesGUI
+  nameWithType: HannesGUI
+  fullName: mosaic_libary.HannesGUI
+- uid: mosaic_libary.cpMuovi
+  commentId: T:mosaic_libary.cpMuovi
+  href: mosaic_libary.cpMuovi.html
+  name: cpMuovi
+  nameWithType: cpMuovi
+  fullName: mosaic_libary.cpMuovi
+- uid: mosaic_libary.Muovi
+  commentId: T:mosaic_libary.Muovi
+  parent: mosaic_libary
+  href: mosaic_libary.Muovi.html
+  name: Muovi
+  nameWithType: Muovi
+  fullName: mosaic_libary.Muovi
+- uid: mosaic_libary.cpHannesReceiver
+  commentId: T:mosaic_libary.cpHannesReceiver
+  href: mosaic_libary.cpHannesReceiver.html
+  name: cpHannesReceiver
+  nameWithType: cpHannesReceiver
+  fullName: mosaic_libary.cpHannesReceiver
+- uid: mosaic_libary.HannesReceiver
+  commentId: T:mosaic_libary.HannesReceiver
+  parent: mosaic_libary
+  href: mosaic_libary.HannesReceiver.html
+  name: HannesReceiver
+  nameWithType: HannesReceiver
+  fullName: mosaic_libary.HannesReceiver
+- uid: mosaic_libary.cpDLR_ADCBT
+  commentId: T:mosaic_libary.cpDLR_ADCBT
+  href: mosaic_libary.cpDLR_ADCBT.html
+  name: cpDLR_ADCBT
+  nameWithType: cpDLR_ADCBT
+  fullName: mosaic_libary.cpDLR_ADCBT
+- uid: mosaic_libary.DLR_ADCBT
+  commentId: T:mosaic_libary.DLR_ADCBT
+  parent: mosaic_libary
+  href: mosaic_libary.DLR_ADCBT.html
+  name: DLR_ADCBT
+  nameWithType: DLR_ADCBT
+  fullName: mosaic_libary.DLR_ADCBT
+- uid: mosaic_libary.cpMyo
+  commentId: T:mosaic_libary.cpMyo
+  href: mosaic_libary.cpMyo.html
+  name: cpMyo
+  nameWithType: cpMyo
+  fullName: mosaic_libary.cpMyo
+- uid: mosaic_libary.Myo
+  commentId: T:mosaic_libary.Myo
+  parent: mosaic_libary
+  href: mosaic_libary.Myo.html
+  name: Myo
+  nameWithType: Myo
+  fullName: mosaic_libary.Myo
+- uid: mosaic_libary.cpNilsPod
+  commentId: T:mosaic_libary.cpNilsPod
+  href: mosaic_libary.cpNilsPod.html
+  name: cpNilsPod
+  nameWithType: cpNilsPod
+  fullName: mosaic_libary.cpNilsPod
+- uid: mosaic_libary.NilsPod
+  commentId: T:mosaic_libary.NilsPod
+  parent: mosaic_libary
+  href: mosaic_libary.NilsPod.html
+  name: NilsPod
+  nameWithType: NilsPod
+  fullName: mosaic_libary.NilsPod
+- uid: mosaic_libary.cpSinGenerator
+  commentId: T:mosaic_libary.cpSinGenerator
+  href: mosaic_libary.cpSinGenerator.html
+  name: cpSinGenerator
+  nameWithType: cpSinGenerator
+  fullName: mosaic_libary.cpSinGenerator
+- uid: mosaic_libary.SinGenerator
+  commentId: T:mosaic_libary.SinGenerator
+  parent: mosaic_libary
+  href: mosaic_libary.SinGenerator.html
+  name: SinGenerator
+  nameWithType: SinGenerator
+  fullName: mosaic_libary.SinGenerator
+- uid: mosaic_libary.cpStimulus
+  commentId: T:mosaic_libary.cpStimulus
+  href: mosaic_libary.cpStimulus.html
+  name: cpStimulus
+  nameWithType: cpStimulus
+  fullName: mosaic_libary.cpStimulus
+- uid: mosaic_libary.Stimulus
+  commentId: T:mosaic_libary.Stimulus
+  parent: mosaic_libary
+  href: mosaic_libary.Stimulus.html
+  name: Stimulus
+  nameWithType: Stimulus
+  fullName: mosaic_libary.Stimulus
+- uid: mosaic_libary.cpFilter
+  commentId: T:mosaic_libary.cpFilter
+  href: mosaic_libary.cpFilter.html
+  name: cpFilter
+  nameWithType: cpFilter
+  fullName: mosaic_libary.cpFilter
+- uid: mosaic_libary.Filter
+  commentId: T:mosaic_libary.Filter
+  parent: mosaic_libary
+  href: mosaic_libary.Filter.html
+  name: Filter
+  nameWithType: Filter
+  fullName: mosaic_libary.Filter
+- uid: mosaic_libary.cpBuffer
+  commentId: T:mosaic_libary.cpBuffer
+  href: mosaic_libary.cpBuffer.html
+  name: cpBuffer
+  nameWithType: cpBuffer
+  fullName: mosaic_libary.cpBuffer
+- uid: mosaic_libary.Buffer
+  commentId: T:mosaic_libary.Buffer
+  parent: mosaic_libary
+  href: mosaic_libary.Buffer.html
+  name: Buffer
+  nameWithType: Buffer
+  fullName: mosaic_libary.Buffer
+- uid: mosaic_libary.Projector
+  commentId: T:mosaic_libary.Projector
+  href: mosaic_libary.Projector.html
+  name: Projector
+  nameWithType: Projector
+  fullName: mosaic_libary.Projector
+- uid: mosaic_libary.Selector
+  commentId: T:mosaic_libary.Selector
+  href: mosaic_libary.Selector.html
+  name: Selector
+  nameWithType: Selector
+  fullName: mosaic_libary.Selector
+- uid: mosaic_libary.StimTrigger
+  commentId: T:mosaic_libary.StimTrigger
+  href: mosaic_libary.StimTrigger.html
+  name: StimTrigger
+  nameWithType: StimTrigger
+  fullName: mosaic_libary.StimTrigger
+- uid: mosaic_libary.cpSwitch
+  commentId: T:mosaic_libary.cpSwitch
+  href: mosaic_libary.cpSwitch.html
+  name: cpSwitch
+  nameWithType: cpSwitch
+  fullName: mosaic_libary.cpSwitch
+- uid: mosaic_libary.Switch
+  commentId: T:mosaic_libary.Switch
+  parent: mosaic_libary
+  href: mosaic_libary.Switch.html
+  name: Switch
+  nameWithType: Switch
+  fullName: mosaic_libary.Switch
+- uid: mosaic_libary.cpTrigger
+  commentId: T:mosaic_libary.cpTrigger
+  href: mosaic_libary.cpTrigger.html
+  name: cpTrigger
+  nameWithType: cpTrigger
+  fullName: mosaic_libary.cpTrigger
+- uid: mosaic_libary.Trigger
+  commentId: T:mosaic_libary.Trigger
+  parent: mosaic_libary
+  href: mosaic_libary.Trigger.html
+  name: Trigger
+  nameWithType: Trigger
+  fullName: mosaic_libary.Trigger
+- uid: mosaic_libary.cpFunction
+  commentId: T:mosaic_libary.cpFunction
+  href: mosaic_libary.cpFunction.html
+  name: cpFunction
+  nameWithType: cpFunction
+  fullName: mosaic_libary.cpFunction
+- uid: mosaic_libary.Function
+  commentId: T:mosaic_libary.Function
+  parent: mosaic_libary
+  href: mosaic_libary.Function.html
+  name: Function
+  nameWithType: Function
+  fullName: mosaic_libary.Function
+- uid: mosaic_libary.cpBatchPredictor
+  commentId: T:mosaic_libary.cpBatchPredictor
+  href: mosaic_libary.cpBatchPredictor.html
+  name: cpBatchPredictor
+  nameWithType: cpBatchPredictor
+  fullName: mosaic_libary.cpBatchPredictor
+- uid: mosaic_libary.BatchPredictor
+  commentId: T:mosaic_libary.BatchPredictor
+  parent: mosaic_libary
+  href: mosaic_libary.BatchPredictor.html
+  name: BatchPredictor
+  nameWithType: BatchPredictor
+  fullName: mosaic_libary.BatchPredictor
+- uid: mosaic_libary.cpTAC
+  commentId: T:mosaic_libary.cpTAC
+  href: mosaic_libary.cpTAC.html
+  name: cpTAC
+  nameWithType: cpTAC
+  fullName: mosaic_libary.cpTAC
+- uid: mosaic_libary.TAC
+  commentId: T:mosaic_libary.TAC
+  parent: mosaic_libary
+  href: mosaic_libary.TAC.html
+  name: TAC
+  nameWithType: TAC
+  fullName: mosaic_libary.TAC
+- uid: mosaic_libary.cpIncrementalPredictor
+  commentId: T:mosaic_libary.cpIncrementalPredictor
+  href: mosaic_libary.cpIncrementalPredictor.html
+  name: cpIncrementalPredictor
+  nameWithType: cpIncrementalPredictor
+  fullName: mosaic_libary.cpIncrementalPredictor
+- uid: mosaic_libary.IncrementalPredictor
+  commentId: T:mosaic_libary.IncrementalPredictor
+  parent: mosaic_libary
+  href: mosaic_libary.IncrementalPredictor.html
+  name: IncrementalPredictor
+  nameWithType: IncrementalPredictor
+  fullName: mosaic_libary.IncrementalPredictor
+- uid: mosaic_libary.cpResampler
+  commentId: T:mosaic_libary.cpResampler
+  href: mosaic_libary.cpResampler.html
+  name: cpResampler
+  nameWithType: cpResampler
+  fullName: mosaic_libary.cpResampler
+- uid: mosaic_libary.Resampler
+  commentId: T:mosaic_libary.Resampler
+  parent: mosaic_libary
+  href: mosaic_libary.Resampler.html
+  name: Resampler
+  nameWithType: Resampler
+  fullName: mosaic_libary.Resampler
+- uid: mosaic_libary.ROS
+  commentId: T:mosaic_libary.ROS
+  href: mosaic_libary.ROS.html
+  name: ROS
+  nameWithType: ROS
+  fullName: mosaic_libary.ROS
+- uid: mosaic_libary.DecimatorTimer
+  commentId: T:mosaic_libary.DecimatorTimer
+  href: mosaic_libary.DecimatorTimer.html
+  name: DecimatorTimer
+  nameWithType: DecimatorTimer
+  fullName: mosaic_libary.DecimatorTimer
+- uid: mosaic_libary.cpScheduledTimer
+  commentId: T:mosaic_libary.cpScheduledTimer
+  href: mosaic_libary.cpScheduledTimer.html
+  name: cpScheduledTimer
+  nameWithType: cpScheduledTimer
+  fullName: mosaic_libary.cpScheduledTimer
+- uid: mosaic_libary.ScheduledTimer
+  commentId: T:mosaic_libary.ScheduledTimer
+  parent: mosaic_libary
+  href: mosaic_libary.ScheduledTimer.html
+  name: ScheduledTimer
+  nameWithType: ScheduledTimer
+  fullName: mosaic_libary.ScheduledTimer
+- uid: mosaic_libary.cpVectorialFunction
+  commentId: T:mosaic_libary.cpVectorialFunction
+  href: mosaic_libary.cpVectorialFunction.html
+  name: cpVectorialFunction
+  nameWithType: cpVectorialFunction
+  fullName: mosaic_libary.cpVectorialFunction
+- uid: mosaic_libary.VectorialFunction
+  commentId: T:mosaic_libary.VectorialFunction
+  parent: mosaic_libary
+  href: mosaic_libary.VectorialFunction.html
+  name: VectorialFunction
+  nameWithType: VectorialFunction
+  fullName: mosaic_libary.VectorialFunction
+- uid: mosaic_libary.PredictingMachine
+  commentId: T:mosaic_libary.PredictingMachine
+  parent: mosaic_libary
+  href: mosaic_libary.PredictingMachine.html
+  name: PredictingMachine
+  nameWithType: PredictingMachine
+  fullName: mosaic_libary.PredictingMachine
+- uid: mosaic_libary.BatchLearningMachine
+  commentId: T:mosaic_libary.BatchLearningMachine
+  parent: mosaic_libary
+  href: mosaic_libary.BatchLearningMachine.html
+  name: BatchLearningMachine
+  nameWithType: BatchLearningMachine
+  fullName: mosaic_libary.BatchLearningMachine
+- uid: mosaic_libary.IncrementalLearningMachine
+  commentId: T:mosaic_libary.IncrementalLearningMachine
+  parent: mosaic_libary
+  href: mosaic_libary.IncrementalLearningMachine.html
+  name: IncrementalLearningMachine
+  nameWithType: IncrementalLearningMachine
+  fullName: mosaic_libary.IncrementalLearningMachine
+- uid: mosaic_libary.RidgeRegression
+  commentId: T:mosaic_libary.RidgeRegression
+  parent: mosaic_libary
+  href: mosaic_libary.RidgeRegression.html
+  name: RidgeRegression
+  nameWithType: RidgeRegression
+  fullName: mosaic_libary.RidgeRegression
+- uid: mosaic_libary.RR_RFF
+  commentId: T:mosaic_libary.RR_RFF
+  href: mosaic_libary.RR_RFF.html
+  name: RR_RFF
+  nameWithType: RR_RFF
+  fullName: mosaic_libary.RR_RFF
+- uid: mosaic_libary.IncrementalRidgeRegression
+  commentId: T:mosaic_libary.IncrementalRidgeRegression
+  parent: mosaic_libary
+  href: mosaic_libary.IncrementalRidgeRegression.html
+  name: IncrementalRidgeRegression
+  nameWithType: IncrementalRidgeRegression
+  fullName: mosaic_libary.IncrementalRidgeRegression
+- uid: mosaic_libary.IncrementalRFF
+  commentId: T:mosaic_libary.IncrementalRFF
+  href: mosaic_libary.IncrementalRFF.html
+  name: IncrementalRFF
+  nameWithType: IncrementalRFF
+  fullName: mosaic_libary.IncrementalRFF
+- uid: mosaic_libary.IncrementalLDA
+  commentId: T:mosaic_libary.IncrementalLDA
+  href: mosaic_libary.IncrementalLDA.html
+  name: IncrementalLDA
+  nameWithType: IncrementalLDA
+  fullName: mosaic_libary.IncrementalLDA
+- uid: mosaic_libary.BlockTable
+  commentId: T:mosaic_libary.BlockTable
+  href: mosaic_libary.BlockTable.html
+  name: BlockTable
+  nameWithType: BlockTable
+  fullName: mosaic_libary.BlockTable
+- uid: mosaic_libary.Vertex
+  commentId: T:mosaic_libary.Vertex
+  parent: mosaic_libary
+  href: mosaic_libary.Vertex.html
+  name: Vertex
+  nameWithType: Vertex
+  fullName: mosaic_libary.Vertex
+- uid: mosaic_libary.Edge
+  commentId: T:mosaic_libary.Edge
+  href: mosaic_libary.Edge.html
+  name: Edge
+  nameWithType: Edge
+  fullName: mosaic_libary.Edge
+- uid: mosaic_libary.BlockTableArea
+  commentId: T:mosaic_libary.BlockTableArea
+  parent: mosaic_libary
+  href: mosaic_libary.BlockTableArea.html
+  name: BlockTableArea
+  nameWithType: BlockTableArea
+  fullName: mosaic_libary.BlockTableArea
+- uid: mosaic_libary.GraphData
+  commentId: T:mosaic_libary.GraphData
+  parent: mosaic_libary
+  href: mosaic_libary.GraphData.html
+  name: GraphData
+  nameWithType: GraphData
+  fullName: mosaic_libary.GraphData
+- uid: mosaic_libary.GXLogicCore
+  commentId: T:mosaic_libary.GXLogicCore
+  href: mosaic_libary.GXLogicCore.html
+  name: GXLogicCore
+  nameWithType: GXLogicCore
+  fullName: mosaic_libary.GXLogicCore
+- uid: mosaic_libary.BlockTable_window
+  commentId: T:mosaic_libary.BlockTable_window
+  parent: mosaic_libary
+  href: mosaic_libary.BlockTable_window.html
+  name: BlockTable_window
+  nameWithType: BlockTable_window
+  fullName: mosaic_libary.BlockTable_window
+- uid: mosaic_libary.ControlPanel
+  commentId: T:mosaic_libary.ControlPanel
+  parent: mosaic_libary
+  href: mosaic_libary.ControlPanel.html
+  name: ControlPanel
+  nameWithType: ControlPanel
+  fullName: mosaic_libary.ControlPanel
+- uid: mosaic_libary.Monitor
+  commentId: T:mosaic_libary.Monitor
+  parent: mosaic_libary
+  href: mosaic_libary.Monitor.html
+  name: Monitor
+  nameWithType: Monitor
+  fullName: mosaic_libary.Monitor
+- uid: mosaic_libary.SimpleProgressBar
+  commentId: T:mosaic_libary.SimpleProgressBar
+  parent: mosaic_libary
+  href: mosaic_libary.SimpleProgressBar.html
+  name: SimpleProgressBar
+  nameWithType: SimpleProgressBar
+  fullName: mosaic_libary.SimpleProgressBar
+- uid: mosaic_libary.CircularBuffer`1
+  commentId: T:mosaic_libary.CircularBuffer`1
+  href: mosaic_libary.CircularBuffer-1.html
+  name: CircularBuffer<T>
+  nameWithType: CircularBuffer<T>
+  fullName: mosaic_libary.CircularBuffer<T>
+  nameWithType.vb: CircularBuffer(Of T)
+  fullName.vb: mosaic_libary.CircularBuffer(Of T)
+  name.vb: CircularBuffer(Of T)
+  spec.csharp:
+  - uid: mosaic_libary.CircularBuffer`1
+    name: CircularBuffer
+    href: mosaic_libary.CircularBuffer-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: mosaic_libary.CircularBuffer`1
+    name: CircularBuffer
+    href: mosaic_libary.CircularBuffer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: mosaic_libary.DBWriter
+  commentId: T:mosaic_libary.DBWriter
+  parent: mosaic_libary
+  href: mosaic_libary.DBWriter.html
+  name: DBWriter
+  nameWithType: DBWriter
+  fullName: mosaic_libary.DBWriter
+- uid: mosaic_libary.StreamManager
+  commentId: T:mosaic_libary.StreamManager
+  parent: mosaic_libary
+  href: mosaic_libary.StreamManager.html
+  name: StreamManager
+  nameWithType: StreamManager
+  fullName: mosaic_libary.StreamManager
+- uid: mosaic_libary.StreamManager.DataReceivedHandler
+  commentId: T:mosaic_libary.StreamManager.DataReceivedHandler
+  parent: mosaic_libary
+  href: mosaic_libary.StreamManager.html
+  name: StreamManager.DataReceivedHandler
+  nameWithType: StreamManager.DataReceivedHandler
+  fullName: mosaic_libary.StreamManager.DataReceivedHandler
+  spec.csharp:
+  - uid: mosaic_libary.StreamManager
+    name: StreamManager
+    href: mosaic_libary.StreamManager.html
+  - name: .
+  - uid: mosaic_libary.StreamManager.DataReceivedHandler
+    name: DataReceivedHandler
+    href: mosaic_libary.StreamManager.DataReceivedHandler.html
+  spec.vb:
+  - uid: mosaic_libary.StreamManager
+    name: StreamManager
+    href: mosaic_libary.StreamManager.html
+  - name: .
+  - uid: mosaic_libary.StreamManager.DataReceivedHandler
+    name: DataReceivedHandler
+    href: mosaic_libary.StreamManager.DataReceivedHandler.html
+- uid: mosaic_libary.Utils
+  commentId: T:mosaic_libary.Utils
+  href: mosaic_libary.Utils.html
+  name: Utils
+  nameWithType: Utils
+  fullName: mosaic_libary.Utils
+- uid: mosaic_libary.ScopeMonitor
+  commentId: T:mosaic_libary.ScopeMonitor
+  parent: mosaic_libary
+  href: mosaic_libary.ScopeMonitor.html
+  name: ScopeMonitor
+  nameWithType: ScopeMonitor
+  fullName: mosaic_libary.ScopeMonitor
+- uid: mosaic_libary.Timer
+  commentId: T:mosaic_libary.Timer
+  parent: mosaic_libary
+  href: mosaic_libary.Timer.html
+  name: Timer
+  nameWithType: Timer
+  fullName: mosaic_libary.Timer
+- uid: mosaic_libary.SpiderPlotMonitor
+  commentId: T:mosaic_libary.SpiderPlotMonitor
+  parent: mosaic_libary
+  href: mosaic_libary.SpiderPlotMonitor.html
+  name: SpiderPlotMonitor
+  nameWithType: SpiderPlotMonitor
+  fullName: mosaic_libary.SpiderPlotMonitor
+- uid: mosaic_libary.HeatMapMonitor
+  commentId: T:mosaic_libary.HeatMapMonitor
+  parent: mosaic_libary
+  href: mosaic_libary.HeatMapMonitor.html
+  name: HeatMapMonitor
+  nameWithType: HeatMapMonitor
+  fullName: mosaic_libary.HeatMapMonitor
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary

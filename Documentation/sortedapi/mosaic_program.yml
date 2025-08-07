@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_program
+  commentId: N:mosaic_program
+  id: mosaic_program
+  children:
+  - mosaic_program.Program
+  - mosaic_program.template_project_mainForm
+  langs:
+  - csharp
+  - vb
+  name: mosaic_program
+  nameWithType: mosaic_program
+  fullName: mosaic_program
+  type: Namespace
+  assemblies:
+  - template_project
+references:
+- uid: mosaic_program.Program
+  commentId: T:mosaic_program.Program
+  href: mosaic_program.Program.html
+  name: Program
+  nameWithType: Program
+  fullName: mosaic_program.Program
+- uid: mosaic_program.template_project_mainForm
+  commentId: T:mosaic_program.template_project_mainForm
+  href: mosaic_program.template_project_mainForm.html
+  name: template_project_mainForm
+  nameWithType: template_project_mainForm
+  fullName: mosaic_program.template_project_mainForm

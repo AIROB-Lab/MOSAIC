@@ -1,0 +1,67 @@
+# -------------------------------------
+# gather EMG at 200Hz, process it
+# -------------------------------------
+# -------------------------------------
+# simple example #1:
+# generate 10D sinusoidal signal at 200Hz, square it and double it.
+# demonstrate subscribing or not subscribing (doubledSignal does or does not subscribe to sinusoidSignal according to the "-" in the Inputs).
+# rather than using two scheduled timers, use a DecimatorTimer to decimate a fast (2kHz) ScheduledTimer
+# -------------------------------------
+
+# each block is declared as follows:
+# <name>: {
+#    Type: <string>,
+#    DesiredRate: <double>,
+#    Inputs: [ <string>,...,<string> ],
+#    Params: [ <string>,...,<string> ],
+#    Path: <string>
+# }
+
+# if an entry in Inputs starts with '-', we do not subscribe immediately to the entry:
+# try to remove the '-' in the definition of the Inputs to doubledSignal and see what happens.
+# specifying a Path will cause any block to dump its data to Path\name.txt.
+
+timerFast: { Type: ScheduledTimer, DesiredRate: 110 }
+timerSlow: { Type: DecimatorTimer, DesiredRate: 50, Inputs: [ timerFast ] }
+
+FBGS: { Type: FBGS, Inputs: [ timerFast ], Params: [ 0, 1 ], Path: 'D:\Logs\FBGS_logs' }
+FBGS_F1: {Type: AdaptiveFilter, Inputs: [ FBGS ], Params: [ 1, 1, 0, 0 ]}
+FBGS_F2: {Type: AdaptiveFilter, Inputs: [ FBGS ], Params: [ 1, -5, -34, 0 ]}
+FBGS_BP: {Type: vectorialFunction, Inputs: [FBGS_F1, FBGS_F2], Params: ['subtract']}
+
+ROIFitter: {Type: hyperplaneFitting, Inputs: [FBGS_BP], Params: [4]}
+ROIResampled: { Type: Resampler, Inputs: [ ROIFitter, timerSlow ] }
+# sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 10 ], Path: 'C:\temp' }
+
+
+
+
+ground_truth: { Type: Trigger, Params: [
+      rest:0;0;0;0;0;0;0;0;0;0;0;0;0,
+     power:1;1;1;1;1;1;0;0;0;0;0;0;0,
+      flex:0;0;0;0;0;0;1;0;0;0;0;0;0,
+    extend:0;0;0;0;0;0;0;1;0;0;0;0;0,
+      pron:0;0;0;0;0;0;0;0;1;0;0;0;0,
+       sup:0;0;0;0;0;0;0;0;0;1;0;0;0,
+     radial:0;0;0;0;0;0;0;0;0;0;1;0;0,
+    ulnar:0;0;0;0;0;0;0;0;0;0;0;1;0
+], Path: 'D:\Logs\FBGS_logs' }
+
+
+
+# stepwise control needs 13 as third parameter (additional open)
+incr_learn_prediction: { Type: IncrementalPredictor, Inputs: [ ROIResampled, ground_truth ], Params: [ IncrementalRidgeRegression, 10, 13 ] }
+
+incr_capped: {Type: Function, Inputs: [incr_learn_prediction], Params: [clip:1]}
+incr_rff_prediction: { Type: IncrementalPredictor, Inputs: [ ROIResampled, ground_truth ], Params: [ IncrementalRFF, 10, 13 ] }
+
+
+controlAlgorithm: { Type: ControlAlgorithm, Inputs: [incr_capped], Params: [ algorithm:DirectControl ]}
+controlAlgorithmrff: { Type: ControlAlgorithm, Inputs: [incr_rff_prediction], Params: [ algorithm:DirectControl ]}
+
+
+blender_skin_arm_ctrl: { Type: BlenderArm, Inputs: [ controlAlgorithm ], Params: [ localhost, 3334 ] }
+blender_skin_arm_ctrlrff: { Type: BlenderArm, Inputs: [ controlAlgorithmrff ], Params: [ localhost, 3333 ] }
+
+# hannes_arm_rem: { Type: HannesArm, Inputs: [ incr_learn_prediction, raw_EMG, ARV ], Params: [ '10.203.25.149', 8889, 8, 64]} #Params: ip, port, num_rawEMGs (in bytes), num_ARVs (in bytes)
+#hannes_arm_loc: { Type: HannesArm, Inputs: [ controlAlgorithm, raw_EMG, ARV ], Params: [ localhost, 8889, 8, 64 ]}

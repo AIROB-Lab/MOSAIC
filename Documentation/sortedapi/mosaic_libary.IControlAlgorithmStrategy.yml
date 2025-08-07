@@ -1,0 +1,323 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.IControlAlgorithmStrategy
+  commentId: T:mosaic_libary.IControlAlgorithmStrategy
+  id: IControlAlgorithmStrategy
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+  - mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  langs:
+  - csharp
+  - vb
+  name: IControlAlgorithmStrategy
+  nameWithType: IControlAlgorithmStrategy
+  fullName: mosaic_libary.IControlAlgorithmStrategy
+  type: Interface
+  source:
+    id: IControlAlgorithmStrategy
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\IControlAlgorithmStrategy.cs
+    startLine: 12
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Defines the interface for all control algorithm strategies.
+  example: []
+  syntax:
+    content: public interface IControlAlgorithmStrategy
+    content.vb: Public Interface IControlAlgorithmStrategy
+- uid: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  id: ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.IControlAlgorithmStrategy
+  langs:
+  - csharp
+  - vb
+  name: ProcessPrediction(Vector<double>)
+  nameWithType: IControlAlgorithmStrategy.ProcessPrediction(Vector<double>)
+  fullName: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  type: Method
+  source:
+    id: ProcessPrediction
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\IControlAlgorithmStrategy.cs
+    startLine: 25
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Processes the prediction vector and updates actuation values accordingly.
+  remarks: >-
+    The interpretation of the prediction values depends on the specific control strategy.
+
+    Implementing classes must define how the mapping is performed.
+  example: []
+  syntax:
+    content: void ProcessPrediction(Vector<double> prediction)
+    parameters:
+    - id: prediction
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: >-
+        A vector containing predicted activation values for each Degree of Actuation (DOA).
+
+        The values are typically in the range [0,1] and need to be mapped to [0,100] for actuation.
+    content.vb: Sub ProcessPrediction(prediction As Vector(Of Double))
+  overload: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction*
+  nameWithType.vb: IControlAlgorithmStrategy.ProcessPrediction(Vector(Of Double))
+  fullName.vb: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: ProcessPrediction(Vector(Of Double))
+- uid: mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+  commentId: M:mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+  id: GetControlDict
+  parent: mosaic_libary.IControlAlgorithmStrategy
+  langs:
+  - csharp
+  - vb
+  name: GetControlDict()
+  nameWithType: IControlAlgorithmStrategy.GetControlDict()
+  fullName: mosaic_libary.IControlAlgorithmStrategy.GetControlDict()
+  type: Method
+  source:
+    id: GetControlDict
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\IControlAlgorithmStrategy.cs
+    startLine: 34
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Retrieves the current control dictionary containing actuation values for all DOAs.
+  example: []
+  syntax:
+    content: Dictionary<DOAs, double> GetControlDict()
+    return:
+      type: System.Collections.Generic.Dictionary{mosaic_libary.DOAs,System.Double}
+      description: A dictionary where each <xref href="mosaic_libary.DOAs" data-throw-if-not-resolved="false"></xref> key is mapped to its corresponding actuation value.
+    content.vb: Function GetControlDict() As Dictionary(Of DOAs, Double)
+  overload: mosaic_libary.IControlAlgorithmStrategy.GetControlDict*
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction*
+  commentId: Overload:mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction
+  href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_ProcessPrediction_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: ProcessPrediction
+  nameWithType: IControlAlgorithmStrategy.ProcessPrediction
+  fullName: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: mosaic_libary.DOAs
+  commentId: T:mosaic_libary.DOAs
+  parent: mosaic_libary
+  href: mosaic_libary.DOAs.html
+  name: DOAs
+  nameWithType: DOAs
+  fullName: mosaic_libary.DOAs
+- uid: mosaic_libary.IControlAlgorithmStrategy.GetControlDict*
+  commentId: Overload:mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+  href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_GetControlDict
+  name: GetControlDict
+  nameWithType: IControlAlgorithmStrategy.GetControlDict
+  fullName: mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+- uid: System.Collections.Generic.Dictionary{mosaic_libary.DOAs,System.Double}
+  commentId: T:System.Collections.Generic.Dictionary{mosaic_libary.DOAs,System.Double}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<DOAs, double>
+  nameWithType: Dictionary<DOAs, double>
+  fullName: System.Collections.Generic.Dictionary<mosaic_libary.DOAs, double>
+  nameWithType.vb: Dictionary(Of DOAs, Double)
+  fullName.vb: System.Collections.Generic.Dictionary(Of mosaic_libary.DOAs, Double)
+  name.vb: Dictionary(Of DOAs, Double)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.DOAs
+    name: DOAs
+    href: mosaic_libary.DOAs.html
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.DOAs
+    name: DOAs
+    href: mosaic_libary.DOAs.html
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

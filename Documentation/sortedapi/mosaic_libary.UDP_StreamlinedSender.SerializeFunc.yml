@@ -1,0 +1,43 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+  commentId: T:mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+  id: UDP_StreamlinedSender.SerializeFunc
+  parent: mosaic_libary
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: UDP_StreamlinedSender.SerializeFunc
+  nameWithType: UDP_StreamlinedSender.SerializeFunc
+  fullName: mosaic_libary.UDP_StreamlinedSender.SerializeFunc
+  type: Delegate
+  source:
+    id: SerializeFunc
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\UDP_StreamlinedSender.cs
+    startLine: 51
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public delegate void UDP_StreamlinedSender.SerializeFunc(dynamic value)
+    parameters:
+    - id: value
+      type: dynamic
+    content.vb: Public Delegate Sub UDP_StreamlinedSender.SerializeFunc(value As Object)
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: dynamic
+  commentId: T:System.Object
+  isExternal: true
+  name: dynamic
+  nameWithType: dynamic
+  fullName: dynamic
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object

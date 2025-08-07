@@ -1,0 +1,808 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.StreamManager
+  commentId: T:mosaic_libary.StreamManager
+  id: StreamManager
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.StreamManager.#ctor(System.IO.Stream,System.Int32,System.Int32)
+  - mosaic_libary.StreamManager.DataReceived
+  - mosaic_libary.StreamManager.FinishedReading(System.IAsyncResult)
+  - mosaic_libary.StreamManager.StartStreaming
+  - mosaic_libary.StreamManager.StopStreaming
+  - mosaic_libary.StreamManager.Write(System.Byte[])
+  - mosaic_libary.StreamManager.WriteAsync(System.Byte[])
+  - mosaic_libary.StreamManager._bufferLength
+  - mosaic_libary.StreamManager._delayInMilliseconds
+  - mosaic_libary.StreamManager._myBuffer
+  - mosaic_libary.StreamManager._myStream
+  - mosaic_libary.StreamManager._numberOfBytesReceived
+  - mosaic_libary.StreamManager._stopStreaming
+  langs:
+  - csharp
+  - vb
+  name: StreamManager
+  nameWithType: StreamManager
+  fullName: mosaic_libary.StreamManager
+  type: Class
+  source:
+    id: StreamManager
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 231
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    StreamManager - Takes a Stream (off a file, a string, a serial port, a TCP socket,
+        or whatever else is based upon a Stream) and
+            1. enforces a Write()/WriteAsync() method to write to the stream;
+            2. fires a DataReceived event whenever new data is available.
+        Originally born because the SerialPort.DataReceived event seems to be unreliable
+        (see https://www.sparxeng.com/blog/software/must-use-net-system-io-ports-serialport).
+        Uses StartReading() to invoke Stream.BeginRead and asynchronously read stuff from the stream;
+        upon finishing reading, FinishedReading() is called upon, which is where the DataReceived event is fired.
+        After firing the event, FinishedReading() calls StartReading() again, unless StopReading is set to true.
+        Initialise the class with a Stream, the maximum length of the buffer for the received data,
+        and a delay in msecs, which the class will wait for if no data was available. This is essential,
+        otherwise the BeginRead()/FinishedReading() cycle would spin as fast as possible.
+  example: []
+  syntax:
+    content: public class StreamManager
+    content.vb: Public Class StreamManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.StreamManager._myStream
+  commentId: F:mosaic_libary.StreamManager._myStream
+  id: _myStream
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: _myStream
+  nameWithType: StreamManager._myStream
+  fullName: mosaic_libary.StreamManager._myStream
+  type: Field
+  source:
+    id: _myStream
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 236
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Stream used for reading data.
+  example: []
+  syntax:
+    content: private Stream _myStream
+    return:
+      type: System.IO.Stream
+    content.vb: Private _myStream As Stream
+- uid: mosaic_libary.StreamManager._myBuffer
+  commentId: F:mosaic_libary.StreamManager._myBuffer
+  id: _myBuffer
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: _myBuffer
+  nameWithType: StreamManager._myBuffer
+  fullName: mosaic_libary.StreamManager._myBuffer
+  type: Field
+  source:
+    id: _myBuffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 241
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Buffer used for storing received data.
+  example: []
+  syntax:
+    content: private byte[] _myBuffer
+    return:
+      type: System.Byte[]
+    content.vb: Private _myBuffer As Byte()
+- uid: mosaic_libary.StreamManager._delayInMilliseconds
+  commentId: F:mosaic_libary.StreamManager._delayInMilliseconds
+  id: _delayInMilliseconds
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: _delayInMilliseconds
+  nameWithType: StreamManager._delayInMilliseconds
+  fullName: mosaic_libary.StreamManager._delayInMilliseconds
+  type: Field
+  source:
+    id: _delayInMilliseconds
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 246
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Delay in milliseconds for waiting if no data is available.
+  example: []
+  syntax:
+    content: private int _delayInMilliseconds
+    return:
+      type: System.Int32
+    content.vb: Private _delayInMilliseconds As Integer
+- uid: mosaic_libary.StreamManager._stopStreaming
+  commentId: F:mosaic_libary.StreamManager._stopStreaming
+  id: _stopStreaming
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: _stopStreaming
+  nameWithType: StreamManager._stopStreaming
+  fullName: mosaic_libary.StreamManager._stopStreaming
+  type: Field
+  source:
+    id: _stopStreaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 251
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Flag indicating whether to stop streaming.
+  example: []
+  syntax:
+    content: private bool _stopStreaming
+    return:
+      type: System.Boolean
+    content.vb: Private _stopStreaming As Boolean
+- uid: mosaic_libary.StreamManager._bufferLength
+  commentId: F:mosaic_libary.StreamManager._bufferLength
+  id: _bufferLength
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: _bufferLength
+  nameWithType: StreamManager._bufferLength
+  fullName: mosaic_libary.StreamManager._bufferLength
+  type: Field
+  source:
+    id: _bufferLength
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 256
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Maximum length of the buffer for received data.
+  example: []
+  syntax:
+    content: private int _bufferLength
+    return:
+      type: System.Int32
+    content.vb: Private _bufferLength As Integer
+- uid: mosaic_libary.StreamManager._numberOfBytesReceived
+  commentId: F:mosaic_libary.StreamManager._numberOfBytesReceived
+  id: _numberOfBytesReceived
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: _numberOfBytesReceived
+  nameWithType: StreamManager._numberOfBytesReceived
+  fullName: mosaic_libary.StreamManager._numberOfBytesReceived
+  type: Field
+  source:
+    id: _numberOfBytesReceived
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 261
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Number of bytes received in the last read operation.
+  example: []
+  syntax:
+    content: private int _numberOfBytesReceived
+    return:
+      type: System.Int32
+    content.vb: Private _numberOfBytesReceived As Integer
+- uid: mosaic_libary.StreamManager.#ctor(System.IO.Stream,System.Int32,System.Int32)
+  commentId: M:mosaic_libary.StreamManager.#ctor(System.IO.Stream,System.Int32,System.Int32)
+  id: '#ctor(System.IO.Stream,System.Int32,System.Int32)'
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: StreamManager(Stream, int, int)
+  nameWithType: StreamManager.StreamManager(Stream, int, int)
+  fullName: mosaic_libary.StreamManager.StreamManager(System.IO.Stream, int, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 270
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Constructs a new StreamManager instance.
+  example: []
+  syntax:
+    content: public StreamManager(Stream myStream, int bufferLength = 1024, int delayInMilliseconds = 10)
+    parameters:
+    - id: myStream
+      type: System.IO.Stream
+      description: The input stream.
+    - id: bufferLength
+      type: System.Int32
+      description: The maximum length of the buffer for received data.
+    - id: delayInMilliseconds
+      type: System.Int32
+      description: The delay in milliseconds for waiting if no data is available.
+    content.vb: Public Sub New(myStream As Stream, bufferLength As Integer = 1024, delayInMilliseconds As Integer = 10)
+  overload: mosaic_libary.StreamManager.#ctor*
+  nameWithType.vb: StreamManager.New(Stream, Integer, Integer)
+  fullName.vb: mosaic_libary.StreamManager.New(System.IO.Stream, Integer, Integer)
+  name.vb: New(Stream, Integer, Integer)
+- uid: mosaic_libary.StreamManager.Write(System.Byte[])
+  commentId: M:mosaic_libary.StreamManager.Write(System.Byte[])
+  id: Write(System.Byte[])
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: Write(byte[])
+  nameWithType: StreamManager.Write(byte[])
+  fullName: mosaic_libary.StreamManager.Write(byte[])
+  type: Method
+  source:
+    id: Write
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 283
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Writes the specified message to the stream.
+  example: []
+  syntax:
+    content: public void Write(byte[] msg)
+    parameters:
+    - id: msg
+      type: System.Byte[]
+      description: The message to write.
+    content.vb: Public Sub Write(msg As Byte())
+  overload: mosaic_libary.StreamManager.Write*
+  nameWithType.vb: StreamManager.Write(Byte())
+  fullName.vb: mosaic_libary.StreamManager.Write(Byte())
+  name.vb: Write(Byte())
+- uid: mosaic_libary.StreamManager.WriteAsync(System.Byte[])
+  commentId: M:mosaic_libary.StreamManager.WriteAsync(System.Byte[])
+  id: WriteAsync(System.Byte[])
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: WriteAsync(byte[])
+  nameWithType: StreamManager.WriteAsync(byte[])
+  fullName: mosaic_libary.StreamManager.WriteAsync(byte[])
+  type: Method
+  source:
+    id: WriteAsync
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 289
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Asynchronously writes the specified message to the stream.
+  example: []
+  syntax:
+    content: public void WriteAsync(byte[] msg)
+    parameters:
+    - id: msg
+      type: System.Byte[]
+      description: The message to write.
+    content.vb: Public Sub WriteAsync(msg As Byte())
+  overload: mosaic_libary.StreamManager.WriteAsync*
+  nameWithType.vb: StreamManager.WriteAsync(Byte())
+  fullName.vb: mosaic_libary.StreamManager.WriteAsync(Byte())
+  name.vb: WriteAsync(Byte())
+- uid: mosaic_libary.StreamManager.StartStreaming
+  commentId: M:mosaic_libary.StreamManager.StartStreaming
+  id: StartStreaming
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: StartStreaming()
+  nameWithType: StreamManager.StartStreaming()
+  fullName: mosaic_libary.StreamManager.StartStreaming()
+  type: Method
+  source:
+    id: StartStreaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 294
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Start the Stream.
+  example: []
+  syntax:
+    content: public void StartStreaming()
+    content.vb: Public Sub StartStreaming()
+  overload: mosaic_libary.StreamManager.StartStreaming*
+- uid: mosaic_libary.StreamManager.StopStreaming
+  commentId: M:mosaic_libary.StreamManager.StopStreaming
+  id: StopStreaming
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: StopStreaming()
+  nameWithType: StreamManager.StopStreaming()
+  fullName: mosaic_libary.StreamManager.StopStreaming()
+  type: Method
+  source:
+    id: StopStreaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 299
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Stops the stream by setting the stopStreaming flag to true.
+  example: []
+  syntax:
+    content: public void StopStreaming()
+    content.vb: Public Sub StopStreaming()
+  overload: mosaic_libary.StreamManager.StopStreaming*
+- uid: mosaic_libary.StreamManager.FinishedReading(System.IAsyncResult)
+  commentId: M:mosaic_libary.StreamManager.FinishedReading(System.IAsyncResult)
+  id: FinishedReading(System.IAsyncResult)
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: FinishedReading(IAsyncResult)
+  nameWithType: StreamManager.FinishedReading(IAsyncResult)
+  fullName: mosaic_libary.StreamManager.FinishedReading(System.IAsyncResult)
+  type: Method
+  source:
+    id: FinishedReading
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 306
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Checks  if Stream is still read. Returns is still reading. If anything is received from Stream, asynchronously fires event with the right amount of data. If nothing is received,
+
+    waits a while. Countious reading, or stops reading is _stopStreaming is <code>true</code>.
+  example: []
+  syntax:
+    content: private void FinishedReading(IAsyncResult ar)
+    parameters:
+    - id: ar
+      type: System.IAsyncResult
+      description: ''
+    content.vb: Private Sub FinishedReading(ar As IAsyncResult)
+  overload: mosaic_libary.StreamManager.FinishedReading*
+- uid: mosaic_libary.StreamManager.DataReceived
+  commentId: E:mosaic_libary.StreamManager.DataReceived
+  id: DataReceived
+  parent: mosaic_libary.StreamManager
+  langs:
+  - csharp
+  - vb
+  name: DataReceived
+  nameWithType: StreamManager.DataReceived
+  fullName: mosaic_libary.StreamManager.DataReceived
+  type: Event
+  source:
+    id: DataReceived
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 331
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Event that is fired when data is received.
+  example: []
+  syntax:
+    content: public event StreamManager.DataReceivedHandler DataReceived
+    return:
+      type: mosaic_libary.StreamManager.DataReceivedHandler
+    content.vb: Public Event DataReceived As StreamManager.DataReceivedHandler
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO.Stream
+  commentId: T:System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.io.stream
+  name: Stream
+  nameWithType: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.IO
+    name: IO
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.io
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: mosaic_libary.StreamManager.#ctor*
+  commentId: Overload:mosaic_libary.StreamManager.#ctor
+  href: mosaic_libary.StreamManager.html#mosaic_libary_StreamManager__ctor_System_IO_Stream_System_Int32_System_Int32_
+  name: StreamManager
+  nameWithType: StreamManager.StreamManager
+  fullName: mosaic_libary.StreamManager.StreamManager
+  nameWithType.vb: StreamManager.New
+  fullName.vb: mosaic_libary.StreamManager.New
+  name.vb: New
+- uid: mosaic_libary.StreamManager.Write*
+  commentId: Overload:mosaic_libary.StreamManager.Write
+  href: mosaic_libary.StreamManager.html#mosaic_libary_StreamManager_Write_System_Byte___
+  name: Write
+  nameWithType: StreamManager.Write
+  fullName: mosaic_libary.StreamManager.Write
+- uid: mosaic_libary.StreamManager.WriteAsync*
+  commentId: Overload:mosaic_libary.StreamManager.WriteAsync
+  href: mosaic_libary.StreamManager.html#mosaic_libary_StreamManager_WriteAsync_System_Byte___
+  name: WriteAsync
+  nameWithType: StreamManager.WriteAsync
+  fullName: mosaic_libary.StreamManager.WriteAsync
+- uid: mosaic_libary.StreamManager.StartStreaming*
+  commentId: Overload:mosaic_libary.StreamManager.StartStreaming
+  href: mosaic_libary.StreamManager.html#mosaic_libary_StreamManager_StartStreaming
+  name: StartStreaming
+  nameWithType: StreamManager.StartStreaming
+  fullName: mosaic_libary.StreamManager.StartStreaming
+- uid: mosaic_libary.StreamManager.StopStreaming*
+  commentId: Overload:mosaic_libary.StreamManager.StopStreaming
+  href: mosaic_libary.StreamManager.html#mosaic_libary_StreamManager_StopStreaming
+  name: StopStreaming
+  nameWithType: StreamManager.StopStreaming
+  fullName: mosaic_libary.StreamManager.StopStreaming
+- uid: mosaic_libary.StreamManager.FinishedReading*
+  commentId: Overload:mosaic_libary.StreamManager.FinishedReading
+  href: mosaic_libary.StreamManager.html#mosaic_libary_StreamManager_FinishedReading_System_IAsyncResult_
+  name: FinishedReading
+  nameWithType: StreamManager.FinishedReading
+  fullName: mosaic_libary.StreamManager.FinishedReading
+- uid: System.IAsyncResult
+  commentId: T:System.IAsyncResult
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iasyncresult
+  name: IAsyncResult
+  nameWithType: IAsyncResult
+  fullName: System.IAsyncResult
+- uid: mosaic_libary.StreamManager.DataReceivedHandler
+  commentId: T:mosaic_libary.StreamManager.DataReceivedHandler
+  parent: mosaic_libary
+  href: mosaic_libary.StreamManager.html
+  name: StreamManager.DataReceivedHandler
+  nameWithType: StreamManager.DataReceivedHandler
+  fullName: mosaic_libary.StreamManager.DataReceivedHandler
+  spec.csharp:
+  - uid: mosaic_libary.StreamManager
+    name: StreamManager
+    href: mosaic_libary.StreamManager.html
+  - name: .
+  - uid: mosaic_libary.StreamManager.DataReceivedHandler
+    name: DataReceivedHandler
+    href: mosaic_libary.StreamManager.DataReceivedHandler.html
+  spec.vb:
+  - uid: mosaic_libary.StreamManager
+    name: StreamManager
+    href: mosaic_libary.StreamManager.html
+  - name: .
+  - uid: mosaic_libary.StreamManager.DataReceivedHandler
+    name: DataReceivedHandler
+    href: mosaic_libary.StreamManager.DataReceivedHandler.html

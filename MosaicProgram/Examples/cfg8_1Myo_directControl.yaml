@@ -1,0 +1,75 @@
+﻿# ---------------------------------------------------------------------
+# Test Setup – Erlangen MediRob (with Andrea and Dario)
+# ---------------------------------------------------------------------
+# Purpose:
+# - Real-time incremental myocontrol using the Myo armband or HannesReceiver
+# - Control of the Blender skin-textured arm model using EMG signals
+# - Labels defined for a subset of relevant wrist/finger actions
+# ---------------------------------------------------------------------
+
+# ----------- EMG acquisition and preprocessing
+# Timer running at 200 Hz drives EMG acquisition
+timer_hannes: { Type: ScheduledTimer, DesiredRate: 200 }
+
+# EMG input: choose between Myo (default) or HannesReceiver (commented)
+# Myo input from recorded data path (e.g., 'c:\temp')
+# raw_EMG: { Type: HannesReceiver, Inputs: [ timer_hannes ], Params: ['9000', '6'] }
+raw_EMG: { Type: Myo, Inputs: [ timer_hannes ], Path: 'c:\temp' }
+
+# Standard preprocessing chain: amplify → rectify → low-pass filter
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+# Low-pass filter: 2nd-order Butterworth, 0.3 Hz cutoff, Fs = 200 Hz
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  Params: [ 0.00002206;0.00004412;0.00002206, 1;-1.9867;0.9868 ]
+}
+
+# Downsample to 25 Hz for smoother prediction/control
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_hannes ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# ----------- Trigger-based labeling and incremental learning
+# Ground truth: 12D activation vector for control targets
+# [ th_flex, th_rot, index, middle, ring, little, wr_flex, wr_ext, wr_pron, wr_sup, wr_ulnar, wr_radial ]
+ground_truth: {
+  Type: Trigger,
+  Params: [
+    rest:    0;0;0;0;0;0;0;0;0;0;0;0,
+    power:   1;1;1;1;1;1;0;0;0;0;0;0,
+    flex:    0;0;0;0;0;0;1;0;0;0;0;0,
+    extend:  0;0;0;0;0;0;0;1;0;0;0;0,
+    pron:    0;0;0;0;0;0;0;0;1;0;0;0
+  ]
+}
+
+# Incremental learning model: Ridge Regression (8 EMG inputs → 12 DOF predictions)
+incr_learn_prediction: {
+  Type: IncrementalPredictor,
+  Inputs: [ ARV, ground_truth ],
+  Params: [ IncrementalRidgeRegression, 8, 12 ]
+}
+
+# ----------- Control the Blender skin-textured arm
+# Converts prediction vector into real-time motion control
+controlAlgorithm: {
+  Type: ControlAlgorithm,
+  Inputs: [ incr_learn_prediction ],
+  Params: [ algorithm:DirectControl ]
+}
+
+# Optional: use stepwise control instead
+# controlAlgorithm: {
+#   Type: ControlAlgorithm,
+#   Inputs: [ incr_learn_prediction ],
+#   Params: [ algorithm:StepwiseControl ]
+# }
+
+# Send control signals to the Blender arm (skin-textured version)
+blender_skin_arm_ctrl: {
+  Type: BlenderArm,
+  Inputs: [ controlAlgorithm ],
+  Params: [ localhost, 3334 ]
+}

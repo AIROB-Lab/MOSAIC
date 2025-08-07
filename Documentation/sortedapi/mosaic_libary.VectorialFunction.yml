@@ -1,0 +1,1667 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.VectorialFunction
+  commentId: T:mosaic_libary.VectorialFunction
+  id: VectorialFunction
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.VectorialFunction.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  - mosaic_libary.VectorialFunction.ConfigureInputs
+  - mosaic_libary.VectorialFunction.OnNewInput(mosaic_libary.Block,System.Object)
+  - mosaic_libary.VectorialFunction.ResetOutput
+  - mosaic_libary.VectorialFunction.SetParams(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  - mosaic_libary.VectorialFunction.SkewSymmetric(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  - mosaic_libary.VectorialFunction._d
+  - mosaic_libary.VectorialFunction._matrixArray
+  - mosaic_libary.VectorialFunction._opName
+  - mosaic_libary.VectorialFunction._opParams
+  - mosaic_libary.VectorialFunction._projMat
+  - mosaic_libary.VectorialFunction._result
+  - mosaic_libary.VectorialFunction._source1Name
+  - mosaic_libary.VectorialFunction._source2Name
+  - mosaic_libary.VectorialFunction._value1
+  - mosaic_libary.VectorialFunction._value2
+  - mosaic_libary.VectorialFunction._vectorvalue
+  langs:
+  - csharp
+  - vb
+  name: VectorialFunction
+  nameWithType: VectorialFunction
+  fullName: mosaic_libary.VectorialFunction
+  type: Class
+  source:
+    id: VectorialFunction
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 141
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Represents a specialized <xref href="mosaic_libary.Block" data-throw-if-not-resolved="false"></xref> that performs various vectorial operations on input vectors,
+
+    potentially involving one or two source input blocks. This class provides functionality
+
+    to configure inputs, parse operation parameters, and process new incoming Vector data
+
+    to produce resultant vectors based on the specified operation.
+
+
+    Operations supported by this class include:
+
+    <ul><li><code>rotation</code>: Applies a rotational transform to an input Vector using specified roll, pitch, and yaw angles.</li><li><code>absolute_value</code>: Computes the magnitude (L2 norm) of the input Vector.</li><li><code>wrench_projection</code>: Projects a wrench Vector using a configurable projection matrix constructed from the input vectors.</li><li><code>addVectors</code>: Adds two input vectors element-wise.</li><li><code>subtract</code>: Subtracts the second input Vector from the first, element-wise.</li><li><code>crossVector</code>: Computes the cross product of two 3D input vectors.</li><li><code>scalarProduct</code>: Computes the scalar (dot) product of two input vectors.</li><li><code>matrix_multiply</code>: Multiplies the input Vector by a provided projection matrix.</li><li><code>integrate</code>: Integrates the input Vector over time by accumulating its values.</li></ul>
+  example:
+  - >-
+    <pre><code class="lang-csharp">myVectorOp:
+
+    {
+      Type: VectorialFunction,
+      Inputs: [ inputAName, inputBName ],
+      Params: [ "subtract" ]
+    }</code></pre>
+     Explanation:
+     <ul><li><code>Type: VectorialFunction</code> indicates that this block will perform one of the available vector operations 
+           (e.g., <code>subtract</code>).
+         </li><li><code>Inputs: [ inputA, inputB ]</code> shows two upstream blocks providing vectors. 
+           For <code>subtract</code>, the second vector is subtracted from the first.
+         </li><li><code>Params: [ "subtract" ]</code> configures the specific operation to be performed. 
+           Other operations (e.g., <code>addVectors</code>, <code>absolute_value</code>) can be substituted as needed.
+         </li></ul>
+
+     When both <code>inputA</code> and <code>inputB</code> are received, this block subtracts the second input from the first, 
+     element by element, and outputs the resulting vector.
+  syntax:
+    content: 'public class VectorialFunction : Block, IDisposable'
+    content.vb: Public Class VectorialFunction Inherits Block Implements IDisposable
+  inheritance:
+  - System.Object
+  - mosaic_libary.Block
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - mosaic_libary.Block.Name
+  - mosaic_libary.Block.DesiredRate
+  - mosaic_libary.Block.Rate
+  - mosaic_libary.Block.IsLagging
+  - mosaic_libary.Block.IsIdle
+  - mosaic_libary.Block.IsStumbling
+  - mosaic_libary.Block.InputCfg
+  - mosaic_libary.Block.Params
+  - mosaic_libary.Block.InputBlocks
+  - mosaic_libary.Block.Ticks
+  - mosaic_libary.Block._dump
+  - mosaic_libary.Block._stumblingLock
+  - mosaic_libary.Block._onNewInputLock
+  - mosaic_libary.Block.Data
+  - mosaic_libary.Block.cp
+  - mosaic_libary.Block.Dispose
+  - mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  - mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  - mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  - mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  - mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  - mosaic_libary.Block.Output
+  - mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  - mosaic_libary.Block.ShowHideCp
+  - mosaic_libary.Block.MouseLeftClick
+  - mosaic_libary.Block.MouseRightClick
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.VectorialFunction._opName
+  commentId: F:mosaic_libary.VectorialFunction._opName
+  id: _opName
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _opName
+  nameWithType: VectorialFunction._opName
+  fullName: mosaic_libary.VectorialFunction._opName
+  type: Field
+  source:
+    id: _opName
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 146
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The operation name to be performed by this vectorial function.
+  example: []
+  syntax:
+    content: private string _opName
+    return:
+      type: System.String
+    content.vb: Private _opName As String
+- uid: mosaic_libary.VectorialFunction._value1
+  commentId: F:mosaic_libary.VectorialFunction._value1
+  id: _value1
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _value1
+  nameWithType: VectorialFunction._value1
+  fullName: mosaic_libary.VectorialFunction._value1
+  type: Field
+  source:
+    id: _value1
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 151
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The first Vector value input.
+  example: []
+  syntax:
+    content: private Vector<double> _value1
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private _value1 As Vector(Of Double)
+- uid: mosaic_libary.VectorialFunction._value2
+  commentId: F:mosaic_libary.VectorialFunction._value2
+  id: _value2
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _value2
+  nameWithType: VectorialFunction._value2
+  fullName: mosaic_libary.VectorialFunction._value2
+  type: Field
+  source:
+    id: _value2
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 156
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The second Vector value input.
+  example: []
+  syntax:
+    content: private Vector<double> _value2
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private _value2 As Vector(Of Double)
+- uid: mosaic_libary.VectorialFunction._result
+  commentId: F:mosaic_libary.VectorialFunction._result
+  id: _result
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _result
+  nameWithType: VectorialFunction._result
+  fullName: mosaic_libary.VectorialFunction._result
+  type: Field
+  source:
+    id: _result
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 161
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The result of the operation.
+  example: []
+  syntax:
+    content: private Vector<double> _result
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private _result As Vector(Of Double)
+- uid: mosaic_libary.VectorialFunction._source1Name
+  commentId: F:mosaic_libary.VectorialFunction._source1Name
+  id: _source1Name
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _source1Name
+  nameWithType: VectorialFunction._source1Name
+  fullName: mosaic_libary.VectorialFunction._source1Name
+  type: Field
+  source:
+    id: _source1Name
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 166
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The name of the first source block.
+  example: []
+  syntax:
+    content: private string _source1Name
+    return:
+      type: System.String
+    content.vb: Private _source1Name As String
+- uid: mosaic_libary.VectorialFunction._source2Name
+  commentId: F:mosaic_libary.VectorialFunction._source2Name
+  id: _source2Name
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _source2Name
+  nameWithType: VectorialFunction._source2Name
+  fullName: mosaic_libary.VectorialFunction._source2Name
+  type: Field
+  source:
+    id: _source2Name
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 171
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The name of the second source block.
+  example: []
+  syntax:
+    content: private string _source2Name
+    return:
+      type: System.String
+    content.vb: Private _source2Name As String
+- uid: mosaic_libary.VectorialFunction._opParams
+  commentId: F:mosaic_libary.VectorialFunction._opParams
+  id: _opParams
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _opParams
+  nameWithType: VectorialFunction._opParams
+  fullName: mosaic_libary.VectorialFunction._opParams
+  type: Field
+  source:
+    id: _opParams
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 176
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Parameters for the operation.
+  example: []
+  syntax:
+    content: private string[] _opParams
+    return:
+      type: System.String[]
+    content.vb: Private _opParams As String()
+- uid: mosaic_libary.VectorialFunction._projMat
+  commentId: F:mosaic_libary.VectorialFunction._projMat
+  id: _projMat
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _projMat
+  nameWithType: VectorialFunction._projMat
+  fullName: mosaic_libary.VectorialFunction._projMat
+  type: Field
+  source:
+    id: _projMat
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 181
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The projection Matrix for Matrix operations.
+  example: []
+  syntax:
+    content: private Matrix<double> _projMat
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+    content.vb: Private _projMat As Matrix(Of Double)
+- uid: mosaic_libary.VectorialFunction._matrixArray
+  commentId: F:mosaic_libary.VectorialFunction._matrixArray
+  id: _matrixArray
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _matrixArray
+  nameWithType: VectorialFunction._matrixArray
+  fullName: mosaic_libary.VectorialFunction._matrixArray
+  type: Field
+  source:
+    id: _matrixArray
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 186
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: An array of matrices for operations requiring multiple Matrix inputs.
+  example: []
+  syntax:
+    content: private Matrix<double>[,] _matrixArray
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}[,]
+    content.vb: Private _matrixArray As Matrix(Of Double)(,)
+- uid: mosaic_libary.VectorialFunction._d
+  commentId: F:mosaic_libary.VectorialFunction._d
+  id: _d
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _d
+  nameWithType: VectorialFunction._d
+  fullName: mosaic_libary.VectorialFunction._d
+  type: Field
+  source:
+    id: _d
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 188
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public int _d
+    return:
+      type: System.Int32
+    content.vb: Public _d As Integer
+- uid: mosaic_libary.VectorialFunction._vectorvalue
+  commentId: F:mosaic_libary.VectorialFunction._vectorvalue
+  id: _vectorvalue
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: _vectorvalue
+  nameWithType: VectorialFunction._vectorvalue
+  fullName: mosaic_libary.VectorialFunction._vectorvalue
+  type: Field
+  source:
+    id: _vectorvalue
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 189
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Vector<double> _vectorvalue
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private _vectorvalue As Vector(Of Double)
+- uid: mosaic_libary.VectorialFunction.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  commentId: M:mosaic_libary.VectorialFunction.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  id: '#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)'
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: VectorialFunction(string, double, List<string>, List<string>, string)
+  nameWithType: VectorialFunction.VectorialFunction(string, double, List<string>, List<string>, string)
+  fullName: mosaic_libary.VectorialFunction.VectorialFunction(string, double, System.Collections.Generic.List<string>, System.Collections.Generic.List<string>, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 199
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Initializes a new instance of the <xref href="mosaic_libary.VectorialFunction" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public VectorialFunction(string Name, double DesiredRate, List<string> InputCfg, List<string> Params, string Path)
+    parameters:
+    - id: Name
+      type: System.String
+      description: The name of the block.
+    - id: DesiredRate
+      type: System.Double
+      description: The desired rate of operation.
+    - id: InputCfg
+      type: System.Collections.Generic.List{System.String}
+      description: Configuration for the input blocks.
+    - id: Params
+      type: System.Collections.Generic.List{System.String}
+      description: Operation parameters.
+    - id: Path
+      type: System.String
+      description: The path for any required external resources.
+    content.vb: Public Sub New(Name As String, DesiredRate As Double, InputCfg As List(Of String), Params As List(Of String), Path As String)
+  overload: mosaic_libary.VectorialFunction.#ctor*
+  nameWithType.vb: VectorialFunction.New(String, Double, List(Of String), List(Of String), String)
+  fullName.vb: mosaic_libary.VectorialFunction.New(String, Double, System.Collections.Generic.List(Of String), System.Collections.Generic.List(Of String), String)
+  name.vb: New(String, Double, List(Of String), List(Of String), String)
+- uid: mosaic_libary.VectorialFunction.ConfigureInputs
+  commentId: M:mosaic_libary.VectorialFunction.ConfigureInputs
+  id: ConfigureInputs
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: ConfigureInputs()
+  nameWithType: VectorialFunction.ConfigureInputs()
+  fullName: mosaic_libary.VectorialFunction.ConfigureInputs()
+  type: Method
+  source:
+    id: ConfigureInputs
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 208
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Configures the inputs and parses operation parameters.
+  example: []
+  syntax:
+    content: public override void ConfigureInputs()
+    content.vb: Public Overrides Sub ConfigureInputs()
+  overridden: mosaic_libary.Block.ConfigureInputs
+  overload: mosaic_libary.VectorialFunction.ConfigureInputs*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown if the block has incorrect input configurations or invalid operation parameters.
+- uid: mosaic_libary.VectorialFunction.OnNewInput(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.VectorialFunction.OnNewInput(mosaic_libary.Block,System.Object)
+  id: OnNewInput(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: OnNewInput(Block, object)
+  nameWithType: VectorialFunction.OnNewInput(Block, object)
+  fullName: mosaic_libary.VectorialFunction.OnNewInput(mosaic_libary.Block, object)
+  type: Method
+  source:
+    id: OnNewInput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 273
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Processes new input data and performs the configured operation.
+  example: []
+  syntax:
+    content: protected override void OnNewInput(Block sender, object value)
+    parameters:
+    - id: sender
+      type: mosaic_libary.Block
+      description: The source block sending the input.
+    - id: value
+      type: System.Object
+      description: The input Vector.
+    content.vb: Protected Overrides Sub OnNewInput(sender As Block, value As Object)
+  overridden: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  overload: mosaic_libary.VectorialFunction.OnNewInput*
+  nameWithType.vb: VectorialFunction.OnNewInput(Block, Object)
+  fullName.vb: mosaic_libary.VectorialFunction.OnNewInput(mosaic_libary.Block, Object)
+  name.vb: OnNewInput(Block, Object)
+- uid: mosaic_libary.VectorialFunction.SkewSymmetric(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.VectorialFunction.SkewSymmetric(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  id: SkewSymmetric(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: SkewSymmetric(Vector<double>)
+  nameWithType: VectorialFunction.SkewSymmetric(Vector<double>)
+  fullName: mosaic_libary.VectorialFunction.SkewSymmetric(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  type: Method
+  source:
+    id: SkewSymmetric
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 329
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Computes the skew-symmetric matrix of a 3D Vector.
+  example: []
+  syntax:
+    content: private Matrix<double> SkewSymmetric(Vector<double> vector)
+    parameters:
+    - id: vector
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: The input 3D Vector.
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The skew-symmetric matrix.
+    content.vb: Private Function SkewSymmetric(vector As Vector(Of Double)) As Matrix(Of Double)
+  overload: mosaic_libary.VectorialFunction.SkewSymmetric*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown if the input Vector is not 3D.
+  nameWithType.vb: VectorialFunction.SkewSymmetric(Vector(Of Double))
+  fullName.vb: mosaic_libary.VectorialFunction.SkewSymmetric(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: SkewSymmetric(Vector(Of Double))
+- uid: mosaic_libary.VectorialFunction.SetParams(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.VectorialFunction.SetParams(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: SetParams(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: SetParams(Matrix<double>)
+  nameWithType: VectorialFunction.SetParams(Matrix<double>)
+  fullName: mosaic_libary.VectorialFunction.SetParams(MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: SetParams
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 345
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Updates the parameters for the operation matrix mulitplication.
+  example: []
+  syntax:
+    content: public void SetParams(Matrix<double> m)
+    parameters:
+    - id: m
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The projection matrix.
+    content.vb: Public Sub SetParams(m As Matrix(Of Double))
+  overload: mosaic_libary.VectorialFunction.SetParams*
+  nameWithType.vb: VectorialFunction.SetParams(Matrix(Of Double))
+  fullName.vb: mosaic_libary.VectorialFunction.SetParams(MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: SetParams(Matrix(Of Double))
+- uid: mosaic_libary.VectorialFunction.ResetOutput
+  commentId: M:mosaic_libary.VectorialFunction.ResetOutput
+  id: ResetOutput
+  parent: mosaic_libary.VectorialFunction
+  langs:
+  - csharp
+  - vb
+  name: ResetOutput()
+  nameWithType: VectorialFunction.ResetOutput()
+  fullName: mosaic_libary.VectorialFunction.ResetOutput()
+  type: Method
+  source:
+    id: ResetOutput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\VectorialFunction.cs
+    startLine: 356
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Resets the output Vector to its initial state.
+  example: []
+  syntax:
+    content: public void ResetOutput()
+    content.vb: Public Sub ResetOutput()
+  overload: mosaic_libary.VectorialFunction.ResetOutput*
+references:
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: mosaic_libary.Block.Name
+  commentId: P:mosaic_libary.Block.Name
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Name
+  name: Name
+  nameWithType: Block.Name
+  fullName: mosaic_libary.Block.Name
+- uid: mosaic_libary.Block.DesiredRate
+  commentId: P:mosaic_libary.Block.DesiredRate
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_DesiredRate
+  name: DesiredRate
+  nameWithType: Block.DesiredRate
+  fullName: mosaic_libary.Block.DesiredRate
+- uid: mosaic_libary.Block.Rate
+  commentId: P:mosaic_libary.Block.Rate
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Rate
+  name: Rate
+  nameWithType: Block.Rate
+  fullName: mosaic_libary.Block.Rate
+- uid: mosaic_libary.Block.IsLagging
+  commentId: P:mosaic_libary.Block.IsLagging
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsLagging
+  name: IsLagging
+  nameWithType: Block.IsLagging
+  fullName: mosaic_libary.Block.IsLagging
+- uid: mosaic_libary.Block.IsIdle
+  commentId: P:mosaic_libary.Block.IsIdle
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsIdle
+  name: IsIdle
+  nameWithType: Block.IsIdle
+  fullName: mosaic_libary.Block.IsIdle
+- uid: mosaic_libary.Block.IsStumbling
+  commentId: F:mosaic_libary.Block.IsStumbling
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsStumbling
+  name: IsStumbling
+  nameWithType: Block.IsStumbling
+  fullName: mosaic_libary.Block.IsStumbling
+- uid: mosaic_libary.Block.InputCfg
+  commentId: P:mosaic_libary.Block.InputCfg
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_InputCfg
+  name: InputCfg
+  nameWithType: Block.InputCfg
+  fullName: mosaic_libary.Block.InputCfg
+- uid: mosaic_libary.Block.Params
+  commentId: F:mosaic_libary.Block.Params
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Params
+  name: Params
+  nameWithType: Block.Params
+  fullName: mosaic_libary.Block.Params
+- uid: mosaic_libary.Block.InputBlocks
+  commentId: F:mosaic_libary.Block.InputBlocks
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_InputBlocks
+  name: InputBlocks
+  nameWithType: Block.InputBlocks
+  fullName: mosaic_libary.Block.InputBlocks
+- uid: mosaic_libary.Block.Ticks
+  commentId: F:mosaic_libary.Block.Ticks
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Ticks
+  name: Ticks
+  nameWithType: Block.Ticks
+  fullName: mosaic_libary.Block.Ticks
+- uid: mosaic_libary.Block._dump
+  commentId: F:mosaic_libary.Block._dump
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__dump
+  name: _dump
+  nameWithType: Block._dump
+  fullName: mosaic_libary.Block._dump
+- uid: mosaic_libary.Block._stumblingLock
+  commentId: F:mosaic_libary.Block._stumblingLock
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__stumblingLock
+  name: _stumblingLock
+  nameWithType: Block._stumblingLock
+  fullName: mosaic_libary.Block._stumblingLock
+- uid: mosaic_libary.Block._onNewInputLock
+  commentId: F:mosaic_libary.Block._onNewInputLock
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__onNewInputLock
+  name: _onNewInputLock
+  nameWithType: Block._onNewInputLock
+  fullName: mosaic_libary.Block._onNewInputLock
+- uid: mosaic_libary.Block.Data
+  commentId: F:mosaic_libary.Block.Data
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Data
+  name: Data
+  nameWithType: Block.Data
+  fullName: mosaic_libary.Block.Data
+- uid: mosaic_libary.Block.cp
+  commentId: F:mosaic_libary.Block.cp
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_cp
+  name: cp
+  nameWithType: Block.cp
+  fullName: mosaic_libary.Block.cp
+- uid: mosaic_libary.Block.Dispose
+  commentId: M:mosaic_libary.Block.Dispose
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  name: Dispose()
+  nameWithType: Block.Dispose()
+  fullName: mosaic_libary.Block.Dispose()
+  spec.csharp:
+  - uid: mosaic_libary.Block.Dispose
+    name: Dispose
+    href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.Dispose
+    name: Dispose
+    href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  name: SubscribeTo(Block)
+  nameWithType: Block.SubscribeTo(Block)
+  fullName: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+    name: SubscribeTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+    name: SubscribeTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  name: UnsubscribeFrom(Block)
+  nameWithType: Block.UnsubscribeFrom(Block)
+  fullName: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+    name: UnsubscribeFrom
+    href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+    name: UnsubscribeFrom
+    href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  name: HasInput(Block)
+  nameWithType: Block.HasInput(Block)
+  fullName: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+    name: HasInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+    name: HasInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  name: IsSubscribedTo(Block)
+  nameWithType: Block.IsSubscribedTo(Block)
+  fullName: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+    name: IsSubscribedTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+    name: IsSubscribedTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  commentId: M:mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  name: SendOutput(object, bool)
+  nameWithType: Block.SendOutput(object, bool)
+  fullName: mosaic_libary.Block.SendOutput(object, bool)
+  nameWithType.vb: Block.SendOutput(Object, Boolean)
+  fullName.vb: mosaic_libary.Block.SendOutput(Object, Boolean)
+  name.vb: SendOutput(Object, Boolean)
+  spec.csharp:
+  - uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+    name: SendOutput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+    name: SendOutput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: mosaic_libary.Block.Output
+  commentId: E:mosaic_libary.Block.Output
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Output
+  name: Output
+  nameWithType: Block.Output
+  fullName: mosaic_libary.Block.Output
+- uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  name: OnNewInputLocked(Block, object)
+  nameWithType: Block.OnNewInputLocked(Block, object)
+  fullName: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, object)
+  nameWithType.vb: Block.OnNewInputLocked(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, Object)
+  name.vb: OnNewInputLocked(Block, Object)
+  spec.csharp:
+  - uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+    name: OnNewInputLocked
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+    name: OnNewInputLocked
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: mosaic_libary.Block.ShowHideCp
+  commentId: M:mosaic_libary.Block.ShowHideCp
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  name: ShowHideCp()
+  nameWithType: Block.ShowHideCp()
+  fullName: mosaic_libary.Block.ShowHideCp()
+  spec.csharp:
+  - uid: mosaic_libary.Block.ShowHideCp
+    name: ShowHideCp
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.ShowHideCp
+    name: ShowHideCp
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.MouseLeftClick
+  commentId: M:mosaic_libary.Block.MouseLeftClick
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  name: MouseLeftClick()
+  nameWithType: Block.MouseLeftClick()
+  fullName: mosaic_libary.Block.MouseLeftClick()
+  spec.csharp:
+  - uid: mosaic_libary.Block.MouseLeftClick
+    name: MouseLeftClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.MouseLeftClick
+    name: MouseLeftClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.MouseRightClick
+  commentId: M:mosaic_libary.Block.MouseRightClick
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  name: MouseRightClick()
+  nameWithType: Block.MouseRightClick()
+  fullName: mosaic_libary.Block.MouseRightClick()
+  spec.csharp:
+  - uid: mosaic_libary.Block.MouseRightClick
+    name: MouseRightClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.MouseRightClick
+    name: MouseRightClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Matrix`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Matrix<double>
+  nameWithType: Matrix<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<double>
+  nameWithType.vb: Matrix(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of Double)
+  name.vb: Matrix(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix`1
+  isExternal: true
+  name: Matrix<T>
+  nameWithType: Matrix<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<T>
+  nameWithType.vb: Matrix(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of T)
+  name.vb: Matrix(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}[,]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Matrix<double>[,]
+  nameWithType: Matrix<double>[,]
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<double>[,]
+  nameWithType.vb: Matrix(Of Double)(,)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of Double)(,)
+  name.vb: Matrix(Of Double)(,)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: '['
+  - name: ','
+  - name: ']'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: (
+  - name: ','
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: mosaic_libary.VectorialFunction
+  commentId: T:mosaic_libary.VectorialFunction
+  parent: mosaic_libary
+  href: mosaic_libary.VectorialFunction.html
+  name: VectorialFunction
+  nameWithType: VectorialFunction
+  fullName: mosaic_libary.VectorialFunction
+- uid: mosaic_libary.VectorialFunction.#ctor*
+  commentId: Overload:mosaic_libary.VectorialFunction.#ctor
+  href: mosaic_libary.VectorialFunction.html#mosaic_libary_VectorialFunction__ctor_System_String_System_Double_System_Collections_Generic_List_System_String__System_Collections_Generic_List_System_String__System_String_
+  name: VectorialFunction
+  nameWithType: VectorialFunction.VectorialFunction
+  fullName: mosaic_libary.VectorialFunction.VectorialFunction
+  nameWithType.vb: VectorialFunction.New
+  fullName.vb: mosaic_libary.VectorialFunction.New
+  name.vb: New
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: mosaic_libary.Block.ConfigureInputs
+  commentId: M:mosaic_libary.Block.ConfigureInputs
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  name: ConfigureInputs()
+  nameWithType: Block.ConfigureInputs()
+  fullName: mosaic_libary.Block.ConfigureInputs()
+  spec.csharp:
+  - uid: mosaic_libary.Block.ConfigureInputs
+    name: ConfigureInputs
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.ConfigureInputs
+    name: ConfigureInputs
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  - name: (
+  - name: )
+- uid: mosaic_libary.VectorialFunction.ConfigureInputs*
+  commentId: Overload:mosaic_libary.VectorialFunction.ConfigureInputs
+  href: mosaic_libary.VectorialFunction.html#mosaic_libary_VectorialFunction_ConfigureInputs
+  name: ConfigureInputs
+  nameWithType: VectorialFunction.ConfigureInputs
+  fullName: mosaic_libary.VectorialFunction.ConfigureInputs
+- uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  name: OnNewInput(Block, object)
+  nameWithType: Block.OnNewInput(Block, object)
+  fullName: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, object)
+  nameWithType.vb: Block.OnNewInput(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, Object)
+  name.vb: OnNewInput(Block, Object)
+  spec.csharp:
+  - uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+    name: OnNewInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+    name: OnNewInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: mosaic_libary.VectorialFunction.OnNewInput*
+  commentId: Overload:mosaic_libary.VectorialFunction.OnNewInput
+  href: mosaic_libary.VectorialFunction.html#mosaic_libary_VectorialFunction_OnNewInput_mosaic_libary_Block_System_Object_
+  name: OnNewInput
+  nameWithType: VectorialFunction.OnNewInput
+  fullName: mosaic_libary.VectorialFunction.OnNewInput
+- uid: mosaic_libary.VectorialFunction.SkewSymmetric*
+  commentId: Overload:mosaic_libary.VectorialFunction.SkewSymmetric
+  href: mosaic_libary.VectorialFunction.html#mosaic_libary_VectorialFunction_SkewSymmetric_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: SkewSymmetric
+  nameWithType: VectorialFunction.SkewSymmetric
+  fullName: mosaic_libary.VectorialFunction.SkewSymmetric
+- uid: mosaic_libary.VectorialFunction.SetParams*
+  commentId: Overload:mosaic_libary.VectorialFunction.SetParams
+  href: mosaic_libary.VectorialFunction.html#mosaic_libary_VectorialFunction_SetParams_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: SetParams
+  nameWithType: VectorialFunction.SetParams
+  fullName: mosaic_libary.VectorialFunction.SetParams
+- uid: mosaic_libary.VectorialFunction.ResetOutput*
+  commentId: Overload:mosaic_libary.VectorialFunction.ResetOutput
+  href: mosaic_libary.VectorialFunction.html#mosaic_libary_VectorialFunction_ResetOutput
+  name: ResetOutput
+  nameWithType: VectorialFunction.ResetOutput
+  fullName: mosaic_libary.VectorialFunction.ResetOutput

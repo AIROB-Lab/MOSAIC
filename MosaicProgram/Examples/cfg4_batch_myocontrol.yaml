@@ -1,0 +1,79 @@
+# ---------------------------------------------------------------------
+# Example 4: Batch Machine Learning-Based Myocontrol System
+# ---------------------------------------------------------------------
+# - Acquire and preprocess sEMG signals into ARV features (same chain as Example 2 & 3)
+# - Use a Trigger to label clusters with multi-DOF target vectors
+# - Store labeled ARV data in a Buffer
+# - Train a model with BatchPredictor (e.g., Ridge Regression with Random Fourier Features)
+# - Predict control signals and send them to a virtual arm (e.g., Blender)
+# ---------------------------------------------------------------------
+
+# EMG acquisition and preprocessing
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ], Params: [''] }
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  # 2nd-order Butterworth LP @ 2 Hz, Fs = 200 Hz
+  # MATLAB: [b,a] = butter(2, 2/(200/2), 'low')
+  Params: [ 0.00094469;0.0018894;0.00094469, 1;-1.9112;0.91498 ]
+}
+
+# Downsample ARV to 25 Hz
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# Trigger for capturing labeled clusters (12-DOF vectors)
+capture_data: {
+  Type: Trigger,
+  Params: [
+    rest:    0;0;0;0;0;0;0;0;0;0;0;0,
+    power:   1;1;1;1;1;1;0;0;0;0;0;0,
+    flex:    0;0;0;0;0;0;1;0;0;0;0;0,
+    extend:  0;0;0;0;0;0;0;1;0;0;0;0,
+    pron:    0;0;0;0;0;0;0;0;1;0;0;0,
+    sup:     0;0;0;0;0;0;0;0;0;1;0;0
+  ]
+}
+
+# Buffer to store <label vector, ARV cluster> pairs
+cluster_storage: {
+  Type: Buffer,
+  Inputs: [ capture_data, -ARV ]  # '-' means ARV is only subscribed when capturing
+}
+
+# Batch predictor using data from buffer
+# Format: Params = [ bufferName, modelType, inputDim, outputDim ]
+batch_learn: {
+  Type: BatchPredictor,
+  Inputs: [ ARV ],
+  Params: [ cluster_storage, RR_RFF, 8, 12 ]
+}
+# Alternative model:
+# batch_learn: { Type: BatchPredictor, Inputs: [ ARV ], Params: [ cluster_storage, RidgeRegression, 8, 12 ] }
+
+# Optional test input: 12D sinusoidal signal generator
+sinGen: { Type: SinGenerator, Inputs: [ timer_subs ], Params: [ 12 ] }
+
+# Switch between learned myocontrol and test input
+select_pred: {
+  Type: Switch,
+  Inputs: [ sinGen, -batch_learn ]  # Switch toggles between sinGen and batch prediction
+}
+
+# Control algorithm for mapping predictions to actuator targets
+controlAlgorithm: {
+  Type: ControlAlgorithm,
+  Inputs: [ select_pred ],
+  Params: [ algorithm:DirectControl ]
+}
+
+# Final output: control Blender virtual arm (skin-textured version)
+blender_skin_arm_ctrl: {
+  Type: BlenderArm,
+  Inputs: [ controlAlgorithm ],
+  Params: [ localhost, 3334 ]
+}

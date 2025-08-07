@@ -1,0 +1,2498 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.GXLogicCore
+  commentId: T:mosaic_libary.GXLogicCore
+  id: GXLogicCore
+  parent: mosaic_libary
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GXLogicCore
+  nameWithType: GXLogicCore
+  fullName: mosaic_libary.GXLogicCore
+  type: Class
+  source:
+    id: GXLogicCore
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 88
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: 'public class GXLogicCore : GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>, IGXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>, IDisposable'
+    content.vb: Public Class GXLogicCore Inherits GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)) Implements IGXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)), IDisposable
+  inheritance:
+  - System.Object
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  implements:
+  - GraphX.Common.Interfaces.IGXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  - System.IDisposable
+  inheritedMembers:
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Clear(System.Boolean)
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PushFilters
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ApplyFilters
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PopFilters
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Dispose
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmFactory
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{mosaic_libary.Vertex,mosaic_libary.Edge},GraphX.Common.Interfaces.IExternalOverlapRemoval{mosaic_libary.Vertex},GraphX.Common.Interfaces.IExternalEdgeRouting{mosaic_libary.Vertex,mosaic_libary.Edge})
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Boolean)
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreVertexSizesNeeded
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreOverlapNeeded
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ComputeEdgeRoutesByVertex(mosaic_libary.Vertex,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Compute(System.Threading.CancellationToken)
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AlgorithmFactory
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AlgorithmStorage
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsCustomLayout
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalLayoutAlgorithm
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalOverlapRemovalAlgorithm
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalEdgeRoutingAlgorithm
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultLayoutAlgorithm
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultOverlapRemovalAlgorithm
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultEdgeRoutingAlgorithm
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultLayoutAlgorithmParams
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultOverlapRemovalAlgorithmParams
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultEdgeRoutingAlgorithmParams
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AsyncAlgorithmCompute
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsFiltered
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsFilterRemoved
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Filters
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EdgeCurvingEnabled
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EdgeCurvingTolerance
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Graph
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.OriginalGraph
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EnableParallelEdges
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ParallelEdgeDistance
+  - GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsEdgeRoutingEnabled
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  commentId: T:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  parent: GraphX.Logic.Models
+  definition: GraphX.Logic.Models.GXLogicCore`3
+  href: mosaic_libary.Vertex.html
+  name: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3
+    name: GXLogicCore
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3
+    name: GXLogicCore
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: GraphX.Common.Interfaces.IGXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  commentId: T:GraphX.Common.Interfaces.IGXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  parent: GraphX.Common.Interfaces
+  definition: GraphX.Common.Interfaces.IGXLogicCore`3
+  href: mosaic_libary.Vertex.html
+  name: IGXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>
+  nameWithType: IGXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>
+  fullName: GraphX.Common.Interfaces.IGXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>
+  nameWithType.vb: IGXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge))
+  fullName.vb: GraphX.Common.Interfaces.IGXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: IGXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge))
+  spec.csharp:
+  - uid: GraphX.Common.Interfaces.IGXLogicCore`3
+    name: IGXLogicCore
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Interfaces.IGXLogicCore`3
+    name: IGXLogicCore
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Clear(System.Boolean)
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Clear(System.Boolean)
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.Clear(System.Boolean)
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Clear(bool)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.Clear(bool)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.Clear(bool)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).Clear(Boolean)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).Clear(Boolean)
+  name.vb: Clear(Boolean)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Clear(System.Boolean)
+    name: Clear
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Clear(System.Boolean)
+    name: Clear
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PushFilters
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PushFilters
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.PushFilters
+  name: PushFilters()
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.PushFilters()
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.PushFilters()
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).PushFilters()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).PushFilters()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PushFilters
+    name: PushFilters
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PushFilters
+    name: PushFilters
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ApplyFilters
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ApplyFilters
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.ApplyFilters
+  name: ApplyFilters()
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.ApplyFilters()
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.ApplyFilters()
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).ApplyFilters()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).ApplyFilters()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ApplyFilters
+    name: ApplyFilters
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ApplyFilters
+    name: ApplyFilters
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PopFilters
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PopFilters
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.PopFilters
+  name: PopFilters()
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.PopFilters()
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.PopFilters()
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).PopFilters()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).PopFilters()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PopFilters
+    name: PopFilters
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.PopFilters
+    name: PopFilters
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Dispose
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Dispose
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.Dispose
+  name: Dispose()
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.Dispose()
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.Dispose()
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).Dispose()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).Dispose()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmFactory
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmFactory
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmFactory
+  name: CreateNewAlgorithmFactory()
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.CreateNewAlgorithmFactory()
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.CreateNewAlgorithmFactory()
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).CreateNewAlgorithmFactory()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).CreateNewAlgorithmFactory()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmFactory
+    name: CreateNewAlgorithmFactory
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmFactory
+    name: CreateNewAlgorithmFactory
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{mosaic_libary.Vertex,mosaic_libary.Edge},GraphX.Common.Interfaces.IExternalOverlapRemoval{mosaic_libary.Vertex},GraphX.Common.Interfaces.IExternalEdgeRouting{mosaic_libary.Vertex,mosaic_libary.Edge})
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{mosaic_libary.Vertex,mosaic_libary.Edge},GraphX.Common.Interfaces.IExternalOverlapRemoval{mosaic_libary.Vertex},GraphX.Common.Interfaces.IExternalEdgeRouting{mosaic_libary.Vertex,mosaic_libary.Edge})
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{`0,`1},GraphX.Common.Interfaces.IExternalOverlapRemoval{`0},GraphX.Common.Interfaces.IExternalEdgeRouting{`0,`1})
+  href: mosaic_libary.Vertex.html
+  name: CreateNewAlgorithmStorage(IExternalLayout<Vertex, Edge>, IExternalOverlapRemoval<Vertex>, IExternalEdgeRouting<Vertex, Edge>)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.CreateNewAlgorithmStorage(IExternalLayout<Vertex, Edge>, IExternalOverlapRemoval<Vertex>, IExternalEdgeRouting<Vertex, Edge>)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout<mosaic_libary.Vertex, mosaic_libary.Edge>, GraphX.Common.Interfaces.IExternalOverlapRemoval<mosaic_libary.Vertex>, GraphX.Common.Interfaces.IExternalEdgeRouting<mosaic_libary.Vertex, mosaic_libary.Edge>)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).CreateNewAlgorithmStorage(IExternalLayout(Of Vertex, Edge), IExternalOverlapRemoval(Of Vertex), IExternalEdgeRouting(Of Vertex, Edge))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout(Of mosaic_libary.Vertex, mosaic_libary.Edge), GraphX.Common.Interfaces.IExternalOverlapRemoval(Of mosaic_libary.Vertex), GraphX.Common.Interfaces.IExternalEdgeRouting(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: CreateNewAlgorithmStorage(IExternalLayout(Of Vertex, Edge), IExternalOverlapRemoval(Of Vertex), IExternalEdgeRouting(Of Vertex, Edge))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{mosaic_libary.Vertex,mosaic_libary.Edge},GraphX.Common.Interfaces.IExternalOverlapRemoval{mosaic_libary.Vertex},GraphX.Common.Interfaces.IExternalEdgeRouting{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: CreateNewAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: GraphX.Common.Interfaces.IExternalLayout`2
+    name: IExternalLayout
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalOverlapRemoval`1
+    name: IExternalOverlapRemoval
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalEdgeRouting`2
+    name: IExternalEdgeRouting
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{mosaic_libary.Vertex,mosaic_libary.Edge},GraphX.Common.Interfaces.IExternalOverlapRemoval{mosaic_libary.Vertex},GraphX.Common.Interfaces.IExternalEdgeRouting{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: CreateNewAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: GraphX.Common.Interfaces.IExternalLayout`2
+    name: IExternalLayout
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalOverlapRemoval`1
+    name: IExternalOverlapRemoval
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalEdgeRouting`2
+    name: IExternalEdgeRouting
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: GenerateAlgorithmStorage(Dictionary<Vertex, Size>, IDictionary<Vertex, Point>)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.GenerateAlgorithmStorage(Dictionary<Vertex, Size>, IDictionary<Vertex, Point>)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary<mosaic_libary.Vertex, GraphX.Measure.Size>, System.Collections.Generic.IDictionary<mosaic_libary.Vertex, GraphX.Measure.Point>)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).GenerateAlgorithmStorage(Dictionary(Of Vertex, Size), IDictionary(Of Vertex, Point))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).GenerateAlgorithmStorage(System.Collections.Generic.Dictionary(Of mosaic_libary.Vertex, GraphX.Measure.Size), System.Collections.Generic.IDictionary(Of mosaic_libary.Vertex, GraphX.Measure.Point))
+  name.vb: GenerateAlgorithmStorage(Dictionary(Of Vertex, Size), IDictionary(Of Vertex, Point))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+    name: GenerateAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+    name: GenerateAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Boolean)
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Boolean)
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Boolean)
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: GetVertexSizeRectangles(IDictionary<Vertex, Point>, Dictionary<Vertex, Size>, bool)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.GetVertexSizeRectangles(IDictionary<Vertex, Point>, Dictionary<Vertex, Size>, bool)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.GetVertexSizeRectangles(System.Collections.Generic.IDictionary<mosaic_libary.Vertex, GraphX.Measure.Point>, System.Collections.Generic.Dictionary<mosaic_libary.Vertex, GraphX.Measure.Size>, bool)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).GetVertexSizeRectangles(IDictionary(Of Vertex, Point), Dictionary(Of Vertex, Size), Boolean)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).GetVertexSizeRectangles(System.Collections.Generic.IDictionary(Of mosaic_libary.Vertex, GraphX.Measure.Point), System.Collections.Generic.Dictionary(Of mosaic_libary.Vertex, GraphX.Measure.Size), Boolean)
+  name.vb: GetVertexSizeRectangles(IDictionary(Of Vertex, Point), Dictionary(Of Vertex, Size), Boolean)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Boolean)
+    name: GetVertexSizeRectangles
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Boolean)
+    name: GetVertexSizeRectangles
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreVertexSizesNeeded
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreVertexSizesNeeded
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.AreVertexSizesNeeded
+  name: AreVertexSizesNeeded()
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.AreVertexSizesNeeded()
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.AreVertexSizesNeeded()
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).AreVertexSizesNeeded()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).AreVertexSizesNeeded()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreVertexSizesNeeded
+    name: AreVertexSizesNeeded
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreVertexSizesNeeded
+    name: AreVertexSizesNeeded
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreOverlapNeeded
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreOverlapNeeded
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.AreOverlapNeeded
+  name: AreOverlapNeeded()
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.AreOverlapNeeded()
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.AreOverlapNeeded()
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).AreOverlapNeeded()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).AreOverlapNeeded()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreOverlapNeeded
+    name: AreOverlapNeeded
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AreOverlapNeeded
+    name: AreOverlapNeeded
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Rect})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: GenerateOverlapRemovalAlgorithm(Dictionary<Vertex, Rect>)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.GenerateOverlapRemovalAlgorithm(Dictionary<Vertex, Rect>)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary<mosaic_libary.Vertex, GraphX.Measure.Rect>)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).GenerateOverlapRemovalAlgorithm(Dictionary(Of Vertex, Rect))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary(Of mosaic_libary.Vertex, GraphX.Measure.Rect))
+  name.vb: GenerateOverlapRemovalAlgorithm(Dictionary(Of Vertex, Rect))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+    name: GenerateOverlapRemovalAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+    name: GenerateOverlapRemovalAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: GenerateLayoutAlgorithm(Dictionary<Vertex, Size>, IDictionary<Vertex, Point>)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.GenerateLayoutAlgorithm(Dictionary<Vertex, Size>, IDictionary<Vertex, Point>)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary<mosaic_libary.Vertex, GraphX.Measure.Size>, System.Collections.Generic.IDictionary<mosaic_libary.Vertex, GraphX.Measure.Point>)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).GenerateLayoutAlgorithm(Dictionary(Of Vertex, Size), IDictionary(Of Vertex, Point))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary(Of mosaic_libary.Vertex, GraphX.Measure.Size), System.Collections.Generic.IDictionary(Of mosaic_libary.Vertex, GraphX.Measure.Point))
+  name.vb: GenerateLayoutAlgorithm(Dictionary(Of Vertex, Size), IDictionary(Of Vertex, Point))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+    name: GenerateLayoutAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{mosaic_libary.Vertex,GraphX.Measure.Size},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point})
+    name: GenerateLayoutAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Rect})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: GenerateEdgeRoutingAlgorithm(Size, IDictionary<Vertex, Point>, IDictionary<Vertex, Rect>)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.GenerateEdgeRoutingAlgorithm(Size, IDictionary<Vertex, Point>, IDictionary<Vertex, Rect>)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size, System.Collections.Generic.IDictionary<mosaic_libary.Vertex, GraphX.Measure.Point>, System.Collections.Generic.IDictionary<mosaic_libary.Vertex, GraphX.Measure.Rect>)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).GenerateEdgeRoutingAlgorithm(Size, IDictionary(Of Vertex, Point), IDictionary(Of Vertex, Rect))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size, System.Collections.Generic.IDictionary(Of mosaic_libary.Vertex, GraphX.Measure.Point), System.Collections.Generic.IDictionary(Of mosaic_libary.Vertex, GraphX.Measure.Rect))
+  name.vb: GenerateEdgeRoutingAlgorithm(Size, IDictionary(Of Vertex, Point), IDictionary(Of Vertex, Rect))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+    name: GenerateEdgeRoutingAlgorithm
+    isExternal: true
+  - name: (
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Point},System.Collections.Generic.IDictionary{mosaic_libary.Vertex,GraphX.Measure.Rect})
+    name: GenerateEdgeRoutingAlgorithm
+    isExternal: true
+  - name: (
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ComputeEdgeRoutesByVertex(mosaic_libary.Vertex,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ComputeEdgeRoutesByVertex(mosaic_libary.Vertex,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.ComputeEdgeRoutesByVertex(`0,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+  href: mosaic_libary.Vertex.html
+  name: ComputeEdgeRoutesByVertex(Vertex, Point?, Size?)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.ComputeEdgeRoutesByVertex(Vertex, Point?, Size?)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.ComputeEdgeRoutesByVertex(mosaic_libary.Vertex, GraphX.Measure.Point?, GraphX.Measure.Size?)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).ComputeEdgeRoutesByVertex(Vertex, Point?, Size?)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).ComputeEdgeRoutesByVertex(mosaic_libary.Vertex, GraphX.Measure.Point?, GraphX.Measure.Size?)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ComputeEdgeRoutesByVertex(mosaic_libary.Vertex,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+    name: ComputeEdgeRoutesByVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ComputeEdgeRoutesByVertex(mosaic_libary.Vertex,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+    name: ComputeEdgeRoutesByVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '?'
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Compute(System.Threading.CancellationToken)
+  commentId: M:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Compute(System.Threading.CancellationToken)
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.Compute(System.Threading.CancellationToken)
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Compute(CancellationToken)
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.Compute(CancellationToken)
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.Compute(System.Threading.CancellationToken)
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).Compute(CancellationToken)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).Compute(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Compute(System.Threading.CancellationToken)
+    name: Compute
+    isExternal: true
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Compute(System.Threading.CancellationToken)
+    name: Compute
+    isExternal: true
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AlgorithmFactory
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AlgorithmFactory
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.AlgorithmFactory
+  name: AlgorithmFactory
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.AlgorithmFactory
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.AlgorithmFactory
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).AlgorithmFactory
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).AlgorithmFactory
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AlgorithmStorage
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AlgorithmStorage
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.AlgorithmStorage
+  name: AlgorithmStorage
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.AlgorithmStorage
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.AlgorithmStorage
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).AlgorithmStorage
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).AlgorithmStorage
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsCustomLayout
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsCustomLayout
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.IsCustomLayout
+  name: IsCustomLayout
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.IsCustomLayout
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.IsCustomLayout
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).IsCustomLayout
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).IsCustomLayout
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalLayoutAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalLayoutAlgorithm
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.ExternalLayoutAlgorithm
+  name: ExternalLayoutAlgorithm
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.ExternalLayoutAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.ExternalLayoutAlgorithm
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).ExternalLayoutAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).ExternalLayoutAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalOverlapRemovalAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalOverlapRemovalAlgorithm
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.ExternalOverlapRemovalAlgorithm
+  name: ExternalOverlapRemovalAlgorithm
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.ExternalOverlapRemovalAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.ExternalOverlapRemovalAlgorithm
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).ExternalOverlapRemovalAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).ExternalOverlapRemovalAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalEdgeRoutingAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ExternalEdgeRoutingAlgorithm
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.ExternalEdgeRoutingAlgorithm
+  name: ExternalEdgeRoutingAlgorithm
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.ExternalEdgeRoutingAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.ExternalEdgeRoutingAlgorithm
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).ExternalEdgeRoutingAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).ExternalEdgeRoutingAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultLayoutAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultLayoutAlgorithm
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.DefaultLayoutAlgorithm
+  name: DefaultLayoutAlgorithm
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.DefaultLayoutAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.DefaultLayoutAlgorithm
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).DefaultLayoutAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).DefaultLayoutAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultOverlapRemovalAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultOverlapRemovalAlgorithm
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.DefaultOverlapRemovalAlgorithm
+  name: DefaultOverlapRemovalAlgorithm
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.DefaultOverlapRemovalAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.DefaultOverlapRemovalAlgorithm
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).DefaultOverlapRemovalAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).DefaultOverlapRemovalAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultEdgeRoutingAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultEdgeRoutingAlgorithm
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.DefaultEdgeRoutingAlgorithm
+  name: DefaultEdgeRoutingAlgorithm
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.DefaultEdgeRoutingAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.DefaultEdgeRoutingAlgorithm
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).DefaultEdgeRoutingAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).DefaultEdgeRoutingAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultLayoutAlgorithmParams
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultLayoutAlgorithmParams
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.DefaultLayoutAlgorithmParams
+  name: DefaultLayoutAlgorithmParams
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.DefaultLayoutAlgorithmParams
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.DefaultLayoutAlgorithmParams
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).DefaultLayoutAlgorithmParams
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).DefaultLayoutAlgorithmParams
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultOverlapRemovalAlgorithmParams
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultOverlapRemovalAlgorithmParams
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.DefaultOverlapRemovalAlgorithmParams
+  name: DefaultOverlapRemovalAlgorithmParams
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.DefaultOverlapRemovalAlgorithmParams
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.DefaultOverlapRemovalAlgorithmParams
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).DefaultOverlapRemovalAlgorithmParams
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).DefaultOverlapRemovalAlgorithmParams
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultEdgeRoutingAlgorithmParams
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.DefaultEdgeRoutingAlgorithmParams
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.DefaultEdgeRoutingAlgorithmParams
+  name: DefaultEdgeRoutingAlgorithmParams
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.DefaultEdgeRoutingAlgorithmParams
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.DefaultEdgeRoutingAlgorithmParams
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).DefaultEdgeRoutingAlgorithmParams
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).DefaultEdgeRoutingAlgorithmParams
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AsyncAlgorithmCompute
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.AsyncAlgorithmCompute
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.AsyncAlgorithmCompute
+  name: AsyncAlgorithmCompute
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.AsyncAlgorithmCompute
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.AsyncAlgorithmCompute
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).AsyncAlgorithmCompute
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).AsyncAlgorithmCompute
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsFiltered
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsFiltered
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.IsFiltered
+  name: IsFiltered
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.IsFiltered
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.IsFiltered
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).IsFiltered
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).IsFiltered
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsFilterRemoved
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsFilterRemoved
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.IsFilterRemoved
+  name: IsFilterRemoved
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.IsFilterRemoved
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.IsFilterRemoved
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).IsFilterRemoved
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).IsFilterRemoved
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Filters
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Filters
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.Filters
+  name: Filters
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.Filters
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.Filters
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).Filters
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).Filters
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EdgeCurvingEnabled
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EdgeCurvingEnabled
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.EdgeCurvingEnabled
+  name: EdgeCurvingEnabled
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.EdgeCurvingEnabled
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.EdgeCurvingEnabled
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).EdgeCurvingEnabled
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).EdgeCurvingEnabled
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EdgeCurvingTolerance
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EdgeCurvingTolerance
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.EdgeCurvingTolerance
+  name: EdgeCurvingTolerance
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.EdgeCurvingTolerance
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.EdgeCurvingTolerance
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).EdgeCurvingTolerance
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).EdgeCurvingTolerance
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Graph
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.Graph
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.Graph
+  name: Graph
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.Graph
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.Graph
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).Graph
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).Graph
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.OriginalGraph
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.OriginalGraph
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.OriginalGraph
+  name: OriginalGraph
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.OriginalGraph
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.OriginalGraph
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).OriginalGraph
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).OriginalGraph
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EnableParallelEdges
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.EnableParallelEdges
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.EnableParallelEdges
+  name: EnableParallelEdges
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.EnableParallelEdges
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.EnableParallelEdges
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).EnableParallelEdges
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).EnableParallelEdges
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ParallelEdgeDistance
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.ParallelEdgeDistance
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.ParallelEdgeDistance
+  name: ParallelEdgeDistance
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.ParallelEdgeDistance
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.ParallelEdgeDistance
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).ParallelEdgeDistance
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).ParallelEdgeDistance
+- uid: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsEdgeRoutingEnabled
+  commentId: P:GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}.IsEdgeRoutingEnabled
+  parent: GraphX.Logic.Models.GXLogicCore{mosaic_libary.Vertex,mosaic_libary.Edge,QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}}
+  definition: GraphX.Logic.Models.GXLogicCore`3.IsEdgeRoutingEnabled
+  name: IsEdgeRoutingEnabled
+  nameWithType: GXLogicCore<Vertex, Edge, BidirectionalGraph<Vertex, Edge>>.IsEdgeRoutingEnabled
+  fullName: GraphX.Logic.Models.GXLogicCore<mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>>.IsEdgeRoutingEnabled
+  nameWithType.vb: GXLogicCore(Of Vertex, Edge, BidirectionalGraph(Of Vertex, Edge)).IsEdgeRoutingEnabled
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of mosaic_libary.Vertex, mosaic_libary.Edge, QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)).IsEdgeRoutingEnabled
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GraphX.Logic.Models.GXLogicCore`3
+  commentId: T:GraphX.Logic.Models.GXLogicCore`3
+  isExternal: true
+  name: GXLogicCore<TVertex, TEdge, TGraph>
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph)
+  name.vb: GXLogicCore(Of TVertex, TEdge, TGraph)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3
+    name: GXLogicCore
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: ','
+  - name: " "
+  - name: TGraph
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3
+    name: GXLogicCore
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: ','
+  - name: " "
+  - name: TGraph
+  - name: )
+- uid: GraphX.Logic.Models
+  commentId: N:GraphX.Logic.Models
+  isExternal: true
+  name: GraphX.Logic.Models
+  nameWithType: GraphX.Logic.Models
+  fullName: GraphX.Logic.Models
+  spec.csharp:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Logic
+    name: Logic
+    isExternal: true
+  - name: .
+  - uid: GraphX.Logic.Models
+    name: Models
+    isExternal: true
+  spec.vb:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Logic
+    name: Logic
+    isExternal: true
+  - name: .
+  - uid: GraphX.Logic.Models
+    name: Models
+    isExternal: true
+- uid: GraphX.Common.Interfaces.IGXLogicCore`3
+  commentId: T:GraphX.Common.Interfaces.IGXLogicCore`3
+  isExternal: true
+  name: IGXLogicCore<TVertex, TEdge, TGraph>
+  nameWithType: IGXLogicCore<TVertex, TEdge, TGraph>
+  fullName: GraphX.Common.Interfaces.IGXLogicCore<TVertex, TEdge, TGraph>
+  nameWithType.vb: IGXLogicCore(Of TVertex, TEdge, TGraph)
+  fullName.vb: GraphX.Common.Interfaces.IGXLogicCore(Of TVertex, TEdge, TGraph)
+  name.vb: IGXLogicCore(Of TVertex, TEdge, TGraph)
+  spec.csharp:
+  - uid: GraphX.Common.Interfaces.IGXLogicCore`3
+    name: IGXLogicCore
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: ','
+  - name: " "
+  - name: TGraph
+  - name: '>'
+  spec.vb:
+  - uid: GraphX.Common.Interfaces.IGXLogicCore`3
+    name: IGXLogicCore
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: ','
+  - name: " "
+  - name: TGraph
+  - name: )
+- uid: GraphX.Common.Interfaces
+  commentId: N:GraphX.Common.Interfaces
+  isExternal: true
+  name: GraphX.Common.Interfaces
+  nameWithType: GraphX.Common.Interfaces
+  fullName: GraphX.Common.Interfaces
+  spec.csharp:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Interfaces
+    name: Interfaces
+    isExternal: true
+  spec.vb:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Interfaces
+    name: Interfaces
+    isExternal: true
+- uid: GraphX.Logic.Models.GXLogicCore`3.Clear(System.Boolean)
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.Clear(System.Boolean)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: Clear(bool)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.Clear(bool)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.Clear(bool)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).Clear(Boolean)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).Clear(Boolean)
+  name.vb: Clear(Boolean)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.Clear(System.Boolean)
+    name: Clear
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.Clear(System.Boolean)
+    name: Clear
+    isExternal: true
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.PushFilters
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.PushFilters
+  isExternal: true
+  name: PushFilters()
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.PushFilters()
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.PushFilters()
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).PushFilters()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).PushFilters()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.PushFilters
+    name: PushFilters
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.PushFilters
+    name: PushFilters
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.ApplyFilters
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.ApplyFilters
+  isExternal: true
+  name: ApplyFilters()
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.ApplyFilters()
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.ApplyFilters()
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).ApplyFilters()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).ApplyFilters()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.ApplyFilters
+    name: ApplyFilters
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.ApplyFilters
+    name: ApplyFilters
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.PopFilters
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.PopFilters
+  isExternal: true
+  name: PopFilters()
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.PopFilters()
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.PopFilters()
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).PopFilters()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).PopFilters()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.PopFilters
+    name: PopFilters
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.PopFilters
+    name: PopFilters
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.Dispose
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.Dispose
+  isExternal: true
+  name: Dispose()
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.Dispose()
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.Dispose()
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).Dispose()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).Dispose()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.Dispose
+    name: Dispose
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmFactory
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmFactory
+  isExternal: true
+  name: CreateNewAlgorithmFactory()
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.CreateNewAlgorithmFactory()
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.CreateNewAlgorithmFactory()
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).CreateNewAlgorithmFactory()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).CreateNewAlgorithmFactory()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmFactory
+    name: CreateNewAlgorithmFactory
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmFactory
+    name: CreateNewAlgorithmFactory
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{`0,`1},GraphX.Common.Interfaces.IExternalOverlapRemoval{`0},GraphX.Common.Interfaces.IExternalEdgeRouting{`0,`1})
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{`0,`1},GraphX.Common.Interfaces.IExternalOverlapRemoval{`0},GraphX.Common.Interfaces.IExternalEdgeRouting{`0,`1})
+  isExternal: true
+  name: CreateNewAlgorithmStorage(IExternalLayout<TVertex, TEdge>, IExternalOverlapRemoval<TVertex>, IExternalEdgeRouting<TVertex, TEdge>)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.CreateNewAlgorithmStorage(IExternalLayout<TVertex, TEdge>, IExternalOverlapRemoval<TVertex>, IExternalEdgeRouting<TVertex, TEdge>)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout<TVertex, TEdge>, GraphX.Common.Interfaces.IExternalOverlapRemoval<TVertex>, GraphX.Common.Interfaces.IExternalEdgeRouting<TVertex, TEdge>)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).CreateNewAlgorithmStorage(IExternalLayout(Of TVertex, TEdge), IExternalOverlapRemoval(Of TVertex), IExternalEdgeRouting(Of TVertex, TEdge))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout(Of TVertex, TEdge), GraphX.Common.Interfaces.IExternalOverlapRemoval(Of TVertex), GraphX.Common.Interfaces.IExternalEdgeRouting(Of TVertex, TEdge))
+  name.vb: CreateNewAlgorithmStorage(IExternalLayout(Of TVertex, TEdge), IExternalOverlapRemoval(Of TVertex), IExternalEdgeRouting(Of TVertex, TEdge))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{`0,`1},GraphX.Common.Interfaces.IExternalOverlapRemoval{`0},GraphX.Common.Interfaces.IExternalEdgeRouting{`0,`1})
+    name: CreateNewAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: GraphX.Common.Interfaces.IExternalLayout`2
+    name: IExternalLayout
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalOverlapRemoval`1
+    name: IExternalOverlapRemoval
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalEdgeRouting`2
+    name: IExternalEdgeRouting
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.CreateNewAlgorithmStorage(GraphX.Common.Interfaces.IExternalLayout{`0,`1},GraphX.Common.Interfaces.IExternalOverlapRemoval{`0},GraphX.Common.Interfaces.IExternalEdgeRouting{`0,`1})
+    name: CreateNewAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: GraphX.Common.Interfaces.IExternalLayout`2
+    name: IExternalLayout
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalOverlapRemoval`1
+    name: IExternalOverlapRemoval
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IExternalEdgeRouting`2
+    name: IExternalEdgeRouting
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: GenerateAlgorithmStorage(Dictionary<TVertex, Size>, IDictionary<TVertex, Point>)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.GenerateAlgorithmStorage(Dictionary<TVertex, Size>, IDictionary<TVertex, Point>)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary<TVertex, GraphX.Measure.Size>, System.Collections.Generic.IDictionary<TVertex, GraphX.Measure.Point>)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).GenerateAlgorithmStorage(Dictionary(Of TVertex, Size), IDictionary(Of TVertex, Point))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).GenerateAlgorithmStorage(System.Collections.Generic.Dictionary(Of TVertex, GraphX.Measure.Size), System.Collections.Generic.IDictionary(Of TVertex, GraphX.Measure.Point))
+  name.vb: GenerateAlgorithmStorage(Dictionary(Of TVertex, Size), IDictionary(Of TVertex, Point))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+    name: GenerateAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateAlgorithmStorage(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+    name: GenerateAlgorithmStorage
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Boolean)
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Boolean)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: GetVertexSizeRectangles(IDictionary<TVertex, Point>, Dictionary<TVertex, Size>, bool)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.GetVertexSizeRectangles(IDictionary<TVertex, Point>, Dictionary<TVertex, Size>, bool)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.GetVertexSizeRectangles(System.Collections.Generic.IDictionary<TVertex, GraphX.Measure.Point>, System.Collections.Generic.Dictionary<TVertex, GraphX.Measure.Size>, bool)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).GetVertexSizeRectangles(IDictionary(Of TVertex, Point), Dictionary(Of TVertex, Size), Boolean)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).GetVertexSizeRectangles(System.Collections.Generic.IDictionary(Of TVertex, GraphX.Measure.Point), System.Collections.Generic.Dictionary(Of TVertex, GraphX.Measure.Size), Boolean)
+  name.vb: GetVertexSizeRectangles(IDictionary(Of TVertex, Point), Dictionary(Of TVertex, Size), Boolean)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Boolean)
+    name: GetVertexSizeRectangles
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GetVertexSizeRectangles(System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Boolean)
+    name: GetVertexSizeRectangles
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.AreVertexSizesNeeded
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.AreVertexSizesNeeded
+  isExternal: true
+  name: AreVertexSizesNeeded()
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.AreVertexSizesNeeded()
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.AreVertexSizesNeeded()
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).AreVertexSizesNeeded()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).AreVertexSizesNeeded()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.AreVertexSizesNeeded
+    name: AreVertexSizesNeeded
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.AreVertexSizesNeeded
+    name: AreVertexSizesNeeded
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.AreOverlapNeeded
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.AreOverlapNeeded
+  isExternal: true
+  name: AreOverlapNeeded()
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.AreOverlapNeeded()
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.AreOverlapNeeded()
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).AreOverlapNeeded()
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).AreOverlapNeeded()
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.AreOverlapNeeded
+    name: AreOverlapNeeded
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.AreOverlapNeeded
+    name: AreOverlapNeeded
+    isExternal: true
+  - name: (
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Rect})
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Rect})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: GenerateOverlapRemovalAlgorithm(Dictionary<TVertex, Rect>)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.GenerateOverlapRemovalAlgorithm(Dictionary<TVertex, Rect>)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary<TVertex, GraphX.Measure.Rect>)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).GenerateOverlapRemovalAlgorithm(Dictionary(Of TVertex, Rect))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary(Of TVertex, GraphX.Measure.Rect))
+  name.vb: GenerateOverlapRemovalAlgorithm(Dictionary(Of TVertex, Rect))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Rect})
+    name: GenerateOverlapRemovalAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateOverlapRemovalAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Rect})
+    name: GenerateOverlapRemovalAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: GenerateLayoutAlgorithm(Dictionary<TVertex, Size>, IDictionary<TVertex, Point>)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.GenerateLayoutAlgorithm(Dictionary<TVertex, Size>, IDictionary<TVertex, Point>)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary<TVertex, GraphX.Measure.Size>, System.Collections.Generic.IDictionary<TVertex, GraphX.Measure.Point>)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).GenerateLayoutAlgorithm(Dictionary(Of TVertex, Size), IDictionary(Of TVertex, Point))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary(Of TVertex, GraphX.Measure.Size), System.Collections.Generic.IDictionary(Of TVertex, GraphX.Measure.Point))
+  name.vb: GenerateLayoutAlgorithm(Dictionary(Of TVertex, Size), IDictionary(Of TVertex, Point))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+    name: GenerateLayoutAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateLayoutAlgorithm(System.Collections.Generic.Dictionary{`0,GraphX.Measure.Size},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point})
+    name: GenerateLayoutAlgorithm
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Rect})
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Rect})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  name: GenerateEdgeRoutingAlgorithm(Size, IDictionary<TVertex, Point>, IDictionary<TVertex, Rect>)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.GenerateEdgeRoutingAlgorithm(Size, IDictionary<TVertex, Point>, IDictionary<TVertex, Rect>)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size, System.Collections.Generic.IDictionary<TVertex, GraphX.Measure.Point>, System.Collections.Generic.IDictionary<TVertex, GraphX.Measure.Rect>)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).GenerateEdgeRoutingAlgorithm(Size, IDictionary(Of TVertex, Point), IDictionary(Of TVertex, Rect))
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size, System.Collections.Generic.IDictionary(Of TVertex, GraphX.Measure.Point), System.Collections.Generic.IDictionary(Of TVertex, GraphX.Measure.Rect))
+  name.vb: GenerateEdgeRoutingAlgorithm(Size, IDictionary(Of TVertex, Point), IDictionary(Of TVertex, Rect))
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Rect})
+    name: GenerateEdgeRoutingAlgorithm
+    isExternal: true
+  - name: (
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.GenerateEdgeRoutingAlgorithm(GraphX.Measure.Size,System.Collections.Generic.IDictionary{`0,GraphX.Measure.Point},System.Collections.Generic.IDictionary{`0,GraphX.Measure.Rect})
+    name: GenerateEdgeRoutingAlgorithm
+    isExternal: true
+  - name: (
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IDictionary`2
+    name: IDictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.idictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Rect
+    name: Rect
+    isExternal: true
+  - name: )
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.ComputeEdgeRoutesByVertex(`0,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.ComputeEdgeRoutesByVertex(`0,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+  isExternal: true
+  name: ComputeEdgeRoutesByVertex(TVertex, Point?, Size?)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.ComputeEdgeRoutesByVertex(TVertex, Point?, Size?)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.ComputeEdgeRoutesByVertex(TVertex, GraphX.Measure.Point?, GraphX.Measure.Size?)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).ComputeEdgeRoutesByVertex(TVertex, Point?, Size?)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).ComputeEdgeRoutesByVertex(TVertex, GraphX.Measure.Point?, GraphX.Measure.Size?)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.ComputeEdgeRoutesByVertex(`0,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+    name: ComputeEdgeRoutesByVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '?'
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.ComputeEdgeRoutesByVertex(`0,System.Nullable{GraphX.Measure.Point},System.Nullable{GraphX.Measure.Size})
+    name: ComputeEdgeRoutesByVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Point
+    name: Point
+    isExternal: true
+  - name: '?'
+  - name: ','
+  - name: " "
+  - uid: GraphX.Measure.Size
+    name: Size
+    isExternal: true
+  - name: '?'
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.Compute(System.Threading.CancellationToken)
+  commentId: M:GraphX.Logic.Models.GXLogicCore`3.Compute(System.Threading.CancellationToken)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: Compute(CancellationToken)
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.Compute(CancellationToken)
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.Compute(System.Threading.CancellationToken)
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).Compute(CancellationToken)
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).Compute(System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.Compute(System.Threading.CancellationToken)
+    name: Compute
+    isExternal: true
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+  spec.vb:
+  - uid: GraphX.Logic.Models.GXLogicCore`3.Compute(System.Threading.CancellationToken)
+    name: Compute
+    isExternal: true
+  - name: (
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  - name: )
+- uid: GraphX.Logic.Models.GXLogicCore`3.AlgorithmFactory
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.AlgorithmFactory
+  isExternal: true
+  name: AlgorithmFactory
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.AlgorithmFactory
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.AlgorithmFactory
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).AlgorithmFactory
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).AlgorithmFactory
+- uid: GraphX.Logic.Models.GXLogicCore`3.AlgorithmStorage
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.AlgorithmStorage
+  isExternal: true
+  name: AlgorithmStorage
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.AlgorithmStorage
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.AlgorithmStorage
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).AlgorithmStorage
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).AlgorithmStorage
+- uid: GraphX.Logic.Models.GXLogicCore`3.IsCustomLayout
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.IsCustomLayout
+  isExternal: true
+  name: IsCustomLayout
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.IsCustomLayout
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.IsCustomLayout
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).IsCustomLayout
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).IsCustomLayout
+- uid: GraphX.Logic.Models.GXLogicCore`3.ExternalLayoutAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.ExternalLayoutAlgorithm
+  isExternal: true
+  name: ExternalLayoutAlgorithm
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.ExternalLayoutAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.ExternalLayoutAlgorithm
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).ExternalLayoutAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).ExternalLayoutAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore`3.ExternalOverlapRemovalAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.ExternalOverlapRemovalAlgorithm
+  isExternal: true
+  name: ExternalOverlapRemovalAlgorithm
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.ExternalOverlapRemovalAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.ExternalOverlapRemovalAlgorithm
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).ExternalOverlapRemovalAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).ExternalOverlapRemovalAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore`3.ExternalEdgeRoutingAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.ExternalEdgeRoutingAlgorithm
+  isExternal: true
+  name: ExternalEdgeRoutingAlgorithm
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.ExternalEdgeRoutingAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.ExternalEdgeRoutingAlgorithm
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).ExternalEdgeRoutingAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).ExternalEdgeRoutingAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore`3.DefaultLayoutAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.DefaultLayoutAlgorithm
+  isExternal: true
+  name: DefaultLayoutAlgorithm
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.DefaultLayoutAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.DefaultLayoutAlgorithm
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).DefaultLayoutAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).DefaultLayoutAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore`3.DefaultOverlapRemovalAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.DefaultOverlapRemovalAlgorithm
+  isExternal: true
+  name: DefaultOverlapRemovalAlgorithm
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.DefaultOverlapRemovalAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.DefaultOverlapRemovalAlgorithm
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).DefaultOverlapRemovalAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).DefaultOverlapRemovalAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore`3.DefaultEdgeRoutingAlgorithm
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.DefaultEdgeRoutingAlgorithm
+  isExternal: true
+  name: DefaultEdgeRoutingAlgorithm
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.DefaultEdgeRoutingAlgorithm
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.DefaultEdgeRoutingAlgorithm
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).DefaultEdgeRoutingAlgorithm
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).DefaultEdgeRoutingAlgorithm
+- uid: GraphX.Logic.Models.GXLogicCore`3.DefaultLayoutAlgorithmParams
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.DefaultLayoutAlgorithmParams
+  isExternal: true
+  name: DefaultLayoutAlgorithmParams
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.DefaultLayoutAlgorithmParams
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.DefaultLayoutAlgorithmParams
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).DefaultLayoutAlgorithmParams
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).DefaultLayoutAlgorithmParams
+- uid: GraphX.Logic.Models.GXLogicCore`3.DefaultOverlapRemovalAlgorithmParams
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.DefaultOverlapRemovalAlgorithmParams
+  isExternal: true
+  name: DefaultOverlapRemovalAlgorithmParams
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.DefaultOverlapRemovalAlgorithmParams
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.DefaultOverlapRemovalAlgorithmParams
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).DefaultOverlapRemovalAlgorithmParams
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).DefaultOverlapRemovalAlgorithmParams
+- uid: GraphX.Logic.Models.GXLogicCore`3.DefaultEdgeRoutingAlgorithmParams
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.DefaultEdgeRoutingAlgorithmParams
+  isExternal: true
+  name: DefaultEdgeRoutingAlgorithmParams
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.DefaultEdgeRoutingAlgorithmParams
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.DefaultEdgeRoutingAlgorithmParams
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).DefaultEdgeRoutingAlgorithmParams
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).DefaultEdgeRoutingAlgorithmParams
+- uid: GraphX.Logic.Models.GXLogicCore`3.AsyncAlgorithmCompute
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.AsyncAlgorithmCompute
+  isExternal: true
+  name: AsyncAlgorithmCompute
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.AsyncAlgorithmCompute
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.AsyncAlgorithmCompute
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).AsyncAlgorithmCompute
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).AsyncAlgorithmCompute
+- uid: GraphX.Logic.Models.GXLogicCore`3.IsFiltered
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.IsFiltered
+  isExternal: true
+  name: IsFiltered
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.IsFiltered
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.IsFiltered
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).IsFiltered
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).IsFiltered
+- uid: GraphX.Logic.Models.GXLogicCore`3.IsFilterRemoved
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.IsFilterRemoved
+  isExternal: true
+  name: IsFilterRemoved
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.IsFilterRemoved
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.IsFilterRemoved
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).IsFilterRemoved
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).IsFilterRemoved
+- uid: GraphX.Logic.Models.GXLogicCore`3.Filters
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.Filters
+  isExternal: true
+  name: Filters
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.Filters
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.Filters
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).Filters
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).Filters
+- uid: GraphX.Logic.Models.GXLogicCore`3.EdgeCurvingEnabled
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.EdgeCurvingEnabled
+  isExternal: true
+  name: EdgeCurvingEnabled
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.EdgeCurvingEnabled
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.EdgeCurvingEnabled
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).EdgeCurvingEnabled
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).EdgeCurvingEnabled
+- uid: GraphX.Logic.Models.GXLogicCore`3.EdgeCurvingTolerance
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.EdgeCurvingTolerance
+  isExternal: true
+  name: EdgeCurvingTolerance
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.EdgeCurvingTolerance
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.EdgeCurvingTolerance
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).EdgeCurvingTolerance
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).EdgeCurvingTolerance
+- uid: GraphX.Logic.Models.GXLogicCore`3.Graph
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.Graph
+  isExternal: true
+  name: Graph
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.Graph
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.Graph
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).Graph
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).Graph
+- uid: GraphX.Logic.Models.GXLogicCore`3.OriginalGraph
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.OriginalGraph
+  isExternal: true
+  name: OriginalGraph
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.OriginalGraph
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.OriginalGraph
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).OriginalGraph
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).OriginalGraph
+- uid: GraphX.Logic.Models.GXLogicCore`3.EnableParallelEdges
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.EnableParallelEdges
+  isExternal: true
+  name: EnableParallelEdges
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.EnableParallelEdges
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.EnableParallelEdges
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).EnableParallelEdges
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).EnableParallelEdges
+- uid: GraphX.Logic.Models.GXLogicCore`3.ParallelEdgeDistance
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.ParallelEdgeDistance
+  isExternal: true
+  name: ParallelEdgeDistance
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.ParallelEdgeDistance
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.ParallelEdgeDistance
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).ParallelEdgeDistance
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).ParallelEdgeDistance
+- uid: GraphX.Logic.Models.GXLogicCore`3.IsEdgeRoutingEnabled
+  commentId: P:GraphX.Logic.Models.GXLogicCore`3.IsEdgeRoutingEnabled
+  isExternal: true
+  name: IsEdgeRoutingEnabled
+  nameWithType: GXLogicCore<TVertex, TEdge, TGraph>.IsEdgeRoutingEnabled
+  fullName: GraphX.Logic.Models.GXLogicCore<TVertex, TEdge, TGraph>.IsEdgeRoutingEnabled
+  nameWithType.vb: GXLogicCore(Of TVertex, TEdge, TGraph).IsEdgeRoutingEnabled
+  fullName.vb: GraphX.Logic.Models.GXLogicCore(Of TVertex, TEdge, TGraph).IsEdgeRoutingEnabled

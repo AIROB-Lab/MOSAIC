@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.HannesHand.EMGMDeviceMode
+  commentId: T:mosaic_libary.HannesHand.EMGMDeviceMode
+  id: HannesHand.EMGMDeviceMode
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_COMMAND_MODE
+  - mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_STREAM_MODE
+  langs:
+  - csharp
+  - vb
+  name: HannesHand.EMGMDeviceMode
+  nameWithType: HannesHand.EMGMDeviceMode
+  fullName: mosaic_libary.HannesHand.EMGMDeviceMode
+  type: Enum
+  source:
+    id: EMGMDeviceMode
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 351
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Possible modes of the EMGEM device. Certain commands are only possible in one of them. To "setup the device", e.g. 
+
+    set mode or activate joints, the Command mode has to be ON. For streaming joint position/speed commands the Stream
+
+    Mode has to be activated.
+  example: []
+  syntax:
+    content: public enum HannesHand.EMGMDeviceMode
+    content.vb: Public Enum HannesHand.EMGMDeviceMode
+- uid: mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_COMMAND_MODE
+  commentId: F:mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_COMMAND_MODE
+  id: EMGM_COMMAND_MODE
+  parent: mosaic_libary.HannesHand.EMGMDeviceMode
+  langs:
+  - csharp
+  - vb
+  name: EMGM_COMMAND_MODE
+  nameWithType: HannesHand.EMGMDeviceMode.EMGM_COMMAND_MODE
+  fullName: mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_COMMAND_MODE
+  type: Field
+  source:
+    id: EMGM_COMMAND_MODE
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 353
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EMGM_COMMAND_MODE = 0
+    return:
+      type: mosaic_libary.HannesHand.EMGMDeviceMode
+- uid: mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_STREAM_MODE
+  commentId: F:mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_STREAM_MODE
+  id: EMGM_STREAM_MODE
+  parent: mosaic_libary.HannesHand.EMGMDeviceMode
+  langs:
+  - csharp
+  - vb
+  name: EMGM_STREAM_MODE
+  nameWithType: HannesHand.EMGMDeviceMode.EMGM_STREAM_MODE
+  fullName: mosaic_libary.HannesHand.EMGMDeviceMode.EMGM_STREAM_MODE
+  type: Field
+  source:
+    id: EMGM_STREAM_MODE
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 354
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EMGM_STREAM_MODE = 1
+    return:
+      type: mosaic_libary.HannesHand.EMGMDeviceMode
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.HannesHand.EMGMDeviceMode
+  commentId: T:mosaic_libary.HannesHand.EMGMDeviceMode
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.EMGMDeviceMode
+  nameWithType: HannesHand.EMGMDeviceMode
+  fullName: mosaic_libary.HannesHand.EMGMDeviceMode
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.EMGMDeviceMode
+    name: EMGMDeviceMode
+    href: mosaic_libary.HannesHand.EMGMDeviceMode.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.EMGMDeviceMode
+    name: EMGMDeviceMode
+    href: mosaic_libary.HannesHand.EMGMDeviceMode.html

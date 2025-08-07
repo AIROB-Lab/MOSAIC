@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Block.OutputHandler
+  commentId: T:mosaic_libary.Block.OutputHandler
+  id: Block.OutputHandler
+  parent: mosaic_libary
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: Block.OutputHandler
+  nameWithType: Block.OutputHandler
+  fullName: mosaic_libary.Block.OutputHandler
+  type: Delegate
+  source:
+    id: OutputHandler
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 370
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public delegate void Block.OutputHandler(Block sender, object value)
+    parameters:
+    - id: sender
+      type: mosaic_libary.Block
+    - id: value
+      type: System.Object
+    content.vb: Public Delegate Sub Block.OutputHandler(sender As Block, value As Object)
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

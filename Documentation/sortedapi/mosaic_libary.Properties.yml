@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Properties
+  commentId: N:mosaic_libary.Properties
+  id: mosaic_libary.Properties
+  children:
+  - mosaic_libary.Properties.Resources
+  langs:
+  - csharp
+  - vb
+  name: mosaic_libary.Properties
+  nameWithType: mosaic_libary.Properties
+  fullName: mosaic_libary.Properties
+  type: Namespace
+  assemblies:
+  - iM
+references:
+- uid: mosaic_libary.Properties.Resources
+  commentId: T:mosaic_libary.Properties.Resources
+  href: mosaic_libary.Properties.Resources.html
+  name: Resources
+  nameWithType: Resources
+  fullName: mosaic_libary.Properties.Resources

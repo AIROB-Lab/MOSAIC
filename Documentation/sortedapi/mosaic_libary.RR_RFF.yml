@@ -1,0 +1,1241 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.RR_RFF
+  commentId: T:mosaic_libary.RR_RFF
+  id: RR_RFF
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.RR_RFF.#ctor(System.Int32,System.Int32,System.Double,System.Double,System.Int32)
+  - mosaic_libary.RR_RFF.#ctor(System.Int32,System.Int32,System.String[])
+  - mosaic_libary.RR_RFF.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  - mosaic_libary.RR_RFF.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  - mosaic_libary.RR_RFF.Initialise(System.Int32,System.Int32,System.Double,System.Double,System.Int32)
+  - mosaic_libary.RR_RFF.Omega
+  - mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  - mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  - mosaic_libary.RR_RFF.RR
+  - mosaic_libary.RR_RFF.ResetModel
+  - mosaic_libary.RR_RFF.beta
+  - mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  - mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  langs:
+  - csharp
+  - vb
+  name: RR_RFF
+  nameWithType: RR_RFF
+  fullName: mosaic_libary.RR_RFF
+  type: Class
+  source:
+    id: RR_RFF
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 307
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Ridge Regression with Random Fourier Features (RR_RFF).
+
+    This approach maps input samples into a high-dimensional feature space via phi(x),
+
+    where phi(x) uses Random Fourier Features (RFF) to approximate a Radial Basis Function (RBF) kernel.
+
+    As the number of features (D) increases, this method approximates Least-Squares Support Vector Machines (LS-SVM) with an RBF kernel.
+  example: []
+  syntax:
+    content: 'public class RR_RFF : BatchLearningMachine'
+    content.vb: Public Class RR_RFF Inherits BatchLearningMachine
+  inheritance:
+  - System.Object
+  - mosaic_libary.PredictingMachine
+  - mosaic_libary.BatchLearningMachine
+  inheritedMembers:
+  - mosaic_libary.PredictingMachine._pmLock
+  - mosaic_libary.PredictingMachine._d
+  - mosaic_libary.PredictingMachine._M
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.RR_RFF.Omega
+  commentId: F:mosaic_libary.RR_RFF.Omega
+  id: Omega
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: Omega
+  nameWithType: RR_RFF.Omega
+  fullName: mosaic_libary.RR_RFF.Omega
+  type: Field
+  source:
+    id: Omega
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 312
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The matrix of random Fourier feature weights (Ω), drawn from a normal distribution with mean 0 and standard deviation sigma.
+  example: []
+  syntax:
+    content: private Matrix<double> Omega
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+    content.vb: Private Omega As Matrix(Of Double)
+- uid: mosaic_libary.RR_RFF.beta
+  commentId: F:mosaic_libary.RR_RFF.beta
+  id: beta
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: beta
+  nameWithType: RR_RFF.beta
+  fullName: mosaic_libary.RR_RFF.beta
+  type: Field
+  source:
+    id: beta
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 317
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The vector of random bias terms (β), drawn from a uniform distribution between -π and π.
+  example: []
+  syntax:
+    content: private Vector<double> beta
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private beta As Vector(Of Double)
+- uid: mosaic_libary.RR_RFF.RR
+  commentId: F:mosaic_libary.RR_RFF.RR
+  id: RR
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: RR
+  nameWithType: RR_RFF.RR
+  fullName: mosaic_libary.RR_RFF.RR
+  type: Field
+  source:
+    id: RR
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 322
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The Ridge Regression instance used to operate on the transformed feature space (RFF space).
+  example: []
+  syntax:
+    content: private RidgeRegression RR
+    return:
+      type: mosaic_libary.RidgeRegression
+    content.vb: Private RR As RidgeRegression
+- uid: mosaic_libary.RR_RFF.#ctor(System.Int32,System.Int32,System.Double,System.Double,System.Int32)
+  commentId: M:mosaic_libary.RR_RFF.#ctor(System.Int32,System.Int32,System.Double,System.Double,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Double,System.Double,System.Int32)'
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: RR_RFF(int, int, double, double, int)
+  nameWithType: RR_RFF.RR_RFF(int, int, double, double, int)
+  fullName: mosaic_libary.RR_RFF.RR_RFF(int, int, double, double, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 332
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Constructs the RR_RFF model with explicit hyperparameters.
+  example: []
+  syntax:
+    content: public RR_RFF(int d, int M, double lambda = 1, double sigma = 1, int D = 300)
+    parameters:
+    - id: d
+      type: System.Int32
+      description: The input space dimensionality (number of features).
+    - id: M
+      type: System.Int32
+      description: The output space dimensionality (number of targets).
+    - id: lambda
+      type: System.Double
+      description: The regularization coefficient for Ridge Regression.
+    - id: sigma
+      type: System.Double
+      description: The standard deviation of the RBF kernel (used for generating random features).
+    - id: D
+      type: System.Int32
+      description: The number of random Fourier features (higher D results in better approximation).
+    content.vb: Public Sub New(d As Integer, M As Integer, lambda As Double = 1, sigma As Double = 1, D As Integer = 300)
+  overload: mosaic_libary.RR_RFF.#ctor*
+  nameWithType.vb: RR_RFF.New(Integer, Integer, Double, Double, Integer)
+  fullName.vb: mosaic_libary.RR_RFF.New(Integer, Integer, Double, Double, Integer)
+  name.vb: New(Integer, Integer, Double, Double, Integer)
+- uid: mosaic_libary.RR_RFF.#ctor(System.Int32,System.Int32,System.String[])
+  commentId: M:mosaic_libary.RR_RFF.#ctor(System.Int32,System.Int32,System.String[])
+  id: '#ctor(System.Int32,System.Int32,System.String[])'
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: RR_RFF(int, int, string[])
+  nameWithType: RR_RFF.RR_RFF(int, int, string[])
+  fullName: mosaic_libary.RR_RFF.RR_RFF(int, int, string[])
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 344
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Constructs the RR_RFF model from a YAML configuration file.
+
+    Expects hyperparameters [lambda, sigma, D] in the configuration file.
+  example: []
+  syntax:
+    content: public RR_RFF(int d, int M, string[] HyperParams)
+    parameters:
+    - id: d
+      type: System.Int32
+      description: The input space dimensionality (number of features).
+    - id: M
+      type: System.Int32
+      description: The output space dimensionality (number of targets).
+    - id: HyperParams
+      type: System.String[]
+      description: 'An array of strings representing hyperparameters: [lambda, sigma, D].'
+    content.vb: Public Sub New(d As Integer, M As Integer, HyperParams As String())
+  overload: mosaic_libary.RR_RFF.#ctor*
+  nameWithType.vb: RR_RFF.New(Integer, Integer, String())
+  fullName.vb: mosaic_libary.RR_RFF.New(Integer, Integer, String())
+  name.vb: New(Integer, Integer, String())
+- uid: mosaic_libary.RR_RFF.Initialise(System.Int32,System.Int32,System.Double,System.Double,System.Int32)
+  commentId: M:mosaic_libary.RR_RFF.Initialise(System.Int32,System.Int32,System.Double,System.Double,System.Int32)
+  id: Initialise(System.Int32,System.Int32,System.Double,System.Double,System.Int32)
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: Initialise(int, int, double, double, int)
+  nameWithType: RR_RFF.Initialise(int, int, double, double, int)
+  fullName: mosaic_libary.RR_RFF.Initialise(int, int, double, double, int)
+  type: Method
+  source:
+    id: Initialise
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 366
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Initializes the RR_RFF model, including the Ridge Regression instance and the random Fourier features.
+  example: []
+  syntax:
+    content: public void Initialise(int d, int M, double lambda = 1, double sigma = 1, int D = 300)
+    parameters:
+    - id: d
+      type: System.Int32
+      description: The input space dimensionality.
+    - id: M
+      type: System.Int32
+      description: The output space dimensionality.
+    - id: lambda
+      type: System.Double
+      description: The regularization coefficient for Ridge Regression.
+    - id: sigma
+      type: System.Double
+      description: The standard deviation of the RBF kernel (used for generating random features).
+    - id: D
+      type: System.Int32
+      description: The number of random Fourier features.
+    content.vb: Public Sub Initialise(d As Integer, M As Integer, lambda As Double = 1, sigma As Double = 1, D As Integer = 300)
+  overload: mosaic_libary.RR_RFF.Initialise*
+  nameWithType.vb: RR_RFF.Initialise(Integer, Integer, Double, Double, Integer)
+  fullName.vb: mosaic_libary.RR_RFF.Initialise(Integer, Integer, Double, Double, Integer)
+  name.vb: Initialise(Integer, Integer, Double, Double, Integer)
+- uid: mosaic_libary.RR_RFF.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.RR_RFF.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: BuildModel(Matrix<double>, Matrix<double>)
+  nameWithType: RR_RFF.BuildModel(Matrix<double>, Matrix<double>)
+  fullName: mosaic_libary.RR_RFF.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix<double>, MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: BuildModel
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 385
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Builds the model by mapping input samples into the RFF space and applying Ridge Regression.
+  example: []
+  syntax:
+    content: public override void BuildModel(Matrix<double> X, Matrix<double> Y)
+    parameters:
+    - id: X
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The input matrix (features).
+    - id: Y
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The output matrix (targets).
+    content.vb: Public Overrides Sub BuildModel(X As Matrix(Of Double), Y As Matrix(Of Double))
+  overridden: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  overload: mosaic_libary.RR_RFF.BuildModel*
+  nameWithType.vb: RR_RFF.BuildModel(Matrix(Of Double), Matrix(Of Double))
+  fullName.vb: mosaic_libary.RR_RFF.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix(Of Double), MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: BuildModel(Matrix(Of Double), Matrix(Of Double))
+- uid: mosaic_libary.RR_RFF.ResetModel
+  commentId: M:mosaic_libary.RR_RFF.ResetModel
+  id: ResetModel
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: ResetModel()
+  nameWithType: RR_RFF.ResetModel()
+  fullName: mosaic_libary.RR_RFF.ResetModel()
+  type: Method
+  source:
+    id: ResetModel
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 393
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Resets the Ridge Regression model.
+  example: []
+  syntax:
+    content: public override void ResetModel()
+    content.vb: Public Overrides Sub ResetModel()
+  overridden: mosaic_libary.PredictingMachine.ResetModel
+  overload: mosaic_libary.RR_RFF.ResetModel*
+- uid: mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  id: Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: Predict(Vector<double>)
+  nameWithType: RR_RFF.Predict(Vector<double>)
+  fullName: mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  type: Method
+  source:
+    id: Predict
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 403
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Predicts the output for a single input vector by first mapping it to the RFF space.
+  example: []
+  syntax:
+    content: public override Vector<double> Predict(Vector<double> x)
+    parameters:
+    - id: x
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: The input vector.
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: The predicted output vector.
+    content.vb: Public Overrides Function Predict(x As Vector(Of Double)) As Vector(Of Double)
+  overridden: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  overload: mosaic_libary.RR_RFF.Predict*
+  nameWithType.vb: RR_RFF.Predict(Vector(Of Double))
+  fullName.vb: mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: Predict(Vector(Of Double))
+- uid: mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: Predict(Matrix<double>)
+  nameWithType: RR_RFF.Predict(Matrix<double>)
+  fullName: mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: Predict
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 413
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Predicts the output for a batch of input samples by first mapping them to the RFF space.
+  example: []
+  syntax:
+    content: public override Matrix<double> Predict(Matrix<double> X)
+    parameters:
+    - id: X
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The input matrix (each row represents a sample).
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The output matrix (each row corresponds to a predicted output).
+    content.vb: Public Overrides Function Predict(X As Matrix(Of Double)) As Matrix(Of Double)
+  overridden: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  overload: mosaic_libary.RR_RFF.Predict*
+  nameWithType.vb: RR_RFF.Predict(Matrix(Of Double))
+  fullName.vb: mosaic_libary.RR_RFF.Predict(MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: Predict(Matrix(Of Double))
+- uid: mosaic_libary.RR_RFF.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.RR_RFF.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  id: Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: Confidence(Vector<double>)
+  nameWithType: RR_RFF.Confidence(Vector<double>)
+  fullName: mosaic_libary.RR_RFF.Confidence(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  type: Method
+  source:
+    id: Confidence
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 424
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Evaluates the confidence of a prediction for a single input vector.
+
+    Confidence is computed in the RFF space.
+  example: []
+  syntax:
+    content: public override double Confidence(Vector<double> x)
+    parameters:
+    - id: x
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: The input vector.
+    return:
+      type: System.Double
+      description: The confidence value for the prediction.
+    content.vb: Public Overrides Function Confidence(x As Vector(Of Double)) As Double
+  overridden: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  overload: mosaic_libary.RR_RFF.Confidence*
+  nameWithType.vb: RR_RFF.Confidence(Vector(Of Double))
+  fullName.vb: mosaic_libary.RR_RFF.Confidence(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: Confidence(Vector(Of Double))
+- uid: mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  id: phi(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: phi(Vector<double>)
+  nameWithType: RR_RFF.phi(Vector<double>)
+  fullName: mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  type: Method
+  source:
+    id: phi
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 435
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Maps a single input vector to the RFF space using the transformation:
+
+    phi(x) = cos(Omega * x + beta)
+  example: []
+  syntax:
+    content: private Vector<double> phi(Vector<double> x)
+    parameters:
+    - id: x
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: The input vector.
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: The transformed vector in the RFF space.
+    content.vb: Private Function phi(x As Vector(Of Double)) As Vector(Of Double)
+  overload: mosaic_libary.RR_RFF.phi*
+  nameWithType.vb: RR_RFF.phi(Vector(Of Double))
+  fullName.vb: mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: phi(Vector(Of Double))
+- uid: mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: phi(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.RR_RFF
+  langs:
+  - csharp
+  - vb
+  name: phi(Matrix<double>)
+  nameWithType: RR_RFF.phi(Matrix<double>)
+  fullName: mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: phi
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 450
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Maps a batch of input samples to the RFF space using the transformation:
+
+    phi(X) = cos(Omega * Xᵀ + Beta), where Beta consists of stacked copies of β.
+  example: []
+  syntax:
+    content: private Matrix<double> phi(Matrix<double> X)
+    parameters:
+    - id: X
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The input matrix (features).
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The transformed matrix in the RFF space.
+    content.vb: Private Function phi(X As Matrix(Of Double)) As Matrix(Of Double)
+  overload: mosaic_libary.RR_RFF.phi*
+  nameWithType.vb: RR_RFF.phi(Matrix(Of Double))
+  fullName.vb: mosaic_libary.RR_RFF.phi(MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: phi(Matrix(Of Double))
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: mosaic_libary.PredictingMachine
+  commentId: T:mosaic_libary.PredictingMachine
+  parent: mosaic_libary
+  href: mosaic_libary.PredictingMachine.html
+  name: PredictingMachine
+  nameWithType: PredictingMachine
+  fullName: mosaic_libary.PredictingMachine
+- uid: mosaic_libary.BatchLearningMachine
+  commentId: T:mosaic_libary.BatchLearningMachine
+  parent: mosaic_libary
+  href: mosaic_libary.BatchLearningMachine.html
+  name: BatchLearningMachine
+  nameWithType: BatchLearningMachine
+  fullName: mosaic_libary.BatchLearningMachine
+- uid: mosaic_libary.PredictingMachine._pmLock
+  commentId: F:mosaic_libary.PredictingMachine._pmLock
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine__pmLock
+  name: _pmLock
+  nameWithType: PredictingMachine._pmLock
+  fullName: mosaic_libary.PredictingMachine._pmLock
+- uid: mosaic_libary.PredictingMachine._d
+  commentId: F:mosaic_libary.PredictingMachine._d
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine__d
+  name: _d
+  nameWithType: PredictingMachine._d
+  fullName: mosaic_libary.PredictingMachine._d
+- uid: mosaic_libary.PredictingMachine._M
+  commentId: F:mosaic_libary.PredictingMachine._M
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine__M
+  name: _M
+  nameWithType: PredictingMachine._M
+  fullName: mosaic_libary.PredictingMachine._M
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Matrix`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Matrix<double>
+  nameWithType: Matrix<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<double>
+  nameWithType.vb: Matrix(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of Double)
+  name.vb: Matrix(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix`1
+  isExternal: true
+  name: Matrix<T>
+  nameWithType: Matrix<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<T>
+  nameWithType.vb: Matrix(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of T)
+  name.vb: Matrix(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: mosaic_libary.RidgeRegression
+  commentId: T:mosaic_libary.RidgeRegression
+  parent: mosaic_libary
+  href: mosaic_libary.RidgeRegression.html
+  name: RidgeRegression
+  nameWithType: RidgeRegression
+  fullName: mosaic_libary.RidgeRegression
+- uid: mosaic_libary.RR_RFF.#ctor*
+  commentId: Overload:mosaic_libary.RR_RFF.#ctor
+  href: mosaic_libary.RR_RFF.html#mosaic_libary_RR_RFF__ctor_System_Int32_System_Int32_System_Double_System_Double_System_Int32_
+  name: RR_RFF
+  nameWithType: RR_RFF.RR_RFF
+  fullName: mosaic_libary.RR_RFF.RR_RFF
+  nameWithType.vb: RR_RFF.New
+  fullName.vb: mosaic_libary.RR_RFF.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: mosaic_libary.RR_RFF.Initialise*
+  commentId: Overload:mosaic_libary.RR_RFF.Initialise
+  href: mosaic_libary.RR_RFF.html#mosaic_libary_RR_RFF_Initialise_System_Int32_System_Int32_System_Double_System_Double_System_Int32_
+  name: Initialise
+  nameWithType: RR_RFF.Initialise
+  fullName: mosaic_libary.RR_RFF.Initialise
+- uid: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.BatchLearningMachine
+  isExternal: true
+  href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_BuildModel_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: BuildModel(Matrix<double>, Matrix<double>)
+  nameWithType: BatchLearningMachine.BuildModel(Matrix<double>, Matrix<double>)
+  fullName: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix<double>, MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  nameWithType.vb: BatchLearningMachine.BuildModel(Matrix(Of Double), Matrix(Of Double))
+  fullName.vb: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix(Of Double), MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: BuildModel(Matrix(Of Double), Matrix(Of Double))
+  spec.csharp:
+  - uid: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+    name: BuildModel
+    href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_BuildModel_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+    name: BuildModel
+    href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_BuildModel_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: mosaic_libary.RR_RFF.BuildModel*
+  commentId: Overload:mosaic_libary.RR_RFF.BuildModel
+  href: mosaic_libary.RR_RFF.html#mosaic_libary_RR_RFF_BuildModel_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: BuildModel
+  nameWithType: RR_RFF.BuildModel
+  fullName: mosaic_libary.RR_RFF.BuildModel
+- uid: mosaic_libary.PredictingMachine.ResetModel
+  commentId: M:mosaic_libary.PredictingMachine.ResetModel
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_ResetModel
+  name: ResetModel()
+  nameWithType: PredictingMachine.ResetModel()
+  fullName: mosaic_libary.PredictingMachine.ResetModel()
+  spec.csharp:
+  - uid: mosaic_libary.PredictingMachine.ResetModel
+    name: ResetModel
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_ResetModel
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.PredictingMachine.ResetModel
+    name: ResetModel
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_ResetModel
+  - name: (
+  - name: )
+- uid: mosaic_libary.RR_RFF.ResetModel*
+  commentId: Overload:mosaic_libary.RR_RFF.ResetModel
+  href: mosaic_libary.RR_RFF.html#mosaic_libary_RR_RFF_ResetModel
+  name: ResetModel
+  nameWithType: RR_RFF.ResetModel
+  fullName: mosaic_libary.RR_RFF.ResetModel
+- uid: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.PredictingMachine
+  isExternal: true
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Predict_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: Predict(Vector<double>)
+  nameWithType: PredictingMachine.Predict(Vector<double>)
+  fullName: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  nameWithType.vb: PredictingMachine.Predict(Vector(Of Double))
+  fullName.vb: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: Predict(Vector(Of Double))
+  spec.csharp:
+  - uid: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Predict
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Predict_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Predict
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Predict_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: mosaic_libary.RR_RFF.Predict*
+  commentId: Overload:mosaic_libary.RR_RFF.Predict
+  href: mosaic_libary.RR_RFF.html#mosaic_libary_RR_RFF_Predict_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: Predict
+  nameWithType: RR_RFF.Predict
+  fullName: mosaic_libary.RR_RFF.Predict
+- uid: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.BatchLearningMachine
+  isExternal: true
+  href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_Predict_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: Predict(Matrix<double>)
+  nameWithType: BatchLearningMachine.Predict(Matrix<double>)
+  fullName: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  nameWithType.vb: BatchLearningMachine.Predict(Matrix(Of Double))
+  fullName.vb: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: Predict(Matrix(Of Double))
+  spec.csharp:
+  - uid: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+    name: Predict
+    href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_Predict_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+    name: Predict
+    href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_Predict_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.PredictingMachine
+  isExternal: true
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Confidence_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: Confidence(Vector<double>)
+  nameWithType: PredictingMachine.Confidence(Vector<double>)
+  fullName: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  nameWithType.vb: PredictingMachine.Confidence(Vector(Of Double))
+  fullName.vb: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: Confidence(Vector(Of Double))
+  spec.csharp:
+  - uid: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Confidence
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Confidence_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Confidence
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Confidence_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: mosaic_libary.RR_RFF.Confidence*
+  commentId: Overload:mosaic_libary.RR_RFF.Confidence
+  href: mosaic_libary.RR_RFF.html#mosaic_libary_RR_RFF_Confidence_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: Confidence
+  nameWithType: RR_RFF.Confidence
+  fullName: mosaic_libary.RR_RFF.Confidence
+- uid: mosaic_libary.RR_RFF.phi*
+  commentId: Overload:mosaic_libary.RR_RFF.phi
+  href: mosaic_libary.RR_RFF.html#mosaic_libary_RR_RFF_phi_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: phi
+  nameWithType: RR_RFF.phi
+  fullName: mosaic_libary.RR_RFF.phi

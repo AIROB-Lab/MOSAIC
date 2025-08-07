@@ -1,0 +1,85 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+            "files": [
+              "**/**.csproj"
+            ],
+            "exclude": [
+                "...",
+                "**/template_project.csproj",
+                "**/bin/**",
+                "**/obj/**",
+                "uidRegex: ^cp type: Class"
+
+            ],
+            "src": ".."
+        }
+      ],
+      "dest": "api",
+      "outputFormat": "mref",
+      "includePrivateMembers": true,
+      "disableGitFeatures": false,
+      "disableDefaultFilter": false,
+      "noRestore": false,
+      "namespaceLayout": "flattened",
+      "memberLayout": "samePage",
+      "enumSortOrder": "alphabetic",
+      "allowCompilationErrors": true
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "sortedapi/**.yml",
+            "sortedapi/index.md",
+            "sortedapi/*.yaml"
+        ]
+      },
+      {
+        "files": [
+          "articles/**.md",
+          "articles/**/toc.yml",
+          "toc.yml",
+          "*.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default",
+      "templates/singulinkfx"
+    ],
+    "globalMetadata": {
+    "_appTitle": "MOSAIC",
+    "_appName": "MOSAIC",
+    "_appFaviconPath": "images/logo.png",
+    "_appLogoPath": "images/logo.png",
+    "_appFooter": "<strong>squishy humans / solid research ♥</strong>",
+    "_enableSearch": true,
+    "_disableSideFilter": false,
+    "_enableNewTab": true,
+    "_disableContribution": true,
+    "_disableBreadcrumb": true
+},
+    "postProcessors": [],
+    "keepFileLink": false,
+    "disableGitFeatures": false,
+    "markdownEngineProperties": {
+      "alerts": {
+        "Take Home Lesson": "alert alert-secondary"
+      }
+    }
+  }
+}

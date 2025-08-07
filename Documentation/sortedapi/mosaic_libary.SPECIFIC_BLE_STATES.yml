@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.SPECIFIC_BLE_STATES
+  commentId: T:mosaic_libary.SPECIFIC_BLE_STATES
+  id: SPECIFIC_BLE_STATES
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.SPECIFIC_BLE_STATES.CONNECTED
+  - mosaic_libary.SPECIFIC_BLE_STATES.FOUND
+  - mosaic_libary.SPECIFIC_BLE_STATES.STREAMING
+  langs:
+  - csharp
+  - vb
+  name: SPECIFIC_BLE_STATES
+  nameWithType: SPECIFIC_BLE_STATES
+  fullName: mosaic_libary.SPECIFIC_BLE_STATES
+  type: Enum
+  source:
+    id: SPECIFIC_BLE_STATES
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 881
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Enum for device specific BLE states =&gt; for UI purpose
+  example: []
+  syntax:
+    content: public enum SPECIFIC_BLE_STATES
+    content.vb: Public Enum SPECIFIC_BLE_STATES
+- uid: mosaic_libary.SPECIFIC_BLE_STATES.FOUND
+  commentId: F:mosaic_libary.SPECIFIC_BLE_STATES.FOUND
+  id: FOUND
+  parent: mosaic_libary.SPECIFIC_BLE_STATES
+  langs:
+  - csharp
+  - vb
+  name: FOUND
+  nameWithType: SPECIFIC_BLE_STATES.FOUND
+  fullName: mosaic_libary.SPECIFIC_BLE_STATES.FOUND
+  type: Field
+  source:
+    id: FOUND
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 883
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: FOUND = 0
+    return:
+      type: mosaic_libary.SPECIFIC_BLE_STATES
+- uid: mosaic_libary.SPECIFIC_BLE_STATES.CONNECTED
+  commentId: F:mosaic_libary.SPECIFIC_BLE_STATES.CONNECTED
+  id: CONNECTED
+  parent: mosaic_libary.SPECIFIC_BLE_STATES
+  langs:
+  - csharp
+  - vb
+  name: CONNECTED
+  nameWithType: SPECIFIC_BLE_STATES.CONNECTED
+  fullName: mosaic_libary.SPECIFIC_BLE_STATES.CONNECTED
+  type: Field
+  source:
+    id: CONNECTED
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 884
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: CONNECTED = 1
+    return:
+      type: mosaic_libary.SPECIFIC_BLE_STATES
+- uid: mosaic_libary.SPECIFIC_BLE_STATES.STREAMING
+  commentId: F:mosaic_libary.SPECIFIC_BLE_STATES.STREAMING
+  id: STREAMING
+  parent: mosaic_libary.SPECIFIC_BLE_STATES
+  langs:
+  - csharp
+  - vb
+  name: STREAMING
+  nameWithType: SPECIFIC_BLE_STATES.STREAMING
+  fullName: mosaic_libary.SPECIFIC_BLE_STATES.STREAMING
+  type: Field
+  source:
+    id: STREAMING
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 885
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: STREAMING = 2
+    return:
+      type: mosaic_libary.SPECIFIC_BLE_STATES
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.SPECIFIC_BLE_STATES
+  commentId: T:mosaic_libary.SPECIFIC_BLE_STATES
+  parent: mosaic_libary
+  href: mosaic_libary.SPECIFIC_BLE_STATES.html
+  name: SPECIFIC_BLE_STATES
+  nameWithType: SPECIFIC_BLE_STATES
+  fullName: mosaic_libary.SPECIFIC_BLE_STATES

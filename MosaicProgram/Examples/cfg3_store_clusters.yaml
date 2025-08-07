@@ -1,0 +1,39 @@
+# -------------------------------------
+# Example 3: Capturing and Labeling EMG Clusters
+# -------------------------------------
+# - Process EMG signals to compute ARV (same chain as in Example 2)
+# - Use a Trigger to label segments of data (e.g., rest, flex, extend)
+# - A Buffer collects and stores labeled ARV clusters in dB (for offline analysis)
+# -------------------------------------
+
+# EMG acquisition and ARV computation
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ], Params: [ df:68:f3:9a:ed:0e ] }  # Myo device MAC address
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  # 2nd-order Butterworth LP @ 2 Hz, Fs = 200 Hz
+  # MATLAB: [b,a] = butter(2, 2/(200/2), 'low')
+  Params: [ 0.00094469;0.0018894;0.00094469, 1;-1.9112;0.91498 ]
+}
+
+# Downsample ARV to 25 Hz for storage
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# Label-based capture of ARV segments
+capture_data: {
+  Type: Trigger,
+  Params: [ rest:0, flex_wrist:1, extend_wrist:2 ]  # Define label names and IDs
+}
+
+# Buffer stores labeled data clusters
+# Each captured cluster is stored as a <label, matrix> pair in the global dB list
+cluster_storage: {
+  Type: Buffer,
+  Inputs: [ capture_data, -ARV ]  # '-' means ARV is not auto-subscribed
+}
+

@@ -1,0 +1,2339 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.MuoviSingleProbe
+  commentId: T:mosaic_libary.MuoviSingleProbe
+  id: MuoviSingleProbe
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.MuoviSingleProbe.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  - mosaic_libary.MuoviSingleProbe.CRC8(System.Byte[],System.Int32)
+  - mosaic_libary.MuoviSingleProbe.CheckForDataLoss(System.Byte[],System.Int32)
+  - mosaic_libary.MuoviSingleProbe.ConfigureInputs
+  - mosaic_libary.MuoviSingleProbe.DataLoss
+  - mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer(System.Int32)
+  - mosaic_libary.MuoviSingleProbe.InitialiseMuovi
+  - mosaic_libary.MuoviSingleProbe.IsStreaming
+  - mosaic_libary.MuoviSingleProbe.LatestSample
+  - mosaic_libary.MuoviSingleProbe.MatrixLength
+  - mosaic_libary.MuoviSingleProbe.OnNewInput(mosaic_libary.Block,System.Object)
+  - mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix(System.Byte[])
+  - mosaic_libary.MuoviSingleProbe.ProcessNewInputVector(System.Byte[])
+  - mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample(System.Byte[],System.Int32)
+  - mosaic_libary.MuoviSingleProbe.SetUpConnection
+  - mosaic_libary.MuoviSingleProbe.ShutdownMuovi
+  - mosaic_libary.MuoviSingleProbe.StartStreaming
+  - mosaic_libary.MuoviSingleProbe.StopStreaming
+  - mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived(System.Byte[])
+  - mosaic_libary.MuoviSingleProbe.SubSamplingRate
+  - mosaic_libary.MuoviSingleProbe.Value
+  - mosaic_libary.MuoviSingleProbe._conversionFactor
+  - mosaic_libary.MuoviSingleProbe.bufferParser
+  - mosaic_libary.MuoviSingleProbe.bufferRX
+  - mosaic_libary.MuoviSingleProbe.client
+  - mosaic_libary.MuoviSingleProbe.clientSocket
+  - mosaic_libary.MuoviSingleProbe.countReceived
+  - mosaic_libary.MuoviSingleProbe.emg
+  - mosaic_libary.MuoviSingleProbe.lastCountReceived
+  - mosaic_libary.MuoviSingleProbe.lastTimestamp
+  - mosaic_libary.MuoviSingleProbe.processNewInput
+  - mosaic_libary.MuoviSingleProbe.ptr
+  - mosaic_libary.MuoviSingleProbe.ramp
+  - mosaic_libary.MuoviSingleProbe.sampFreq
+  - mosaic_libary.MuoviSingleProbe.sqSocket
+  - mosaic_libary.MuoviSingleProbe.stream
+  - mosaic_libary.MuoviSingleProbe.streamGSR
+  - mosaic_libary.MuoviSingleProbe.totNumChan
+  - mosaic_libary.MuoviSingleProbe.used_probes
+  langs:
+  - csharp
+  - vb
+  name: MuoviSingleProbe
+  nameWithType: MuoviSingleProbe
+  fullName: mosaic_libary.MuoviSingleProbe
+  type: Class
+  source:
+    id: MuoviSingleProbe
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 96
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    The <xref href="mosaic_libary.MuoviSingleProbe" data-throw-if-not-resolved="false"></xref> class acquires EMG data from a single Muovi probe over a TCP connection. 
+
+    It expects exactly one <xref href="mosaic_libary.Timer" data-throw-if-not-resolved="false"></xref> input block, which triggers data parsing at a specified sampling rate.
+  remarks: >-
+    This version is specialized for a single probe and does not rely on the <code>Params</code> array to specify probe indices.
+
+    You must be connected to the single probe’s Wi-Fi network. Press the On/Off Button for &gt;5 seconds on the probe 
+
+    and connect to the probe’s Wi-Fi network before running this block.
+  example:
+  - >-
+    <pre><code class="lang-csharp">muovi_singleprobe:
+
+    {
+      Type: MuoviSingleProbe,
+      Inputs: [ myTimerBlock ]
+      # Note: No Params array is provided here, 
+      #       as this block uses a single default probe internally.
+    }</code></pre>
+
+    <p>Explanation:</p>
+
+    <ul><li>
+          <code>Type: MuoviSingleProbe</code> indicates that this block connects to the Muovi SyncStation, 
+          awaiting a TCP connection and acquiring data from one selected probe.
+        </li><li>
+          <code>Inputs: [ myTimerBlock ]</code> shows that it must have exactly one <xref href="mosaic_libary.Timer" data-throw-if-not-resolved="false"></xref> 
+          (or a derived class like <xref href="mosaic_libary.ScheduledTimer" data-throw-if-not-resolved="false"></xref>) to drive data parsing at the chosen rate.
+        </li></ul>
+    <p>
+
+    After the block establishes a TCP connection with the Muovi SyncStation, it begins streaming EMG data 
+
+    at a nominal 2 kHz rate and downsamples/batches the samples according to the timer’s <code>DesiredRate</code>.
+
+    </p>
+  syntax:
+    content: 'public class MuoviSingleProbe : Block, IDisposable'
+    content.vb: Public Class MuoviSingleProbe Inherits Block Implements IDisposable
+  inheritance:
+  - System.Object
+  - mosaic_libary.Block
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - mosaic_libary.Block.Name
+  - mosaic_libary.Block.DesiredRate
+  - mosaic_libary.Block.Rate
+  - mosaic_libary.Block.IsLagging
+  - mosaic_libary.Block.IsIdle
+  - mosaic_libary.Block.IsStumbling
+  - mosaic_libary.Block.InputCfg
+  - mosaic_libary.Block.Params
+  - mosaic_libary.Block.InputBlocks
+  - mosaic_libary.Block.Ticks
+  - mosaic_libary.Block._dump
+  - mosaic_libary.Block._stumblingLock
+  - mosaic_libary.Block._onNewInputLock
+  - mosaic_libary.Block.Data
+  - mosaic_libary.Block.cp
+  - mosaic_libary.Block.Dispose
+  - mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  - mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  - mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  - mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  - mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  - mosaic_libary.Block.Output
+  - mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  - mosaic_libary.Block.ShowHideCp
+  - mosaic_libary.Block.MouseLeftClick
+  - mosaic_libary.Block.MouseRightClick
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.MuoviSingleProbe.client
+  commentId: F:mosaic_libary.MuoviSingleProbe.client
+  id: client
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: client
+  nameWithType: MuoviSingleProbe.client
+  fullName: mosaic_libary.MuoviSingleProbe.client
+  type: Field
+  source:
+    id: client
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 101
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: TCP client for communication with the Muovi SyncStation.
+  example: []
+  syntax:
+    content: public TcpClient client
+    return:
+      type: System.Net.Sockets.TcpClient
+    content.vb: Public client As TcpClient
+- uid: mosaic_libary.MuoviSingleProbe.stream
+  commentId: F:mosaic_libary.MuoviSingleProbe.stream
+  id: stream
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: stream
+  nameWithType: MuoviSingleProbe.stream
+  fullName: mosaic_libary.MuoviSingleProbe.stream
+  type: Field
+  source:
+    id: stream
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 105
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Network stream for communication with the Muovi SyncStation.
+  example: []
+  syntax:
+    content: public NetworkStream stream
+    return:
+      type: System.Net.Sockets.NetworkStream
+    content.vb: Public stream As NetworkStream
+- uid: mosaic_libary.MuoviSingleProbe.streamGSR
+  commentId: F:mosaic_libary.MuoviSingleProbe.streamGSR
+  id: streamGSR
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: streamGSR
+  nameWithType: MuoviSingleProbe.streamGSR
+  fullName: mosaic_libary.MuoviSingleProbe.streamGSR
+  type: Field
+  source:
+    id: streamGSR
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 106
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public StreamManager streamGSR
+    return:
+      type: mosaic_libary.StreamManager
+    content.vb: Public streamGSR As StreamManager
+- uid: mosaic_libary.MuoviSingleProbe.LatestSample
+  commentId: F:mosaic_libary.MuoviSingleProbe.LatestSample
+  id: LatestSample
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: LatestSample
+  nameWithType: MuoviSingleProbe.LatestSample
+  fullName: mosaic_libary.MuoviSingleProbe.LatestSample
+  type: Field
+  source:
+    id: LatestSample
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 107
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public Vector<double> LatestSample
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Public LatestSample As Vector(Of Double)
+- uid: mosaic_libary.MuoviSingleProbe.IsStreaming
+  commentId: F:mosaic_libary.MuoviSingleProbe.IsStreaming
+  id: IsStreaming
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: IsStreaming
+  nameWithType: MuoviSingleProbe.IsStreaming
+  fullName: mosaic_libary.MuoviSingleProbe.IsStreaming
+  type: Field
+  source:
+    id: IsStreaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 108
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public bool IsStreaming
+    return:
+      type: System.Boolean
+    content.vb: Public IsStreaming As Boolean
+- uid: mosaic_libary.MuoviSingleProbe.DataLoss
+  commentId: F:mosaic_libary.MuoviSingleProbe.DataLoss
+  id: DataLoss
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: DataLoss
+  nameWithType: MuoviSingleProbe.DataLoss
+  fullName: mosaic_libary.MuoviSingleProbe.DataLoss
+  type: Field
+  source:
+    id: DataLoss
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 109
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public bool DataLoss
+    return:
+      type: System.Boolean
+    content.vb: Public DataLoss As Boolean
+- uid: mosaic_libary.MuoviSingleProbe.sqSocket
+  commentId: F:mosaic_libary.MuoviSingleProbe.sqSocket
+  id: sqSocket
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: sqSocket
+  nameWithType: MuoviSingleProbe.sqSocket
+  fullName: mosaic_libary.MuoviSingleProbe.sqSocket
+  type: Field
+  source:
+    id: sqSocket
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 112
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Socket sqSocket
+    return:
+      type: System.Net.Sockets.Socket
+    content.vb: Private sqSocket As Socket
+- uid: mosaic_libary.MuoviSingleProbe.emg
+  commentId: F:mosaic_libary.MuoviSingleProbe.emg
+  id: emg
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: emg
+  nameWithType: MuoviSingleProbe.emg
+  fullName: mosaic_libary.MuoviSingleProbe.emg
+  type: Field
+  source:
+    id: emg
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 113
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Vector<double> emg
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private emg As Vector(Of Double)
+- uid: mosaic_libary.MuoviSingleProbe.Value
+  commentId: F:mosaic_libary.MuoviSingleProbe.Value
+  id: Value
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: MuoviSingleProbe.Value
+  fullName: mosaic_libary.MuoviSingleProbe.Value
+  type: Field
+  source:
+    id: Value
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 114
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Vector<double> Value
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private Value As Vector(Of Double)
+- uid: mosaic_libary.MuoviSingleProbe.ramp
+  commentId: F:mosaic_libary.MuoviSingleProbe.ramp
+  id: ramp
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: ramp
+  nameWithType: MuoviSingleProbe.ramp
+  fullName: mosaic_libary.MuoviSingleProbe.ramp
+  type: Field
+  source:
+    id: ramp
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 115
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private short ramp
+    return:
+      type: System.Int16
+    content.vb: Private ramp As Short
+- uid: mosaic_libary.MuoviSingleProbe.bufferRX
+  commentId: F:mosaic_libary.MuoviSingleProbe.bufferRX
+  id: bufferRX
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: bufferRX
+  nameWithType: MuoviSingleProbe.bufferRX
+  fullName: mosaic_libary.MuoviSingleProbe.bufferRX
+  type: Field
+  source:
+    id: bufferRX
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 116
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private string bufferRX
+    return:
+      type: System.String
+    content.vb: Private bufferRX As String
+- uid: mosaic_libary.MuoviSingleProbe.bufferParser
+  commentId: F:mosaic_libary.MuoviSingleProbe.bufferParser
+  id: bufferParser
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: bufferParser
+  nameWithType: MuoviSingleProbe.bufferParser
+  fullName: mosaic_libary.MuoviSingleProbe.bufferParser
+  type: Field
+  source:
+    id: bufferParser
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 117
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private string bufferParser
+    return:
+      type: System.String
+    content.vb: Private bufferParser As String
+- uid: mosaic_libary.MuoviSingleProbe.sampFreq
+  commentId: F:mosaic_libary.MuoviSingleProbe.sampFreq
+  id: sampFreq
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: sampFreq
+  nameWithType: MuoviSingleProbe.sampFreq
+  fullName: mosaic_libary.MuoviSingleProbe.sampFreq
+  type: Field
+  source:
+    id: sampFreq
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 119
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int sampFreq
+    return:
+      type: System.Int32
+    content.vb: Private sampFreq As Integer
+- uid: mosaic_libary.MuoviSingleProbe.ptr
+  commentId: F:mosaic_libary.MuoviSingleProbe.ptr
+  id: ptr
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: ptr
+  nameWithType: MuoviSingleProbe.ptr
+  fullName: mosaic_libary.MuoviSingleProbe.ptr
+  type: Field
+  source:
+    id: ptr
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 121
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int ptr
+    return:
+      type: System.Int32
+    content.vb: Private ptr As Integer
+- uid: mosaic_libary.MuoviSingleProbe.used_probes
+  commentId: F:mosaic_libary.MuoviSingleProbe.used_probes
+  id: used_probes
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: used_probes
+  nameWithType: MuoviSingleProbe.used_probes
+  fullName: mosaic_libary.MuoviSingleProbe.used_probes
+  type: Field
+  source:
+    id: used_probes
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 123
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private List<int> used_probes
+    return:
+      type: System.Collections.Generic.List{System.Int32}
+    content.vb: Private used_probes As List(Of Integer)
+- uid: mosaic_libary.MuoviSingleProbe.totNumChan
+  commentId: F:mosaic_libary.MuoviSingleProbe.totNumChan
+  id: totNumChan
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: totNumChan
+  nameWithType: MuoviSingleProbe.totNumChan
+  fullName: mosaic_libary.MuoviSingleProbe.totNumChan
+  type: Field
+  source:
+    id: totNumChan
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 128
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Tracks the total Number of channels used.
+  example: []
+  syntax:
+    content: private int totNumChan
+    return:
+      type: System.Int32
+    content.vb: Private totNumChan As Integer
+- uid: mosaic_libary.MuoviSingleProbe.SubSamplingRate
+  commentId: F:mosaic_libary.MuoviSingleProbe.SubSamplingRate
+  id: SubSamplingRate
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: SubSamplingRate
+  nameWithType: MuoviSingleProbe.SubSamplingRate
+  fullName: mosaic_libary.MuoviSingleProbe.SubSamplingRate
+  type: Field
+  source:
+    id: SubSamplingRate
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 129
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private const int SubSamplingRate = 18
+    return:
+      type: System.Int32
+    content.vb: Private Const SubSamplingRate As Integer = 18
+- uid: mosaic_libary.MuoviSingleProbe.MatrixLength
+  commentId: F:mosaic_libary.MuoviSingleProbe.MatrixLength
+  id: MatrixLength
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: MatrixLength
+  nameWithType: MuoviSingleProbe.MatrixLength
+  fullName: mosaic_libary.MuoviSingleProbe.MatrixLength
+  type: Field
+  source:
+    id: MatrixLength
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 130
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int MatrixLength
+    return:
+      type: System.Int32
+    content.vb: Private MatrixLength As Integer
+- uid: mosaic_libary.MuoviSingleProbe._conversionFactor
+  commentId: F:mosaic_libary.MuoviSingleProbe._conversionFactor
+  id: _conversionFactor
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: _conversionFactor
+  nameWithType: MuoviSingleProbe._conversionFactor
+  fullName: mosaic_libary.MuoviSingleProbe._conversionFactor
+  type: Field
+  source:
+    id: _conversionFactor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 133
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private double _conversionFactor
+    return:
+      type: System.Double
+    content.vb: Private _conversionFactor As Double
+- uid: mosaic_libary.MuoviSingleProbe.processNewInput
+  commentId: F:mosaic_libary.MuoviSingleProbe.processNewInput
+  id: processNewInput
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: processNewInput
+  nameWithType: MuoviSingleProbe.processNewInput
+  fullName: mosaic_libary.MuoviSingleProbe.processNewInput
+  type: Field
+  source:
+    id: processNewInput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 134
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private MuoviSingleProbe.ProcessNewInput processNewInput
+    return:
+      type: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+    content.vb: Private processNewInput As MuoviSingleProbe.ProcessNewInput
+- uid: mosaic_libary.MuoviSingleProbe.clientSocket
+  commentId: F:mosaic_libary.MuoviSingleProbe.clientSocket
+  id: clientSocket
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: clientSocket
+  nameWithType: MuoviSingleProbe.clientSocket
+  fullName: mosaic_libary.MuoviSingleProbe.clientSocket
+  type: Field
+  source:
+    id: clientSocket
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 135
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Socket clientSocket
+    return:
+      type: System.Net.Sockets.Socket
+    content.vb: Private clientSocket As Socket
+- uid: mosaic_libary.MuoviSingleProbe.countReceived
+  commentId: F:mosaic_libary.MuoviSingleProbe.countReceived
+  id: countReceived
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: countReceived
+  nameWithType: MuoviSingleProbe.countReceived
+  fullName: mosaic_libary.MuoviSingleProbe.countReceived
+  type: Field
+  source:
+    id: countReceived
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 136
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int countReceived
+    return:
+      type: System.Int32
+    content.vb: Private countReceived As Integer
+- uid: mosaic_libary.MuoviSingleProbe.lastTimestamp
+  commentId: F:mosaic_libary.MuoviSingleProbe.lastTimestamp
+  id: lastTimestamp
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: lastTimestamp
+  nameWithType: MuoviSingleProbe.lastTimestamp
+  fullName: mosaic_libary.MuoviSingleProbe.lastTimestamp
+  type: Field
+  source:
+    id: lastTimestamp
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 137
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private double lastTimestamp
+    return:
+      type: System.Double
+    content.vb: Private lastTimestamp As Double
+- uid: mosaic_libary.MuoviSingleProbe.lastCountReceived
+  commentId: F:mosaic_libary.MuoviSingleProbe.lastCountReceived
+  id: lastCountReceived
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: lastCountReceived
+  nameWithType: MuoviSingleProbe.lastCountReceived
+  fullName: mosaic_libary.MuoviSingleProbe.lastCountReceived
+  type: Field
+  source:
+    id: lastCountReceived
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 138
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int lastCountReceived
+    return:
+      type: System.Int32
+    content.vb: Private lastCountReceived As Integer
+- uid: mosaic_libary.MuoviSingleProbe.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  commentId: M:mosaic_libary.MuoviSingleProbe.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  id: '#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)'
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: MuoviSingleProbe(string, double, List<string>, List<string>, string)
+  nameWithType: MuoviSingleProbe.MuoviSingleProbe(string, double, List<string>, List<string>, string)
+  fullName: mosaic_libary.MuoviSingleProbe.MuoviSingleProbe(string, double, System.Collections.Generic.List<string>, System.Collections.Generic.List<string>, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 140
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public MuoviSingleProbe(string Name, double DesiredRate, List<string> InputCfg, List<string> Params, string Path)
+    parameters:
+    - id: Name
+      type: System.String
+    - id: DesiredRate
+      type: System.Double
+    - id: InputCfg
+      type: System.Collections.Generic.List{System.String}
+    - id: Params
+      type: System.Collections.Generic.List{System.String}
+    - id: Path
+      type: System.String
+    content.vb: Public Sub New(Name As String, DesiredRate As Double, InputCfg As List(Of String), Params As List(Of String), Path As String)
+  overload: mosaic_libary.MuoviSingleProbe.#ctor*
+  nameWithType.vb: MuoviSingleProbe.New(String, Double, List(Of String), List(Of String), String)
+  fullName.vb: mosaic_libary.MuoviSingleProbe.New(String, Double, System.Collections.Generic.List(Of String), System.Collections.Generic.List(Of String), String)
+  name.vb: New(String, Double, List(Of String), List(Of String), String)
+- uid: mosaic_libary.MuoviSingleProbe.ConfigureInputs
+  commentId: M:mosaic_libary.MuoviSingleProbe.ConfigureInputs
+  id: ConfigureInputs
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: ConfigureInputs()
+  nameWithType: MuoviSingleProbe.ConfigureInputs()
+  fullName: mosaic_libary.MuoviSingleProbe.ConfigureInputs()
+  type: Method
+  source:
+    id: ConfigureInputs
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 143
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Configures input blocks based on the specified input configuration.
+
+    This method is responsible for adding input blocks to the list of input blocks and subscribing to some of them, as specified in the input configuration.
+  example: []
+  syntax:
+    content: public override void ConfigureInputs()
+    content.vb: Public Overrides Sub ConfigureInputs()
+  overridden: mosaic_libary.Block.ConfigureInputs
+  overload: mosaic_libary.MuoviSingleProbe.ConfigureInputs*
+- uid: mosaic_libary.MuoviSingleProbe.InitialiseMuovi
+  commentId: M:mosaic_libary.MuoviSingleProbe.InitialiseMuovi
+  id: InitialiseMuovi
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: InitialiseMuovi()
+  nameWithType: MuoviSingleProbe.InitialiseMuovi()
+  fullName: mosaic_libary.MuoviSingleProbe.InitialiseMuovi()
+  type: Method
+  source:
+    id: InitialiseMuovi
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 171
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void InitialiseMuovi()
+    content.vb: Public Sub InitialiseMuovi()
+  overload: mosaic_libary.MuoviSingleProbe.InitialiseMuovi*
+- uid: mosaic_libary.MuoviSingleProbe.SetUpConnection
+  commentId: M:mosaic_libary.MuoviSingleProbe.SetUpConnection
+  id: SetUpConnection
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: SetUpConnection()
+  nameWithType: MuoviSingleProbe.SetUpConnection()
+  fullName: mosaic_libary.MuoviSingleProbe.SetUpConnection()
+  type: Method
+  source:
+    id: SetUpConnection
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 193
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Setting up the connection to the Muovi SyncStation. Creating a TCPClient on the IP address of the SyncStation 192.168.76.1 and the port 54320.
+
+    Opens up Networkstream for communication.
+  example: []
+  syntax:
+    content: private void SetUpConnection()
+    content.vb: Private Sub SetUpConnection()
+  overload: mosaic_libary.MuoviSingleProbe.SetUpConnection*
+- uid: mosaic_libary.MuoviSingleProbe.CRC8(System.Byte[],System.Int32)
+  commentId: M:mosaic_libary.MuoviSingleProbe.CRC8(System.Byte[],System.Int32)
+  id: CRC8(System.Byte[],System.Int32)
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: CRC8(byte[], int)
+  nameWithType: MuoviSingleProbe.CRC8(byte[], int)
+  fullName: mosaic_libary.MuoviSingleProbe.CRC8(byte[], int)
+  type: Method
+  source:
+    id: CRC8
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 218
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    This function is performing an n 8-bit Cyclic Redundancy Check (CRC-8) checksum.  
+
+    CRC is used in error-checking protocols, where a small, fixed-size checksum (like 8 bits in this case) is generated from data to detect errors that may occur during 
+
+    transmission or storage.
+
+    TODO: check the for loop, it seems to be off by one.
+  example: []
+  syntax:
+    content: public static int CRC8(byte[] data, int len)
+    parameters:
+    - id: data
+      type: System.Byte[]
+      description: array of bytes received from Muovi
+    - id: len
+      type: System.Int32
+      description: length of the
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Function CRC8(data As Byte(), len As Integer) As Integer
+  overload: mosaic_libary.MuoviSingleProbe.CRC8*
+  nameWithType.vb: MuoviSingleProbe.CRC8(Byte(), Integer)
+  fullName.vb: mosaic_libary.MuoviSingleProbe.CRC8(Byte(), Integer)
+  name.vb: CRC8(Byte(), Integer)
+- uid: mosaic_libary.MuoviSingleProbe.StartStreaming
+  commentId: M:mosaic_libary.MuoviSingleProbe.StartStreaming
+  id: StartStreaming
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: StartStreaming()
+  nameWithType: MuoviSingleProbe.StartStreaming()
+  fullName: mosaic_libary.MuoviSingleProbe.StartStreaming()
+  type: Method
+  source:
+    id: StartStreaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 247
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Starts the streaming process of the Muovi SyncStation.
+  example: []
+  syntax:
+    content: public void StartStreaming()
+    content.vb: Public Sub StartStreaming()
+  overload: mosaic_libary.MuoviSingleProbe.StartStreaming*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown if SyncStation is already streaming.
+- uid: mosaic_libary.MuoviSingleProbe.ShutdownMuovi
+  commentId: M:mosaic_libary.MuoviSingleProbe.ShutdownMuovi
+  id: ShutdownMuovi
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: ShutdownMuovi()
+  nameWithType: MuoviSingleProbe.ShutdownMuovi()
+  fullName: mosaic_libary.MuoviSingleProbe.ShutdownMuovi()
+  type: Method
+  source:
+    id: ShutdownMuovi
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 255
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void ShutdownMuovi()
+    content.vb: Public Sub ShutdownMuovi()
+  overload: mosaic_libary.MuoviSingleProbe.ShutdownMuovi*
+- uid: mosaic_libary.MuoviSingleProbe.StopStreaming
+  commentId: M:mosaic_libary.MuoviSingleProbe.StopStreaming
+  id: StopStreaming
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: StopStreaming()
+  nameWithType: MuoviSingleProbe.StopStreaming()
+  fullName: mosaic_libary.MuoviSingleProbe.StopStreaming()
+  type: Method
+  source:
+    id: StopStreaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 282
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void StopStreaming()
+    content.vb: Public Sub StopStreaming()
+  overload: mosaic_libary.MuoviSingleProbe.StopStreaming*
+- uid: mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived(System.Byte[])
+  commentId: M:mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived(System.Byte[])
+  id: StreamGSR_DataReceived(System.Byte[])
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: StreamGSR_DataReceived(byte[])
+  nameWithType: MuoviSingleProbe.StreamGSR_DataReceived(byte[])
+  fullName: mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived(byte[])
+  type: Method
+  source:
+    id: StreamGSR_DataReceived
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 290
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private void StreamGSR_DataReceived(byte[] receivedBytes)
+    parameters:
+    - id: receivedBytes
+      type: System.Byte[]
+    content.vb: Private Sub StreamGSR_DataReceived(receivedBytes As Byte())
+  overload: mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived*
+  nameWithType.vb: MuoviSingleProbe.StreamGSR_DataReceived(Byte())
+  fullName.vb: mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived(Byte())
+  name.vb: StreamGSR_DataReceived(Byte())
+- uid: mosaic_libary.MuoviSingleProbe.OnNewInput(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.MuoviSingleProbe.OnNewInput(mosaic_libary.Block,System.Object)
+  id: OnNewInput(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: OnNewInput(Block, object)
+  nameWithType: MuoviSingleProbe.OnNewInput(Block, object)
+  fullName: mosaic_libary.MuoviSingleProbe.OnNewInput(mosaic_libary.Block, object)
+  type: Method
+  source:
+    id: OnNewInput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 313
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Methode <code>OnNewInput</code> is a call-back methode. Get's called each time on of the <code>Blocks</code> input blocks (sender) produces a new value. Handles all received inputs.
+  example: []
+  syntax:
+    content: protected override void OnNewInput(Block sender, object value)
+    parameters:
+    - id: sender
+      type: mosaic_libary.Block
+      description: Input Block, which sends the value.
+    - id: value
+      type: System.Object
+      description: Value that is sent by the input block
+    content.vb: Protected Overrides Sub OnNewInput(sender As Block, value As Object)
+  overridden: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  overload: mosaic_libary.MuoviSingleProbe.OnNewInput*
+  nameWithType.vb: MuoviSingleProbe.OnNewInput(Block, Object)
+  fullName.vb: mosaic_libary.MuoviSingleProbe.OnNewInput(mosaic_libary.Block, Object)
+  name.vb: OnNewInput(Block, Object)
+- uid: mosaic_libary.MuoviSingleProbe.CheckForDataLoss(System.Byte[],System.Int32)
+  commentId: M:mosaic_libary.MuoviSingleProbe.CheckForDataLoss(System.Byte[],System.Int32)
+  id: CheckForDataLoss(System.Byte[],System.Int32)
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: CheckForDataLoss(byte[], int)
+  nameWithType: MuoviSingleProbe.CheckForDataLoss(byte[], int)
+  fullName: mosaic_libary.MuoviSingleProbe.CheckForDataLoss(byte[], int)
+  type: Method
+  source:
+    id: CheckForDataLoss
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 331
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private void CheckForDataLoss(byte[] frame, int offset = 0)
+    parameters:
+    - id: frame
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    content.vb: Private Sub CheckForDataLoss(frame As Byte(), offset As Integer = 0)
+  overload: mosaic_libary.MuoviSingleProbe.CheckForDataLoss*
+  nameWithType.vb: MuoviSingleProbe.CheckForDataLoss(Byte(), Integer)
+  fullName.vb: mosaic_libary.MuoviSingleProbe.CheckForDataLoss(Byte(), Integer)
+  name.vb: CheckForDataLoss(Byte(), Integer)
+- uid: mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer(System.Int32)
+  commentId: M:mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer(System.Int32)
+  id: DeleteFirstNSamplesFromBuffer(System.Int32)
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: DeleteFirstNSamplesFromBuffer(int)
+  nameWithType: MuoviSingleProbe.DeleteFirstNSamplesFromBuffer(int)
+  fullName: mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer(int)
+  type: Method
+  source:
+    id: DeleteFirstNSamplesFromBuffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 344
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private void DeleteFirstNSamplesFromBuffer(int n = 1)
+    parameters:
+    - id: n
+      type: System.Int32
+    content.vb: Private Sub DeleteFirstNSamplesFromBuffer(n As Integer = 1)
+  overload: mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer*
+  nameWithType.vb: MuoviSingleProbe.DeleteFirstNSamplesFromBuffer(Integer)
+  fullName.vb: mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer(Integer)
+  name.vb: DeleteFirstNSamplesFromBuffer(Integer)
+- uid: mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix(System.Byte[])
+  commentId: M:mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix(System.Byte[])
+  id: ProcessNewInputMatrix(System.Byte[])
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: ProcessNewInputMatrix(byte[])
+  nameWithType: MuoviSingleProbe.ProcessNewInputMatrix(byte[])
+  fullName: mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix(byte[])
+  type: Method
+  source:
+    id: ProcessNewInputMatrix
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 361
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private void ProcessNewInputMatrix(byte[] frame)
+    parameters:
+    - id: frame
+      type: System.Byte[]
+    content.vb: Private Sub ProcessNewInputMatrix(frame As Byte())
+  overload: mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix*
+  nameWithType.vb: MuoviSingleProbe.ProcessNewInputMatrix(Byte())
+  fullName.vb: mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix(Byte())
+  name.vb: ProcessNewInputMatrix(Byte())
+- uid: mosaic_libary.MuoviSingleProbe.ProcessNewInputVector(System.Byte[])
+  commentId: M:mosaic_libary.MuoviSingleProbe.ProcessNewInputVector(System.Byte[])
+  id: ProcessNewInputVector(System.Byte[])
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: ProcessNewInputVector(byte[])
+  nameWithType: MuoviSingleProbe.ProcessNewInputVector(byte[])
+  fullName: mosaic_libary.MuoviSingleProbe.ProcessNewInputVector(byte[])
+  type: Method
+  source:
+    id: ProcessNewInputVector
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 380
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private void ProcessNewInputVector(byte[] frame)
+    parameters:
+    - id: frame
+      type: System.Byte[]
+    content.vb: Private Sub ProcessNewInputVector(frame As Byte())
+  overload: mosaic_libary.MuoviSingleProbe.ProcessNewInputVector*
+  nameWithType.vb: MuoviSingleProbe.ProcessNewInputVector(Byte())
+  fullName.vb: mosaic_libary.MuoviSingleProbe.ProcessNewInputVector(Byte())
+  name.vb: ProcessNewInputVector(Byte())
+- uid: mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample(System.Byte[],System.Int32)
+  commentId: M:mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample(System.Byte[],System.Int32)
+  id: ReadAndDecodeSample(System.Byte[],System.Int32)
+  parent: mosaic_libary.MuoviSingleProbe
+  langs:
+  - csharp
+  - vb
+  name: ReadAndDecodeSample(byte[], int)
+  nameWithType: MuoviSingleProbe.ReadAndDecodeSample(byte[], int)
+  fullName: mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample(byte[], int)
+  type: Method
+  source:
+    id: ReadAndDecodeSample
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 389
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Vector<double> ReadAndDecodeSample(byte[] frame, int offset = 0)
+    parameters:
+    - id: frame
+      type: System.Byte[]
+    - id: offset
+      type: System.Int32
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private Function ReadAndDecodeSample(frame As Byte(), offset As Integer = 0) As Vector(Of Double)
+  overload: mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample*
+  nameWithType.vb: MuoviSingleProbe.ReadAndDecodeSample(Byte(), Integer)
+  fullName.vb: mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample(Byte(), Integer)
+  name.vb: ReadAndDecodeSample(Byte(), Integer)
+references:
+- uid: mosaic_libary.MuoviSingleProbe
+  commentId: T:mosaic_libary.MuoviSingleProbe
+  parent: mosaic_libary
+  href: mosaic_libary.MuoviSingleProbe.html
+  name: MuoviSingleProbe
+  nameWithType: MuoviSingleProbe
+  fullName: mosaic_libary.MuoviSingleProbe
+- uid: mosaic_libary.Timer
+  commentId: T:mosaic_libary.Timer
+  parent: mosaic_libary
+  href: mosaic_libary.Timer.html
+  name: Timer
+  nameWithType: Timer
+  fullName: mosaic_libary.Timer
+- uid: mosaic_libary.ScheduledTimer
+  commentId: T:mosaic_libary.ScheduledTimer
+  parent: mosaic_libary
+  href: mosaic_libary.ScheduledTimer.html
+  name: ScheduledTimer
+  nameWithType: ScheduledTimer
+  fullName: mosaic_libary.ScheduledTimer
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: mosaic_libary.Block.Name
+  commentId: P:mosaic_libary.Block.Name
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Name
+  name: Name
+  nameWithType: Block.Name
+  fullName: mosaic_libary.Block.Name
+- uid: mosaic_libary.Block.DesiredRate
+  commentId: P:mosaic_libary.Block.DesiredRate
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_DesiredRate
+  name: DesiredRate
+  nameWithType: Block.DesiredRate
+  fullName: mosaic_libary.Block.DesiredRate
+- uid: mosaic_libary.Block.Rate
+  commentId: P:mosaic_libary.Block.Rate
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Rate
+  name: Rate
+  nameWithType: Block.Rate
+  fullName: mosaic_libary.Block.Rate
+- uid: mosaic_libary.Block.IsLagging
+  commentId: P:mosaic_libary.Block.IsLagging
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsLagging
+  name: IsLagging
+  nameWithType: Block.IsLagging
+  fullName: mosaic_libary.Block.IsLagging
+- uid: mosaic_libary.Block.IsIdle
+  commentId: P:mosaic_libary.Block.IsIdle
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsIdle
+  name: IsIdle
+  nameWithType: Block.IsIdle
+  fullName: mosaic_libary.Block.IsIdle
+- uid: mosaic_libary.Block.IsStumbling
+  commentId: F:mosaic_libary.Block.IsStumbling
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsStumbling
+  name: IsStumbling
+  nameWithType: Block.IsStumbling
+  fullName: mosaic_libary.Block.IsStumbling
+- uid: mosaic_libary.Block.InputCfg
+  commentId: P:mosaic_libary.Block.InputCfg
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_InputCfg
+  name: InputCfg
+  nameWithType: Block.InputCfg
+  fullName: mosaic_libary.Block.InputCfg
+- uid: mosaic_libary.Block.Params
+  commentId: F:mosaic_libary.Block.Params
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Params
+  name: Params
+  nameWithType: Block.Params
+  fullName: mosaic_libary.Block.Params
+- uid: mosaic_libary.Block.InputBlocks
+  commentId: F:mosaic_libary.Block.InputBlocks
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_InputBlocks
+  name: InputBlocks
+  nameWithType: Block.InputBlocks
+  fullName: mosaic_libary.Block.InputBlocks
+- uid: mosaic_libary.Block.Ticks
+  commentId: F:mosaic_libary.Block.Ticks
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Ticks
+  name: Ticks
+  nameWithType: Block.Ticks
+  fullName: mosaic_libary.Block.Ticks
+- uid: mosaic_libary.Block._dump
+  commentId: F:mosaic_libary.Block._dump
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__dump
+  name: _dump
+  nameWithType: Block._dump
+  fullName: mosaic_libary.Block._dump
+- uid: mosaic_libary.Block._stumblingLock
+  commentId: F:mosaic_libary.Block._stumblingLock
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__stumblingLock
+  name: _stumblingLock
+  nameWithType: Block._stumblingLock
+  fullName: mosaic_libary.Block._stumblingLock
+- uid: mosaic_libary.Block._onNewInputLock
+  commentId: F:mosaic_libary.Block._onNewInputLock
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__onNewInputLock
+  name: _onNewInputLock
+  nameWithType: Block._onNewInputLock
+  fullName: mosaic_libary.Block._onNewInputLock
+- uid: mosaic_libary.Block.Data
+  commentId: F:mosaic_libary.Block.Data
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Data
+  name: Data
+  nameWithType: Block.Data
+  fullName: mosaic_libary.Block.Data
+- uid: mosaic_libary.Block.cp
+  commentId: F:mosaic_libary.Block.cp
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_cp
+  name: cp
+  nameWithType: Block.cp
+  fullName: mosaic_libary.Block.cp
+- uid: mosaic_libary.Block.Dispose
+  commentId: M:mosaic_libary.Block.Dispose
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  name: Dispose()
+  nameWithType: Block.Dispose()
+  fullName: mosaic_libary.Block.Dispose()
+  spec.csharp:
+  - uid: mosaic_libary.Block.Dispose
+    name: Dispose
+    href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.Dispose
+    name: Dispose
+    href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  name: SubscribeTo(Block)
+  nameWithType: Block.SubscribeTo(Block)
+  fullName: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+    name: SubscribeTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+    name: SubscribeTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  name: UnsubscribeFrom(Block)
+  nameWithType: Block.UnsubscribeFrom(Block)
+  fullName: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+    name: UnsubscribeFrom
+    href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+    name: UnsubscribeFrom
+    href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  name: HasInput(Block)
+  nameWithType: Block.HasInput(Block)
+  fullName: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+    name: HasInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+    name: HasInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  name: IsSubscribedTo(Block)
+  nameWithType: Block.IsSubscribedTo(Block)
+  fullName: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+    name: IsSubscribedTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+    name: IsSubscribedTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  commentId: M:mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  name: SendOutput(object, bool)
+  nameWithType: Block.SendOutput(object, bool)
+  fullName: mosaic_libary.Block.SendOutput(object, bool)
+  nameWithType.vb: Block.SendOutput(Object, Boolean)
+  fullName.vb: mosaic_libary.Block.SendOutput(Object, Boolean)
+  name.vb: SendOutput(Object, Boolean)
+  spec.csharp:
+  - uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+    name: SendOutput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+    name: SendOutput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: mosaic_libary.Block.Output
+  commentId: E:mosaic_libary.Block.Output
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Output
+  name: Output
+  nameWithType: Block.Output
+  fullName: mosaic_libary.Block.Output
+- uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  name: OnNewInputLocked(Block, object)
+  nameWithType: Block.OnNewInputLocked(Block, object)
+  fullName: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, object)
+  nameWithType.vb: Block.OnNewInputLocked(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, Object)
+  name.vb: OnNewInputLocked(Block, Object)
+  spec.csharp:
+  - uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+    name: OnNewInputLocked
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+    name: OnNewInputLocked
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: mosaic_libary.Block.ShowHideCp
+  commentId: M:mosaic_libary.Block.ShowHideCp
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  name: ShowHideCp()
+  nameWithType: Block.ShowHideCp()
+  fullName: mosaic_libary.Block.ShowHideCp()
+  spec.csharp:
+  - uid: mosaic_libary.Block.ShowHideCp
+    name: ShowHideCp
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.ShowHideCp
+    name: ShowHideCp
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.MouseLeftClick
+  commentId: M:mosaic_libary.Block.MouseLeftClick
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  name: MouseLeftClick()
+  nameWithType: Block.MouseLeftClick()
+  fullName: mosaic_libary.Block.MouseLeftClick()
+  spec.csharp:
+  - uid: mosaic_libary.Block.MouseLeftClick
+    name: MouseLeftClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.MouseLeftClick
+    name: MouseLeftClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.MouseRightClick
+  commentId: M:mosaic_libary.Block.MouseRightClick
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  name: MouseRightClick()
+  nameWithType: Block.MouseRightClick()
+  fullName: mosaic_libary.Block.MouseRightClick()
+  spec.csharp:
+  - uid: mosaic_libary.Block.MouseRightClick
+    name: MouseRightClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.MouseRightClick
+    name: MouseRightClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Net.Sockets.TcpClient
+  commentId: T:System.Net.Sockets.TcpClient
+  parent: System.Net.Sockets
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.sockets.tcpclient
+  name: TcpClient
+  nameWithType: TcpClient
+  fullName: System.Net.Sockets.TcpClient
+- uid: System.Net.Sockets
+  commentId: N:System.Net.Sockets
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Net.Sockets
+  nameWithType: System.Net.Sockets
+  fullName: System.Net.Sockets
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Sockets
+    name: Sockets
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.sockets
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Net
+    name: Net
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net
+  - name: .
+  - uid: System.Net.Sockets
+    name: Sockets
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.net.sockets
+- uid: System.Net.Sockets.NetworkStream
+  commentId: T:System.Net.Sockets.NetworkStream
+  parent: System.Net.Sockets
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.sockets.networkstream
+  name: NetworkStream
+  nameWithType: NetworkStream
+  fullName: System.Net.Sockets.NetworkStream
+- uid: mosaic_libary.StreamManager
+  commentId: T:mosaic_libary.StreamManager
+  parent: mosaic_libary
+  href: mosaic_libary.StreamManager.html
+  name: StreamManager
+  nameWithType: StreamManager
+  fullName: mosaic_libary.StreamManager
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Net.Sockets.Socket
+  commentId: T:System.Net.Sockets.Socket
+  parent: System.Net.Sockets
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.net.sockets.socket
+  name: Socket
+  nameWithType: Socket
+  fullName: System.Net.Sockets.Socket
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int16
+  name: short
+  nameWithType: short
+  fullName: short
+  nameWithType.vb: Short
+  fullName.vb: Short
+  name.vb: Short
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{System.Int32}
+  commentId: T:System.Collections.Generic.List{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<int>
+  nameWithType: List<int>
+  fullName: System.Collections.Generic.List<int>
+  nameWithType.vb: List(Of Integer)
+  fullName.vb: System.Collections.Generic.List(Of Integer)
+  name.vb: List(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  commentId: T:mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  parent: mosaic_libary
+  href: mosaic_libary.MuoviSingleProbe.html
+  name: MuoviSingleProbe.ProcessNewInput
+  nameWithType: MuoviSingleProbe.ProcessNewInput
+  fullName: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  spec.csharp:
+  - uid: mosaic_libary.MuoviSingleProbe
+    name: MuoviSingleProbe
+    href: mosaic_libary.MuoviSingleProbe.html
+  - name: .
+  - uid: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+    name: ProcessNewInput
+    href: mosaic_libary.MuoviSingleProbe.ProcessNewInput.html
+  spec.vb:
+  - uid: mosaic_libary.MuoviSingleProbe
+    name: MuoviSingleProbe
+    href: mosaic_libary.MuoviSingleProbe.html
+  - name: .
+  - uid: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+    name: ProcessNewInput
+    href: mosaic_libary.MuoviSingleProbe.ProcessNewInput.html
+- uid: mosaic_libary.MuoviSingleProbe.#ctor*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.#ctor
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe__ctor_System_String_System_Double_System_Collections_Generic_List_System_String__System_Collections_Generic_List_System_String__System_String_
+  name: MuoviSingleProbe
+  nameWithType: MuoviSingleProbe.MuoviSingleProbe
+  fullName: mosaic_libary.MuoviSingleProbe.MuoviSingleProbe
+  nameWithType.vb: MuoviSingleProbe.New
+  fullName.vb: mosaic_libary.MuoviSingleProbe.New
+  name.vb: New
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: mosaic_libary.Block.ConfigureInputs
+  commentId: M:mosaic_libary.Block.ConfigureInputs
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  name: ConfigureInputs()
+  nameWithType: Block.ConfigureInputs()
+  fullName: mosaic_libary.Block.ConfigureInputs()
+  spec.csharp:
+  - uid: mosaic_libary.Block.ConfigureInputs
+    name: ConfigureInputs
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.ConfigureInputs
+    name: ConfigureInputs
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  - name: (
+  - name: )
+- uid: mosaic_libary.MuoviSingleProbe.ConfigureInputs*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.ConfigureInputs
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_ConfigureInputs
+  name: ConfigureInputs
+  nameWithType: MuoviSingleProbe.ConfigureInputs
+  fullName: mosaic_libary.MuoviSingleProbe.ConfigureInputs
+- uid: mosaic_libary.MuoviSingleProbe.InitialiseMuovi*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.InitialiseMuovi
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_InitialiseMuovi
+  name: InitialiseMuovi
+  nameWithType: MuoviSingleProbe.InitialiseMuovi
+  fullName: mosaic_libary.MuoviSingleProbe.InitialiseMuovi
+- uid: mosaic_libary.MuoviSingleProbe.SetUpConnection*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.SetUpConnection
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_SetUpConnection
+  name: SetUpConnection
+  nameWithType: MuoviSingleProbe.SetUpConnection
+  fullName: mosaic_libary.MuoviSingleProbe.SetUpConnection
+- uid: mosaic_libary.MuoviSingleProbe.CRC8*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.CRC8
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_CRC8_System_Byte___System_Int32_
+  name: CRC8
+  nameWithType: MuoviSingleProbe.CRC8
+  fullName: mosaic_libary.MuoviSingleProbe.CRC8
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: mosaic_libary.MuoviSingleProbe.StartStreaming*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.StartStreaming
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_StartStreaming
+  name: StartStreaming
+  nameWithType: MuoviSingleProbe.StartStreaming
+  fullName: mosaic_libary.MuoviSingleProbe.StartStreaming
+- uid: mosaic_libary.MuoviSingleProbe.ShutdownMuovi*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.ShutdownMuovi
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_ShutdownMuovi
+  name: ShutdownMuovi
+  nameWithType: MuoviSingleProbe.ShutdownMuovi
+  fullName: mosaic_libary.MuoviSingleProbe.ShutdownMuovi
+- uid: mosaic_libary.MuoviSingleProbe.StopStreaming*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.StopStreaming
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_StopStreaming
+  name: StopStreaming
+  nameWithType: MuoviSingleProbe.StopStreaming
+  fullName: mosaic_libary.MuoviSingleProbe.StopStreaming
+- uid: mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_StreamGSR_DataReceived_System_Byte___
+  name: StreamGSR_DataReceived
+  nameWithType: MuoviSingleProbe.StreamGSR_DataReceived
+  fullName: mosaic_libary.MuoviSingleProbe.StreamGSR_DataReceived
+- uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  name: OnNewInput(Block, object)
+  nameWithType: Block.OnNewInput(Block, object)
+  fullName: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, object)
+  nameWithType.vb: Block.OnNewInput(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, Object)
+  name.vb: OnNewInput(Block, Object)
+  spec.csharp:
+  - uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+    name: OnNewInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+    name: OnNewInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: mosaic_libary.MuoviSingleProbe.OnNewInput*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.OnNewInput
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_OnNewInput_mosaic_libary_Block_System_Object_
+  name: OnNewInput
+  nameWithType: MuoviSingleProbe.OnNewInput
+  fullName: mosaic_libary.MuoviSingleProbe.OnNewInput
+- uid: mosaic_libary.MuoviSingleProbe.CheckForDataLoss*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.CheckForDataLoss
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_CheckForDataLoss_System_Byte___System_Int32_
+  name: CheckForDataLoss
+  nameWithType: MuoviSingleProbe.CheckForDataLoss
+  fullName: mosaic_libary.MuoviSingleProbe.CheckForDataLoss
+- uid: mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_DeleteFirstNSamplesFromBuffer_System_Int32_
+  name: DeleteFirstNSamplesFromBuffer
+  nameWithType: MuoviSingleProbe.DeleteFirstNSamplesFromBuffer
+  fullName: mosaic_libary.MuoviSingleProbe.DeleteFirstNSamplesFromBuffer
+- uid: mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_ProcessNewInputMatrix_System_Byte___
+  name: ProcessNewInputMatrix
+  nameWithType: MuoviSingleProbe.ProcessNewInputMatrix
+  fullName: mosaic_libary.MuoviSingleProbe.ProcessNewInputMatrix
+- uid: mosaic_libary.MuoviSingleProbe.ProcessNewInputVector*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.ProcessNewInputVector
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_ProcessNewInputVector_System_Byte___
+  name: ProcessNewInputVector
+  nameWithType: MuoviSingleProbe.ProcessNewInputVector
+  fullName: mosaic_libary.MuoviSingleProbe.ProcessNewInputVector
+- uid: mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample*
+  commentId: Overload:mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample
+  href: mosaic_libary.MuoviSingleProbe.html#mosaic_libary_MuoviSingleProbe_ReadAndDecodeSample_System_Byte___System_Int32_
+  name: ReadAndDecodeSample
+  nameWithType: MuoviSingleProbe.ReadAndDecodeSample
+  fullName: mosaic_libary.MuoviSingleProbe.ReadAndDecodeSample

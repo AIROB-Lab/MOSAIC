@@ -1,0 +1,50 @@
+# ---------------------------------------------------------------------
+# Example 12: Incremental Machine Learning-Based Myocontrol of the IIT Hannes Hand
+# ---------------------------------------------------------------------
+
+# ----------- EMG acquisition and preprocessing pipeline
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }  # Sampling rate: 200 Hz
+
+# Acquire 8-channel EMG from Myo armband
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ], Params: [ '' ] }
+
+# Preprocessing steps: amplification, rectification, smoothing
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+# Apply 2nd-order Butterworth low-pass filter with 2 Hz cutoff
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  Params: [ 0.00094469; 0.0018894; 0.00094469, 1; -1.9112; 0.91498 ]
+}
+
+# Downsample smoothed signal to 25 Hz
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# ----------- Trigger-based incremental training (no Buffer needed)
+# Provides immediate ground-truth labels to the predictor
+capture_data: { Type: Trigger, Params: [
+    rest:   0;0;0;0;0;0;0;0;0;0;0;0,
+    power:  1;1;1;1;1;1;0;0;0;0;0;0,
+    flex:   0;0;0;0;0;0;1;0;0;0;0;0,
+    extend: 0;0;0;0;0;0;0;1;0;0;0;0,
+    pron:   0;0;0;0;0;0;0;0;1;0;0;0,
+    sup:    0;0;0;0;0;0;0;0;0;1;0;0
+]}
+
+# Incremental model: trains in real time using ARV input (8D) and 12D ground truth
+# Uncomment one of the available predictors:
+# incr_learn: { Type: IncrementalPredictor, Inputs: [ ARV, capture_data ], Params: [ IncrementalRidgeRegression, 8, 12 ] }
+incr_learn: { Type: IncrementalPredictor, Inputs: [ ARV, capture_data ], Params: [ IncrementalRFF, 8, 12 ] }
+# Alternative with hyperparameters: [kernelWidth, ridgeLambda, bufferSize]
+# incr_learn: { Type: IncrementalPredictor, Inputs: [ ARV, capture_data ], Params: [ IncrementalRFF, 8, 12, 1.0, 1.0, 300 ] }
+
+# ----------- Prediction-driven control
+# Map prediction outputs to control commands
+controlAlgorithm: { Type: ControlAlgorithm, Inputs: [ incr_learn ], Params: [ algorithm: DirectControl ] }
+
+# Control the physical Hannes Hand using predicted outputs
+hannes_hand_ctrl: { Type: HannesHand, Inputs: [ controlAlgorithm ] }
+

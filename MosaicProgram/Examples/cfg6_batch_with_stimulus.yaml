@@ -1,0 +1,65 @@
+﻿# ---------------------------------------------------------------------
+# Example 6: Batch Myocontrol with Visual Stimulus-Guided Data Collection
+# ---------------------------------------------------------------------
+# - Similar to cfg4_batch_myocontrol.yaml, but data gathering is automated
+# - A visual stimulus presents timed action cues (e.g., rest, power, flex)
+# - Stimulus drives both the Buffer (via StimTrigger) and the white Blender arm
+# ---------------------------------------------------------------------
+
+# EMG acquisition and preprocessing (same as in previous examples)
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ], Params: [ df:68:f3:9a:ed:0e ] }
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  # 2nd-order Butterworth LP @ 2 Hz (Fs = 200 Hz)
+  # MATLAB: [b,a] = butter(2, 2/(200/2), 'low')
+  Params: [ 0.00094469;0.0018894;0.00094469, 1;-1.9112;0.91498 ]
+}
+
+# Downsample ARV signal to 25 Hz
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# Visual stimulus sequence (6 tasks, each lasting 3 seconds)
+# Sequence: rest → power → flex → rest → power → flex
+visual_stim: {
+  Type: Stimulus,
+  Inputs: [ -timer_subs ],
+  Params: [ 3.0,         # duration per stimulus (s)
+    0;0;0;0;0;0;0;0;0;0;0;0,    # rest
+    1;1;1;1;1;1;0;0;0;0;0;0,    # power
+    0;0;0;0;0;0;1;0;0;0;0;0,    # flex
+    0;0;0;0;0;0;0;0;0;0;0;0,    # rest
+    1;1;1;1;1;1;0;0;0;0;0;0,    # power
+    0;0;0;0;0;0;1;0;0;0;0;0     # flex
+  ]
+}
+
+# Use stimulus output to control white Blender arm for visualization
+visual_stim_tv: { Type: Selector, Inputs: [ visual_stim ] }
+controlAlgorithm1: { Type: ControlAlgorithm, Inputs: [ visual_stim_tv ], Params: [ algorithm:DirectControl ] }
+blender_white_arm_ctrl: { Type: BlenderArm, Inputs: [ controlAlgorithm1 ], Params: [ localhost, 3333 ] }
+
+# Trigger fires based on stimulus timing; controls when Buffer captures ARV
+visual_stim_trigger: { Type: StimTrigger, Inputs: [ visual_stim ] }
+
+# Store labeled ARV data based on stimulus timing
+cluster_storage: { Type: Buffer, Inputs: [ visual_stim_trigger, -ARV ] }
+
+# Batch predictor trained from buffer; predicts control activations from ARV
+# Format: [ bufferName, modelType, inputDim, outputDim ]
+batch_learn: {
+  Type: BatchPredictor,
+  Inputs: [ ARV ],
+  Params: [ cluster_storage, RR_RFF, 8, 12 ]
+}
+# Alternative model:
+# batch_learn: { Type: BatchPredictor, Inputs: [ ARV ], Params: [ cluster_storage, RidgeRegression, 8, 12 ] }
+
+# Use predicted output to control the skin-textured Blender arm
+controlAlgorithm2: { Type: ControlAlgorithm, Inputs: [ batch_learn ], Params: [ algorithm:DirectControl ] }
+blender_skin_arm_ctrl: { Type: BlenderArm, Inputs: [ controlAlgorithm2 ], Params: [ localhost, 3334 ] }

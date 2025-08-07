@@ -1,0 +1,316 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.DOAs
+  commentId: T:mosaic_libary.DOAs
+  id: DOAs
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.DOAs.ElbowExtension
+  - mosaic_libary.DOAs.ElbowFlexion
+  - mosaic_libary.DOAs.Index
+  - mosaic_libary.DOAs.Little
+  - mosaic_libary.DOAs.Middle
+  - mosaic_libary.DOAs.OpenHand
+  - mosaic_libary.DOAs.Ring
+  - mosaic_libary.DOAs.ThumbFlexion
+  - mosaic_libary.DOAs.ThumbRotation
+  - mosaic_libary.DOAs.WristFlexionExtension
+  - mosaic_libary.DOAs.WristPronationSupination
+  - mosaic_libary.DOAs.WristUlnarRadialDevation
+  langs:
+  - csharp
+  - vb
+  name: DOAs
+  nameWithType: DOAs
+  fullName: mosaic_libary.DOAs
+  type: Enum
+  source:
+    id: DOAs
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 11
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Available Degrees of Actuation currently supported by the system
+  example: []
+  syntax:
+    content: public enum DOAs
+    content.vb: Public Enum DOAs
+- uid: mosaic_libary.DOAs.ThumbFlexion
+  commentId: F:mosaic_libary.DOAs.ThumbFlexion
+  id: ThumbFlexion
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: ThumbFlexion
+  nameWithType: DOAs.ThumbFlexion
+  fullName: mosaic_libary.DOAs.ThumbFlexion
+  type: Field
+  source:
+    id: ThumbFlexion
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 13
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ThumbFlexion = 0
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.ThumbRotation
+  commentId: F:mosaic_libary.DOAs.ThumbRotation
+  id: ThumbRotation
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: ThumbRotation
+  nameWithType: DOAs.ThumbRotation
+  fullName: mosaic_libary.DOAs.ThumbRotation
+  type: Field
+  source:
+    id: ThumbRotation
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 14
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ThumbRotation = 1
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.Index
+  commentId: F:mosaic_libary.DOAs.Index
+  id: Index
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: DOAs.Index
+  fullName: mosaic_libary.DOAs.Index
+  type: Field
+  source:
+    id: Index
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 15
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Index = 2
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.Middle
+  commentId: F:mosaic_libary.DOAs.Middle
+  id: Middle
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: Middle
+  nameWithType: DOAs.Middle
+  fullName: mosaic_libary.DOAs.Middle
+  type: Field
+  source:
+    id: Middle
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 16
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Middle = 3
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.Ring
+  commentId: F:mosaic_libary.DOAs.Ring
+  id: Ring
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: Ring
+  nameWithType: DOAs.Ring
+  fullName: mosaic_libary.DOAs.Ring
+  type: Field
+  source:
+    id: Ring
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 17
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Ring = 4
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.Little
+  commentId: F:mosaic_libary.DOAs.Little
+  id: Little
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: Little
+  nameWithType: DOAs.Little
+  fullName: mosaic_libary.DOAs.Little
+  type: Field
+  source:
+    id: Little
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 18
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Little = 5
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.WristFlexionExtension
+  commentId: F:mosaic_libary.DOAs.WristFlexionExtension
+  id: WristFlexionExtension
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: WristFlexionExtension
+  nameWithType: DOAs.WristFlexionExtension
+  fullName: mosaic_libary.DOAs.WristFlexionExtension
+  type: Field
+  source:
+    id: WristFlexionExtension
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 19
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: WristFlexionExtension = 6
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.WristUlnarRadialDevation
+  commentId: F:mosaic_libary.DOAs.WristUlnarRadialDevation
+  id: WristUlnarRadialDevation
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: WristUlnarRadialDevation
+  nameWithType: DOAs.WristUlnarRadialDevation
+  fullName: mosaic_libary.DOAs.WristUlnarRadialDevation
+  type: Field
+  source:
+    id: WristUlnarRadialDevation
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 20
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: WristUlnarRadialDevation = 7
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.WristPronationSupination
+  commentId: F:mosaic_libary.DOAs.WristPronationSupination
+  id: WristPronationSupination
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: WristPronationSupination
+  nameWithType: DOAs.WristPronationSupination
+  fullName: mosaic_libary.DOAs.WristPronationSupination
+  type: Field
+  source:
+    id: WristPronationSupination
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 21
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: WristPronationSupination = 8
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.OpenHand
+  commentId: F:mosaic_libary.DOAs.OpenHand
+  id: OpenHand
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: OpenHand
+  nameWithType: DOAs.OpenHand
+  fullName: mosaic_libary.DOAs.OpenHand
+  type: Field
+  source:
+    id: OpenHand
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 22
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: OpenHand = 9
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.ElbowFlexion
+  commentId: F:mosaic_libary.DOAs.ElbowFlexion
+  id: ElbowFlexion
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: ElbowFlexion
+  nameWithType: DOAs.ElbowFlexion
+  fullName: mosaic_libary.DOAs.ElbowFlexion
+  type: Field
+  source:
+    id: ElbowFlexion
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 23
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ElbowFlexion = 10
+    return:
+      type: mosaic_libary.DOAs
+- uid: mosaic_libary.DOAs.ElbowExtension
+  commentId: F:mosaic_libary.DOAs.ElbowExtension
+  id: ElbowExtension
+  parent: mosaic_libary.DOAs
+  langs:
+  - csharp
+  - vb
+  name: ElbowExtension
+  nameWithType: DOAs.ElbowExtension
+  fullName: mosaic_libary.DOAs.ElbowExtension
+  type: Field
+  source:
+    id: ElbowExtension
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 24
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ElbowExtension = 11
+    return:
+      type: mosaic_libary.DOAs
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.DOAs
+  commentId: T:mosaic_libary.DOAs
+  parent: mosaic_libary
+  href: mosaic_libary.DOAs.html
+  name: DOAs
+  nameWithType: DOAs
+  fullName: mosaic_libary.DOAs

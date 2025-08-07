@@ -1,0 +1,48 @@
+# ---------------------------------------------------------------------
+# Example 9: Dual-Device Incremental Myocontrol with 16 EMG Channels
+# ---------------------------------------------------------------------
+
+# ----------- Timer and raw EMG acquisition
+# Uses two Myo armbands (upper and lower) sampled at 200 Hz
+timer_hannes: { Type: ScheduledTimer, DesiredRate: 200 }
+
+# Define two independent Myo blocks
+raw_EMG15_upper: { Type: Myo, Inputs: [ timer_hannes ], Path: 'c:\temp' }
+raw_EMG16_lower: { Type: Myo, Inputs: [ timer_hannes ], Path: 'c:\temp' }
+
+# Join both Myo streams into a single 16-channel signal
+joiner: { Type: Joiner, Inputs: [ raw_EMG15_upper, raw_EMG16_lower ], Params: [ timerBlockName: raw_EMG15_upper ] }
+
+# ----------- Signal preprocessing
+# Amplify EMG, then rectify and low-pass filter (Butterworth 2nd order, 0.3 Hz cutoff at 200 Hz sampling)
+amplified_raw_EMG: { Type: Function, Inputs: [ joiner ], Params: [ multiply:5 ] }
+rectified_raw_EMG:  { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  Params: [ 0.00002206; 0.00004412; 0.00002206, 1; -1.9867; 0.9868 ]
+}
+
+# Downsample from 200 Hz to 25 Hz
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_hannes ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# ----------- Model training and control
+# Define ground truth actions for training
+# [ th_flex, th_rot, index, middle, ring, little, wr_flex, wr_ext, wr_pron, wr_sup, wr_ulnar, wr_radial, open ]
+ground_truth: { Type: Trigger, Params: [
+    rest:   0;0;0;0;0;0;0;0;0;0;0;0,
+    power:  1;1;1;1;1;1;0;0;0;0;0;0,
+    flex:   0;0;0;0;0;0;1;0;0;0;0;0,
+    extend: 0;0;0;0;0;0;0;1;0;0;0;0,
+    pron:   0;0;0;0;0;0;0;0;1;0;0;0
+]}
+
+# Train an incremental regression model using 16-channel ARV and 12-DOF target vectors
+incr_learn_prediction: { Type: IncrementalPredictor, Inputs: [ ARV, ground_truth ], Params: [ IncrementalRidgeRegression, 16, 12 ] }
+
+# Control algorithm using direct proportional mapping
+controlAlgorithm: { Type: ControlAlgorithm, Inputs: [ incr_learn_prediction ], Params: [ algorithm: DirectControl ] }
+
+# Control the skin-textured Blender arm with predictions
+blender_skin_arm_ctrl: { Type: BlenderArm, Inputs: [ controlAlgorithm ], Params: [ localhost, 3334 ] }

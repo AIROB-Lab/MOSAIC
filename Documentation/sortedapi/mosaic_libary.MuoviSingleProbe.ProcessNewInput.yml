@@ -1,0 +1,57 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  commentId: T:mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  id: MuoviSingleProbe.ProcessNewInput
+  parent: mosaic_libary
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: MuoviSingleProbe.ProcessNewInput
+  nameWithType: MuoviSingleProbe.ProcessNewInput
+  fullName: mosaic_libary.MuoviSingleProbe.ProcessNewInput
+  type: Delegate
+  source:
+    id: ProcessNewInput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\MuoviSingleProbe.cs
+    startLine: 132
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private delegate void MuoviSingleProbe.ProcessNewInput(byte[] frame)
+    parameters:
+    - id: frame
+      type: System.Byte[]
+    content.vb: Private Delegate Sub MuoviSingleProbe.ProcessNewInput(frame As Byte())
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

@@ -1,0 +1,673 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.BatchLearningMachine
+  commentId: T:mosaic_libary.BatchLearningMachine
+  id: BatchLearningMachine
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.BatchLearningMachine.#ctor(System.Int32,System.Int32)
+  - mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  - mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  langs:
+  - csharp
+  - vb
+  name: BatchLearningMachine
+  nameWithType: BatchLearningMachine
+  fullName: mosaic_libary.BatchLearningMachine
+  type: Class
+  source:
+    id: BatchLearningMachine
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 78
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Represents an abstract base class for a batch learning machine.
+
+    This class extends the capabilities of the <xref href="mosaic_libary.PredictingMachine" data-throw-if-not-resolved="false"></xref> 
+
+    by allowing batch processing of multiple samples and a one-shot model building process.
+  example: []
+  syntax:
+    content: 'public abstract class BatchLearningMachine : PredictingMachine'
+    content.vb: Public MustInherit Class BatchLearningMachine Inherits PredictingMachine
+  inheritance:
+  - System.Object
+  - mosaic_libary.PredictingMachine
+  derivedClasses:
+  - mosaic_libary.RR_RFF
+  - mosaic_libary.RidgeRegression
+  inheritedMembers:
+  - mosaic_libary.PredictingMachine._pmLock
+  - mosaic_libary.PredictingMachine._d
+  - mosaic_libary.PredictingMachine._M
+  - mosaic_libary.PredictingMachine.ResetModel
+  - mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  - mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.BatchLearningMachine.#ctor(System.Int32,System.Int32)
+  commentId: M:mosaic_libary.BatchLearningMachine.#ctor(System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32)'
+  parent: mosaic_libary.BatchLearningMachine
+  langs:
+  - csharp
+  - vb
+  name: BatchLearningMachine(int, int)
+  nameWithType: BatchLearningMachine.BatchLearningMachine(int, int)
+  fullName: mosaic_libary.BatchLearningMachine.BatchLearningMachine(int, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 85
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Initializes a new instance of the <xref href="mosaic_libary.BatchLearningMachine" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public BatchLearningMachine(int d, int M)
+    parameters:
+    - id: d
+      type: System.Int32
+      description: The number of dimensions in the input space (R^d).
+    - id: M
+      type: System.Int32
+      description: The number of dimensions in the output space (R^M).
+    content.vb: Public Sub New(d As Integer, M As Integer)
+  overload: mosaic_libary.BatchLearningMachine.#ctor*
+  nameWithType.vb: BatchLearningMachine.New(Integer, Integer)
+  fullName.vb: mosaic_libary.BatchLearningMachine.New(Integer, Integer)
+  name.vb: New(Integer, Integer)
+- uid: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: Predict(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.BatchLearningMachine
+  langs:
+  - csharp
+  - vb
+  name: Predict(Matrix<double>)
+  nameWithType: BatchLearningMachine.Predict(Matrix<double>)
+  fullName: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: Predict
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 94
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Predicts outputs for a batch of input samples.
+  example: []
+  syntax:
+    content: public abstract Matrix<double> Predict(Matrix<double> X)
+    parameters:
+    - id: X
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: >-
+        A matrix where each row represents an input sample, and each column corresponds to a feature.
+            The number of columns must match the input dimensionality (d).
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: >-
+        A matrix where each row represents the predicted output for the corresponding input sample,
+            and each column corresponds to an output dimension (M).
+    content.vb: Public MustOverride Function Predict(X As Matrix(Of Double)) As Matrix(Of Double)
+  overload: mosaic_libary.BatchLearningMachine.Predict*
+  nameWithType.vb: BatchLearningMachine.Predict(Matrix(Of Double))
+  fullName.vb: mosaic_libary.BatchLearningMachine.Predict(MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: Predict(Matrix(Of Double))
+- uid: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: BuildModel(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.BatchLearningMachine
+  langs:
+  - csharp
+  - vb
+  name: BuildModel(Matrix<double>, Matrix<double>)
+  nameWithType: BatchLearningMachine.BuildModel(Matrix<double>, Matrix<double>)
+  fullName: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix<double>, MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: BuildModel
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Learning.cs
+    startLine: 104
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Builds the predictive model using a batch of input-output samples.
+
+    This method constructs the model in a one-shot process, which means the model is trained 
+
+    with the provided data and cannot be incrementally updated afterward.
+  example: []
+  syntax:
+    content: public abstract void BuildModel(Matrix<double> X, Matrix<double> Y)
+    parameters:
+    - id: X
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: >-
+        A matrix where each row represents an input sample, and each column corresponds to a feature.
+            The number of columns must match the input dimensionality (d).
+    - id: Y
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: >-
+        A matrix where each row represents the corresponding output for the input sample in <code class="paramref">X</code>.
+            The number of columns must match the output dimensionality (M).
+    content.vb: Public MustOverride Sub BuildModel(X As Matrix(Of Double), Y As Matrix(Of Double))
+  overload: mosaic_libary.BatchLearningMachine.BuildModel*
+  nameWithType.vb: BatchLearningMachine.BuildModel(Matrix(Of Double), Matrix(Of Double))
+  fullName.vb: mosaic_libary.BatchLearningMachine.BuildModel(MathNet.Numerics.LinearAlgebra.Matrix(Of Double), MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: BuildModel(Matrix(Of Double), Matrix(Of Double))
+references:
+- uid: mosaic_libary.PredictingMachine
+  commentId: T:mosaic_libary.PredictingMachine
+  parent: mosaic_libary
+  href: mosaic_libary.PredictingMachine.html
+  name: PredictingMachine
+  nameWithType: PredictingMachine
+  fullName: mosaic_libary.PredictingMachine
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: mosaic_libary.PredictingMachine._pmLock
+  commentId: F:mosaic_libary.PredictingMachine._pmLock
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine__pmLock
+  name: _pmLock
+  nameWithType: PredictingMachine._pmLock
+  fullName: mosaic_libary.PredictingMachine._pmLock
+- uid: mosaic_libary.PredictingMachine._d
+  commentId: F:mosaic_libary.PredictingMachine._d
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine__d
+  name: _d
+  nameWithType: PredictingMachine._d
+  fullName: mosaic_libary.PredictingMachine._d
+- uid: mosaic_libary.PredictingMachine._M
+  commentId: F:mosaic_libary.PredictingMachine._M
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine__M
+  name: _M
+  nameWithType: PredictingMachine._M
+  fullName: mosaic_libary.PredictingMachine._M
+- uid: mosaic_libary.PredictingMachine.ResetModel
+  commentId: M:mosaic_libary.PredictingMachine.ResetModel
+  parent: mosaic_libary.PredictingMachine
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_ResetModel
+  name: ResetModel()
+  nameWithType: PredictingMachine.ResetModel()
+  fullName: mosaic_libary.PredictingMachine.ResetModel()
+  spec.csharp:
+  - uid: mosaic_libary.PredictingMachine.ResetModel
+    name: ResetModel
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_ResetModel
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.PredictingMachine.ResetModel
+    name: ResetModel
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_ResetModel
+  - name: (
+  - name: )
+- uid: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.PredictingMachine
+  isExternal: true
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Predict_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: Predict(Vector<double>)
+  nameWithType: PredictingMachine.Predict(Vector<double>)
+  fullName: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  nameWithType.vb: PredictingMachine.Predict(Vector(Of Double))
+  fullName.vb: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: Predict(Vector(Of Double))
+  spec.csharp:
+  - uid: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Predict
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Predict_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.PredictingMachine.Predict(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Predict
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Predict_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.PredictingMachine
+  isExternal: true
+  href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Confidence_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: Confidence(Vector<double>)
+  nameWithType: PredictingMachine.Confidence(Vector<double>)
+  fullName: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  nameWithType.vb: PredictingMachine.Confidence(Vector(Of Double))
+  fullName.vb: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: Confidence(Vector(Of Double))
+  spec.csharp:
+  - uid: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Confidence
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Confidence_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.PredictingMachine.Confidence(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: Confidence
+    href: mosaic_libary.PredictingMachine.html#mosaic_libary_PredictingMachine_Confidence_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: mosaic_libary.BatchLearningMachine
+  commentId: T:mosaic_libary.BatchLearningMachine
+  parent: mosaic_libary
+  href: mosaic_libary.BatchLearningMachine.html
+  name: BatchLearningMachine
+  nameWithType: BatchLearningMachine
+  fullName: mosaic_libary.BatchLearningMachine
+- uid: mosaic_libary.BatchLearningMachine.#ctor*
+  commentId: Overload:mosaic_libary.BatchLearningMachine.#ctor
+  href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine__ctor_System_Int32_System_Int32_
+  name: BatchLearningMachine
+  nameWithType: BatchLearningMachine.BatchLearningMachine
+  fullName: mosaic_libary.BatchLearningMachine.BatchLearningMachine
+  nameWithType.vb: BatchLearningMachine.New
+  fullName.vb: mosaic_libary.BatchLearningMachine.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: mosaic_libary.BatchLearningMachine.Predict*
+  commentId: Overload:mosaic_libary.BatchLearningMachine.Predict
+  href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_Predict_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: Predict
+  nameWithType: BatchLearningMachine.Predict
+  fullName: mosaic_libary.BatchLearningMachine.Predict
+- uid: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Matrix`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Matrix<double>
+  nameWithType: Matrix<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<double>
+  nameWithType.vb: Matrix(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of Double)
+  name.vb: Matrix(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix`1
+  isExternal: true
+  name: Matrix<T>
+  nameWithType: Matrix<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<T>
+  nameWithType.vb: Matrix(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of T)
+  name.vb: Matrix(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: mosaic_libary.BatchLearningMachine.BuildModel*
+  commentId: Overload:mosaic_libary.BatchLearningMachine.BuildModel
+  href: mosaic_libary.BatchLearningMachine.html#mosaic_libary_BatchLearningMachine_BuildModel_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: BuildModel
+  nameWithType: BatchLearningMachine.BuildModel
+  fullName: mosaic_libary.BatchLearningMachine.BuildModel

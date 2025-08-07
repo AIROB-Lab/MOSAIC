@@ -1,0 +1,3161 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.BluetoothLEManager
+  commentId: T:mosaic_libary.BluetoothLEManager
+  id: BluetoothLEManager
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.BluetoothLEManager.#ctor(System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}})
+  - mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs)
+  - mosaic_libary.BluetoothLEManager.CheckDeviceMatching(System.String,Windows.Devices.Enumeration.DeviceInformation)
+  - mosaic_libary.BluetoothLEManager.CheckWatcherNull
+  - mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync
+  - mosaic_libary.BluetoothLEManager.DequeueBuffer
+  - mosaic_libary.BluetoothLEManager.DeviceConnectionChanged(Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object)
+  - mosaic_libary.BluetoothLEManager.DeviceWatcher_Added(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformation)
+  - mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  - mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  - mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  - mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  - mosaic_libary.BluetoothLEManager.DisconnectAsync
+  - mosaic_libary.BluetoothLEManager.EndCmdCharacteristics
+  - mosaic_libary.BluetoothLEManager.EndCommands
+  - mosaic_libary.BluetoothLEManager.GetBLEdevice(Windows.Devices.Enumeration.DeviceInformation)
+  - mosaic_libary.BluetoothLEManager.GetCharacteristic(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String,System.String)
+  - mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac
+  - mosaic_libary.BluetoothLEManager.GetDevicesCopy
+  - mosaic_libary.BluetoothLEManager.GetGeneralBLECopy
+  - mosaic_libary.BluetoothLEManager.GetMACfromDeviceID(System.String)
+  - mosaic_libary.BluetoothLEManager.GetNameAndMac
+  - mosaic_libary.BluetoothLEManager.GetService(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String)
+  - mosaic_libary.BluetoothLEManager.GetSpecificBLECopy
+  - mosaic_libary.BluetoothLEManager.GetWatcherStatus
+  - mosaic_libary.BluetoothLEManager.HandleException
+  - mosaic_libary.BluetoothLEManager.HandleNull(System.Object)
+  - mosaic_libary.BluetoothLEManager.InitialCmdCharacteristics
+  - mosaic_libary.BluetoothLEManager.InitialCmds
+  - mosaic_libary.BluetoothLEManager.InitialNotifications
+  - mosaic_libary.BluetoothLEManager.Lock_Buffer
+  - mosaic_libary.BluetoothLEManager.Lock_specificStates
+  - mosaic_libary.BluetoothLEManager.NotificationCharacteristics
+  - mosaic_libary.BluetoothLEManager.ObtainedCs
+  - mosaic_libary.BluetoothLEManager.ObtainedServices
+  - mosaic_libary.BluetoothLEManager.OnUiUpdateEvent(System.EventArgs)
+  - mosaic_libary.BluetoothLEManager.SAMPLE_LENGTH
+  - mosaic_libary.BluetoothLEManager.SampleBuffer
+  - mosaic_libary.BluetoothLEManager.SendCommand(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[])
+  - mosaic_libary.BluetoothLEManager.SetWantedDevice(Windows.Devices.Enumeration.DeviceInformation)
+  - mosaic_libary.BluetoothLEManager.ShortenBuffer(System.Int32)
+  - mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher
+  - mosaic_libary.BluetoothLEManager.StartNotification(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic)
+  - mosaic_libary.BluetoothLEManager.StopDeviceWatcher
+  - mosaic_libary.BluetoothLEManager.UiUpdateEvent
+  - mosaic_libary.BluetoothLEManager.WANTED_DEVICE_MAC
+  - mosaic_libary.BluetoothLEManager._bleManagerQ
+  - mosaic_libary.BluetoothLEManager._deviceWatcher
+  - mosaic_libary.BluetoothLEManager._foundDevices
+  - mosaic_libary.BluetoothLEManager._generalBLEstates
+  - mosaic_libary.BluetoothLEManager._lockDevices
+  - mosaic_libary.BluetoothLEManager._lockGeneralStates
+  - mosaic_libary.BluetoothLEManager._lockWatcher
+  - mosaic_libary.BluetoothLEManager.bleDevice
+  - mosaic_libary.BluetoothLEManager.specificBLEstates
+  - mosaic_libary.BluetoothLEManager.wantedDevice
+  langs:
+  - csharp
+  - vb
+  name: BluetoothLEManager
+  nameWithType: BluetoothLEManager
+  fullName: mosaic_libary.BluetoothLEManager
+  type: Class
+  source:
+    id: BluetoothLEManager
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 22
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Manages Bluetooth Low Energy (BLE) operations, including device scanning, connection, and data streaming.
+
+    Allows for BLE device discovery, connection setup, command sending, notification subscription, and data sample collection.
+
+    Use this Block to connecte to Bluethooth Devices lie the Myo.
+  example: []
+  syntax:
+    content: public class BluetoothLEManager
+    content.vb: Public Class BluetoothLEManager
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.BluetoothLEManager._foundDevices
+  commentId: F:mosaic_libary.BluetoothLEManager._foundDevices
+  id: _foundDevices
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: _foundDevices
+  nameWithType: BluetoothLEManager._foundDevices
+  fullName: mosaic_libary.BluetoothLEManager._foundDevices
+  type: Field
+  source:
+    id: _foundDevices
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 31
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Serves as a repository for discovered BLE devices, identified by their MAC addresses.
+
+    Thread safety is ensured through synchronization.
+  example: []
+  syntax:
+    content: private static Dictionary<string, DeviceInformation> _foundDevices
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,Windows.Devices.Enumeration.DeviceInformation}
+    content.vb: Private Shared _foundDevices As Dictionary(Of String, DeviceInformation)
+- uid: mosaic_libary.BluetoothLEManager._lockDevices
+  commentId: F:mosaic_libary.BluetoothLEManager._lockDevices
+  id: _lockDevices
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: _lockDevices
+  nameWithType: BluetoothLEManager._lockDevices
+  fullName: mosaic_libary.BluetoothLEManager._lockDevices
+  type: Field
+  source:
+    id: _lockDevices
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 36
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Object used for locking to synchronize access to the _foundDevices dictionary, ensuring thread safety.
+  example: []
+  syntax:
+    content: private static object _lockDevices
+    return:
+      type: System.Object
+    content.vb: Private Shared _lockDevices As Object
+- uid: mosaic_libary.BluetoothLEManager._deviceWatcher
+  commentId: F:mosaic_libary.BluetoothLEManager._deviceWatcher
+  id: _deviceWatcher
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: _deviceWatcher
+  nameWithType: BluetoothLEManager._deviceWatcher
+  fullName: mosaic_libary.BluetoothLEManager._deviceWatcher
+  type: Field
+  source:
+    id: _deviceWatcher
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 41
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Represents the BLE device watcher used for scanning and discovering devices.
+  example: []
+  syntax:
+    content: private static DeviceWatcher _deviceWatcher
+    return:
+      type: Windows.Devices.Enumeration.DeviceWatcher
+    content.vb: Private Shared _deviceWatcher As DeviceWatcher
+- uid: mosaic_libary.BluetoothLEManager._lockWatcher
+  commentId: F:mosaic_libary.BluetoothLEManager._lockWatcher
+  id: _lockWatcher
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: _lockWatcher
+  nameWithType: BluetoothLEManager._lockWatcher
+  fullName: mosaic_libary.BluetoothLEManager._lockWatcher
+  type: Field
+  source:
+    id: _lockWatcher
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 46
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Object used for locking to synchronize access to the _deviceWatcher, ensuring thread safety during BLE scanning operations.
+  example: []
+  syntax:
+    content: private static object _lockWatcher
+    return:
+      type: System.Object
+    content.vb: Private Shared _lockWatcher As Object
+- uid: mosaic_libary.BluetoothLEManager._generalBLEstates
+  commentId: F:mosaic_libary.BluetoothLEManager._generalBLEstates
+  id: _generalBLEstates
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: _generalBLEstates
+  nameWithType: BluetoothLEManager._generalBLEstates
+  fullName: mosaic_libary.BluetoothLEManager._generalBLEstates
+  type: Field
+  source:
+    id: _generalBLEstates
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 52
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Tracks the general states of BLE operations (e.g., whether devices have been found or if scanning is in progress)
+
+    to manage UI button states. Access is synchronized for thread safety.
+  example: []
+  syntax:
+    content: private static Dictionary<GENERAL_BLE_STATES, bool> _generalBLEstates
+    return:
+      type: System.Collections.Generic.Dictionary{mosaic_libary.GENERAL_BLE_STATES,System.Boolean}
+    content.vb: Private Shared _generalBLEstates As Dictionary(Of GENERAL_BLE_STATES, Boolean)
+- uid: mosaic_libary.BluetoothLEManager._lockGeneralStates
+  commentId: F:mosaic_libary.BluetoothLEManager._lockGeneralStates
+  id: _lockGeneralStates
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: _lockGeneralStates
+  nameWithType: BluetoothLEManager._lockGeneralStates
+  fullName: mosaic_libary.BluetoothLEManager._lockGeneralStates
+  type: Field
+  source:
+    id: _lockGeneralStates
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 57
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static object _lockGeneralStates
+    return:
+      type: System.Object
+    content.vb: Private Shared _lockGeneralStates As Object
+- uid: mosaic_libary.BluetoothLEManager._bleManagerQ
+  commentId: F:mosaic_libary.BluetoothLEManager._bleManagerQ
+  id: _bleManagerQ
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: _bleManagerQ
+  nameWithType: BluetoothLEManager._bleManagerQ
+  fullName: mosaic_libary.BluetoothLEManager._bleManagerQ
+  type: Field
+  source:
+    id: _bleManagerQ
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 63
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Temporary queue to hold BluetoothLEManager instances, illustrating a bridge between static and instance contexts.
+
+    Consider reviewing for a more integrated approach between static and non-static members.
+  example: []
+  syntax:
+    content: private static Queue<BluetoothLEManager> _bleManagerQ
+    return:
+      type: System.Collections.Generic.Queue{mosaic_libary.BluetoothLEManager}
+    content.vb: Private Shared _bleManagerQ As Queue(Of BluetoothLEManager)
+- uid: mosaic_libary.BluetoothLEManager.SampleBuffer
+  commentId: F:mosaic_libary.BluetoothLEManager.SampleBuffer
+  id: SampleBuffer
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: SampleBuffer
+  nameWithType: BluetoothLEManager.SampleBuffer
+  fullName: mosaic_libary.BluetoothLEManager.SampleBuffer
+  type: Field
+  source:
+    id: SampleBuffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 71
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Buffer for storing streamed original byte samples from the connected BLE device.
+  example: []
+  syntax:
+    content: public List<byte[]> SampleBuffer
+    return:
+      type: System.Collections.Generic.List{System.Byte[]}
+    content.vb: Public SampleBuffer As List(Of Byte())
+- uid: mosaic_libary.BluetoothLEManager.Lock_Buffer
+  commentId: F:mosaic_libary.BluetoothLEManager.Lock_Buffer
+  id: Lock_Buffer
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: Lock_Buffer
+  nameWithType: BluetoothLEManager.Lock_Buffer
+  fullName: mosaic_libary.BluetoothLEManager.Lock_Buffer
+  type: Field
+  source:
+    id: Lock_Buffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 75
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Lock object for synchronizing access to SampleBuffer.
+  example: []
+  syntax:
+    content: private static object Lock_Buffer
+    return:
+      type: System.Object
+    content.vb: Private Shared Lock_Buffer As Object
+- uid: mosaic_libary.BluetoothLEManager.specificBLEstates
+  commentId: F:mosaic_libary.BluetoothLEManager.specificBLEstates
+  id: specificBLEstates
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: specificBLEstates
+  nameWithType: BluetoothLEManager.specificBLEstates
+  fullName: mosaic_libary.BluetoothLEManager.specificBLEstates
+  type: Field
+  source:
+    id: specificBLEstates
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 80
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static Dictionary<SPECIFIC_BLE_STATES, bool> specificBLEstates
+    return:
+      type: System.Collections.Generic.Dictionary{mosaic_libary.SPECIFIC_BLE_STATES,System.Boolean}
+    content.vb: Private Shared specificBLEstates As Dictionary(Of SPECIFIC_BLE_STATES, Boolean)
+- uid: mosaic_libary.BluetoothLEManager.Lock_specificStates
+  commentId: F:mosaic_libary.BluetoothLEManager.Lock_specificStates
+  id: Lock_specificStates
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: Lock_specificStates
+  nameWithType: BluetoothLEManager.Lock_specificStates
+  fullName: mosaic_libary.BluetoothLEManager.Lock_specificStates
+  type: Field
+  source:
+    id: Lock_specificStates
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 85
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static object Lock_specificStates
+    return:
+      type: System.Object
+    content.vb: Private Shared Lock_specificStates As Object
+- uid: mosaic_libary.BluetoothLEManager.InitialNotifications
+  commentId: F:mosaic_libary.BluetoothLEManager.InitialNotifications
+  id: InitialNotifications
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: InitialNotifications
+  nameWithType: BluetoothLEManager.InitialNotifications
+  fullName: mosaic_libary.BluetoothLEManager.InitialNotifications
+  type: Field
+  source:
+    id: InitialNotifications
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 87
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Dictionary<string, (string, string)> InitialNotifications
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}}
+    content.vb: Private InitialNotifications As Dictionary(Of String, (String, String))
+- uid: mosaic_libary.BluetoothLEManager.InitialCmds
+  commentId: F:mosaic_libary.BluetoothLEManager.InitialCmds
+  id: InitialCmds
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: InitialCmds
+  nameWithType: BluetoothLEManager.InitialCmds
+  fullName: mosaic_libary.BluetoothLEManager.InitialCmds
+  type: Field
+  source:
+    id: InitialCmds
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 88
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Dictionary<string, (string, string, byte[])> InitialCmds
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}}
+    content.vb: Private InitialCmds As Dictionary(Of String, (String, String, Byte()))
+- uid: mosaic_libary.BluetoothLEManager.EndCommands
+  commentId: F:mosaic_libary.BluetoothLEManager.EndCommands
+  id: EndCommands
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: EndCommands
+  nameWithType: BluetoothLEManager.EndCommands
+  fullName: mosaic_libary.BluetoothLEManager.EndCommands
+  type: Field
+  source:
+    id: EndCommands
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 88
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Dictionary<string, (string, string, byte[])> EndCommands
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}}
+    content.vb: Private EndCommands As Dictionary(Of String, (String, String, Byte()))
+- uid: mosaic_libary.BluetoothLEManager.wantedDevice
+  commentId: F:mosaic_libary.BluetoothLEManager.wantedDevice
+  id: wantedDevice
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: wantedDevice
+  nameWithType: BluetoothLEManager.wantedDevice
+  fullName: mosaic_libary.BluetoothLEManager.wantedDevice
+  type: Field
+  source:
+    id: wantedDevice
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 90
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private DeviceInformation wantedDevice
+    return:
+      type: Windows.Devices.Enumeration.DeviceInformation
+    content.vb: Private wantedDevice As DeviceInformation
+- uid: mosaic_libary.BluetoothLEManager.bleDevice
+  commentId: F:mosaic_libary.BluetoothLEManager.bleDevice
+  id: bleDevice
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: bleDevice
+  nameWithType: BluetoothLEManager.bleDevice
+  fullName: mosaic_libary.BluetoothLEManager.bleDevice
+  type: Field
+  source:
+    id: bleDevice
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 91
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private BluetoothLEDevice bleDevice
+    return:
+      type: Windows.Devices.Bluetooth.BluetoothLEDevice
+    content.vb: Private bleDevice As BluetoothLEDevice
+- uid: mosaic_libary.BluetoothLEManager.NotificationCharacteristics
+  commentId: F:mosaic_libary.BluetoothLEManager.NotificationCharacteristics
+  id: NotificationCharacteristics
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: NotificationCharacteristics
+  nameWithType: BluetoothLEManager.NotificationCharacteristics
+  fullName: mosaic_libary.BluetoothLEManager.NotificationCharacteristics
+  type: Field
+  source:
+    id: NotificationCharacteristics
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 93
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Queue<GattCharacteristic> NotificationCharacteristics
+    return:
+      type: System.Collections.Generic.Queue{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic}
+    content.vb: Private NotificationCharacteristics As Queue(Of GattCharacteristic)
+- uid: mosaic_libary.BluetoothLEManager.InitialCmdCharacteristics
+  commentId: F:mosaic_libary.BluetoothLEManager.InitialCmdCharacteristics
+  id: InitialCmdCharacteristics
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: InitialCmdCharacteristics
+  nameWithType: BluetoothLEManager.InitialCmdCharacteristics
+  fullName: mosaic_libary.BluetoothLEManager.InitialCmdCharacteristics
+  type: Field
+  source:
+    id: InitialCmdCharacteristics
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 94
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Queue<(GattCharacteristic, byte[])> InitialCmdCharacteristics
+    return:
+      type: System.Collections.Generic.Queue{System.ValueTuple{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[]}}
+    content.vb: Private InitialCmdCharacteristics As Queue(Of (GattCharacteristic, Byte()))
+- uid: mosaic_libary.BluetoothLEManager.EndCmdCharacteristics
+  commentId: F:mosaic_libary.BluetoothLEManager.EndCmdCharacteristics
+  id: EndCmdCharacteristics
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: EndCmdCharacteristics
+  nameWithType: BluetoothLEManager.EndCmdCharacteristics
+  fullName: mosaic_libary.BluetoothLEManager.EndCmdCharacteristics
+  type: Field
+  source:
+    id: EndCmdCharacteristics
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 95
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Queue<(GattCharacteristic, byte[])> EndCmdCharacteristics
+    return:
+      type: System.Collections.Generic.Queue{System.ValueTuple{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[]}}
+    content.vb: Private EndCmdCharacteristics As Queue(Of (GattCharacteristic, Byte()))
+- uid: mosaic_libary.BluetoothLEManager.WANTED_DEVICE_MAC
+  commentId: F:mosaic_libary.BluetoothLEManager.WANTED_DEVICE_MAC
+  id: WANTED_DEVICE_MAC
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: WANTED_DEVICE_MAC
+  nameWithType: BluetoothLEManager.WANTED_DEVICE_MAC
+  fullName: mosaic_libary.BluetoothLEManager.WANTED_DEVICE_MAC
+  type: Field
+  source:
+    id: WANTED_DEVICE_MAC
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 97
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private string WANTED_DEVICE_MAC
+    return:
+      type: System.String
+    content.vb: Private WANTED_DEVICE_MAC As String
+- uid: mosaic_libary.BluetoothLEManager.SAMPLE_LENGTH
+  commentId: F:mosaic_libary.BluetoothLEManager.SAMPLE_LENGTH
+  id: SAMPLE_LENGTH
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: SAMPLE_LENGTH
+  nameWithType: BluetoothLEManager.SAMPLE_LENGTH
+  fullName: mosaic_libary.BluetoothLEManager.SAMPLE_LENGTH
+  type: Field
+  source:
+    id: SAMPLE_LENGTH
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 98
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int SAMPLE_LENGTH
+    return:
+      type: System.Int32
+    content.vb: Private SAMPLE_LENGTH As Integer
+- uid: mosaic_libary.BluetoothLEManager.ObtainedCs
+  commentId: F:mosaic_libary.BluetoothLEManager.ObtainedCs
+  id: ObtainedCs
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: ObtainedCs
+  nameWithType: BluetoothLEManager.ObtainedCs
+  fullName: mosaic_libary.BluetoothLEManager.ObtainedCs
+  type: Field
+  source:
+    id: ObtainedCs
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 101
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Queue<GattCharacteristic> ObtainedCs
+    return:
+      type: System.Collections.Generic.Queue{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic}
+    content.vb: Private ObtainedCs As Queue(Of GattCharacteristic)
+- uid: mosaic_libary.BluetoothLEManager.ObtainedServices
+  commentId: F:mosaic_libary.BluetoothLEManager.ObtainedServices
+  id: ObtainedServices
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: ObtainedServices
+  nameWithType: BluetoothLEManager.ObtainedServices
+  fullName: mosaic_libary.BluetoothLEManager.ObtainedServices
+  type: Field
+  source:
+    id: ObtainedServices
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 104
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Queue<GattDeviceService> ObtainedServices
+    return:
+      type: System.Collections.Generic.Queue{Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService}
+    content.vb: Private ObtainedServices As Queue(Of GattDeviceService)
+- uid: mosaic_libary.BluetoothLEManager.UiUpdateEvent
+  commentId: E:mosaic_libary.BluetoothLEManager.UiUpdateEvent
+  id: UiUpdateEvent
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: UiUpdateEvent
+  nameWithType: BluetoothLEManager.UiUpdateEvent
+  fullName: mosaic_libary.BluetoothLEManager.UiUpdateEvent
+  type: Event
+  source:
+    id: UiUpdateEvent
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 112
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Event for signaling UI updates, such as changes in BLE device discovery status. 
+
+    This can be subscribed to by UI components or devices (e.g., Myo Device) to refresh the UI accordingly.
+  example: []
+  syntax:
+    content: public static event EventHandler UiUpdateEvent
+    return:
+      type: System.EventHandler
+    content.vb: Public Shared Event UiUpdateEvent As EventHandler
+- uid: mosaic_libary.BluetoothLEManager.#ctor(System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}})
+  commentId: M:mosaic_libary.BluetoothLEManager.#ctor(System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}})
+  id: '#ctor(System.String,System.Int32,System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}},System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}})'
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: BluetoothLEManager(string, int, Dictionary<string, (string, string)>, Dictionary<string, (string, string, byte[])>, Dictionary<string, (string, string, byte[])>)
+  nameWithType: BluetoothLEManager.BluetoothLEManager(string, int, Dictionary<string, (string, string)>, Dictionary<string, (string, string, byte[])>, Dictionary<string, (string, string, byte[])>)
+  fullName: mosaic_libary.BluetoothLEManager.BluetoothLEManager(string, int, System.Collections.Generic.Dictionary<string, (string, string)>, System.Collections.Generic.Dictionary<string, (string, string, byte[])>, System.Collections.Generic.Dictionary<string, (string, string, byte[])>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 124
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Constructs new BLE Manager =&gt; One per device!
+  example: []
+  syntax:
+    content: public BluetoothLEManager(string macAddress, int sampleLength, Dictionary<string, (string, string)> initialNotifications, Dictionary<string, (string, string, byte[])> initialCmds, Dictionary<string, (string, string, byte[])> endCommands)
+    parameters:
+    - id: macAddress
+      type: System.String
+      description: MAC-address of wanted device either with ":" or "-" separation
+    - id: sampleLength
+      type: System.Int32
+      description: 'Streamed sample length in BYTE(!) =&gt; ATTENTION: is higher depending on data type'
+    - id: initialNotifications
+      type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}}
+      description: 'Notifications Characteristics, STRUCTURE: string arbitrary name, string service, string characteristic'
+    - id: initialCmds
+      type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}}
+      description: 'Command Characteristics, STRUCTURE: string arbitrary name, string service, string characteristic, byteArray cmd'
+    - id: endCommands
+      type: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}}
+      description: 'Command Characteristics, STRUCTURE: string arbitrary name, string service, string characteristic, byteArray cmd'
+    content.vb: Public Sub New(macAddress As String, sampleLength As Integer, initialNotifications As Dictionary(Of String, (String, String)), initialCmds As Dictionary(Of String, (String, String, Byte())), endCommands As Dictionary(Of String, (String, String, Byte())))
+  overload: mosaic_libary.BluetoothLEManager.#ctor*
+  nameWithType.vb: BluetoothLEManager.New(String, Integer, Dictionary(Of String, (String, String)), Dictionary(Of String, (String, String, Byte())), Dictionary(Of String, (String, String, Byte())))
+  fullName.vb: mosaic_libary.BluetoothLEManager.New(String, Integer, System.Collections.Generic.Dictionary(Of String, (String, String)), System.Collections.Generic.Dictionary(Of String, (String, String, Byte())), System.Collections.Generic.Dictionary(Of String, (String, String, Byte())))
+  name.vb: New(String, Integer, Dictionary(Of String, (String, String)), Dictionary(Of String, (String, String, Byte())), Dictionary(Of String, (String, String, Byte())))
+- uid: mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs)
+  commentId: M:mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs)
+  id: Characteristic_ValueChanged(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: Characteristic_ValueChanged(GattCharacteristic, GattValueChangedEventArgs)
+  nameWithType: BluetoothLEManager.Characteristic_ValueChanged(GattCharacteristic, GattValueChangedEventArgs)
+  fullName: mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic, Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs)
+  type: Method
+  source:
+    id: Characteristic_ValueChanged
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 157
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles value changes in a GATT characteristic.
+  example: []
+  syntax:
+    content: private void Characteristic_ValueChanged(GattCharacteristic sender, GattValueChangedEventArgs args)
+    parameters:
+    - id: sender
+      type: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+      description: The GATT characteristic that triggered the event.
+    - id: args
+      type: Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs
+      description: The event arguments containing the characteristic value.
+    content.vb: Private Sub Characteristic_ValueChanged(sender As GattCharacteristic, args As GattValueChangedEventArgs)
+  overload: mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged*
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Added(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformation)
+  commentId: M:mosaic_libary.BluetoothLEManager.DeviceWatcher_Added(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformation)
+  id: DeviceWatcher_Added(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformation)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DeviceWatcher_Added(DeviceWatcher, DeviceInformation)
+  nameWithType: BluetoothLEManager.DeviceWatcher_Added(DeviceWatcher, DeviceInformation)
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Added(Windows.Devices.Enumeration.DeviceWatcher, Windows.Devices.Enumeration.DeviceInformation)
+  type: Method
+  source:
+    id: DeviceWatcher_Added
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 193
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Automatically triggered when a BLE device is found.
+  example: []
+  syntax:
+    content: private static void DeviceWatcher_Added(DeviceWatcher sender, DeviceInformation args)
+    parameters:
+    - id: sender
+      type: Windows.Devices.Enumeration.DeviceWatcher
+      description: The device watcher.
+    - id: args
+      type: Windows.Devices.Enumeration.DeviceInformation
+      description: The device information.
+    content.vb: Private Shared Sub DeviceWatcher_Added(sender As DeviceWatcher, args As DeviceInformation)
+  overload: mosaic_libary.BluetoothLEManager.DeviceWatcher_Added*
+- uid: mosaic_libary.BluetoothLEManager.GetMACfromDeviceID(System.String)
+  commentId: M:mosaic_libary.BluetoothLEManager.GetMACfromDeviceID(System.String)
+  id: GetMACfromDeviceID(System.String)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetMACfromDeviceID(string)
+  nameWithType: BluetoothLEManager.GetMACfromDeviceID(string)
+  fullName: mosaic_libary.BluetoothLEManager.GetMACfromDeviceID(string)
+  type: Method
+  source:
+    id: GetMACfromDeviceID
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 237
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Retrieves the MAC address from a device ID.
+  example: []
+  syntax:
+    content: private static string GetMACfromDeviceID(string DeviceID)
+    parameters:
+    - id: DeviceID
+      type: System.String
+      description: The device ID.
+    return:
+      type: System.String
+      description: The MAC address.
+    content.vb: Private Shared Function GetMACfromDeviceID(DeviceID As String) As String
+  overload: mosaic_libary.BluetoothLEManager.GetMACfromDeviceID*
+  nameWithType.vb: BluetoothLEManager.GetMACfromDeviceID(String)
+  fullName.vb: mosaic_libary.BluetoothLEManager.GetMACfromDeviceID(String)
+  name.vb: GetMACfromDeviceID(String)
+- uid: mosaic_libary.BluetoothLEManager.CheckDeviceMatching(System.String,Windows.Devices.Enumeration.DeviceInformation)
+  commentId: M:mosaic_libary.BluetoothLEManager.CheckDeviceMatching(System.String,Windows.Devices.Enumeration.DeviceInformation)
+  id: CheckDeviceMatching(System.String,Windows.Devices.Enumeration.DeviceInformation)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: CheckDeviceMatching(string, DeviceInformation)
+  nameWithType: BluetoothLEManager.CheckDeviceMatching(string, DeviceInformation)
+  fullName: mosaic_libary.BluetoothLEManager.CheckDeviceMatching(string, Windows.Devices.Enumeration.DeviceInformation)
+  type: Method
+  source:
+    id: CheckDeviceMatching
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 251
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Checks if the discovered device matches the desired device.
+  example: []
+  syntax:
+    content: private void CheckDeviceMatching(string mac, DeviceInformation args)
+    parameters:
+    - id: mac
+      type: System.String
+      description: The MAC address of the device.
+    - id: args
+      type: Windows.Devices.Enumeration.DeviceInformation
+      description: The device information.
+    content.vb: Private Sub CheckDeviceMatching(mac As String, args As DeviceInformation)
+  overload: mosaic_libary.BluetoothLEManager.CheckDeviceMatching*
+  nameWithType.vb: BluetoothLEManager.CheckDeviceMatching(String, DeviceInformation)
+  fullName.vb: mosaic_libary.BluetoothLEManager.CheckDeviceMatching(String, Windows.Devices.Enumeration.DeviceInformation)
+  name.vb: CheckDeviceMatching(String, DeviceInformation)
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  commentId: M:mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  id: DeviceWatcher_EnumerationCompleted(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DeviceWatcher_EnumerationCompleted(DeviceWatcher, object)
+  nameWithType: BluetoothLEManager.DeviceWatcher_EnumerationCompleted(DeviceWatcher, object)
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted(Windows.Devices.Enumeration.DeviceWatcher, object)
+  type: Method
+  source:
+    id: DeviceWatcher_EnumerationCompleted
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 274
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles the completion of BLE device enumeration.
+  example: []
+  syntax:
+    content: private static void DeviceWatcher_EnumerationCompleted(DeviceWatcher sender, object args)
+    parameters:
+    - id: sender
+      type: Windows.Devices.Enumeration.DeviceWatcher
+      description: The device watcher.
+    - id: args
+      type: System.Object
+      description: The event arguments.
+    content.vb: Private Shared Sub DeviceWatcher_EnumerationCompleted(sender As DeviceWatcher, args As Object)
+  overload: mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted*
+  nameWithType.vb: BluetoothLEManager.DeviceWatcher_EnumerationCompleted(DeviceWatcher, Object)
+  fullName.vb: mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted(Windows.Devices.Enumeration.DeviceWatcher, Object)
+  name.vb: DeviceWatcher_EnumerationCompleted(DeviceWatcher, Object)
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  commentId: M:mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  id: DeviceWatcher_Removed(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DeviceWatcher_Removed(DeviceWatcher, DeviceInformationUpdate)
+  nameWithType: BluetoothLEManager.DeviceWatcher_Removed(DeviceWatcher, DeviceInformationUpdate)
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed(Windows.Devices.Enumeration.DeviceWatcher, Windows.Devices.Enumeration.DeviceInformationUpdate)
+  type: Method
+  source:
+    id: DeviceWatcher_Removed
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 284
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles the removal of a BLE device.
+  example: []
+  syntax:
+    content: private static void DeviceWatcher_Removed(DeviceWatcher sender, DeviceInformationUpdate args)
+    parameters:
+    - id: sender
+      type: Windows.Devices.Enumeration.DeviceWatcher
+      description: The device watcher.
+    - id: args
+      type: Windows.Devices.Enumeration.DeviceInformationUpdate
+      description: The device information update.
+    content.vb: Private Shared Sub DeviceWatcher_Removed(sender As DeviceWatcher, args As DeviceInformationUpdate)
+  overload: mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed*
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  commentId: M:mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  id: DeviceWatcher_Updated(Windows.Devices.Enumeration.DeviceWatcher,Windows.Devices.Enumeration.DeviceInformationUpdate)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DeviceWatcher_Updated(DeviceWatcher, DeviceInformationUpdate)
+  nameWithType: BluetoothLEManager.DeviceWatcher_Updated(DeviceWatcher, DeviceInformationUpdate)
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated(Windows.Devices.Enumeration.DeviceWatcher, Windows.Devices.Enumeration.DeviceInformationUpdate)
+  type: Method
+  source:
+    id: DeviceWatcher_Updated
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 299
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles updates to a BLE device's information.
+  example: []
+  syntax:
+    content: private static void DeviceWatcher_Updated(DeviceWatcher sender, DeviceInformationUpdate args)
+    parameters:
+    - id: sender
+      type: Windows.Devices.Enumeration.DeviceWatcher
+      description: The device watcher.
+    - id: args
+      type: Windows.Devices.Enumeration.DeviceInformationUpdate
+      description: The device information update.
+    content.vb: Private Shared Sub DeviceWatcher_Updated(sender As DeviceWatcher, args As DeviceInformationUpdate)
+  overload: mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated*
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  commentId: M:mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  id: DeviceWatcher_Stopped(Windows.Devices.Enumeration.DeviceWatcher,System.Object)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DeviceWatcher_Stopped(DeviceWatcher, object)
+  nameWithType: BluetoothLEManager.DeviceWatcher_Stopped(DeviceWatcher, object)
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped(Windows.Devices.Enumeration.DeviceWatcher, object)
+  type: Method
+  source:
+    id: DeviceWatcher_Stopped
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 318
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles the stopping of the device watcher.
+  example: []
+  syntax:
+    content: private static void DeviceWatcher_Stopped(DeviceWatcher sender, object args)
+    parameters:
+    - id: sender
+      type: Windows.Devices.Enumeration.DeviceWatcher
+      description: The device watcher.
+    - id: args
+      type: System.Object
+      description: The event arguments.
+    content.vb: Private Shared Sub DeviceWatcher_Stopped(sender As DeviceWatcher, args As Object)
+  overload: mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped*
+  nameWithType.vb: BluetoothLEManager.DeviceWatcher_Stopped(DeviceWatcher, Object)
+  fullName.vb: mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped(Windows.Devices.Enumeration.DeviceWatcher, Object)
+  name.vb: DeviceWatcher_Stopped(DeviceWatcher, Object)
+- uid: mosaic_libary.BluetoothLEManager.DeviceConnectionChanged(Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object)
+  commentId: M:mosaic_libary.BluetoothLEManager.DeviceConnectionChanged(Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object)
+  id: DeviceConnectionChanged(Windows.Devices.Bluetooth.BluetoothLEDevice,System.Object)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DeviceConnectionChanged(BluetoothLEDevice, object)
+  nameWithType: BluetoothLEManager.DeviceConnectionChanged(BluetoothLEDevice, object)
+  fullName: mosaic_libary.BluetoothLEManager.DeviceConnectionChanged(Windows.Devices.Bluetooth.BluetoothLEDevice, object)
+  type: Method
+  source:
+    id: DeviceConnectionChanged
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 332
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles changes in the connection status of a BLE device.
+  example: []
+  syntax:
+    content: private void DeviceConnectionChanged(BluetoothLEDevice sender, object args)
+    parameters:
+    - id: sender
+      type: Windows.Devices.Bluetooth.BluetoothLEDevice
+      description: The BLE device.
+    - id: args
+      type: System.Object
+      description: The event arguments.
+    content.vb: Private Sub DeviceConnectionChanged(sender As BluetoothLEDevice, args As Object)
+  overload: mosaic_libary.BluetoothLEManager.DeviceConnectionChanged*
+  nameWithType.vb: BluetoothLEManager.DeviceConnectionChanged(BluetoothLEDevice, Object)
+  fullName.vb: mosaic_libary.BluetoothLEManager.DeviceConnectionChanged(Windows.Devices.Bluetooth.BluetoothLEDevice, Object)
+  name.vb: DeviceConnectionChanged(BluetoothLEDevice, Object)
+- uid: mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync
+  commentId: M:mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync
+  id: ConnectionRoutineAsync
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: ConnectionRoutineAsync()
+  nameWithType: BluetoothLEManager.ConnectionRoutineAsync()
+  fullName: mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync()
+  type: Method
+  source:
+    id: ConnectionRoutineAsync
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 360
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Connection Routine for BLE Device (but kept general)
+  example: []
+  syntax:
+    content: public void ConnectionRoutineAsync()
+    content.vb: Public Sub ConnectionRoutineAsync()
+  overload: mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync*
+- uid: mosaic_libary.BluetoothLEManager.DisconnectAsync
+  commentId: M:mosaic_libary.BluetoothLEManager.DisconnectAsync
+  id: DisconnectAsync
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DisconnectAsync()
+  nameWithType: BluetoothLEManager.DisconnectAsync()
+  fullName: mosaic_libary.BluetoothLEManager.DisconnectAsync()
+  type: Method
+  source:
+    id: DisconnectAsync
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 460
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Stops Notifications. Disconnection from current bleDevice.
+  example: []
+  syntax:
+    content: public void DisconnectAsync()
+    content.vb: Public Sub DisconnectAsync()
+  overload: mosaic_libary.BluetoothLEManager.DisconnectAsync*
+- uid: mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher
+  commentId: M:mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher
+  id: StartNewDeviceWatcher
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: StartNewDeviceWatcher()
+  nameWithType: BluetoothLEManager.StartNewDeviceWatcher()
+  fullName: mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher()
+  type: Method
+  source:
+    id: StartNewDeviceWatcher
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 524
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Async function to start new Device Watcher =&gt; Starts Scanning for BLE
+  example: []
+  syntax:
+    content: public static void StartNewDeviceWatcher()
+    content.vb: Public Shared Sub StartNewDeviceWatcher()
+  overload: mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher*
+- uid: mosaic_libary.BluetoothLEManager.StopDeviceWatcher
+  commentId: M:mosaic_libary.BluetoothLEManager.StopDeviceWatcher
+  id: StopDeviceWatcher
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: StopDeviceWatcher()
+  nameWithType: BluetoothLEManager.StopDeviceWatcher()
+  fullName: mosaic_libary.BluetoothLEManager.StopDeviceWatcher()
+  type: Method
+  source:
+    id: StopDeviceWatcher
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 568
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Stops Scanning
+  example: []
+  syntax:
+    content: public static void StopDeviceWatcher()
+    content.vb: Public Shared Sub StopDeviceWatcher()
+  overload: mosaic_libary.BluetoothLEManager.StopDeviceWatcher*
+- uid: mosaic_libary.BluetoothLEManager.GetBLEdevice(Windows.Devices.Enumeration.DeviceInformation)
+  commentId: M:mosaic_libary.BluetoothLEManager.GetBLEdevice(Windows.Devices.Enumeration.DeviceInformation)
+  id: GetBLEdevice(Windows.Devices.Enumeration.DeviceInformation)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetBLEdevice(DeviceInformation)
+  nameWithType: BluetoothLEManager.GetBLEdevice(DeviceInformation)
+  fullName: mosaic_libary.BluetoothLEManager.GetBLEdevice(Windows.Devices.Enumeration.DeviceInformation)
+  type: Method
+  source:
+    id: GetBLEdevice
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 576
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private static Task<BluetoothLEDevice> GetBLEdevice(DeviceInformation bleDeviceInfo)
+    parameters:
+    - id: bleDeviceInfo
+      type: Windows.Devices.Enumeration.DeviceInformation
+    return:
+      type: System.Threading.Tasks.Task{Windows.Devices.Bluetooth.BluetoothLEDevice}
+    content.vb: Private Shared Function GetBLEdevice(bleDeviceInfo As DeviceInformation) As Task(Of BluetoothLEDevice)
+  overload: mosaic_libary.BluetoothLEManager.GetBLEdevice*
+- uid: mosaic_libary.BluetoothLEManager.GetCharacteristic(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String,System.String)
+  commentId: M:mosaic_libary.BluetoothLEManager.GetCharacteristic(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String,System.String)
+  id: GetCharacteristic(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String,System.String)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetCharacteristic(BluetoothLEDevice, string, string)
+  nameWithType: BluetoothLEManager.GetCharacteristic(BluetoothLEDevice, string, string)
+  fullName: mosaic_libary.BluetoothLEManager.GetCharacteristic(Windows.Devices.Bluetooth.BluetoothLEDevice, string, string)
+  type: Method
+  source:
+    id: GetCharacteristic
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 582
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Task<GattCharacteristic> GetCharacteristic(BluetoothLEDevice bleDevice, string wantedCharacteristicUUID, string ServiceUUID)
+    parameters:
+    - id: bleDevice
+      type: Windows.Devices.Bluetooth.BluetoothLEDevice
+    - id: wantedCharacteristicUUID
+      type: System.String
+    - id: ServiceUUID
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic}
+    content.vb: Private Function GetCharacteristic(bleDevice As BluetoothLEDevice, wantedCharacteristicUUID As String, ServiceUUID As String) As Task(Of GattCharacteristic)
+  overload: mosaic_libary.BluetoothLEManager.GetCharacteristic*
+  nameWithType.vb: BluetoothLEManager.GetCharacteristic(BluetoothLEDevice, String, String)
+  fullName.vb: mosaic_libary.BluetoothLEManager.GetCharacteristic(Windows.Devices.Bluetooth.BluetoothLEDevice, String, String)
+  name.vb: GetCharacteristic(BluetoothLEDevice, String, String)
+- uid: mosaic_libary.BluetoothLEManager.GetService(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String)
+  commentId: M:mosaic_libary.BluetoothLEManager.GetService(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String)
+  id: GetService(Windows.Devices.Bluetooth.BluetoothLEDevice,System.String)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetService(BluetoothLEDevice, string)
+  nameWithType: BluetoothLEManager.GetService(BluetoothLEDevice, string)
+  fullName: mosaic_libary.BluetoothLEManager.GetService(Windows.Devices.Bluetooth.BluetoothLEDevice, string)
+  type: Method
+  source:
+    id: GetService
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 631
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Task<GattDeviceService> GetService(BluetoothLEDevice bleDevice, string wantedServiceUUID)
+    parameters:
+    - id: bleDevice
+      type: Windows.Devices.Bluetooth.BluetoothLEDevice
+    - id: wantedServiceUUID
+      type: System.String
+    return:
+      type: System.Threading.Tasks.Task{Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService}
+    content.vb: Private Function GetService(bleDevice As BluetoothLEDevice, wantedServiceUUID As String) As Task(Of GattDeviceService)
+  overload: mosaic_libary.BluetoothLEManager.GetService*
+  nameWithType.vb: BluetoothLEManager.GetService(BluetoothLEDevice, String)
+  fullName.vb: mosaic_libary.BluetoothLEManager.GetService(Windows.Devices.Bluetooth.BluetoothLEDevice, String)
+  name.vb: GetService(BluetoothLEDevice, String)
+- uid: mosaic_libary.BluetoothLEManager.StartNotification(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic)
+  commentId: M:mosaic_libary.BluetoothLEManager.StartNotification(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic)
+  id: StartNotification(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: StartNotification(GattCharacteristic)
+  nameWithType: BluetoothLEManager.StartNotification(GattCharacteristic)
+  fullName: mosaic_libary.BluetoothLEManager.StartNotification(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic)
+  type: Method
+  source:
+    id: StartNotification
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 661
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Task<bool> StartNotification(GattCharacteristic not_item)
+    parameters:
+    - id: not_item
+      type: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Private Function StartNotification(not_item As GattCharacteristic) As Task(Of Boolean)
+  overload: mosaic_libary.BluetoothLEManager.StartNotification*
+- uid: mosaic_libary.BluetoothLEManager.SendCommand(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[])
+  commentId: M:mosaic_libary.BluetoothLEManager.SendCommand(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[])
+  id: SendCommand(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[])
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: SendCommand(GattCharacteristic, byte[])
+  nameWithType: BluetoothLEManager.SendCommand(GattCharacteristic, byte[])
+  fullName: mosaic_libary.BluetoothLEManager.SendCommand(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic, byte[])
+  type: Method
+  source:
+    id: SendCommand
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 676
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Task<bool> SendCommand(GattCharacteristic gattCharacteristic, byte[] cmd)
+    parameters:
+    - id: gattCharacteristic
+      type: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    - id: cmd
+      type: System.Byte[]
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+    content.vb: Private Function SendCommand(gattCharacteristic As GattCharacteristic, cmd As Byte()) As Task(Of Boolean)
+  overload: mosaic_libary.BluetoothLEManager.SendCommand*
+  nameWithType.vb: BluetoothLEManager.SendCommand(GattCharacteristic, Byte())
+  fullName.vb: mosaic_libary.BluetoothLEManager.SendCommand(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic, Byte())
+  name.vb: SendCommand(GattCharacteristic, Byte())
+- uid: mosaic_libary.BluetoothLEManager.DequeueBuffer
+  commentId: M:mosaic_libary.BluetoothLEManager.DequeueBuffer
+  id: DequeueBuffer
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: DequeueBuffer()
+  nameWithType: BluetoothLEManager.DequeueBuffer()
+  fullName: mosaic_libary.BluetoothLEManager.DequeueBuffer()
+  type: Method
+  source:
+    id: DequeueBuffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 701
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Evaluates current device buffer. If it is empty it returns null
+  example: []
+  syntax:
+    content: public byte[] DequeueBuffer()
+    return:
+      type: System.Byte[]
+      description: original streamed byte or null if empty
+    content.vb: Public Function DequeueBuffer() As Byte()
+  overload: mosaic_libary.BluetoothLEManager.DequeueBuffer*
+- uid: mosaic_libary.BluetoothLEManager.ShortenBuffer(System.Int32)
+  commentId: M:mosaic_libary.BluetoothLEManager.ShortenBuffer(System.Int32)
+  id: ShortenBuffer(System.Int32)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: ShortenBuffer(int)
+  nameWithType: BluetoothLEManager.ShortenBuffer(int)
+  fullName: mosaic_libary.BluetoothLEManager.ShortenBuffer(int)
+  type: Method
+  source:
+    id: ShortenBuffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 723
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: If for whatever reason Sample Buffer gets bigger =&gt; Delay gets bigger, is cut to maximum delay (in samples)
+  example: []
+  syntax:
+    content: public int ShortenBuffer(int MAX_DELAY)
+    parameters:
+    - id: MAX_DELAY
+      type: System.Int32
+      description: Max Delay in Samples
+    return:
+      type: System.Int32
+      description: returns the number of jumped samples
+    content.vb: Public Function ShortenBuffer(MAX_DELAY As Integer) As Integer
+  overload: mosaic_libary.BluetoothLEManager.ShortenBuffer*
+  nameWithType.vb: BluetoothLEManager.ShortenBuffer(Integer)
+  fullName.vb: mosaic_libary.BluetoothLEManager.ShortenBuffer(Integer)
+  name.vb: ShortenBuffer(Integer)
+- uid: mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac
+  commentId: M:mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac
+  id: GetDeviceNameElseMac
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetDeviceNameElseMac()
+  nameWithType: BluetoothLEManager.GetDeviceNameElseMac()
+  fullName: mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac()
+  type: Method
+  source:
+    id: GetDeviceNameElseMac
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 749
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: getter function for device name, in case it is null. It returns the device mac address as backup.
+  example: []
+  syntax:
+    content: public string GetDeviceNameElseMac()
+    return:
+      type: System.String
+      description: Device name or mac address as backup
+    content.vb: Public Function GetDeviceNameElseMac() As String
+  overload: mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac*
+- uid: mosaic_libary.BluetoothLEManager.GetGeneralBLECopy
+  commentId: M:mosaic_libary.BluetoothLEManager.GetGeneralBLECopy
+  id: GetGeneralBLECopy
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetGeneralBLECopy()
+  nameWithType: BluetoothLEManager.GetGeneralBLECopy()
+  fullName: mosaic_libary.BluetoothLEManager.GetGeneralBLECopy()
+  type: Method
+  source:
+    id: GetGeneralBLECopy
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 759
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Returns a copy of the Gerneral BLE States Instance
+  example: []
+  syntax:
+    content: public static Dictionary<GENERAL_BLE_STATES, bool> GetGeneralBLECopy()
+    return:
+      type: System.Collections.Generic.Dictionary{mosaic_libary.GENERAL_BLE_STATES,System.Boolean}
+      description: ''
+    content.vb: Public Shared Function GetGeneralBLECopy() As Dictionary(Of GENERAL_BLE_STATES, Boolean)
+  overload: mosaic_libary.BluetoothLEManager.GetGeneralBLECopy*
+- uid: mosaic_libary.BluetoothLEManager.GetDevicesCopy
+  commentId: M:mosaic_libary.BluetoothLEManager.GetDevicesCopy
+  id: GetDevicesCopy
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetDevicesCopy()
+  nameWithType: BluetoothLEManager.GetDevicesCopy()
+  fullName: mosaic_libary.BluetoothLEManager.GetDevicesCopy()
+  type: Method
+  source:
+    id: GetDevicesCopy
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 769
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Returns a copy of the current _foundDevices Dictionary
+  example: []
+  syntax:
+    content: public static Dictionary<string, DeviceInformation> GetDevicesCopy()
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,Windows.Devices.Enumeration.DeviceInformation}
+      description: ''
+    content.vb: Public Shared Function GetDevicesCopy() As Dictionary(Of String, DeviceInformation)
+  overload: mosaic_libary.BluetoothLEManager.GetDevicesCopy*
+- uid: mosaic_libary.BluetoothLEManager.CheckWatcherNull
+  commentId: M:mosaic_libary.BluetoothLEManager.CheckWatcherNull
+  id: CheckWatcherNull
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: CheckWatcherNull()
+  nameWithType: BluetoothLEManager.CheckWatcherNull()
+  fullName: mosaic_libary.BluetoothLEManager.CheckWatcherNull()
+  type: Method
+  source:
+    id: CheckWatcherNull
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 778
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Checks if the Device Watcher is NULL
+  example: []
+  syntax:
+    content: public static bool CheckWatcherNull()
+    return:
+      type: System.Boolean
+      description: Returns TRUE if watcher is NULL
+    content.vb: Public Shared Function CheckWatcherNull() As Boolean
+  overload: mosaic_libary.BluetoothLEManager.CheckWatcherNull*
+- uid: mosaic_libary.BluetoothLEManager.GetWatcherStatus
+  commentId: M:mosaic_libary.BluetoothLEManager.GetWatcherStatus
+  id: GetWatcherStatus
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetWatcherStatus()
+  nameWithType: BluetoothLEManager.GetWatcherStatus()
+  fullName: mosaic_libary.BluetoothLEManager.GetWatcherStatus()
+  type: Method
+  source:
+    id: GetWatcherStatus
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 789
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Gets the current watcher status.
+  example: []
+  syntax:
+    content: public static DeviceWatcherStatus GetWatcherStatus()
+    return:
+      type: Windows.Devices.Enumeration.DeviceWatcherStatus
+      description: Returns device watcher status (Started, Stopped, etc).
+    content.vb: Public Shared Function GetWatcherStatus() As DeviceWatcherStatus
+  overload: mosaic_libary.BluetoothLEManager.GetWatcherStatus*
+- uid: mosaic_libary.BluetoothLEManager.GetSpecificBLECopy
+  commentId: M:mosaic_libary.BluetoothLEManager.GetSpecificBLECopy
+  id: GetSpecificBLECopy
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetSpecificBLECopy()
+  nameWithType: BluetoothLEManager.GetSpecificBLECopy()
+  fullName: mosaic_libary.BluetoothLEManager.GetSpecificBLECopy()
+  type: Method
+  source:
+    id: GetSpecificBLECopy
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 801
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Gets device specific BLE state information.
+  example: []
+  syntax:
+    content: public Dictionary<SPECIFIC_BLE_STATES, bool> GetSpecificBLECopy()
+    return:
+      type: System.Collections.Generic.Dictionary{mosaic_libary.SPECIFIC_BLE_STATES,System.Boolean}
+      description: Copy of device specific BLE states dictionary.
+    content.vb: Public Function GetSpecificBLECopy() As Dictionary(Of SPECIFIC_BLE_STATES, Boolean)
+  overload: mosaic_libary.BluetoothLEManager.GetSpecificBLECopy*
+- uid: mosaic_libary.BluetoothLEManager.GetNameAndMac
+  commentId: M:mosaic_libary.BluetoothLEManager.GetNameAndMac
+  id: GetNameAndMac
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: GetNameAndMac()
+  nameWithType: BluetoothLEManager.GetNameAndMac()
+  fullName: mosaic_libary.BluetoothLEManager.GetNameAndMac()
+  type: Method
+  source:
+    id: GetNameAndMac
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 811
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Gets the name and MAC address of the device.
+  example: []
+  syntax:
+    content: public Tuple<string, string> GetNameAndMac()
+    return:
+      type: System.Tuple{System.String,System.String}
+      description: A tuple containing the device name and MAC address.
+    content.vb: Public Function GetNameAndMac() As Tuple(Of String, String)
+  overload: mosaic_libary.BluetoothLEManager.GetNameAndMac*
+- uid: mosaic_libary.BluetoothLEManager.SetWantedDevice(Windows.Devices.Enumeration.DeviceInformation)
+  commentId: M:mosaic_libary.BluetoothLEManager.SetWantedDevice(Windows.Devices.Enumeration.DeviceInformation)
+  id: SetWantedDevice(Windows.Devices.Enumeration.DeviceInformation)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: SetWantedDevice(DeviceInformation)
+  nameWithType: BluetoothLEManager.SetWantedDevice(DeviceInformation)
+  fullName: mosaic_libary.BluetoothLEManager.SetWantedDevice(Windows.Devices.Enumeration.DeviceInformation)
+  type: Method
+  source:
+    id: SetWantedDevice
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 821
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Set Wanted Device from outside =&gt; for Dropdown list
+  example: []
+  syntax:
+    content: public void SetWantedDevice(DeviceInformation wantedDevice)
+    parameters:
+    - id: wantedDevice
+      type: Windows.Devices.Enumeration.DeviceInformation
+      description: he desired device information.
+    content.vb: Public Sub SetWantedDevice(wantedDevice As DeviceInformation)
+  overload: mosaic_libary.BluetoothLEManager.SetWantedDevice*
+- uid: mosaic_libary.BluetoothLEManager.HandleNull(System.Object)
+  commentId: M:mosaic_libary.BluetoothLEManager.HandleNull(System.Object)
+  id: HandleNull(System.Object)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: HandleNull(object)
+  nameWithType: BluetoothLEManager.HandleNull(object)
+  fullName: mosaic_libary.BluetoothLEManager.HandleNull(object)
+  type: Method
+  source:
+    id: HandleNull
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 835
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles null objects.
+  example: []
+  syntax:
+    content: private bool HandleNull(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to check.
+    return:
+      type: System.Boolean
+      description: True if the object is null; otherwise false.
+    content.vb: Private Function HandleNull(obj As Object) As Boolean
+  overload: mosaic_libary.BluetoothLEManager.HandleNull*
+  nameWithType.vb: BluetoothLEManager.HandleNull(Object)
+  fullName.vb: mosaic_libary.BluetoothLEManager.HandleNull(Object)
+  name.vb: HandleNull(Object)
+- uid: mosaic_libary.BluetoothLEManager.HandleException
+  commentId: M:mosaic_libary.BluetoothLEManager.HandleException
+  id: HandleException
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: HandleException()
+  nameWithType: BluetoothLEManager.HandleException()
+  fullName: mosaic_libary.BluetoothLEManager.HandleException()
+  type: Method
+  source:
+    id: HandleException
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 847
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles BLE communication exceptions.
+  example: []
+  syntax:
+    content: private void HandleException()
+    content.vb: Private Sub HandleException()
+  overload: mosaic_libary.BluetoothLEManager.HandleException*
+- uid: mosaic_libary.BluetoothLEManager.OnUiUpdateEvent(System.EventArgs)
+  commentId: M:mosaic_libary.BluetoothLEManager.OnUiUpdateEvent(System.EventArgs)
+  id: OnUiUpdateEvent(System.EventArgs)
+  parent: mosaic_libary.BluetoothLEManager
+  langs:
+  - csharp
+  - vb
+  name: OnUiUpdateEvent(EventArgs)
+  nameWithType: BluetoothLEManager.OnUiUpdateEvent(EventArgs)
+  fullName: mosaic_libary.BluetoothLEManager.OnUiUpdateEvent(System.EventArgs)
+  type: Method
+  source:
+    id: OnUiUpdateEvent
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 862
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Fire event UI needs update
+  example: []
+  syntax:
+    content: protected static void OnUiUpdateEvent(EventArgs e)
+    parameters:
+    - id: e
+      type: System.EventArgs
+      description: ''
+    content.vb: Protected Shared Sub OnUiUpdateEvent(e As EventArgs)
+  overload: mosaic_libary.BluetoothLEManager.OnUiUpdateEvent*
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Collections.Generic.Dictionary{System.String,Windows.Devices.Enumeration.DeviceInformation}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,Windows.Devices.Enumeration.DeviceInformation}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, DeviceInformation>
+  nameWithType: Dictionary<string, DeviceInformation>
+  fullName: System.Collections.Generic.Dictionary<string, Windows.Devices.Enumeration.DeviceInformation>
+  nameWithType.vb: Dictionary(Of String, DeviceInformation)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Windows.Devices.Enumeration.DeviceInformation)
+  name.vb: Dictionary(Of String, DeviceInformation)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Windows.Devices.Enumeration.DeviceInformation
+    name: DeviceInformation
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: Windows.Devices.Enumeration.DeviceInformation
+    name: DeviceInformation
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Windows.Devices.Enumeration.DeviceWatcher
+  commentId: T:Windows.Devices.Enumeration.DeviceWatcher
+  parent: Windows.Devices.Enumeration
+  isExternal: true
+  name: DeviceWatcher
+  nameWithType: DeviceWatcher
+  fullName: Windows.Devices.Enumeration.DeviceWatcher
+- uid: Windows.Devices.Enumeration
+  commentId: N:Windows.Devices.Enumeration
+  isExternal: true
+  name: Windows.Devices.Enumeration
+  nameWithType: Windows.Devices.Enumeration
+  fullName: Windows.Devices.Enumeration
+  spec.csharp:
+  - uid: Windows
+    name: Windows
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices
+    name: Devices
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Enumeration
+    name: Enumeration
+    isExternal: true
+  spec.vb:
+  - uid: Windows
+    name: Windows
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices
+    name: Devices
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Enumeration
+    name: Enumeration
+    isExternal: true
+- uid: System.Collections.Generic.Dictionary{mosaic_libary.GENERAL_BLE_STATES,System.Boolean}
+  commentId: T:System.Collections.Generic.Dictionary{mosaic_libary.GENERAL_BLE_STATES,System.Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<GENERAL_BLE_STATES, bool>
+  nameWithType: Dictionary<GENERAL_BLE_STATES, bool>
+  fullName: System.Collections.Generic.Dictionary<mosaic_libary.GENERAL_BLE_STATES, bool>
+  nameWithType.vb: Dictionary(Of GENERAL_BLE_STATES, Boolean)
+  fullName.vb: System.Collections.Generic.Dictionary(Of mosaic_libary.GENERAL_BLE_STATES, Boolean)
+  name.vb: Dictionary(Of GENERAL_BLE_STATES, Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.GENERAL_BLE_STATES
+    name: GENERAL_BLE_STATES
+    href: mosaic_libary.GENERAL_BLE_STATES.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.GENERAL_BLE_STATES
+    name: GENERAL_BLE_STATES
+    href: mosaic_libary.GENERAL_BLE_STATES.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Collections.Generic.Queue{mosaic_libary.BluetoothLEManager}
+  commentId: T:System.Collections.Generic.Queue{mosaic_libary.BluetoothLEManager}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<BluetoothLEManager>
+  nameWithType: Queue<BluetoothLEManager>
+  fullName: System.Collections.Generic.Queue<mosaic_libary.BluetoothLEManager>
+  nameWithType.vb: Queue(Of BluetoothLEManager)
+  fullName.vb: System.Collections.Generic.Queue(Of mosaic_libary.BluetoothLEManager)
+  name.vb: Queue(Of BluetoothLEManager)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - uid: mosaic_libary.BluetoothLEManager
+    name: BluetoothLEManager
+    href: mosaic_libary.BluetoothLEManager.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.BluetoothLEManager
+    name: BluetoothLEManager
+    href: mosaic_libary.BluetoothLEManager.html
+  - name: )
+- uid: System.Collections.Generic.Queue`1
+  commentId: T:System.Collections.Generic.Queue`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.List{System.Byte[]}
+  commentId: T:System.Collections.Generic.List{System.Byte[]}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<byte[]>
+  nameWithType: List<byte[]>
+  fullName: System.Collections.Generic.List<byte[]>
+  nameWithType.vb: List(Of Byte())
+  fullName.vb: System.Collections.Generic.List(Of Byte())
+  name.vb: List(Of Byte())
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic.Dictionary{mosaic_libary.SPECIFIC_BLE_STATES,System.Boolean}
+  commentId: T:System.Collections.Generic.Dictionary{mosaic_libary.SPECIFIC_BLE_STATES,System.Boolean}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<SPECIFIC_BLE_STATES, bool>
+  nameWithType: Dictionary<SPECIFIC_BLE_STATES, bool>
+  fullName: System.Collections.Generic.Dictionary<mosaic_libary.SPECIFIC_BLE_STATES, bool>
+  nameWithType.vb: Dictionary(Of SPECIFIC_BLE_STATES, Boolean)
+  fullName.vb: System.Collections.Generic.Dictionary(Of mosaic_libary.SPECIFIC_BLE_STATES, Boolean)
+  name.vb: Dictionary(Of SPECIFIC_BLE_STATES, Boolean)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.SPECIFIC_BLE_STATES
+    name: SPECIFIC_BLE_STATES
+    href: mosaic_libary.SPECIFIC_BLE_STATES.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.SPECIFIC_BLE_STATES
+    name: SPECIFIC_BLE_STATES
+    href: mosaic_libary.SPECIFIC_BLE_STATES.html
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, (string, string)>
+  nameWithType: Dictionary<string, (string, string)>
+  fullName: System.Collections.Generic.Dictionary<string, (string, string)>
+  nameWithType.vb: Dictionary(Of String, (String, String))
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, (String, String))
+  name.vb: Dictionary(Of String, (String, String))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.ValueTuple{System.String,System.String,System.Byte[]}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, (string, string, byte[])>
+  nameWithType: Dictionary<string, (string, string, byte[])>
+  fullName: System.Collections.Generic.Dictionary<string, (string, string, byte[])>
+  nameWithType.vb: Dictionary(Of String, (String, String, Byte()))
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, (String, String, Byte()))
+  name.vb: Dictionary(Of String, (String, String, Byte()))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+  - name: )
+- uid: Windows.Devices.Enumeration.DeviceInformation
+  commentId: T:Windows.Devices.Enumeration.DeviceInformation
+  parent: Windows.Devices.Enumeration
+  isExternal: true
+  name: DeviceInformation
+  nameWithType: DeviceInformation
+  fullName: Windows.Devices.Enumeration.DeviceInformation
+- uid: Windows.Devices.Bluetooth.BluetoothLEDevice
+  commentId: T:Windows.Devices.Bluetooth.BluetoothLEDevice
+  parent: Windows.Devices.Bluetooth
+  isExternal: true
+  name: BluetoothLEDevice
+  nameWithType: BluetoothLEDevice
+  fullName: Windows.Devices.Bluetooth.BluetoothLEDevice
+- uid: Windows.Devices.Bluetooth
+  commentId: N:Windows.Devices.Bluetooth
+  isExternal: true
+  name: Windows.Devices.Bluetooth
+  nameWithType: Windows.Devices.Bluetooth
+  fullName: Windows.Devices.Bluetooth
+  spec.csharp:
+  - uid: Windows
+    name: Windows
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices
+    name: Devices
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Bluetooth
+    name: Bluetooth
+    isExternal: true
+  spec.vb:
+  - uid: Windows
+    name: Windows
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices
+    name: Devices
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Bluetooth
+    name: Bluetooth
+    isExternal: true
+- uid: System.Collections.Generic.Queue{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic}
+  commentId: T:System.Collections.Generic.Queue{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<GattCharacteristic>
+  nameWithType: Queue<GattCharacteristic>
+  fullName: System.Collections.Generic.Queue<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic>
+  nameWithType.vb: Queue(Of GattCharacteristic)
+  fullName.vb: System.Collections.Generic.Queue(Of Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic)
+  name.vb: Queue(Of GattCharacteristic)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    name: GattCharacteristic
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    name: GattCharacteristic
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.Queue{System.ValueTuple{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[]}}
+  commentId: T:System.Collections.Generic.Queue{System.ValueTuple{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic,System.Byte[]}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<(GattCharacteristic, byte[])>
+  nameWithType: Queue<(GattCharacteristic, byte[])>
+  fullName: System.Collections.Generic.Queue<(Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic, byte[])>
+  nameWithType.vb: Queue(Of (GattCharacteristic, Byte()))
+  fullName.vb: System.Collections.Generic.Queue(Of (Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic, Byte()))
+  name.vb: Queue(Of (GattCharacteristic, Byte()))
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - name: (
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    name: GattCharacteristic
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    name: GattCharacteristic
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.Queue{Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService}
+  commentId: T:System.Collections.Generic.Queue{Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  name: Queue<GattDeviceService>
+  nameWithType: Queue<GattDeviceService>
+  fullName: System.Collections.Generic.Queue<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService>
+  nameWithType.vb: Queue(Of GattDeviceService)
+  fullName.vb: System.Collections.Generic.Queue(Of Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService)
+  name.vb: Queue(Of GattDeviceService)
+  spec.csharp:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: <
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    name: GattDeviceService
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Queue`1
+    name: Queue
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.queue-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    name: GattDeviceService
+    isExternal: true
+  - name: )
+- uid: System.EventHandler
+  commentId: T:System.EventHandler
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler
+  name: EventHandler
+  nameWithType: EventHandler
+  fullName: System.EventHandler
+- uid: mosaic_libary.BluetoothLEManager.#ctor*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.#ctor
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager__ctor_System_String_System_Int32_System_Collections_Generic_Dictionary_System_String_System_ValueTuple_System_String_System_String___System_Collections_Generic_Dictionary_System_String_System_ValueTuple_System_String_System_String_System_Byte_____System_Collections_Generic_Dictionary_System_String_System_ValueTuple_System_String_System_String_System_Byte_____
+  name: BluetoothLEManager
+  nameWithType: BluetoothLEManager.BluetoothLEManager
+  fullName: mosaic_libary.BluetoothLEManager.BluetoothLEManager
+  nameWithType.vb: BluetoothLEManager.New
+  fullName.vb: mosaic_libary.BluetoothLEManager.New
+  name.vb: New
+- uid: mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_Characteristic_ValueChanged_Windows_Devices_Bluetooth_GenericAttributeProfile_GattCharacteristic_Windows_Devices_Bluetooth_GenericAttributeProfile_GattValueChangedEventArgs_
+  name: Characteristic_ValueChanged
+  nameWithType: BluetoothLEManager.Characteristic_ValueChanged
+  fullName: mosaic_libary.BluetoothLEManager.Characteristic_ValueChanged
+- uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+  commentId: T:Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+  parent: Windows.Devices.Bluetooth.GenericAttributeProfile
+  isExternal: true
+  name: GattCharacteristic
+  nameWithType: GattCharacteristic
+  fullName: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+- uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs
+  commentId: T:Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs
+  parent: Windows.Devices.Bluetooth.GenericAttributeProfile
+  isExternal: true
+  name: GattValueChangedEventArgs
+  nameWithType: GattValueChangedEventArgs
+  fullName: Windows.Devices.Bluetooth.GenericAttributeProfile.GattValueChangedEventArgs
+- uid: Windows.Devices.Bluetooth.GenericAttributeProfile
+  commentId: N:Windows.Devices.Bluetooth.GenericAttributeProfile
+  isExternal: true
+  name: Windows.Devices.Bluetooth.GenericAttributeProfile
+  nameWithType: Windows.Devices.Bluetooth.GenericAttributeProfile
+  fullName: Windows.Devices.Bluetooth.GenericAttributeProfile
+  spec.csharp:
+  - uid: Windows
+    name: Windows
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices
+    name: Devices
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Bluetooth
+    name: Bluetooth
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile
+    name: GenericAttributeProfile
+    isExternal: true
+  spec.vb:
+  - uid: Windows
+    name: Windows
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices
+    name: Devices
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Bluetooth
+    name: Bluetooth
+    isExternal: true
+  - name: .
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile
+    name: GenericAttributeProfile
+    isExternal: true
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Added*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DeviceWatcher_Added
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DeviceWatcher_Added_Windows_Devices_Enumeration_DeviceWatcher_Windows_Devices_Enumeration_DeviceInformation_
+  name: DeviceWatcher_Added
+  nameWithType: BluetoothLEManager.DeviceWatcher_Added
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Added
+- uid: mosaic_libary.BluetoothLEManager.GetMACfromDeviceID*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetMACfromDeviceID
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetMACfromDeviceID_System_String_
+  name: GetMACfromDeviceID
+  nameWithType: BluetoothLEManager.GetMACfromDeviceID
+  fullName: mosaic_libary.BluetoothLEManager.GetMACfromDeviceID
+- uid: mosaic_libary.BluetoothLEManager.CheckDeviceMatching*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.CheckDeviceMatching
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_CheckDeviceMatching_System_String_Windows_Devices_Enumeration_DeviceInformation_
+  name: CheckDeviceMatching
+  nameWithType: BluetoothLEManager.CheckDeviceMatching
+  fullName: mosaic_libary.BluetoothLEManager.CheckDeviceMatching
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DeviceWatcher_EnumerationCompleted_Windows_Devices_Enumeration_DeviceWatcher_System_Object_
+  name: DeviceWatcher_EnumerationCompleted
+  nameWithType: BluetoothLEManager.DeviceWatcher_EnumerationCompleted
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_EnumerationCompleted
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DeviceWatcher_Removed_Windows_Devices_Enumeration_DeviceWatcher_Windows_Devices_Enumeration_DeviceInformationUpdate_
+  name: DeviceWatcher_Removed
+  nameWithType: BluetoothLEManager.DeviceWatcher_Removed
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Removed
+- uid: Windows.Devices.Enumeration.DeviceInformationUpdate
+  commentId: T:Windows.Devices.Enumeration.DeviceInformationUpdate
+  parent: Windows.Devices.Enumeration
+  isExternal: true
+  name: DeviceInformationUpdate
+  nameWithType: DeviceInformationUpdate
+  fullName: Windows.Devices.Enumeration.DeviceInformationUpdate
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DeviceWatcher_Updated_Windows_Devices_Enumeration_DeviceWatcher_Windows_Devices_Enumeration_DeviceInformationUpdate_
+  name: DeviceWatcher_Updated
+  nameWithType: BluetoothLEManager.DeviceWatcher_Updated
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Updated
+- uid: mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DeviceWatcher_Stopped_Windows_Devices_Enumeration_DeviceWatcher_System_Object_
+  name: DeviceWatcher_Stopped
+  nameWithType: BluetoothLEManager.DeviceWatcher_Stopped
+  fullName: mosaic_libary.BluetoothLEManager.DeviceWatcher_Stopped
+- uid: mosaic_libary.BluetoothLEManager.DeviceConnectionChanged*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DeviceConnectionChanged
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DeviceConnectionChanged_Windows_Devices_Bluetooth_BluetoothLEDevice_System_Object_
+  name: DeviceConnectionChanged
+  nameWithType: BluetoothLEManager.DeviceConnectionChanged
+  fullName: mosaic_libary.BluetoothLEManager.DeviceConnectionChanged
+- uid: mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_ConnectionRoutineAsync
+  name: ConnectionRoutineAsync
+  nameWithType: BluetoothLEManager.ConnectionRoutineAsync
+  fullName: mosaic_libary.BluetoothLEManager.ConnectionRoutineAsync
+- uid: mosaic_libary.BluetoothLEManager.DisconnectAsync*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DisconnectAsync
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DisconnectAsync
+  name: DisconnectAsync
+  nameWithType: BluetoothLEManager.DisconnectAsync
+  fullName: mosaic_libary.BluetoothLEManager.DisconnectAsync
+- uid: mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_StartNewDeviceWatcher
+  name: StartNewDeviceWatcher
+  nameWithType: BluetoothLEManager.StartNewDeviceWatcher
+  fullName: mosaic_libary.BluetoothLEManager.StartNewDeviceWatcher
+- uid: mosaic_libary.BluetoothLEManager.StopDeviceWatcher*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.StopDeviceWatcher
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_StopDeviceWatcher
+  name: StopDeviceWatcher
+  nameWithType: BluetoothLEManager.StopDeviceWatcher
+  fullName: mosaic_libary.BluetoothLEManager.StopDeviceWatcher
+- uid: mosaic_libary.BluetoothLEManager.GetBLEdevice*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetBLEdevice
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetBLEdevice_Windows_Devices_Enumeration_DeviceInformation_
+  name: GetBLEdevice
+  nameWithType: BluetoothLEManager.GetBLEdevice
+  fullName: mosaic_libary.BluetoothLEManager.GetBLEdevice
+- uid: System.Threading.Tasks.Task{Windows.Devices.Bluetooth.BluetoothLEDevice}
+  commentId: T:System.Threading.Tasks.Task{Windows.Devices.Bluetooth.BluetoothLEDevice}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<BluetoothLEDevice>
+  nameWithType: Task<BluetoothLEDevice>
+  fullName: System.Threading.Tasks.Task<Windows.Devices.Bluetooth.BluetoothLEDevice>
+  nameWithType.vb: Task(Of BluetoothLEDevice)
+  fullName.vb: System.Threading.Tasks.Task(Of Windows.Devices.Bluetooth.BluetoothLEDevice)
+  name.vb: Task(Of BluetoothLEDevice)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Windows.Devices.Bluetooth.BluetoothLEDevice
+    name: BluetoothLEDevice
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Windows.Devices.Bluetooth.BluetoothLEDevice
+    name: BluetoothLEDevice
+    isExternal: true
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: mosaic_libary.BluetoothLEManager.GetCharacteristic*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetCharacteristic
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetCharacteristic_Windows_Devices_Bluetooth_BluetoothLEDevice_System_String_System_String_
+  name: GetCharacteristic
+  nameWithType: BluetoothLEManager.GetCharacteristic
+  fullName: mosaic_libary.BluetoothLEManager.GetCharacteristic
+- uid: System.Threading.Tasks.Task{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic}
+  commentId: T:System.Threading.Tasks.Task{Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GattCharacteristic>
+  nameWithType: Task<GattCharacteristic>
+  fullName: System.Threading.Tasks.Task<Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic>
+  nameWithType.vb: Task(Of GattCharacteristic)
+  fullName.vb: System.Threading.Tasks.Task(Of Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic)
+  name.vb: Task(Of GattCharacteristic)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    name: GattCharacteristic
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattCharacteristic
+    name: GattCharacteristic
+    isExternal: true
+  - name: )
+- uid: mosaic_libary.BluetoothLEManager.GetService*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetService
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetService_Windows_Devices_Bluetooth_BluetoothLEDevice_System_String_
+  name: GetService
+  nameWithType: BluetoothLEManager.GetService
+  fullName: mosaic_libary.BluetoothLEManager.GetService
+- uid: System.Threading.Tasks.Task{Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService}
+  commentId: T:System.Threading.Tasks.Task{Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<GattDeviceService>
+  nameWithType: Task<GattDeviceService>
+  fullName: System.Threading.Tasks.Task<Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService>
+  nameWithType.vb: Task(Of GattDeviceService)
+  fullName.vb: System.Threading.Tasks.Task(Of Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService)
+  name.vb: Task(Of GattDeviceService)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    name: GattDeviceService
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Windows.Devices.Bluetooth.GenericAttributeProfile.GattDeviceService
+    name: GattDeviceService
+    isExternal: true
+  - name: )
+- uid: mosaic_libary.BluetoothLEManager.StartNotification*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.StartNotification
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_StartNotification_Windows_Devices_Bluetooth_GenericAttributeProfile_GattCharacteristic_
+  name: StartNotification
+  nameWithType: BluetoothLEManager.StartNotification
+  fullName: mosaic_libary.BluetoothLEManager.StartNotification
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<bool>
+  nameWithType: Task<bool>
+  fullName: System.Threading.Tasks.Task<bool>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: mosaic_libary.BluetoothLEManager.SendCommand*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.SendCommand
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_SendCommand_Windows_Devices_Bluetooth_GenericAttributeProfile_GattCharacteristic_System_Byte___
+  name: SendCommand
+  nameWithType: BluetoothLEManager.SendCommand
+  fullName: mosaic_libary.BluetoothLEManager.SendCommand
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: mosaic_libary.BluetoothLEManager.DequeueBuffer*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.DequeueBuffer
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_DequeueBuffer
+  name: DequeueBuffer
+  nameWithType: BluetoothLEManager.DequeueBuffer
+  fullName: mosaic_libary.BluetoothLEManager.DequeueBuffer
+- uid: mosaic_libary.BluetoothLEManager.ShortenBuffer*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.ShortenBuffer
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_ShortenBuffer_System_Int32_
+  name: ShortenBuffer
+  nameWithType: BluetoothLEManager.ShortenBuffer
+  fullName: mosaic_libary.BluetoothLEManager.ShortenBuffer
+- uid: mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetDeviceNameElseMac
+  name: GetDeviceNameElseMac
+  nameWithType: BluetoothLEManager.GetDeviceNameElseMac
+  fullName: mosaic_libary.BluetoothLEManager.GetDeviceNameElseMac
+- uid: mosaic_libary.BluetoothLEManager.GetGeneralBLECopy*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetGeneralBLECopy
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetGeneralBLECopy
+  name: GetGeneralBLECopy
+  nameWithType: BluetoothLEManager.GetGeneralBLECopy
+  fullName: mosaic_libary.BluetoothLEManager.GetGeneralBLECopy
+- uid: mosaic_libary.BluetoothLEManager.GetDevicesCopy*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetDevicesCopy
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetDevicesCopy
+  name: GetDevicesCopy
+  nameWithType: BluetoothLEManager.GetDevicesCopy
+  fullName: mosaic_libary.BluetoothLEManager.GetDevicesCopy
+- uid: mosaic_libary.BluetoothLEManager.CheckWatcherNull*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.CheckWatcherNull
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_CheckWatcherNull
+  name: CheckWatcherNull
+  nameWithType: BluetoothLEManager.CheckWatcherNull
+  fullName: mosaic_libary.BluetoothLEManager.CheckWatcherNull
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: mosaic_libary.BluetoothLEManager.GetWatcherStatus*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetWatcherStatus
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetWatcherStatus
+  name: GetWatcherStatus
+  nameWithType: BluetoothLEManager.GetWatcherStatus
+  fullName: mosaic_libary.BluetoothLEManager.GetWatcherStatus
+- uid: Windows.Devices.Enumeration.DeviceWatcherStatus
+  commentId: T:Windows.Devices.Enumeration.DeviceWatcherStatus
+  parent: Windows.Devices.Enumeration
+  isExternal: true
+  name: DeviceWatcherStatus
+  nameWithType: DeviceWatcherStatus
+  fullName: Windows.Devices.Enumeration.DeviceWatcherStatus
+- uid: mosaic_libary.BluetoothLEManager.GetSpecificBLECopy*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetSpecificBLECopy
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetSpecificBLECopy
+  name: GetSpecificBLECopy
+  nameWithType: BluetoothLEManager.GetSpecificBLECopy
+  fullName: mosaic_libary.BluetoothLEManager.GetSpecificBLECopy
+- uid: mosaic_libary.BluetoothLEManager.GetNameAndMac*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.GetNameAndMac
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_GetNameAndMac
+  name: GetNameAndMac
+  nameWithType: BluetoothLEManager.GetNameAndMac
+  fullName: mosaic_libary.BluetoothLEManager.GetNameAndMac
+- uid: System.Tuple{System.String,System.String}
+  commentId: T:System.Tuple{System.String,System.String}
+  parent: System
+  definition: System.Tuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  name: Tuple<string, string>
+  nameWithType: Tuple<string, string>
+  fullName: System.Tuple<string, string>
+  nameWithType.vb: Tuple(Of String, String)
+  fullName.vb: System.Tuple(Of String, String)
+  name.vb: Tuple(Of String, String)
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Tuple`2
+  commentId: T:System.Tuple`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  name: Tuple<T1, T2>
+  nameWithType: Tuple<T1, T2>
+  fullName: System.Tuple<T1, T2>
+  nameWithType.vb: Tuple(Of T1, T2)
+  fullName.vb: System.Tuple(Of T1, T2)
+  name.vb: Tuple(Of T1, T2)
+  spec.csharp:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: <
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: '>'
+  spec.vb:
+  - uid: System.Tuple`2
+    name: Tuple
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.tuple-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: mosaic_libary.BluetoothLEManager.SetWantedDevice*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.SetWantedDevice
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_SetWantedDevice_Windows_Devices_Enumeration_DeviceInformation_
+  name: SetWantedDevice
+  nameWithType: BluetoothLEManager.SetWantedDevice
+  fullName: mosaic_libary.BluetoothLEManager.SetWantedDevice
+- uid: mosaic_libary.BluetoothLEManager.HandleNull*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.HandleNull
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_HandleNull_System_Object_
+  name: HandleNull
+  nameWithType: BluetoothLEManager.HandleNull
+  fullName: mosaic_libary.BluetoothLEManager.HandleNull
+- uid: mosaic_libary.BluetoothLEManager.HandleException*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.HandleException
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_HandleException
+  name: HandleException
+  nameWithType: BluetoothLEManager.HandleException
+  fullName: mosaic_libary.BluetoothLEManager.HandleException
+- uid: mosaic_libary.BluetoothLEManager.OnUiUpdateEvent*
+  commentId: Overload:mosaic_libary.BluetoothLEManager.OnUiUpdateEvent
+  href: mosaic_libary.BluetoothLEManager.html#mosaic_libary_BluetoothLEManager_OnUiUpdateEvent_System_EventArgs_
+  name: OnUiUpdateEvent
+  nameWithType: BluetoothLEManager.OnUiUpdateEvent
+  fullName: mosaic_libary.BluetoothLEManager.OnUiUpdateEvent
+- uid: System.EventArgs
+  commentId: T:System.EventArgs
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventargs
+  name: EventArgs
+  nameWithType: EventArgs
+  fullName: System.EventArgs

@@ -1,0 +1,60 @@
+# -------------------------------------
+# ROS Example
+# This example demonstrates the following:
+# 1. Publish a simple signal on the topic "example_topic1".
+# 2. Subscribe to the same topic.
+# 3. Publish the subscribed signal to another topic "example_topic2".
+# -------------------------------------
+
+
+
+# Before running the code, make sure the ROS bridge is running either on WSL or a docker with exposed port 9090 (Websocket port).
+
+# 1. source your bash file e.g. ROS humble: source /opt/ros/humble/setup.bash
+
+# 2. Start the ROS bridge
+#  ROS 1:
+#  roslaunch rosbridge_server rosbridge_websocket.launch
+
+#  ROS2:
+#  ros2 launch rosbridge_server rosbridge_websocket_launch.xml
+
+# The final published data can be monitored on the topic "example_topic2":
+# rostopic echo /example_topic2
+
+
+
+# Params: [ "IP", "publish/subscribe", "Topic_name", "Message_Type" ]
+
+# Explanation of each parameter:
+# 1. "IP": WebSocket server IP.
+
+# 2. "publish" / "subscribe":  Use "publish" to PUBLISH message on the ROS bridge. "subscribe" receive message from the ROS bridge.
+
+# 3. "Topic_name": The name of the topic to which the data will be published or subscribed.
+
+# 4. "Message_Type": The message type used for publishing/Subscribing. Here, it specifies that the message is of type "std_msgs/Float64MultiArray".
+# Other types can be found here: http://docs.ros.org/en/melodic/api/std_msgs/html/index-msg.html
+
+
+timerSlow: { Type: ScheduledTimer, DesiredRate: 18 }
+
+
+sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 10 ] }
+
+# Publish the sinusoid signal to "example_topic1"
+ROS_Publisher_On_example_topic1: { Type: ROS, Inputs: [ sinusoidSignal ], Params: [ "localhost", "publish", "example_topic1", "std_msgs/Float64MultiArray", 10 ] }
+
+# Subscribe to the "example_topic1" topic
+ROS_Subscriber_From_example_topic1: { Type: ROS, Inputs: [], Params: [ "localhost", "subscribe", "example_topic1", "std_msgs/Float64MultiArray" , 10] }
+
+# Process the subscribed signal (in this case, simply passing it through)
+Received_signal: { Type: Function, Inputs: [ ROS_Subscriber_From_example_topic1 ], Params: [ add:0 ] }
+
+# Publish the processed signal to "example_topic2"
+ROS_Publisher_On_example_topic2: { Type: ROS, Inputs: [ Received_signal ], Params: [ "localhost", "publish", "example_topic2", "std_msgs/Float64MultiArray" , 10] }
+
+
+ROS_Subscriber_From_example_topic3_PY: { Type: ROS, Inputs: [], Params: [ "localhost", "subscribe", "example_topic3", "std_msgs/Float64MultiArray", 10 ] }
+
+Received_signal3: { Type: Function, Inputs: [ ROS_Subscriber_From_example_topic3_PY ], Params: [ add:0 ] }

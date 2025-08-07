@@ -1,0 +1,844 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.HannesHand.CommandParsing
+  commentId: T:mosaic_libary.HannesHand.CommandParsing
+  id: HannesHand.CommandParsing
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.HannesHand.CommandParsing.ACK
+  - mosaic_libary.HannesHand.CommandParsing.CommandControl
+  - mosaic_libary.HannesHand.CommandParsing.EnterCMDMode
+  - mosaic_libary.HannesHand.CommandParsing.EnterClassification
+  - mosaic_libary.HannesHand.CommandParsing.EnterTraining
+  - mosaic_libary.HannesHand.CommandParsing.EraseEEPROM
+  - mosaic_libary.HannesHand.CommandParsing.EraseFLASH
+  - mosaic_libary.HannesHand.CommandParsing.ExitCMDMode
+  - mosaic_libary.HannesHand.CommandParsing.NACK
+  - mosaic_libary.HannesHand.CommandParsing.ReadCounter
+  - mosaic_libary.HannesHand.CommandParsing.ReadEEPROM
+  - mosaic_libary.HannesHand.CommandParsing.ReadEEPROMboard
+  - mosaic_libary.HannesHand.CommandParsing.ReadFLASH
+  - mosaic_libary.HannesHand.CommandParsing.RefControl
+  - mosaic_libary.HannesHand.CommandParsing.ReplyCounter
+  - mosaic_libary.HannesHand.CommandParsing.ReplyEEPROM
+  - mosaic_libary.HannesHand.CommandParsing.ReplyEEPROMboard
+  - mosaic_libary.HannesHand.CommandParsing.ReplyEMG
+  - mosaic_libary.HannesHand.CommandParsing.ReplyEMGFiltered
+  - mosaic_libary.HannesHand.CommandParsing.ReplyFLASH
+  - mosaic_libary.HannesHand.CommandParsing.ReplyFingermap
+  - mosaic_libary.HannesHand.CommandParsing.ReplyGestures
+  - mosaic_libary.HannesHand.CommandParsing.ReplyGravity
+  - mosaic_libary.HannesHand.CommandParsing.ReplyMeasurements
+  - mosaic_libary.HannesHand.CommandParsing.ReplyQuaternions
+  - mosaic_libary.HannesHand.CommandParsing.ReplyRef
+  - mosaic_libary.HannesHand.CommandParsing.ReplySkin
+  - mosaic_libary.HannesHand.CommandParsing.ReplyVibro
+  - mosaic_libary.HannesHand.CommandParsing.SimultRefControl
+  - mosaic_libary.HannesHand.CommandParsing.VibroControl
+  - mosaic_libary.HannesHand.CommandParsing.WriteEEPROM
+  - mosaic_libary.HannesHand.CommandParsing.WriteEEPROMboard
+  - mosaic_libary.HannesHand.CommandParsing.WriteFLASH
+  - mosaic_libary.HannesHand.CommandParsing.btProtocol_END
+  langs:
+  - csharp
+  - vb
+  name: HannesHand.CommandParsing
+  nameWithType: HannesHand.CommandParsing
+  fullName: mosaic_libary.HannesHand.CommandParsing
+  type: Enum
+  source:
+    id: CommandParsing
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 254
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    List of Commands and Parsing. The commands are organized in the way that their Index is the correct command
+
+    header. Explanations of the commands are in the Communication Protocol Documentation.
+
+
+    Not all of the commands are used for now.
+  example: []
+  syntax:
+    content: public enum HannesHand.CommandParsing
+    content.vb: Public Enum HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.EnterCMDMode
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.EnterCMDMode
+  id: EnterCMDMode
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: EnterCMDMode
+  nameWithType: HannesHand.CommandParsing.EnterCMDMode
+  fullName: mosaic_libary.HannesHand.CommandParsing.EnterCMDMode
+  type: Field
+  source:
+    id: EnterCMDMode
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 256
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EnterCMDMode = 0
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ExitCMDMode
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ExitCMDMode
+  id: ExitCMDMode
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ExitCMDMode
+  nameWithType: HannesHand.CommandParsing.ExitCMDMode
+  fullName: mosaic_libary.HannesHand.CommandParsing.ExitCMDMode
+  type: Field
+  source:
+    id: ExitCMDMode
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 257
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ExitCMDMode = 1
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ACK
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ACK
+  id: ACK
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ACK
+  nameWithType: HannesHand.CommandParsing.ACK
+  fullName: mosaic_libary.HannesHand.CommandParsing.ACK
+  type: Field
+  source:
+    id: ACK
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 258
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ACK = 2
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.NACK
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.NACK
+  id: NACK
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: NACK
+  nameWithType: HannesHand.CommandParsing.NACK
+  fullName: mosaic_libary.HannesHand.CommandParsing.NACK
+  type: Field
+  source:
+    id: NACK
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 259
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: NACK = 3
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.EraseEEPROM
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.EraseEEPROM
+  id: EraseEEPROM
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: EraseEEPROM
+  nameWithType: HannesHand.CommandParsing.EraseEEPROM
+  fullName: mosaic_libary.HannesHand.CommandParsing.EraseEEPROM
+  type: Field
+  source:
+    id: EraseEEPROM
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 260
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EraseEEPROM = 4
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReadEEPROM
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReadEEPROM
+  id: ReadEEPROM
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReadEEPROM
+  nameWithType: HannesHand.CommandParsing.ReadEEPROM
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReadEEPROM
+  type: Field
+  source:
+    id: ReadEEPROM
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 261
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReadEEPROM = 5
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.WriteEEPROM
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.WriteEEPROM
+  id: WriteEEPROM
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: WriteEEPROM
+  nameWithType: HannesHand.CommandParsing.WriteEEPROM
+  fullName: mosaic_libary.HannesHand.CommandParsing.WriteEEPROM
+  type: Field
+  source:
+    id: WriteEEPROM
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 262
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: WriteEEPROM = 6
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyEEPROM
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyEEPROM
+  id: ReplyEEPROM
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyEEPROM
+  nameWithType: HannesHand.CommandParsing.ReplyEEPROM
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyEEPROM
+  type: Field
+  source:
+    id: ReplyEEPROM
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 263
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyEEPROM = 7
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.EraseFLASH
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.EraseFLASH
+  id: EraseFLASH
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: EraseFLASH
+  nameWithType: HannesHand.CommandParsing.EraseFLASH
+  fullName: mosaic_libary.HannesHand.CommandParsing.EraseFLASH
+  type: Field
+  source:
+    id: EraseFLASH
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 264
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EraseFLASH = 8
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReadFLASH
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReadFLASH
+  id: ReadFLASH
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReadFLASH
+  nameWithType: HannesHand.CommandParsing.ReadFLASH
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReadFLASH
+  type: Field
+  source:
+    id: ReadFLASH
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 265
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReadFLASH = 9
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.WriteFLASH
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.WriteFLASH
+  id: WriteFLASH
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: WriteFLASH
+  nameWithType: HannesHand.CommandParsing.WriteFLASH
+  fullName: mosaic_libary.HannesHand.CommandParsing.WriteFLASH
+  type: Field
+  source:
+    id: WriteFLASH
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 266
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: WriteFLASH = 10
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyFLASH
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyFLASH
+  id: ReplyFLASH
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyFLASH
+  nameWithType: HannesHand.CommandParsing.ReplyFLASH
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyFLASH
+  type: Field
+  source:
+    id: ReplyFLASH
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 267
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyFLASH = 11
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.EnterClassification
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.EnterClassification
+  id: EnterClassification
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: EnterClassification
+  nameWithType: HannesHand.CommandParsing.EnterClassification
+  fullName: mosaic_libary.HannesHand.CommandParsing.EnterClassification
+  type: Field
+  source:
+    id: EnterClassification
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 268
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EnterClassification = 12
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.EnterTraining
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.EnterTraining
+  id: EnterTraining
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: EnterTraining
+  nameWithType: HannesHand.CommandParsing.EnterTraining
+  fullName: mosaic_libary.HannesHand.CommandParsing.EnterTraining
+  type: Field
+  source:
+    id: EnterTraining
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 269
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EnterTraining = 13
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.RefControl
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.RefControl
+  id: RefControl
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: RefControl
+  nameWithType: HannesHand.CommandParsing.RefControl
+  fullName: mosaic_libary.HannesHand.CommandParsing.RefControl
+  type: Field
+  source:
+    id: RefControl
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 270
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: RefControl = 14
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyRef
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyRef
+  id: ReplyRef
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyRef
+  nameWithType: HannesHand.CommandParsing.ReplyRef
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyRef
+  type: Field
+  source:
+    id: ReplyRef
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 271
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyRef = 15
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyEMG
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyEMG
+  id: ReplyEMG
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyEMG
+  nameWithType: HannesHand.CommandParsing.ReplyEMG
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyEMG
+  type: Field
+  source:
+    id: ReplyEMG
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 272
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyEMG = 16
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyQuaternions
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyQuaternions
+  id: ReplyQuaternions
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyQuaternions
+  nameWithType: HannesHand.CommandParsing.ReplyQuaternions
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyQuaternions
+  type: Field
+  source:
+    id: ReplyQuaternions
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 273
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyQuaternions = 17
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplySkin
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplySkin
+  id: ReplySkin
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplySkin
+  nameWithType: HannesHand.CommandParsing.ReplySkin
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplySkin
+  type: Field
+  source:
+    id: ReplySkin
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 274
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplySkin = 18
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyMeasurements
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyMeasurements
+  id: ReplyMeasurements
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyMeasurements
+  nameWithType: HannesHand.CommandParsing.ReplyMeasurements
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyMeasurements
+  type: Field
+  source:
+    id: ReplyMeasurements
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 275
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyMeasurements = 19
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyGestures
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyGestures
+  id: ReplyGestures
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyGestures
+  nameWithType: HannesHand.CommandParsing.ReplyGestures
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyGestures
+  type: Field
+  source:
+    id: ReplyGestures
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 276
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyGestures = 20
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.CommandControl
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.CommandControl
+  id: CommandControl
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: CommandControl
+  nameWithType: HannesHand.CommandParsing.CommandControl
+  fullName: mosaic_libary.HannesHand.CommandParsing.CommandControl
+  type: Field
+  source:
+    id: CommandControl
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 277
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: CommandControl = 21
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReadEEPROMboard
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReadEEPROMboard
+  id: ReadEEPROMboard
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReadEEPROMboard
+  nameWithType: HannesHand.CommandParsing.ReadEEPROMboard
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReadEEPROMboard
+  type: Field
+  source:
+    id: ReadEEPROMboard
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 278
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReadEEPROMboard = 22
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.WriteEEPROMboard
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.WriteEEPROMboard
+  id: WriteEEPROMboard
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: WriteEEPROMboard
+  nameWithType: HannesHand.CommandParsing.WriteEEPROMboard
+  fullName: mosaic_libary.HannesHand.CommandParsing.WriteEEPROMboard
+  type: Field
+  source:
+    id: WriteEEPROMboard
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 279
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: WriteEEPROMboard = 23
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyEEPROMboard
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyEEPROMboard
+  id: ReplyEEPROMboard
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyEEPROMboard
+  nameWithType: HannesHand.CommandParsing.ReplyEEPROMboard
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyEEPROMboard
+  type: Field
+  source:
+    id: ReplyEEPROMboard
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 280
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyEEPROMboard = 24
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.VibroControl
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.VibroControl
+  id: VibroControl
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: VibroControl
+  nameWithType: HannesHand.CommandParsing.VibroControl
+  fullName: mosaic_libary.HannesHand.CommandParsing.VibroControl
+  type: Field
+  source:
+    id: VibroControl
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 281
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: VibroControl = 25
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyVibro
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyVibro
+  id: ReplyVibro
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyVibro
+  nameWithType: HannesHand.CommandParsing.ReplyVibro
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyVibro
+  type: Field
+  source:
+    id: ReplyVibro
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 282
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyVibro = 26
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReadCounter
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReadCounter
+  id: ReadCounter
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReadCounter
+  nameWithType: HannesHand.CommandParsing.ReadCounter
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReadCounter
+  type: Field
+  source:
+    id: ReadCounter
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 283
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReadCounter = 27
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyCounter
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyCounter
+  id: ReplyCounter
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyCounter
+  nameWithType: HannesHand.CommandParsing.ReplyCounter
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyCounter
+  type: Field
+  source:
+    id: ReplyCounter
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 284
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyCounter = 28
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyGravity
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyGravity
+  id: ReplyGravity
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyGravity
+  nameWithType: HannesHand.CommandParsing.ReplyGravity
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyGravity
+  type: Field
+  source:
+    id: ReplyGravity
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 285
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyGravity = 29
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.SimultRefControl
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.SimultRefControl
+  id: SimultRefControl
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: SimultRefControl
+  nameWithType: HannesHand.CommandParsing.SimultRefControl
+  fullName: mosaic_libary.HannesHand.CommandParsing.SimultRefControl
+  type: Field
+  source:
+    id: SimultRefControl
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 286
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: SimultRefControl = 30
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyFingermap
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyFingermap
+  id: ReplyFingermap
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyFingermap
+  nameWithType: HannesHand.CommandParsing.ReplyFingermap
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyFingermap
+  type: Field
+  source:
+    id: ReplyFingermap
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 287
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyFingermap = 31
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.ReplyEMGFiltered
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.ReplyEMGFiltered
+  id: ReplyEMGFiltered
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: ReplyEMGFiltered
+  nameWithType: HannesHand.CommandParsing.ReplyEMGFiltered
+  fullName: mosaic_libary.HannesHand.CommandParsing.ReplyEMGFiltered
+  type: Field
+  source:
+    id: ReplyEMGFiltered
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 288
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: ReplyEMGFiltered = 32
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+- uid: mosaic_libary.HannesHand.CommandParsing.btProtocol_END
+  commentId: F:mosaic_libary.HannesHand.CommandParsing.btProtocol_END
+  id: btProtocol_END
+  parent: mosaic_libary.HannesHand.CommandParsing
+  langs:
+  - csharp
+  - vb
+  name: btProtocol_END
+  nameWithType: HannesHand.CommandParsing.btProtocol_END
+  fullName: mosaic_libary.HannesHand.CommandParsing.btProtocol_END
+  type: Field
+  source:
+    id: btProtocol_END
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 289
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: btProtocol_END = 33
+    return:
+      type: mosaic_libary.HannesHand.CommandParsing
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.HannesHand.CommandParsing
+  commentId: T:mosaic_libary.HannesHand.CommandParsing
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.CommandParsing
+  nameWithType: HannesHand.CommandParsing
+  fullName: mosaic_libary.HannesHand.CommandParsing
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.CommandParsing
+    name: CommandParsing
+    href: mosaic_libary.HannesHand.CommandParsing.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.CommandParsing
+    name: CommandParsing
+    href: mosaic_libary.HannesHand.CommandParsing.html

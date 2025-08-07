@@ -1,0 +1,51 @@
+# ---------------------------------------------------------------------
+# trying to push the envelope to control the HannesArm !
+# ---------------------------------------------------------------------
+
+# obtain LPF'ed ARV at 200Hz - notice myo described by its MAC address!
+timerA: { Type: Timer, DesiredRate: 2000 }
+raw_EMG: { Type: Muovi, Inputs: [ timerA ], OutputType: 32d , Params: [2, 3]}
+x5: { Type: Func_Multiplier, Inputs: [ raw_EMG ], Params: [15], OutputType: 32d }
+#ddS: { Type: ddS, Inputs: [ x5 ], Params: [ '8;8' ], OutputType: 32d }
+abs_raw_EMG: { Type: Func_Rectifier, Inputs: [ x5 ] }
+#lpf_ARV: { Type: Filter, Inputs: [ abs_raw_EMG ],
+#    Params: [ '0,00094469;0,0018894;0,00094469', '1;-1,9112;0,91498' ] # Butt(2o,LP@2Hz,Fs=200S/s)
+#}
+# then subsample and LPF it again!
+
+#lpf_subs_ARV: { Type: Filter, Inputs: [ subs_ARV ],
+#    Params: [ '0,00048944;0,0024472;0,0048944;0,0048944;0,0024472;0,00048944', '1;-3,378;4,7518;-3,4397;1,274;-0,19239' ] # Butt(5o,LP@2Hz,Fs=25S/s)
+#    Params: [ '0,046132;0,092264;0,046132', '1;-1,3073;0,49181' ] # Butt(2o,LP@2Hz,Fs=25S/s)
+#    Params: [ '0,013359;0,026718;0,013359', '1;-1,6475;0,7009' ] # Butt(2o,LP@1Hz,Fs=25S/s)
+#    Params: [ '0,0013487;0,0026974;0,0013487', '1;-1,8935;0,89886' ] # Butt(2o,LP@0.3Hz,Fs=25S/s)
+#}
+
+af1: { Type: AdaptiveFilter, Inputs: [ abs_raw_EMG ],  Params: [ '1', '0', '0', '0'], OutputType: 2d }
+af2: { Type: AdaptiveFilter, Inputs: [ af1 ],  Params: [ '0,7', '-1', '-7', '8'], OutputType: 2d }
+timerB: { Type: TimerDecimator, Inputs: [ timerA ], Params: [ 8 ] }
+subs_ARV: { Type: Resampler, Inputs: [ af2, timerB ] }
+# Trigger for capturing data
+capture_data: { Type: Trigger, Params: [
+      rest:0;0;0;0;0;0;0;0;0;0;0;0,
+      power:1;1;1;1;1;1;0;0;0;0;0;0,
+      flex:0;0;0;0;0;0;1;0;0;0;0;0,
+      extend:0;0;0;0;0;0;0;1;0;0;0;0,
+      pron:0;0;0;0;0;0;0;0;1;0;0;0,
+      sup:0;0;0;0;0;0;0;0;0;1;0;0,
+    ], OutputType: cmd }
+#capture_data: { Type: Trigger, Params: [
+#      rest:0;0;0;0;0;0;0;0;0;0;0;0,
+#     index:0;0;1;0;0;0;0;0;0;0;0;0,
+#      middle:0;0;0;1;0;0;0;0;0;0;0;0,
+#    ring:0;0;0;0;1;0;0;0;0;0;0;0,
+#      little:0;0;0;0;0;1;0;0;0;0;0;0,
+#      thumb:1;0;0;0;0;0;0;0;0;0;0;0,
+#      thumb_add:0;1;0;0;0;0;0;0;0;0;0;0,
+#    ], OutputType: cmd }
+
+# incremental predictor
+incr_RFF: { Type: IncrementalPredictor, Inputs: [ subs_ARV, capture_data ], Params: [ 64,12 ], OutputType: 12d }
+# control skin-textured Blender arm model and Hannes arm model (prediction)
+af3: { Type: AdaptiveFilter, Inputs: [ incr_RFF ],  Params: [ '0,7', '5', '0', '0'], OutputType: 2d }
+BlenderSkinArmCtrl: { Type: BlenderArm, Inputs: [ af3 ], Params: [ localhost, 3334 ] }
+HannesArmCtrl: { Type: HannesArm, Inputs: [ af3 ], Params: [ localhost, 8889 ] }

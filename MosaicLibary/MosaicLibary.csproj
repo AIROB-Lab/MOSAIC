@@ -1,0 +1,478 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F134B8FB-A3E0-4345-920F-185C9D729F71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MosaicLibary</RootNamespace>
+    <AssemblyName>MosaicLibary</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Basics.cs" />
+    <Compile Include="Blocks\AdaptiveFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\AdaptiveFilter.Designer.cs">
+      <DependentUpon>AdaptiveFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\SlidingWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\SlidingWindow.Designer.cs">
+      <DependentUpon>SlidingWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\WaveformLength.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\WaveformLength.Designer.cs">
+      <DependentUpon>WaveformLength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\SlopeSignChanges.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\SlopeSignChanges.Designer.cs">
+      <DependentUpon>SlopeSignChanges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\ZeroCrossings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\ZeroCrossings.Designer.cs">
+      <DependentUpon>ZeroCrossings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\MeanAverageValue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\MeanAverageValue.Designer.cs">
+      <DependentUpon>MeanAverageValue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AllEnums.cs" />
+    <Compile Include="Blocks\ControlAlgorithms\DirectControlStrategy.cs" />
+    <Compile Include="Blocks\ControlAlgorithms\IControlAlgorithmStrategy.cs" />
+    <Compile Include="Blocks\ControlAlgorithms\StepwiseControlStrategy.cs" />
+    <Compile Include="Blocks\ControlAlgorithms\ControlAlgorithm.cs" />
+    <Compile Include="Blocks\Devices\Delsys\Delsys.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\Delsys\Delsys.Designer.cs">
+      <DependentUpon>Delsys.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\Delsys\Sensor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\Delsys\Sensor.Designer.cs">
+      <DependentUpon>Sensor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\Delsys\StreamInfo.cs" />
+    <Compile Include="Blocks\Devices\HannesHand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\HannesHand.designer.cs">
+      <DependentUpon>HannesHand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\MuoviSingleProbe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\MuoviSingleProbe.designer.cs">
+      <DependentUpon>MuoviSingleProbe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\UDP_StreamlinedSender.cs" />
+    <Compile Include="Blocks\FlowControl\FilePlayer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\FilePlayer.designer.cs">
+      <DependentUpon>FilePlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Joiner.cs" />
+    <Compile Include="Blocks\Devices\BlenderArm.cs" />
+    <Compile Include="Blocks\Devices\BluetoothLEManager.cs" />
+    <Compile Include="Blocks\Devices\HannesGUI.cs" />
+    <Compile Include="Blocks\Devices\Muovi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\Muovi.designer.cs">
+      <DependentUpon>Muovi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\HannesReceiver.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\HannesReceiver.designer.cs">
+      <DependentUpon>HannesReceiver.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\DLR_ADCBT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\DLR_ADCBT.designer.cs">
+      <DependentUpon>DLR_ADCBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\Myo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\Myo.designer.cs">
+      <DependentUpon>Myo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\NilsPod.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\NilsPod.Designer.cs">
+      <DependentUpon>NilsPod.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\SinGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\SinGenerator.Designer.cs">
+      <DependentUpon>SinGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Devices\Stimulus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Devices\Stimulus.Designer.cs">
+      <DependentUpon>Stimulus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Filter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Filter.Designer.cs">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\Buffer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\Buffer.Designer.cs">
+      <DependentUpon>Buffer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\Projector.cs" />
+    <Compile Include="Blocks\FlowControl\Selector.cs" />
+    <Compile Include="Blocks\FlowControl\StimTrigger.cs" />
+    <Compile Include="Blocks\FlowControl\Switch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\Switch.designer.cs">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\Trigger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\FlowControl\Trigger.Designer.cs">
+      <DependentUpon>Trigger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Function.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Function.Designer.cs">
+      <DependentUpon>Function.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Learning\BatchPredictor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Learning\BatchPredictor.designer.cs">
+      <DependentUpon>BatchPredictor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Learning\TAC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Learning\TAC.Designer.cs">
+      <DependentUpon>TAC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Learning\IncrementalPredictor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Learning\IncrementalPredictor.designer.cs">
+      <DependentUpon>IncrementalPredictor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Resampler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Resampler.Designer.cs">
+      <DependentUpon>Resampler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\ROS.cs" />
+    <Compile Include="Blocks\Timers\DecimatorTimer.cs" />
+    <Compile Include="Blocks\Timers\ScheduledTimer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Timers\ScheduledTimer.Designer.cs">
+      <DependentUpon>ScheduledTimer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\VectorialFunction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\VectorialFunction.Designer.cs">
+      <DependentUpon>VectorialFunction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Learning.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Visualisation\BlockTable.xaml.cs">
+      <DependentUpon>BlockTable.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Visualisation\ControlPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Visualisation\ControlPanel.Designer.cs">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualisation\Monitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visualisation\Monitor.Designer.cs">
+      <DependentUpon>Monitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualisation\SimpleProgressBar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visualisation\SimpleProgressBar.designer.cs">
+      <DependentUpon>SimpleProgressBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils.cs" />
+    <Compile Include="Visualisation\ScopeMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visualisation\ScopeMonitor.designer.cs">
+      <DependentUpon>ScopeMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Blocks\Timers\Timer.cs" />
+    <Compile Include="Visualisation\SpiderPlotMonitor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Visualisation\SpiderPlotMonitor.designer.cs">
+      <DependentUpon>SpiderPlotMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Visualisation\HeatMapMonitor.xaml.cs">
+      <DependentUpon>HeatMapMonitor.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Blocks\AdaptiveFilter.resx">
+      <DependentUpon>AdaptiveFilter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\Delsys\Delsys.resx">
+      <DependentUpon>Delsys.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\Delsys\Sensor.resx">
+      <DependentUpon>Sensor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\HannesHand.resx">
+      <DependentUpon>HannesHand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\Muovi.resx">
+      <DependentUpon>Muovi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\HannesReceiver.resx">
+      <DependentUpon>HannesReceiver.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\DLR_ADCBT.resx">
+      <DependentUpon>DLR_ADCBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\MuoviSingleProbe.resx">
+      <DependentUpon>MuoviSingleProbe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\Myo.resx">
+      <DependentUpon>Myo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\NilsPod.resx">
+      <DependentUpon>NilsPod.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\SinGenerator.resx">
+      <DependentUpon>SinGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Devices\Stimulus.resx">
+      <DependentUpon>Stimulus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Filter.resx">
+      <DependentUpon>Filter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\SlidingWindow.resx">
+      <DependentUpon>SlidingWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\Buffer.resx">
+      <DependentUpon>Buffer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\ChannelSelector.resx">
+      <DependentUpon>ChannelSelector.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\FilePlayer.resx">
+      <DependentUpon>FilePlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\Switch.resx">
+      <DependentUpon>Switch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\Trigger.resx">
+      <DependentUpon>Trigger.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Function.resx">
+      <DependentUpon>Function.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Learning\BatchPredictor.resx">
+      <DependentUpon>BatchPredictor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Learning\TAC.resx">
+      <DependentUpon>TAC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Learning\IncrementalPredictor.resx">
+      <DependentUpon>IncrementalPredictor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Resampler.resx">
+      <DependentUpon>Resampler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\WaveformLength.resx">
+      <DependentUpon>WaveformLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\SlopeSignChanges.resx">
+      <DependentUpon>SlopeSignChanges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\ZeroCrossings.resx">
+      <DependentUpon>ZeroCrossings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\FlowControl\MeanAverageValue.resx">
+      <DependentUpon>MeanAverageValue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Timers\ScheduledTimer.resx">
+      <DependentUpon>ScheduledTimer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\VectorialFunction.resx">
+      <DependentUpon>VectorialFunction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualisation\ControlPanel.resx">
+      <DependentUpon>ControlPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualisation\ScopeMonitor.resx">
+      <DependentUpon>ScopeMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualisation\SimpleProgressBar.resx">
+      <DependentUpon>SimpleProgressBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Visualisation\SpiderPlotMonitor.resx">
+      <DependentUpon>SpiderPlotMonitor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Visualisation\BlockTable.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Visualisation\HeatMapMonitor.xaml">
+      <Generator>XamlIntelliSenseFileGenerator</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Delsys.Drivers">
+      <Version>1.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="DelsysAPI">
+      <Version>2.5.3.832-Main</Version>
+    </PackageReference>
+    <PackageReference Include="GraphX">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MathNet.Numerics">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MathNet.Numerics.Data.Matlab">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MathNet.Numerics.MKL.Win">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.SDK.Contracts">
+      <Version>10.0.22621.755</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="Signals">
+      <Version>1.0.0.9</Version>
+    </PackageReference>
+    <PackageReference Include="WebSocketSharp">
+      <Version>1.0.3-rc11</Version>
+    </PackageReference>
+    <PackageReference Include="WebSocketSharp-netstandard">
+      <Version>1.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="YamlDotNet">
+      <Version>12.3.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Images\checked_green1.png" />
+    <Content Include="Resources\Images\reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DelsysAPI 2.5.3 Nuget Packages\Delsys.Drivers.1.2.1.nupkg" />
+    <None Include="Resources\DelsysAPI 2.5.3 Nuget Packages\DelsysAPI.2.5.3.nupkg" />
+    <None Include="Resources\DelsysAPI 2.5.3 Nuget Packages\Signals.1.0.0.9.nupkg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1610 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  id: Block
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Block.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  - mosaic_libary.Block.ConfigureInputs
+  - mosaic_libary.Block.Data
+  - mosaic_libary.Block.DesiredRate
+  - mosaic_libary.Block.Dispose
+  - mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  - mosaic_libary.Block.InputBlocks
+  - mosaic_libary.Block.InputCfg
+  - mosaic_libary.Block.IsIdle
+  - mosaic_libary.Block.IsLagging
+  - mosaic_libary.Block.IsStumbling
+  - mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  - mosaic_libary.Block.MouseLeftClick
+  - mosaic_libary.Block.MouseRightClick
+  - mosaic_libary.Block.Name
+  - mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  - mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  - mosaic_libary.Block.Output
+  - mosaic_libary.Block.Params
+  - mosaic_libary.Block.Rate
+  - mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  - mosaic_libary.Block.ShowHideCp
+  - mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  - mosaic_libary.Block.Ticks
+  - mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  - mosaic_libary.Block._dump
+  - mosaic_libary.Block._onNewInputLock
+  - mosaic_libary.Block._stumblingLock
+  - mosaic_libary.Block.cp
+  langs:
+  - csharp
+  - vb
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+  type: Class
+  source:
+    id: Block
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 116
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Abstract base class <xref href="mosaic_libary.Block" data-throw-if-not-resolved="false"></xref> for an object receiving inputs and producing outputs - in the ideal world,
+
+    everything is a block (Simulink-style). Values calculated within the block are sent to other blocks
+
+    by firing an Output event; inputs are received by subscribing to the Output eventhandler of each input block.
+
+    Input blocks to this one are dynamically decided using SubscribeTo() and UnsubscribeFrom().
+
+    It's the Chain of Life.
+  example: []
+  syntax:
+    content: 'public abstract class Block : IDisposable'
+    content.vb: Public MustInherit Class Block Implements IDisposable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - mosaic_libary.AdaptiveFilter
+  - mosaic_libary.BatchPredictor
+  - mosaic_libary.BlenderArm
+  - mosaic_libary.Buffer
+  - mosaic_libary.ControlAlgorithm
+  - mosaic_libary.DLR_ADCBT
+  - mosaic_libary.Delsys
+  - mosaic_libary.FilePlayer
+  - mosaic_libary.Filter
+  - mosaic_libary.Function
+  - mosaic_libary.HannesGUI
+  - mosaic_libary.HannesHand
+  - mosaic_libary.HannesReceiver
+  - mosaic_libary.IncrementalPredictor
+  - mosaic_libary.Joiner
+  - mosaic_libary.MeanAverageValue
+  - mosaic_libary.Muovi
+  - mosaic_libary.MuoviSingleProbe
+  - mosaic_libary.Myo
+  - mosaic_libary.NilsPod
+  - mosaic_libary.Projector
+  - mosaic_libary.ROS
+  - mosaic_libary.Resampler
+  - mosaic_libary.Selector
+  - mosaic_libary.SinGenerator
+  - mosaic_libary.SlidingWindow
+  - mosaic_libary.SlopeSignChanges
+  - mosaic_libary.StimTrigger
+  - mosaic_libary.Stimulus
+  - mosaic_libary.Switch
+  - mosaic_libary.TAC
+  - mosaic_libary.Timer
+  - mosaic_libary.Trigger
+  - mosaic_libary.UDP_StreamlinedSender
+  - mosaic_libary.VectorialFunction
+  - mosaic_libary.WaveformLength
+  - mosaic_libary.ZeroCrossings
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.Block.Name
+  commentId: P:mosaic_libary.Block.Name
+  id: Name
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Block.Name
+  fullName: mosaic_libary.Block.Name
+  type: Property
+  source:
+    id: Name
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 122
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Gets or sets the name of the block.
+  example: []
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: mosaic_libary.Block.Name*
+- uid: mosaic_libary.Block.DesiredRate
+  commentId: P:mosaic_libary.Block.DesiredRate
+  id: DesiredRate
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: DesiredRate
+  nameWithType: Block.DesiredRate
+  fullName: mosaic_libary.Block.DesiredRate
+  type: Property
+  source:
+    id: DesiredRate
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 127
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Gets or sets the desired rate of the block.
+  example: []
+  syntax:
+    content: public double DesiredRate { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property DesiredRate As Double
+  overload: mosaic_libary.Block.DesiredRate*
+- uid: mosaic_libary.Block.Rate
+  commentId: P:mosaic_libary.Block.Rate
+  id: Rate
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Rate
+  nameWithType: Block.Rate
+  fullName: mosaic_libary.Block.Rate
+  type: Property
+  source:
+    id: Rate
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 136
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Rate defiened as (#ticks-1 / _deltaT), where 
+
+    - #ticks is the length of the timestamp buffer so far
+
+    - _deltaT is the difference between the last and first timestamp in the buffer 
+
+    A new Timestamp is added to <code>Ticks</code> from each call off <code>SendOutput</code>.
+
+    Total Numer of Elements in <code>Ticks</code> divied by the diffrence between the last and first timestamp in <code>Ticks</code>.
+  example: []
+  syntax:
+    content: public double Rate { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property Rate As Double
+  overload: mosaic_libary.Block.Rate*
+- uid: mosaic_libary.Block.IsLagging
+  commentId: P:mosaic_libary.Block.IsLagging
+  id: IsLagging
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: IsLagging
+  nameWithType: Block.IsLagging
+  fullName: mosaic_libary.Block.IsLagging
+  type: Property
+  source:
+    id: IsLagging
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 141
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: A <code>Block </code>is defiened as lagging, when its <code>Rate</code> is lower than 95% of the <code>DesiredRate</code>.
+  example: []
+  syntax:
+    content: public bool IsLagging { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsLagging As Boolean
+  overload: mosaic_libary.Block.IsLagging*
+- uid: mosaic_libary.Block.IsIdle
+  commentId: P:mosaic_libary.Block.IsIdle
+  id: IsIdle
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: IsIdle
+  nameWithType: Block.IsIdle
+  fullName: mosaic_libary.Block.IsIdle
+  type: Property
+  source:
+    id: IsIdle
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 146
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: A <code>Block</code> id defiened as idle, when it has not ticked after 10*(1/<code>DesiredRate</code>) seconds.
+  example: []
+  syntax:
+    content: public bool IsIdle { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsIdle As Boolean
+  overload: mosaic_libary.Block.IsIdle*
+- uid: mosaic_libary.Block.IsStumbling
+  commentId: F:mosaic_libary.Block.IsStumbling
+  id: IsStumbling
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: IsStumbling
+  nameWithType: Block.IsStumbling
+  fullName: mosaic_libary.Block.IsStumbling
+  type: Field
+  source:
+    id: IsStumbling
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 151
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: A <code>Block</code> is defiend as stumbling, when previous <code>SendOutput</code> is still executing while a new instance of it is being called.
+  example: []
+  syntax:
+    content: public bool IsStumbling
+    return:
+      type: System.Boolean
+    content.vb: Public IsStumbling As Boolean
+- uid: mosaic_libary.Block.InputCfg
+  commentId: P:mosaic_libary.Block.InputCfg
+  id: InputCfg
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: InputCfg
+  nameWithType: Block.InputCfg
+  fullName: mosaic_libary.Block.InputCfg
+  type: Property
+  source:
+    id: InputCfg
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 153
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: protected List<string> InputCfg { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Protected Property InputCfg As List(Of String)
+  overload: mosaic_libary.Block.InputCfg*
+- uid: mosaic_libary.Block.Params
+  commentId: F:mosaic_libary.Block.Params
+  id: Params
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Params
+  nameWithType: Block.Params
+  fullName: mosaic_libary.Block.Params
+  type: Field
+  source:
+    id: Params
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 154
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: protected List<string> Params
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Protected Params As List(Of String)
+- uid: mosaic_libary.Block.InputBlocks
+  commentId: F:mosaic_libary.Block.InputBlocks
+  id: InputBlocks
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: InputBlocks
+  nameWithType: Block.InputBlocks
+  fullName: mosaic_libary.Block.InputBlocks
+  type: Field
+  source:
+    id: InputBlocks
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 158
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: The list of blocks the inputs get taken from, to be populated by ConfigureInputs
+  example: []
+  syntax:
+    content: protected List<Block> InputBlocks
+    return:
+      type: System.Collections.Generic.List{mosaic_libary.Block}
+    content.vb: Protected InputBlocks As List(Of Block)
+- uid: mosaic_libary.Block.Ticks
+  commentId: F:mosaic_libary.Block.Ticks
+  id: Ticks
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Ticks
+  nameWithType: Block.Ticks
+  fullName: mosaic_libary.Block.Ticks
+  type: Field
+  source:
+    id: Ticks
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 172
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Circualar Buffer <code>Ticks</code> for evaluating the rate. Buffer consists of 100 timestamps calles <code>Ticks</code>. Each time an output is produced, i.e., whenever <code>SendOutput(value)</code> is 
+
+    called, the current timestamp is added to <code>Ticks</code>; whenever <code>Rate</code> is queried, the total number of elements currently in <code>Ticks</code> is divided by the difference between the 
+
+    last and first timestamps in it.
+
+    >[!NOTE]
+
+    >Why not simply evaluating the rate since the birth of the block, instead of taking the burden of memorising the past 100 timestamps? Because a block can 
+
+    >be started and stopped arbitrarily – actually, whether it is running depends on the blocks it is connected to – so at some point evaluating the rate over the whole 
+
+    >course of time could become very inaccurate. Picture, e.g., the case in which a block has been running at 2kHz for one minute, then it has stopped running for two minutes, 
+
+    >then it has run again at 2kHz for one minute: the rate since the start in this case is 1kHz, which is deadly wrong in any possible sense; using the timestamps instead, the rate 
+
+    >is evaluated only over the “recent past”.
+  example: []
+  syntax:
+    content: private readonly CircularBuffer<double> Ticks
+    return:
+      type: mosaic_libary.CircularBuffer{System.Double}
+    content.vb: Private ReadOnly Ticks As CircularBuffer(Of Double)
+- uid: mosaic_libary.Block._dump
+  commentId: F:mosaic_libary.Block._dump
+  id: _dump
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: _dump
+  nameWithType: Block._dump
+  fullName: mosaic_libary.Block._dump
+  type: Field
+  source:
+    id: _dump
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 176
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Double-buffered data writer <xref href="mosaic_libary.DBWriter" data-throw-if-not-resolved="false"></xref> for storing data.
+  example: []
+  syntax:
+    content: private readonly DBWriter _dump
+    return:
+      type: mosaic_libary.DBWriter
+    content.vb: Private ReadOnly _dump As DBWriter
+- uid: mosaic_libary.Block._stumblingLock
+  commentId: F:mosaic_libary.Block._stumblingLock
+  id: _stumblingLock
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: _stumblingLock
+  nameWithType: Block._stumblingLock
+  fullName: mosaic_libary.Block._stumblingLock
+  type: Field
+  source:
+    id: _stumblingLock
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 179
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private readonly object _stumblingLock
+    return:
+      type: System.Object
+    content.vb: Private ReadOnly _stumblingLock As Object
+- uid: mosaic_libary.Block._onNewInputLock
+  commentId: F:mosaic_libary.Block._onNewInputLock
+  id: _onNewInputLock
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: _onNewInputLock
+  nameWithType: Block._onNewInputLock
+  fullName: mosaic_libary.Block._onNewInputLock
+  type: Field
+  source:
+    id: _onNewInputLock
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 180
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private readonly object _onNewInputLock
+    return:
+      type: System.Object
+    content.vb: Private ReadOnly _onNewInputLock As Object
+- uid: mosaic_libary.Block.Data
+  commentId: F:mosaic_libary.Block.Data
+  id: Data
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Data
+  nameWithType: Block.Data
+  fullName: mosaic_libary.Block.Data
+  type: Field
+  source:
+    id: Data
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 182
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public object Data
+    return:
+      type: System.Object
+    content.vb: Public Data As Object
+- uid: mosaic_libary.Block.cp
+  commentId: F:mosaic_libary.Block.cp
+  id: cp
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: cp
+  nameWithType: Block.cp
+  fullName: mosaic_libary.Block.cp
+  type: Field
+  source:
+    id: cp
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 186
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Form <xref href="mosaic_libary.ControlPanel" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public ControlPanel cp
+    return:
+      type: mosaic_libary.ControlPanel
+    content.vb: Public cp As ControlPanel
+- uid: mosaic_libary.Block.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  commentId: M:mosaic_libary.Block.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  id: '#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)'
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Block(string, double, List<string>, List<string>, string)
+  nameWithType: Block.Block(string, double, List<string>, List<string>, string)
+  fullName: mosaic_libary.Block.Block(string, double, System.Collections.Generic.List<string>, System.Collections.Generic.List<string>, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 198
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Initializes a new instance of the <xref href="mosaic_libary.Block" data-throw-if-not-resolved="false"></xref> class. Parameter <xref href="mosaic_libary.Block.Name" data-throw-if-not-resolved="false"></xref> is required.
+  example: []
+  syntax:
+    content: public Block(string Name, double DesiredRate = 0, List<string> InputCfg = null, List<string> Params = null, string Path = null)
+    parameters:
+    - id: Name
+      type: System.String
+      description: The name of the block.
+    - id: DesiredRate
+      type: System.Double
+      description: The desired rate of the block.
+    - id: InputCfg
+      type: System.Collections.Generic.List{System.String}
+      description: List of inputs.
+    - id: Params
+      type: System.Collections.Generic.List{System.String}
+      description: List of parameters.
+    - id: Path
+      type: System.String
+      description: Path for DBWriter.
+    content.vb: Public Sub New(Name As String, DesiredRate As Double = 0, InputCfg As List(Of String) = Nothing, Params As List(Of String) = Nothing, Path As String = Nothing)
+  overload: mosaic_libary.Block.#ctor*
+  nameWithType.vb: Block.New(String, Double, List(Of String), List(Of String), String)
+  fullName.vb: mosaic_libary.Block.New(String, Double, System.Collections.Generic.List(Of String), System.Collections.Generic.List(Of String), String)
+  name.vb: New(String, Double, List(Of String), List(Of String), String)
+- uid: mosaic_libary.Block.Dispose
+  commentId: M:mosaic_libary.Block.Dispose
+  id: Dispose
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: Block.Dispose()
+  fullName: mosaic_libary.Block.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 215
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Cleans up resources used by the block.
+  example: []
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose()
+  overload: mosaic_libary.Block.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+- uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  id: SubscribeTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: SubscribeTo(Block)
+  nameWithType: Block.SubscribeTo(Block)
+  fullName: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  type: Method
+  source:
+    id: SubscribeTo
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 240
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Subscribes to the specified block. Updates Buffer size.
+  example: []
+  syntax:
+    content: protected void SubscribeTo(Block b)
+    parameters:
+    - id: b
+      type: mosaic_libary.Block
+      description: The block to subscribe to.
+    content.vb: Protected Sub SubscribeTo(b As Block)
+  overload: mosaic_libary.Block.SubscribeTo*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown if there is an attempt to subscribe to a block that is not among its inputs or if trying to subscribe twice.
+- uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  id: UnsubscribeFrom(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: UnsubscribeFrom(Block)
+  nameWithType: Block.UnsubscribeFrom(Block)
+  fullName: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  type: Method
+  source:
+    id: UnsubscribeFrom
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 265
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Unsubscribes from the specified block.
+  example: []
+  syntax:
+    content: protected void UnsubscribeFrom(Block b)
+    parameters:
+    - id: b
+      type: mosaic_libary.Block
+      description: The block to unsubscribe from.
+    content.vb: Protected Sub UnsubscribeFrom(b As Block)
+  overload: mosaic_libary.Block.UnsubscribeFrom*
+  exceptions:
+  - type: System.Exception
+    commentId: T:System.Exception
+    description: Thrown if there is an attempt to unsubscribe from a block to which it is not currently subscribed.
+- uid: mosaic_libary.Block.ConfigureInputs
+  commentId: M:mosaic_libary.Block.ConfigureInputs
+  id: ConfigureInputs
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: ConfigureInputs()
+  nameWithType: Block.ConfigureInputs()
+  fullName: mosaic_libary.Block.ConfigureInputs()
+  type: Method
+  source:
+    id: ConfigureInputs
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 282
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Configures input blocks based on the specified input configuration.
+
+    This method is responsible for adding input blocks to the list of input blocks and subscribing to some of them, as specified in the input configuration.
+  example: []
+  syntax:
+    content: public virtual void ConfigureInputs()
+    content.vb: Public Overridable Sub ConfigureInputs()
+  overload: mosaic_libary.Block.ConfigureInputs*
+- uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  id: HasInput(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: HasInput(Block)
+  nameWithType: Block.HasInput(Block)
+  fullName: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  type: Method
+  source:
+    id: HasInput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 300
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Checks if <xref href="mosaic_libary.Block" data-throw-if-not-resolved="false"></xref><code>b</code> is on of the inputs.
+  example: []
+  syntax:
+    content: public bool HasInput(Block b)
+    parameters:
+    - id: b
+      type: mosaic_libary.Block
+      description: The block to check.
+    return:
+      type: System.Boolean
+      description: True if the block is one of the inputs, false otherwise.
+    content.vb: Public Function HasInput(b As Block) As Boolean
+  overload: mosaic_libary.Block.HasInput*
+- uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  id: IsSubscribedTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: IsSubscribedTo(Block)
+  nameWithType: Block.IsSubscribedTo(Block)
+  fullName: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  type: Method
+  source:
+    id: IsSubscribedTo
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 310
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Checks if <xref href="mosaic_libary.Block" data-throw-if-not-resolved="false"></xref><code>b</code> is subscribed to.
+  example: []
+  syntax:
+    content: public bool IsSubscribedTo(Block b)
+    parameters:
+    - id: b
+      type: mosaic_libary.Block
+      description: The block to check.
+    return:
+      type: System.Boolean
+      description: True if the block is subscribed to the specified block, false otherwise
+    content.vb: Public Function IsSubscribedTo(b As Block) As Boolean
+  overload: mosaic_libary.Block.IsSubscribedTo*
+- uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  commentId: M:mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  id: SendOutput(System.Object,System.Boolean)
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: SendOutput(object, bool)
+  nameWithType: Block.SendOutput(object, bool)
+  fullName: mosaic_libary.Block.SendOutput(object, bool)
+  type: Method
+  source:
+    id: SendOutput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 328
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Mehode <code>SendOutput</code> to sned output to the next Block if required/desired.
+
+    > [!IMPORTANT]
+
+    >One block should send out only one type of value or, in the most contrived case, a tuple of values of different kinds, e.g., an observation together with a target value
+  example: []
+  syntax:
+    content: protected void SendOutput(object value, bool syncSendOutput = false)
+    parameters:
+    - id: value
+      type: System.Object
+      description: The value to send as output.
+    - id: syncSendOutput
+      type: System.Boolean
+      description: Specifies whether to send the output synchronously or asynchronously.
+    content.vb: Protected Sub SendOutput(value As Object, syncSendOutput As Boolean = False)
+  overload: mosaic_libary.Block.SendOutput*
+  nameWithType.vb: Block.SendOutput(Object, Boolean)
+  fullName.vb: mosaic_libary.Block.SendOutput(Object, Boolean)
+  name.vb: SendOutput(Object, Boolean)
+- uid: mosaic_libary.Block.Output
+  commentId: E:mosaic_libary.Block.Output
+  id: Output
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: Output
+  nameWithType: Block.Output
+  fullName: mosaic_libary.Block.Output
+  type: Event
+  source:
+    id: Output
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 371
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public event Block.OutputHandler Output
+    return:
+      type: mosaic_libary.Block.OutputHandler
+    content.vb: Public Event Output As Block.OutputHandler
+- uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  id: OnNewInputLocked(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: OnNewInputLocked(Block, object)
+  nameWithType: Block.OnNewInputLocked(Block, object)
+  fullName: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, object)
+  type: Method
+  source:
+    id: OnNewInputLocked
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 384
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private void OnNewInputLocked(Block sender, object value)
+    parameters:
+    - id: sender
+      type: mosaic_libary.Block
+    - id: value
+      type: System.Object
+    content.vb: Private Sub OnNewInputLocked(sender As Block, value As Object)
+  overload: mosaic_libary.Block.OnNewInputLocked*
+  nameWithType.vb: Block.OnNewInputLocked(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, Object)
+  name.vb: OnNewInputLocked(Block, Object)
+- uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  id: OnNewInput(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: OnNewInput(Block, object)
+  nameWithType: Block.OnNewInput(Block, object)
+  fullName: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, object)
+  type: Method
+  source:
+    id: OnNewInput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 391
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Methode <code>OnNewInput</code> is a call-back methode. Get's called each time on of the <code>Blocks</code> input blocks (sender) produces a new value. Handles all received inputs.
+  example: []
+  syntax:
+    content: protected abstract void OnNewInput(Block sender, object value)
+    parameters:
+    - id: sender
+      type: mosaic_libary.Block
+      description: Input Block, which sends the value.
+    - id: value
+      type: System.Object
+      description: Value that is sent by the input block
+    content.vb: Protected MustOverride Sub OnNewInput(sender As Block, value As Object)
+  overload: mosaic_libary.Block.OnNewInput*
+  nameWithType.vb: Block.OnNewInput(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, Object)
+  name.vb: OnNewInput(Block, Object)
+- uid: mosaic_libary.Block.ShowHideCp
+  commentId: M:mosaic_libary.Block.ShowHideCp
+  id: ShowHideCp
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: ShowHideCp()
+  nameWithType: Block.ShowHideCp()
+  fullName: mosaic_libary.Block.ShowHideCp()
+  type: Method
+  source:
+    id: ShowHideCp
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 398
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Shows or hides the control panel associated with the block.
+  example: []
+  syntax:
+    content: public void ShowHideCp()
+    content.vb: Public Sub ShowHideCp()
+  overload: mosaic_libary.Block.ShowHideCp*
+- uid: mosaic_libary.Block.MouseLeftClick
+  commentId: M:mosaic_libary.Block.MouseLeftClick
+  id: MouseLeftClick
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: MouseLeftClick()
+  nameWithType: Block.MouseLeftClick()
+  fullName: mosaic_libary.Block.MouseLeftClick()
+  type: Method
+  source:
+    id: MouseLeftClick
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 410
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles the left-click event on the block in the BlockTable.
+  example: []
+  syntax:
+    content: public virtual void MouseLeftClick()
+    content.vb: Public Overridable Sub MouseLeftClick()
+  overload: mosaic_libary.Block.MouseLeftClick*
+- uid: mosaic_libary.Block.MouseRightClick
+  commentId: M:mosaic_libary.Block.MouseRightClick
+  id: MouseRightClick
+  parent: mosaic_libary.Block
+  langs:
+  - csharp
+  - vb
+  name: MouseRightClick()
+  nameWithType: Block.MouseRightClick()
+  fullName: mosaic_libary.Block.MouseRightClick()
+  type: Method
+  source:
+    id: MouseRightClick
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 418
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Handles the right-click event on the block in the BlockTable.
+  example: []
+  syntax:
+    content: public virtual void MouseRightClick()
+    content.vb: Public Overridable Sub MouseRightClick()
+  overload: mosaic_libary.Block.MouseRightClick*
+references:
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: mosaic_libary.Block.Name*
+  commentId: Overload:mosaic_libary.Block.Name
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Name
+  name: Name
+  nameWithType: Block.Name
+  fullName: mosaic_libary.Block.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: mosaic_libary.Block.DesiredRate*
+  commentId: Overload:mosaic_libary.Block.DesiredRate
+  href: mosaic_libary.Block.html#mosaic_libary_Block_DesiredRate
+  name: DesiredRate
+  nameWithType: Block.DesiredRate
+  fullName: mosaic_libary.Block.DesiredRate
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: mosaic_libary.Block.Rate*
+  commentId: Overload:mosaic_libary.Block.Rate
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Rate
+  name: Rate
+  nameWithType: Block.Rate
+  fullName: mosaic_libary.Block.Rate
+- uid: mosaic_libary.Block.IsLagging*
+  commentId: Overload:mosaic_libary.Block.IsLagging
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsLagging
+  name: IsLagging
+  nameWithType: Block.IsLagging
+  fullName: mosaic_libary.Block.IsLagging
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: mosaic_libary.Block.IsIdle*
+  commentId: Overload:mosaic_libary.Block.IsIdle
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsIdle
+  name: IsIdle
+  nameWithType: Block.IsIdle
+  fullName: mosaic_libary.Block.IsIdle
+- uid: mosaic_libary.Block.InputCfg*
+  commentId: Overload:mosaic_libary.Block.InputCfg
+  href: mosaic_libary.Block.html#mosaic_libary_Block_InputCfg
+  name: InputCfg
+  nameWithType: Block.InputCfg
+  fullName: mosaic_libary.Block.InputCfg
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Collections.Generic.List{mosaic_libary.Block}
+  commentId: T:System.Collections.Generic.List{mosaic_libary.Block}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<Block>
+  nameWithType: List<Block>
+  fullName: System.Collections.Generic.List<mosaic_libary.Block>
+  nameWithType.vb: List(Of Block)
+  fullName.vb: System.Collections.Generic.List(Of mosaic_libary.Block)
+  name.vb: List(Of Block)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.CircularBuffer{System.Double}
+  commentId: T:mosaic_libary.CircularBuffer{System.Double}
+  parent: mosaic_libary
+  definition: mosaic_libary.CircularBuffer`1
+  href: mosaic_libary.CircularBuffer-1.html
+  name: CircularBuffer<double>
+  nameWithType: CircularBuffer<double>
+  fullName: mosaic_libary.CircularBuffer<double>
+  nameWithType.vb: CircularBuffer(Of Double)
+  fullName.vb: mosaic_libary.CircularBuffer(Of Double)
+  name.vb: CircularBuffer(Of Double)
+  spec.csharp:
+  - uid: mosaic_libary.CircularBuffer`1
+    name: CircularBuffer
+    href: mosaic_libary.CircularBuffer-1.html
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: mosaic_libary.CircularBuffer`1
+    name: CircularBuffer
+    href: mosaic_libary.CircularBuffer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: mosaic_libary.CircularBuffer`1
+  commentId: T:mosaic_libary.CircularBuffer`1
+  href: mosaic_libary.CircularBuffer-1.html
+  name: CircularBuffer<T>
+  nameWithType: CircularBuffer<T>
+  fullName: mosaic_libary.CircularBuffer<T>
+  nameWithType.vb: CircularBuffer(Of T)
+  fullName.vb: mosaic_libary.CircularBuffer(Of T)
+  name.vb: CircularBuffer(Of T)
+  spec.csharp:
+  - uid: mosaic_libary.CircularBuffer`1
+    name: CircularBuffer
+    href: mosaic_libary.CircularBuffer-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: mosaic_libary.CircularBuffer`1
+    name: CircularBuffer
+    href: mosaic_libary.CircularBuffer-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: mosaic_libary.DBWriter
+  commentId: T:mosaic_libary.DBWriter
+  parent: mosaic_libary
+  href: mosaic_libary.DBWriter.html
+  name: DBWriter
+  nameWithType: DBWriter
+  fullName: mosaic_libary.DBWriter
+- uid: mosaic_libary.ControlPanel
+  commentId: T:mosaic_libary.ControlPanel
+  parent: mosaic_libary
+  href: mosaic_libary.ControlPanel.html
+  name: ControlPanel
+  nameWithType: ControlPanel
+  fullName: mosaic_libary.ControlPanel
+- uid: mosaic_libary.Block.Name
+  commentId: P:mosaic_libary.Block.Name
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Name
+  name: Name
+  nameWithType: Block.Name
+  fullName: mosaic_libary.Block.Name
+- uid: mosaic_libary.Block.#ctor*
+  commentId: Overload:mosaic_libary.Block.#ctor
+  href: mosaic_libary.Block.html#mosaic_libary_Block__ctor_System_String_System_Double_System_Collections_Generic_List_System_String__System_Collections_Generic_List_System_String__System_String_
+  name: Block
+  nameWithType: Block.Block
+  fullName: mosaic_libary.Block.Block
+  nameWithType.vb: Block.New
+  fullName.vb: mosaic_libary.Block.New
+  name.vb: New
+- uid: mosaic_libary.Block.Dispose*
+  commentId: Overload:mosaic_libary.Block.Dispose
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  name: Dispose
+  nameWithType: Block.Dispose
+  fullName: mosaic_libary.Block.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.idisposable.dispose
+  - name: (
+  - name: )
+- uid: System.Exception
+  commentId: T:System.Exception
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: mosaic_libary.Block.SubscribeTo*
+  commentId: Overload:mosaic_libary.Block.SubscribeTo
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  name: SubscribeTo
+  nameWithType: Block.SubscribeTo
+  fullName: mosaic_libary.Block.SubscribeTo
+- uid: mosaic_libary.Block.UnsubscribeFrom*
+  commentId: Overload:mosaic_libary.Block.UnsubscribeFrom
+  href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  name: UnsubscribeFrom
+  nameWithType: Block.UnsubscribeFrom
+  fullName: mosaic_libary.Block.UnsubscribeFrom
+- uid: mosaic_libary.Block.ConfigureInputs*
+  commentId: Overload:mosaic_libary.Block.ConfigureInputs
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  name: ConfigureInputs
+  nameWithType: Block.ConfigureInputs
+  fullName: mosaic_libary.Block.ConfigureInputs
+- uid: mosaic_libary.Block.HasInput*
+  commentId: Overload:mosaic_libary.Block.HasInput
+  href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  name: HasInput
+  nameWithType: Block.HasInput
+  fullName: mosaic_libary.Block.HasInput
+- uid: mosaic_libary.Block.IsSubscribedTo*
+  commentId: Overload:mosaic_libary.Block.IsSubscribedTo
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  name: IsSubscribedTo
+  nameWithType: Block.IsSubscribedTo
+  fullName: mosaic_libary.Block.IsSubscribedTo
+- uid: mosaic_libary.Block.SendOutput*
+  commentId: Overload:mosaic_libary.Block.SendOutput
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  name: SendOutput
+  nameWithType: Block.SendOutput
+  fullName: mosaic_libary.Block.SendOutput
+- uid: mosaic_libary.Block.OutputHandler
+  commentId: T:mosaic_libary.Block.OutputHandler
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block.OutputHandler
+  nameWithType: Block.OutputHandler
+  fullName: mosaic_libary.Block.OutputHandler
+  spec.csharp:
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: .
+  - uid: mosaic_libary.Block.OutputHandler
+    name: OutputHandler
+    href: mosaic_libary.Block.OutputHandler.html
+  spec.vb:
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: .
+  - uid: mosaic_libary.Block.OutputHandler
+    name: OutputHandler
+    href: mosaic_libary.Block.OutputHandler.html
+- uid: mosaic_libary.Block.OnNewInputLocked*
+  commentId: Overload:mosaic_libary.Block.OnNewInputLocked
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  name: OnNewInputLocked
+  nameWithType: Block.OnNewInputLocked
+  fullName: mosaic_libary.Block.OnNewInputLocked
+- uid: mosaic_libary.Block.OnNewInput*
+  commentId: Overload:mosaic_libary.Block.OnNewInput
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  name: OnNewInput
+  nameWithType: Block.OnNewInput
+  fullName: mosaic_libary.Block.OnNewInput
+- uid: mosaic_libary.Block.ShowHideCp*
+  commentId: Overload:mosaic_libary.Block.ShowHideCp
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  name: ShowHideCp
+  nameWithType: Block.ShowHideCp
+  fullName: mosaic_libary.Block.ShowHideCp
+- uid: mosaic_libary.Block.MouseLeftClick*
+  commentId: Overload:mosaic_libary.Block.MouseLeftClick
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  name: MouseLeftClick
+  nameWithType: Block.MouseLeftClick
+  fullName: mosaic_libary.Block.MouseLeftClick
+- uid: mosaic_libary.Block.MouseRightClick*
+  commentId: Overload:mosaic_libary.Block.MouseRightClick
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  name: MouseRightClick
+  nameWithType: Block.MouseRightClick
+  fullName: mosaic_libary.Block.MouseRightClick

@@ -1,0 +1,1323 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.FileReader
+  commentId: T:mosaic_libary.FileReader
+  id: FileReader
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.FileReader.#ctor
+  - mosaic_libary.FileReader.CreateMatrix(System.Collections.Generic.List{System.Collections.Generic.List{System.Double}})
+  - mosaic_libary.FileReader.DebugFrequency(System.Object)
+  - mosaic_libary.FileReader.DebugPrintToConsole(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},mosaic_libary.FileType)
+  - mosaic_libary.FileReader.FileReadFinished
+  - mosaic_libary.FileReader.FileReload
+  - mosaic_libary.FileReader.FormatMatrix(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  - mosaic_libary.FileReader.Frequency
+  - mosaic_libary.FileReader.GetFileType
+  - mosaic_libary.FileReader.Matrix
+  - mosaic_libary.FileReader.OnFileReadFinished(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  - mosaic_libary.FileReader.ParseTextData(System.String)
+  - mosaic_libary.FileReader.Path
+  - mosaic_libary.FileReader.ReadCsvFile
+  - mosaic_libary.FileReader.ReadFile
+  - mosaic_libary.FileReader.ReadMatlabFile
+  - mosaic_libary.FileReader.ReadTextFile
+  - mosaic_libary.FileReader.SendData
+  - mosaic_libary.FileReader._currentRowIndex
+  langs:
+  - csharp
+  - vb
+  name: FileReader
+  nameWithType: FileReader
+  fullName: mosaic_libary.FileReader
+  type: Class
+  source:
+    id: FileReader
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 82
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public class FileReader
+    content.vb: Public Class FileReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.FileReader.Path
+  commentId: P:mosaic_libary.FileReader.Path
+  id: Path
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: Path
+  nameWithType: FileReader.Path
+  fullName: mosaic_libary.FileReader.Path
+  type: Property
+  source:
+    id: Path
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 87
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Full Path to temporal data file that should be read in.
+  example: []
+  syntax:
+    content: public string Path { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Path As String
+  overload: mosaic_libary.FileReader.Path*
+- uid: mosaic_libary.FileReader.Frequency
+  commentId: P:mosaic_libary.FileReader.Frequency
+  id: Frequency
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: Frequency
+  nameWithType: FileReader.Frequency
+  fullName: mosaic_libary.FileReader.Frequency
+  type: Property
+  source:
+    id: Frequency
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 91
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Frequency at wich the temporal data should be sampled.
+  example: []
+  syntax:
+    content: public double Frequency { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Frequency As Double
+  overload: mosaic_libary.FileReader.Frequency*
+- uid: mosaic_libary.FileReader.Matrix
+  commentId: P:mosaic_libary.FileReader.Matrix
+  id: Matrix
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: Matrix
+  nameWithType: FileReader.Matrix
+  fullName: mosaic_libary.FileReader.Matrix
+  type: Property
+  source:
+    id: Matrix
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 95
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Holds the data, which got read in from file.
+  example: []
+  syntax:
+    content: public Matrix<double> Matrix { get; set; }
+    parameters: []
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+    content.vb: Public Property Matrix As Matrix(Of Double)
+  overload: mosaic_libary.FileReader.Matrix*
+- uid: mosaic_libary.FileReader.FileReadFinished
+  commentId: E:mosaic_libary.FileReader.FileReadFinished
+  id: FileReadFinished
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: FileReadFinished
+  nameWithType: FileReader.FileReadFinished
+  fullName: mosaic_libary.FileReader.FileReadFinished
+  type: Event
+  source:
+    id: FileReadFinished
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 100
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Event for notifiyng that the File was sucessfuly read.
+  example: []
+  syntax:
+    content: public event EventHandler<FileReader.MatrixEventArgs> FileReadFinished
+    return:
+      type: System.EventHandler{mosaic_libary.FileReader.MatrixEventArgs}
+    content.vb: Public Event FileReadFinished As EventHandler(Of FileReader.MatrixEventArgs)
+- uid: mosaic_libary.FileReader._currentRowIndex
+  commentId: F:mosaic_libary.FileReader._currentRowIndex
+  id: _currentRowIndex
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: _currentRowIndex
+  nameWithType: FileReader._currentRowIndex
+  fullName: mosaic_libary.FileReader._currentRowIndex
+  type: Field
+  source:
+    id: _currentRowIndex
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 106
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int _currentRowIndex
+    return:
+      type: System.Int32
+    content.vb: Private _currentRowIndex As Integer
+- uid: mosaic_libary.FileReader.#ctor
+  commentId: M:mosaic_libary.FileReader.#ctor
+  id: '#ctor'
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: FileReader()
+  nameWithType: FileReader.FileReader()
+  fullName: mosaic_libary.FileReader.FileReader()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 112
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Constructor.
+  example: []
+  syntax:
+    content: public FileReader()
+    content.vb: Public Sub New()
+  overload: mosaic_libary.FileReader.#ctor*
+  nameWithType.vb: FileReader.New()
+  fullName.vb: mosaic_libary.FileReader.New()
+  name.vb: New()
+- uid: mosaic_libary.FileReader.ReadFile
+  commentId: M:mosaic_libary.FileReader.ReadFile
+  id: ReadFile
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadFile()
+  nameWithType: FileReader.ReadFile()
+  fullName: mosaic_libary.FileReader.ReadFile()
+  type: Method
+  source:
+    id: ReadFile
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 119
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: 'Reads in File: checks for file ending, reads in file and formats matrix.'
+  example: []
+  syntax:
+    content: public void ReadFile()
+    content.vb: Public Sub ReadFile()
+  overload: mosaic_libary.FileReader.ReadFile*
+- uid: mosaic_libary.FileReader.GetFileType
+  commentId: M:mosaic_libary.FileReader.GetFileType
+  id: GetFileType
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: GetFileType()
+  nameWithType: FileReader.GetFileType()
+  fullName: mosaic_libary.FileReader.GetFileType()
+  type: Method
+  source:
+    id: GetFileType
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 154
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Identifies the Type of the file to read by the file ending.
+  example: []
+  syntax:
+    content: private FileType GetFileType()
+    return:
+      type: mosaic_libary.FileType
+      description: <xref href="mosaic_libary.FileType" data-throw-if-not-resolved="false"></xref> of the input file.
+    content.vb: Private Function GetFileType() As FileType
+  overload: mosaic_libary.FileReader.GetFileType*
+- uid: mosaic_libary.FileReader.ReadMatlabFile
+  commentId: M:mosaic_libary.FileReader.ReadMatlabFile
+  id: ReadMatlabFile
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadMatlabFile()
+  nameWithType: FileReader.ReadMatlabFile()
+  fullName: mosaic_libary.FileReader.ReadMatlabFile()
+  type: Method
+  source:
+    id: ReadMatlabFile
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 184
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Reads in Matlab .mab file.
+  example: []
+  syntax:
+    content: private Matrix<double> ReadMatlabFile()
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: Returns <xref href="MathNet.Numerics.LinearAlgebra.Matrix%601" data-throw-if-not-resolved="false"></xref> or null if reading the file fails.
+    content.vb: Private Function ReadMatlabFile() As Matrix(Of Double)
+  overload: mosaic_libary.FileReader.ReadMatlabFile*
+- uid: mosaic_libary.FileReader.ReadTextFile
+  commentId: M:mosaic_libary.FileReader.ReadTextFile
+  id: ReadTextFile
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadTextFile()
+  nameWithType: FileReader.ReadTextFile()
+  fullName: mosaic_libary.FileReader.ReadTextFile()
+  type: Method
+  source:
+    id: ReadTextFile
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 204
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Reads in .txt file and Parses it to <xref href="MathNet.Numerics.LinearAlgebra.Matrix%601" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: private Matrix<double> ReadTextFile()
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+    content.vb: Private Function ReadTextFile() As Matrix(Of Double)
+  overload: mosaic_libary.FileReader.ReadTextFile*
+- uid: mosaic_libary.FileReader.ReadCsvFile
+  commentId: M:mosaic_libary.FileReader.ReadCsvFile
+  id: ReadCsvFile
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadCsvFile()
+  nameWithType: FileReader.ReadCsvFile()
+  fullName: mosaic_libary.FileReader.ReadCsvFile()
+  type: Method
+  source:
+    id: ReadCsvFile
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 234
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Reads in .csv file and Parses it to <xref href="MathNet.Numerics.LinearAlgebra.Matrix%601" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: private Matrix<double> ReadCsvFile()
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+    content.vb: Private Function ReadCsvFile() As Matrix(Of Double)
+  overload: mosaic_libary.FileReader.ReadCsvFile*
+- uid: mosaic_libary.FileReader.ParseTextData(System.String)
+  commentId: M:mosaic_libary.FileReader.ParseTextData(System.String)
+  id: ParseTextData(System.String)
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: ParseTextData(string)
+  nameWithType: FileReader.ParseTextData(string)
+  fullName: mosaic_libary.FileReader.ParseTextData(string)
+  type: Method
+  source:
+    id: ParseTextData
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 283
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Parses test data in lists ouf doubles format.
+  example: []
+  syntax:
+    content: private List<List<double>> ParseTextData(string filedata)
+    parameters:
+    - id: filedata
+      type: System.String
+      description: Text data read from stream.
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+      description: Lists generated out ouf the text data."
+    content.vb: Private Function ParseTextData(filedata As String) As List(Of List(Of Double))
+  overload: mosaic_libary.FileReader.ParseTextData*
+  nameWithType.vb: FileReader.ParseTextData(String)
+  fullName.vb: mosaic_libary.FileReader.ParseTextData(String)
+  name.vb: ParseTextData(String)
+- uid: mosaic_libary.FileReader.CreateMatrix(System.Collections.Generic.List{System.Collections.Generic.List{System.Double}})
+  commentId: M:mosaic_libary.FileReader.CreateMatrix(System.Collections.Generic.List{System.Collections.Generic.List{System.Double}})
+  id: CreateMatrix(System.Collections.Generic.List{System.Collections.Generic.List{System.Double}})
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: CreateMatrix(List<List<double>>)
+  nameWithType: FileReader.CreateMatrix(List<List<double>>)
+  fullName: mosaic_libary.FileReader.CreateMatrix(System.Collections.Generic.List<System.Collections.Generic.List<double>>)
+  type: Method
+  source:
+    id: CreateMatrix
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 318
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Creats Matrix out of Lists.
+  example: []
+  syntax:
+    content: private Matrix<double> CreateMatrix(List<List<double>> dataLists)
+    parameters:
+    - id: dataLists
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+      description: ''
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: ''
+    content.vb: Private Function CreateMatrix(dataLists As List(Of List(Of Double))) As Matrix(Of Double)
+  overload: mosaic_libary.FileReader.CreateMatrix*
+  nameWithType.vb: FileReader.CreateMatrix(List(Of List(Of Double)))
+  fullName.vb: mosaic_libary.FileReader.CreateMatrix(System.Collections.Generic.List(Of System.Collections.Generic.List(Of Double)))
+  name.vb: CreateMatrix(List(Of List(Of Double)))
+- uid: mosaic_libary.FileReader.FormatMatrix(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.FileReader.FormatMatrix(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: FormatMatrix(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: FormatMatrix(Matrix<double>)
+  nameWithType: FileReader.FormatMatrix(Matrix<double>)
+  fullName: mosaic_libary.FileReader.FormatMatrix(MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: FormatMatrix
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 341
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Checks if in the mxn Matrix matrix is bigger or equal then n. If n is bigger transpose Matrix.
+  example: []
+  syntax:
+    content: private Matrix<double> FormatMatrix(Matrix<double> matrix)
+    parameters:
+    - id: matrix
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: Matrix to be checked.
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: Retruns mxn Matrix, where matrix &gt; n.
+    content.vb: Private Function FormatMatrix(matrix As Matrix(Of Double)) As Matrix(Of Double)
+  overload: mosaic_libary.FileReader.FormatMatrix*
+  nameWithType.vb: FileReader.FormatMatrix(Matrix(Of Double))
+  fullName.vb: mosaic_libary.FileReader.FormatMatrix(MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: FormatMatrix(Matrix(Of Double))
+- uid: mosaic_libary.FileReader.FileReload
+  commentId: M:mosaic_libary.FileReader.FileReload
+  id: FileReload
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: FileReload()
+  nameWithType: FileReader.FileReload()
+  fullName: mosaic_libary.FileReader.FileReload()
+  type: Method
+  source:
+    id: FileReload
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 353
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Reloads the file from the beginning. This method resets the internal state for a new file read operation.
+  example: []
+  syntax:
+    content: public void FileReload()
+    content.vb: Public Sub FileReload()
+  overload: mosaic_libary.FileReader.FileReload*
+- uid: mosaic_libary.FileReader.SendData
+  commentId: M:mosaic_libary.FileReader.SendData
+  id: SendData
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: SendData()
+  nameWithType: FileReader.SendData()
+  fullName: mosaic_libary.FileReader.SendData()
+  type: Method
+  source:
+    id: SendData
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 363
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Sends the next available vector of data from the matrix. This method is intended to be called repeatedly to simulate real-time data playback.
+  example: []
+  syntax:
+    content: public Vector<double> SendData()
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: A vector representing the next timestep's data, or null if the matrix is not loaded.
+    content.vb: Public Function SendData() As Vector(Of Double)
+  overload: mosaic_libary.FileReader.SendData*
+- uid: mosaic_libary.FileReader.OnFileReadFinished(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  commentId: M:mosaic_libary.FileReader.OnFileReadFinished(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  id: OnFileReadFinished(MathNet.Numerics.LinearAlgebra.Matrix{System.Double})
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: OnFileReadFinished(Matrix<double>)
+  nameWithType: FileReader.OnFileReadFinished(Matrix<double>)
+  fullName: mosaic_libary.FileReader.OnFileReadFinished(MathNet.Numerics.LinearAlgebra.Matrix<double>)
+  type: Method
+  source:
+    id: OnFileReadFinished
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 387
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Triggers the FileReadFinished event with the loaded matrix data. This method is called after successfully reading a file.
+  example: []
+  syntax:
+    content: protected virtual void OnFileReadFinished(Matrix<double> matrix)
+    parameters:
+    - id: matrix
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+      description: The matrix that was read from the file.
+    content.vb: Protected Overridable Sub OnFileReadFinished(matrix As Matrix(Of Double))
+  overload: mosaic_libary.FileReader.OnFileReadFinished*
+  nameWithType.vb: FileReader.OnFileReadFinished(Matrix(Of Double))
+  fullName.vb: mosaic_libary.FileReader.OnFileReadFinished(MathNet.Numerics.LinearAlgebra.Matrix(Of Double))
+  name.vb: OnFileReadFinished(Matrix(Of Double))
+- uid: mosaic_libary.FileReader.DebugPrintToConsole(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},mosaic_libary.FileType)
+  commentId: M:mosaic_libary.FileReader.DebugPrintToConsole(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},mosaic_libary.FileType)
+  id: DebugPrintToConsole(MathNet.Numerics.LinearAlgebra.Matrix{System.Double},mosaic_libary.FileType)
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: DebugPrintToConsole(Matrix<double>, FileType)
+  nameWithType: FileReader.DebugPrintToConsole(Matrix<double>, FileType)
+  fullName: mosaic_libary.FileReader.DebugPrintToConsole(MathNet.Numerics.LinearAlgebra.Matrix<double>, mosaic_libary.FileType)
+  type: Method
+  source:
+    id: DebugPrintToConsole
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 406
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: >-
+      [Conditional("DEBUG")]
+
+      private void DebugPrintToConsole(Matrix<double> matrix, FileType fileType)
+    parameters:
+    - id: matrix
+      type: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+    - id: fileType
+      type: mosaic_libary.FileType
+    content.vb: >-
+      <Conditional("DEBUG")>
+
+      Private Sub DebugPrintToConsole(matrix As Matrix(Of Double), fileType As FileType)
+  overload: mosaic_libary.FileReader.DebugPrintToConsole*
+  attributes:
+  - type: System.Diagnostics.ConditionalAttribute
+    ctor: System.Diagnostics.ConditionalAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: DEBUG
+  nameWithType.vb: FileReader.DebugPrintToConsole(Matrix(Of Double), FileType)
+  fullName.vb: mosaic_libary.FileReader.DebugPrintToConsole(MathNet.Numerics.LinearAlgebra.Matrix(Of Double), mosaic_libary.FileType)
+  name.vb: DebugPrintToConsole(Matrix(Of Double), FileType)
+- uid: mosaic_libary.FileReader.DebugFrequency(System.Object)
+  commentId: M:mosaic_libary.FileReader.DebugFrequency(System.Object)
+  id: DebugFrequency(System.Object)
+  parent: mosaic_libary.FileReader
+  langs:
+  - csharp
+  - vb
+  name: DebugFrequency(object)
+  nameWithType: FileReader.DebugFrequency(object)
+  fullName: mosaic_libary.FileReader.DebugFrequency(object)
+  type: Method
+  source:
+    id: DebugFrequency
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\FlowControl\FilePlayer.cs
+    startLine: 414
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: >-
+      [Conditional("DEBUG")]
+
+      private void DebugFrequency(object o)
+    parameters:
+    - id: o
+      type: System.Object
+    content.vb: >-
+      <Conditional("DEBUG")>
+
+      Private Sub DebugFrequency(o As Object)
+  overload: mosaic_libary.FileReader.DebugFrequency*
+  attributes:
+  - type: System.Diagnostics.ConditionalAttribute
+    ctor: System.Diagnostics.ConditionalAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: DEBUG
+  nameWithType.vb: FileReader.DebugFrequency(Object)
+  fullName.vb: mosaic_libary.FileReader.DebugFrequency(Object)
+  name.vb: DebugFrequency(Object)
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: mosaic_libary.FileReader.Path*
+  commentId: Overload:mosaic_libary.FileReader.Path
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_Path
+  name: Path
+  nameWithType: FileReader.Path
+  fullName: mosaic_libary.FileReader.Path
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: mosaic_libary.FileReader.Frequency*
+  commentId: Overload:mosaic_libary.FileReader.Frequency
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_Frequency
+  name: Frequency
+  nameWithType: FileReader.Frequency
+  fullName: mosaic_libary.FileReader.Frequency
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: mosaic_libary.FileReader.Matrix*
+  commentId: Overload:mosaic_libary.FileReader.Matrix
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_Matrix
+  name: Matrix
+  nameWithType: FileReader.Matrix
+  fullName: mosaic_libary.FileReader.Matrix
+- uid: MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Matrix`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Matrix<double>
+  nameWithType: Matrix<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<double>
+  nameWithType.vb: Matrix(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of Double)
+  name.vb: Matrix(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Matrix`1
+  isExternal: true
+  name: Matrix<T>
+  nameWithType: Matrix<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Matrix<T>
+  nameWithType.vb: Matrix(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Matrix(Of T)
+  name.vb: Matrix(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Matrix`1
+    name: Matrix
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: System.EventHandler{mosaic_libary.FileReader.MatrixEventArgs}
+  commentId: T:System.EventHandler{mosaic_libary.FileReader.MatrixEventArgs}
+  parent: System
+  definition: System.EventHandler`1
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<FileReader.MatrixEventArgs>
+  nameWithType: EventHandler<FileReader.MatrixEventArgs>
+  fullName: System.EventHandler<mosaic_libary.FileReader.MatrixEventArgs>
+  nameWithType.vb: EventHandler(Of FileReader.MatrixEventArgs)
+  fullName.vb: System.EventHandler(Of mosaic_libary.FileReader.MatrixEventArgs)
+  name.vb: EventHandler(Of FileReader.MatrixEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - uid: mosaic_libary.FileReader
+    name: FileReader
+    href: mosaic_libary.FileReader.html
+  - name: .
+  - uid: mosaic_libary.FileReader.MatrixEventArgs
+    name: MatrixEventArgs
+    href: mosaic_libary.FileReader.MatrixEventArgs.html
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.FileReader
+    name: FileReader
+    href: mosaic_libary.FileReader.html
+  - name: .
+  - uid: mosaic_libary.FileReader.MatrixEventArgs
+    name: MatrixEventArgs
+    href: mosaic_libary.FileReader.MatrixEventArgs.html
+  - name: )
+- uid: System.EventHandler`1
+  commentId: T:System.EventHandler`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  name: EventHandler<TEventArgs>
+  nameWithType: EventHandler<TEventArgs>
+  fullName: System.EventHandler<TEventArgs>
+  nameWithType.vb: EventHandler(Of TEventArgs)
+  fullName.vb: System.EventHandler(Of TEventArgs)
+  name.vb: EventHandler(Of TEventArgs)
+  spec.csharp:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: <
+  - name: TEventArgs
+  - name: '>'
+  spec.vb:
+  - uid: System.EventHandler`1
+    name: EventHandler
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.eventhandler-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEventArgs
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: mosaic_libary.FileReader.#ctor*
+  commentId: Overload:mosaic_libary.FileReader.#ctor
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader__ctor
+  name: FileReader
+  nameWithType: FileReader.FileReader
+  fullName: mosaic_libary.FileReader.FileReader
+  nameWithType.vb: FileReader.New
+  fullName.vb: mosaic_libary.FileReader.New
+  name.vb: New
+- uid: mosaic_libary.FileReader.ReadFile*
+  commentId: Overload:mosaic_libary.FileReader.ReadFile
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_ReadFile
+  name: ReadFile
+  nameWithType: FileReader.ReadFile
+  fullName: mosaic_libary.FileReader.ReadFile
+- uid: mosaic_libary.FileType
+  commentId: T:mosaic_libary.FileType
+  parent: mosaic_libary
+  href: mosaic_libary.FileType.html
+  name: FileType
+  nameWithType: FileType
+  fullName: mosaic_libary.FileType
+- uid: mosaic_libary.FileReader.GetFileType*
+  commentId: Overload:mosaic_libary.FileReader.GetFileType
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_GetFileType
+  name: GetFileType
+  nameWithType: FileReader.GetFileType
+  fullName: mosaic_libary.FileReader.GetFileType
+- uid: mosaic_libary.FileReader.ReadMatlabFile*
+  commentId: Overload:mosaic_libary.FileReader.ReadMatlabFile
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_ReadMatlabFile
+  name: ReadMatlabFile
+  nameWithType: FileReader.ReadMatlabFile
+  fullName: mosaic_libary.FileReader.ReadMatlabFile
+- uid: mosaic_libary.FileReader.ReadTextFile*
+  commentId: Overload:mosaic_libary.FileReader.ReadTextFile
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_ReadTextFile
+  name: ReadTextFile
+  nameWithType: FileReader.ReadTextFile
+  fullName: mosaic_libary.FileReader.ReadTextFile
+- uid: mosaic_libary.FileReader.ReadCsvFile*
+  commentId: Overload:mosaic_libary.FileReader.ReadCsvFile
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_ReadCsvFile
+  name: ReadCsvFile
+  nameWithType: FileReader.ReadCsvFile
+  fullName: mosaic_libary.FileReader.ReadCsvFile
+- uid: mosaic_libary.FileReader.ParseTextData*
+  commentId: Overload:mosaic_libary.FileReader.ParseTextData
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_ParseTextData_System_String_
+  name: ParseTextData
+  nameWithType: FileReader.ParseTextData
+  fullName: mosaic_libary.FileReader.ParseTextData
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<List<double>>
+  nameWithType: List<List<double>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<double>>
+  nameWithType.vb: List(Of List(Of Double))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of Double))
+  name.vb: List(Of List(Of Double))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: mosaic_libary.FileReader.CreateMatrix*
+  commentId: Overload:mosaic_libary.FileReader.CreateMatrix
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_CreateMatrix_System_Collections_Generic_List_System_Collections_Generic_List_System_Double___
+  name: CreateMatrix
+  nameWithType: FileReader.CreateMatrix
+  fullName: mosaic_libary.FileReader.CreateMatrix
+- uid: mosaic_libary.FileReader.FormatMatrix*
+  commentId: Overload:mosaic_libary.FileReader.FormatMatrix
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_FormatMatrix_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: FormatMatrix
+  nameWithType: FileReader.FormatMatrix
+  fullName: mosaic_libary.FileReader.FormatMatrix
+- uid: mosaic_libary.FileReader.FileReload*
+  commentId: Overload:mosaic_libary.FileReader.FileReload
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_FileReload
+  name: FileReload
+  nameWithType: FileReader.FileReload
+  fullName: mosaic_libary.FileReader.FileReload
+- uid: mosaic_libary.FileReader.SendData*
+  commentId: Overload:mosaic_libary.FileReader.SendData
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_SendData
+  name: SendData
+  nameWithType: FileReader.SendData
+  fullName: mosaic_libary.FileReader.SendData
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: mosaic_libary.FileReader.OnFileReadFinished*
+  commentId: Overload:mosaic_libary.FileReader.OnFileReadFinished
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_OnFileReadFinished_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__
+  name: OnFileReadFinished
+  nameWithType: FileReader.OnFileReadFinished
+  fullName: mosaic_libary.FileReader.OnFileReadFinished
+- uid: mosaic_libary.FileReader.DebugPrintToConsole*
+  commentId: Overload:mosaic_libary.FileReader.DebugPrintToConsole
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_DebugPrintToConsole_MathNet_Numerics_LinearAlgebra_Matrix_System_Double__mosaic_libary_FileType_
+  name: DebugPrintToConsole
+  nameWithType: FileReader.DebugPrintToConsole
+  fullName: mosaic_libary.FileReader.DebugPrintToConsole
+- uid: mosaic_libary.FileReader.DebugFrequency*
+  commentId: Overload:mosaic_libary.FileReader.DebugFrequency
+  href: mosaic_libary.FileReader.html#mosaic_libary_FileReader_DebugFrequency_System_Object_
+  name: DebugFrequency
+  nameWithType: FileReader.DebugFrequency
+  fullName: mosaic_libary.FileReader.DebugFrequency

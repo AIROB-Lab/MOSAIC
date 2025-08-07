@@ -1,0 +1,809 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.StepwiseControlStrategy
+  commentId: T:mosaic_libary.StepwiseControlStrategy
+  id: StepwiseControlStrategy
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.StepwiseControlStrategy.#ctor
+  - mosaic_libary.StepwiseControlStrategy.GetControlDict
+  - mosaic_libary.StepwiseControlStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  - mosaic_libary.StepwiseControlStrategy._controlDict
+  - mosaic_libary.StepwiseControlStrategy._deadBand
+  - mosaic_libary.StepwiseControlStrategy._dsMax
+  langs:
+  - csharp
+  - vb
+  name: StepwiseControlStrategy
+  nameWithType: StepwiseControlStrategy
+  fullName: mosaic_libary.StepwiseControlStrategy
+  type: Class
+  source:
+    id: StepwiseControlStrategy
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\StepwiseControlStrategy.cs
+    startLine: 22
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Implements the Stepwise Control strategy, which updates actuation values 
+
+    incrementally based on thresholded activation levels from the prediction vector.
+
+    Used in <xref href="mosaic_libary.ControlAlgorithm" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    The Stepwise Control strategy ensures that movements are adjusted gradually 
+
+    rather than mapped directly from the prediction vector. It uses a threshold (_deadBand)
+
+    to prevent unintended minor activations and scales actuation values incrementally 
+
+    with <xref href="mosaic_libary.StepwiseControlStrategy._dsMax" data-throw-if-not-resolved="false"></xref> (step size).
+  example: []
+  syntax:
+    content: 'public class StepwiseControlStrategy : IControlAlgorithmStrategy'
+    content.vb: Public Class StepwiseControlStrategy Implements IControlAlgorithmStrategy
+  inheritance:
+  - System.Object
+  implements:
+  - mosaic_libary.IControlAlgorithmStrategy
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.StepwiseControlStrategy._controlDict
+  commentId: F:mosaic_libary.StepwiseControlStrategy._controlDict
+  id: _controlDict
+  parent: mosaic_libary.StepwiseControlStrategy
+  langs:
+  - csharp
+  - vb
+  name: _controlDict
+  nameWithType: StepwiseControlStrategy._controlDict
+  fullName: mosaic_libary.StepwiseControlStrategy._controlDict
+  type: Field
+  source:
+    id: _controlDict
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\StepwiseControlStrategy.cs
+    startLine: 27
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Stores the actuation values for each Degree of Actuation (DOA) (implemented DOAs see <xref href="mosaic_libary.DOAs" data-throw-if-not-resolved="false"></xref>).
+  example: []
+  syntax:
+    content: private Dictionary<DOAs, double> _controlDict
+    return:
+      type: System.Collections.Generic.Dictionary{mosaic_libary.DOAs,System.Double}
+    content.vb: Private _controlDict As Dictionary(Of DOAs, Double)
+- uid: mosaic_libary.StepwiseControlStrategy._dsMax
+  commentId: F:mosaic_libary.StepwiseControlStrategy._dsMax
+  id: _dsMax
+  parent: mosaic_libary.StepwiseControlStrategy
+  langs:
+  - csharp
+  - vb
+  name: _dsMax
+  nameWithType: StepwiseControlStrategy._dsMax
+  fullName: mosaic_libary.StepwiseControlStrategy._dsMax
+  type: Field
+  source:
+    id: _dsMax
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\StepwiseControlStrategy.cs
+    startLine: 31
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Defines the step size for incremental adjustments in actuation.
+  example: []
+  syntax:
+    content: private readonly double _dsMax
+    return:
+      type: System.Double
+    content.vb: Private ReadOnly _dsMax As Double
+- uid: mosaic_libary.StepwiseControlStrategy._deadBand
+  commentId: F:mosaic_libary.StepwiseControlStrategy._deadBand
+  id: _deadBand
+  parent: mosaic_libary.StepwiseControlStrategy
+  langs:
+  - csharp
+  - vb
+  name: _deadBand
+  nameWithType: StepwiseControlStrategy._deadBand
+  fullName: mosaic_libary.StepwiseControlStrategy._deadBand
+  type: Field
+  source:
+    id: _deadBand
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\StepwiseControlStrategy.cs
+    startLine: 35
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Defines the deadband threshold to prevent small activations from triggering changes.
+  example: []
+  syntax:
+    content: private readonly double _deadBand
+    return:
+      type: System.Double
+    content.vb: Private ReadOnly _deadBand As Double
+- uid: mosaic_libary.StepwiseControlStrategy.#ctor
+  commentId: M:mosaic_libary.StepwiseControlStrategy.#ctor
+  id: '#ctor'
+  parent: mosaic_libary.StepwiseControlStrategy
+  langs:
+  - csharp
+  - vb
+  name: StepwiseControlStrategy()
+  nameWithType: StepwiseControlStrategy.StepwiseControlStrategy()
+  fullName: mosaic_libary.StepwiseControlStrategy.StepwiseControlStrategy()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\StepwiseControlStrategy.cs
+    startLine: 59
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Initializes a new instance of the <xref href="mosaic_libary.StepwiseControlStrategy" data-throw-if-not-resolved="false"></xref> class.
+
+    Sets initial values for all DOAs.
+
+    The prediction vector follows the structure defined in the configuration file:
+
+    <ul><li>[0] → Thumb Flexion</li><li>[1] → Thumb Rotation</li><li>[2] → Index Finger Flexion</li><li>[3] → Middle Finger Flexion</li><li>[4] → Ring Finger Flexion</li><li>[5] → Little Finger Flexion</li><li>[6] → Wrist Flexion</li><li>[7] → Wrist Extension</li><li>[8] → Wrist Pronation</li><li>[9] → Wrist Supination</li><li>[10] → Wrist Ulnar Deviation</li><li>[11] → Wrist Radial Deviation</li><li>[12] → Elbow Flexion</li><li>[13] → Elbow Extension</li><li>[14] → Global Open Hand Activation</li></ul>
+  example: []
+  syntax:
+    content: public StepwiseControlStrategy()
+    content.vb: Public Sub New()
+  overload: mosaic_libary.StepwiseControlStrategy.#ctor*
+  nameWithType.vb: StepwiseControlStrategy.New()
+  fullName.vb: mosaic_libary.StepwiseControlStrategy.New()
+  name.vb: New()
+- uid: mosaic_libary.StepwiseControlStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.StepwiseControlStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  id: ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.StepwiseControlStrategy
+  langs:
+  - csharp
+  - vb
+  name: ProcessPrediction(Vector<double>)
+  nameWithType: StepwiseControlStrategy.ProcessPrediction(Vector<double>)
+  fullName: mosaic_libary.StepwiseControlStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  type: Method
+  source:
+    id: ProcessPrediction
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\StepwiseControlStrategy.cs
+    startLine: 74
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Processes the prediction vector and updates actuation values accordingly.
+  remarks: >-
+    The interpretation of the prediction values depends on the specific control strategy.
+
+    Implementing classes must define how the mapping is performed.
+  example: []
+  syntax:
+    content: public void ProcessPrediction(Vector<double> prediction)
+    parameters:
+    - id: prediction
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+      description: >-
+        A vector containing predicted activation values for each Degree of Actuation (DOA).
+
+        The values are typically in the range [0,1] and need to be mapped to [0,100] for actuation.
+    content.vb: Public Sub ProcessPrediction(prediction As Vector(Of Double))
+  overload: mosaic_libary.StepwiseControlStrategy.ProcessPrediction*
+  implements:
+  - mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  nameWithType.vb: StepwiseControlStrategy.ProcessPrediction(Vector(Of Double))
+  fullName.vb: mosaic_libary.StepwiseControlStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: ProcessPrediction(Vector(Of Double))
+- uid: mosaic_libary.StepwiseControlStrategy.GetControlDict
+  commentId: M:mosaic_libary.StepwiseControlStrategy.GetControlDict
+  id: GetControlDict
+  parent: mosaic_libary.StepwiseControlStrategy
+  langs:
+  - csharp
+  - vb
+  name: GetControlDict()
+  nameWithType: StepwiseControlStrategy.GetControlDict()
+  fullName: mosaic_libary.StepwiseControlStrategy.GetControlDict()
+  type: Method
+  source:
+    id: GetControlDict
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\ControlAlgorithms\StepwiseControlStrategy.cs
+    startLine: 159
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Retrieves the current control dictionary, which contains actuation values for all DOAs.
+  example: []
+  syntax:
+    content: public Dictionary<DOAs, double> GetControlDict()
+    return:
+      type: System.Collections.Generic.Dictionary{mosaic_libary.DOAs,System.Double}
+      description: A dictionary mapping each <xref href="mosaic_libary.DOAs" data-throw-if-not-resolved="false"></xref> to its current actuation value.
+    content.vb: Public Function GetControlDict() As Dictionary(Of DOAs, Double)
+  overload: mosaic_libary.StepwiseControlStrategy.GetControlDict*
+  implements:
+  - mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+references:
+- uid: mosaic_libary.ControlAlgorithm
+  commentId: T:mosaic_libary.ControlAlgorithm
+  href: mosaic_libary.ControlAlgorithm.html
+  name: ControlAlgorithm
+  nameWithType: ControlAlgorithm
+  fullName: mosaic_libary.ControlAlgorithm
+- uid: mosaic_libary.StepwiseControlStrategy._dsMax
+  commentId: F:mosaic_libary.StepwiseControlStrategy._dsMax
+  href: mosaic_libary.StepwiseControlStrategy.html#mosaic_libary_StepwiseControlStrategy__dsMax
+  name: _dsMax
+  nameWithType: StepwiseControlStrategy._dsMax
+  fullName: mosaic_libary.StepwiseControlStrategy._dsMax
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: mosaic_libary.IControlAlgorithmStrategy
+  commentId: T:mosaic_libary.IControlAlgorithmStrategy
+  parent: mosaic_libary
+  href: mosaic_libary.IControlAlgorithmStrategy.html
+  name: IControlAlgorithmStrategy
+  nameWithType: IControlAlgorithmStrategy
+  fullName: mosaic_libary.IControlAlgorithmStrategy
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: mosaic_libary.DOAs
+  commentId: T:mosaic_libary.DOAs
+  parent: mosaic_libary
+  href: mosaic_libary.DOAs.html
+  name: DOAs
+  nameWithType: DOAs
+  fullName: mosaic_libary.DOAs
+- uid: System.Collections.Generic.Dictionary{mosaic_libary.DOAs,System.Double}
+  commentId: T:System.Collections.Generic.Dictionary{mosaic_libary.DOAs,System.Double}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<DOAs, double>
+  nameWithType: Dictionary<DOAs, double>
+  fullName: System.Collections.Generic.Dictionary<mosaic_libary.DOAs, double>
+  nameWithType.vb: Dictionary(Of DOAs, Double)
+  fullName.vb: System.Collections.Generic.Dictionary(Of mosaic_libary.DOAs, Double)
+  name.vb: Dictionary(Of DOAs, Double)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: mosaic_libary.DOAs
+    name: DOAs
+    href: mosaic_libary.DOAs.html
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.DOAs
+    name: DOAs
+    href: mosaic_libary.DOAs.html
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: mosaic_libary.StepwiseControlStrategy
+  commentId: T:mosaic_libary.StepwiseControlStrategy
+  href: mosaic_libary.StepwiseControlStrategy.html
+  name: StepwiseControlStrategy
+  nameWithType: StepwiseControlStrategy
+  fullName: mosaic_libary.StepwiseControlStrategy
+- uid: mosaic_libary.StepwiseControlStrategy.#ctor*
+  commentId: Overload:mosaic_libary.StepwiseControlStrategy.#ctor
+  href: mosaic_libary.StepwiseControlStrategy.html#mosaic_libary_StepwiseControlStrategy__ctor
+  name: StepwiseControlStrategy
+  nameWithType: StepwiseControlStrategy.StepwiseControlStrategy
+  fullName: mosaic_libary.StepwiseControlStrategy.StepwiseControlStrategy
+  nameWithType.vb: StepwiseControlStrategy.New
+  fullName.vb: mosaic_libary.StepwiseControlStrategy.New
+  name.vb: New
+- uid: mosaic_libary.StepwiseControlStrategy.ProcessPrediction*
+  commentId: Overload:mosaic_libary.StepwiseControlStrategy.ProcessPrediction
+  href: mosaic_libary.StepwiseControlStrategy.html#mosaic_libary_StepwiseControlStrategy_ProcessPrediction_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: ProcessPrediction
+  nameWithType: StepwiseControlStrategy.ProcessPrediction
+  fullName: mosaic_libary.StepwiseControlStrategy.ProcessPrediction
+- uid: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  commentId: M:mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+  parent: mosaic_libary.IControlAlgorithmStrategy
+  isExternal: true
+  href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_ProcessPrediction_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  name: ProcessPrediction(Vector<double>)
+  nameWithType: IControlAlgorithmStrategy.ProcessPrediction(Vector<double>)
+  fullName: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector<double>)
+  nameWithType.vb: IControlAlgorithmStrategy.ProcessPrediction(Vector(Of Double))
+  fullName.vb: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector(Of Double))
+  name.vb: ProcessPrediction(Vector(Of Double))
+  spec.csharp:
+  - uid: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: ProcessPrediction
+    href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_ProcessPrediction_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.IControlAlgorithmStrategy.ProcessPrediction(MathNet.Numerics.LinearAlgebra.Vector{System.Double})
+    name: ProcessPrediction
+    href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_ProcessPrediction_MathNet_Numerics_LinearAlgebra_Vector_System_Double__
+  - name: (
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: mosaic_libary.StepwiseControlStrategy.GetControlDict*
+  commentId: Overload:mosaic_libary.StepwiseControlStrategy.GetControlDict
+  href: mosaic_libary.StepwiseControlStrategy.html#mosaic_libary_StepwiseControlStrategy_GetControlDict
+  name: GetControlDict
+  nameWithType: StepwiseControlStrategy.GetControlDict
+  fullName: mosaic_libary.StepwiseControlStrategy.GetControlDict
+- uid: mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+  commentId: M:mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+  parent: mosaic_libary.IControlAlgorithmStrategy
+  href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_GetControlDict
+  name: GetControlDict()
+  nameWithType: IControlAlgorithmStrategy.GetControlDict()
+  fullName: mosaic_libary.IControlAlgorithmStrategy.GetControlDict()
+  spec.csharp:
+  - uid: mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+    name: GetControlDict
+    href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_GetControlDict
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.IControlAlgorithmStrategy.GetControlDict
+    name: GetControlDict
+    href: mosaic_libary.IControlAlgorithmStrategy.html#mosaic_libary_IControlAlgorithmStrategy_GetControlDict
+  - name: (
+  - name: )

@@ -1,0 +1,663 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Vertex
+  commentId: T:mosaic_libary.Vertex
+  id: Vertex
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Vertex.#ctor
+  - mosaic_libary.Vertex.#ctor(mosaic_libary.Block)
+  - mosaic_libary.Vertex.ToString
+  - mosaic_libary.Vertex.block
+  - mosaic_libary.Vertex.text
+  langs:
+  - csharp
+  - vb
+  name: Vertex
+  nameWithType: Vertex
+  fullName: mosaic_libary.Vertex
+  type: Class
+  source:
+    id: Vertex
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 54
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: 'public class Vertex : VertexBase, IGraphXVertex, IEquatable<IGraphXVertex>, IIdentifiableGraphDataObject'
+    content.vb: Public Class Vertex Inherits VertexBase Implements IGraphXVertex, IEquatable(Of IGraphXVertex), IIdentifiableGraphDataObject
+  inheritance:
+  - System.Object
+  - GraphX.Common.Models.VertexBase
+  implements:
+  - GraphX.Common.Interfaces.IGraphXVertex
+  - System.IEquatable{GraphX.Common.Interfaces.IGraphXVertex}
+  - GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+  inheritedMembers:
+  - GraphX.Common.Models.VertexBase.Equals(GraphX.Common.Interfaces.IGraphXVertex)
+  - GraphX.Common.Models.VertexBase.Angle
+  - GraphX.Common.Models.VertexBase.GroupId
+  - GraphX.Common.Models.VertexBase.SkipProcessing
+  - GraphX.Common.Models.VertexBase.ID
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.Vertex.block
+  commentId: P:mosaic_libary.Vertex.block
+  id: block
+  parent: mosaic_libary.Vertex
+  langs:
+  - csharp
+  - vb
+  name: block
+  nameWithType: Vertex.block
+  fullName: mosaic_libary.Vertex.block
+  type: Property
+  source:
+    id: block
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 56
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public Block block { get; private set; }
+    parameters: []
+    return:
+      type: mosaic_libary.Block
+    content.vb: Public Property block As Block
+  overload: mosaic_libary.Vertex.block*
+- uid: mosaic_libary.Vertex.text
+  commentId: P:mosaic_libary.Vertex.text
+  id: text
+  parent: mosaic_libary.Vertex
+  langs:
+  - csharp
+  - vb
+  name: text
+  nameWithType: Vertex.text
+  fullName: mosaic_libary.Vertex.text
+  type: Property
+  source:
+    id: text
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 57
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public string text { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property text As String
+  overload: mosaic_libary.Vertex.text*
+- uid: mosaic_libary.Vertex.ToString
+  commentId: M:mosaic_libary.Vertex.ToString
+  id: ToString
+  parent: mosaic_libary.Vertex
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Vertex.ToString()
+  fullName: mosaic_libary.Vertex.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 58
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Returns a string that represents the current object.
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString() As String
+  overridden: System.Object.ToString
+  overload: mosaic_libary.Vertex.ToString*
+- uid: mosaic_libary.Vertex.#ctor(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Vertex.#ctor(mosaic_libary.Block)
+  id: '#ctor(mosaic_libary.Block)'
+  parent: mosaic_libary.Vertex
+  langs:
+  - csharp
+  - vb
+  name: Vertex(Block)
+  nameWithType: Vertex.Vertex(Block)
+  fullName: mosaic_libary.Vertex.Vertex(mosaic_libary.Block)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 61
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public Vertex(Block b)
+    parameters:
+    - id: b
+      type: mosaic_libary.Block
+    content.vb: Public Sub New(b As Block)
+  overload: mosaic_libary.Vertex.#ctor*
+  nameWithType.vb: Vertex.New(Block)
+  fullName.vb: mosaic_libary.Vertex.New(mosaic_libary.Block)
+  name.vb: New(Block)
+- uid: mosaic_libary.Vertex.#ctor
+  commentId: M:mosaic_libary.Vertex.#ctor
+  id: '#ctor'
+  parent: mosaic_libary.Vertex
+  langs:
+  - csharp
+  - vb
+  name: Vertex()
+  nameWithType: Vertex.Vertex()
+  fullName: mosaic_libary.Vertex.Vertex()
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 63
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public Vertex()
+    content.vb: Public Sub New()
+  overload: mosaic_libary.Vertex.#ctor*
+  nameWithType.vb: Vertex.New()
+  fullName.vb: mosaic_libary.Vertex.New()
+  name.vb: New()
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: GraphX.Common.Models.VertexBase
+  commentId: T:GraphX.Common.Models.VertexBase
+  parent: GraphX.Common.Models
+  isExternal: true
+  name: VertexBase
+  nameWithType: VertexBase
+  fullName: GraphX.Common.Models.VertexBase
+- uid: GraphX.Common.Interfaces.IGraphXVertex
+  commentId: T:GraphX.Common.Interfaces.IGraphXVertex
+  parent: GraphX.Common.Interfaces
+  isExternal: true
+  name: IGraphXVertex
+  nameWithType: IGraphXVertex
+  fullName: GraphX.Common.Interfaces.IGraphXVertex
+- uid: System.IEquatable{GraphX.Common.Interfaces.IGraphXVertex}
+  commentId: T:System.IEquatable{GraphX.Common.Interfaces.IGraphXVertex}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<IGraphXVertex>
+  nameWithType: IEquatable<IGraphXVertex>
+  fullName: System.IEquatable<GraphX.Common.Interfaces.IGraphXVertex>
+  nameWithType.vb: IEquatable(Of IGraphXVertex)
+  fullName.vb: System.IEquatable(Of GraphX.Common.Interfaces.IGraphXVertex)
+  name.vb: IEquatable(Of IGraphXVertex)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: GraphX.Common.Interfaces.IGraphXVertex
+    name: IGraphXVertex
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: GraphX.Common.Interfaces.IGraphXVertex
+    name: IGraphXVertex
+    isExternal: true
+  - name: )
+- uid: GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+  commentId: T:GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+  parent: GraphX.Common.Interfaces
+  isExternal: true
+  name: IIdentifiableGraphDataObject
+  nameWithType: IIdentifiableGraphDataObject
+  fullName: GraphX.Common.Interfaces.IIdentifiableGraphDataObject
+- uid: GraphX.Common.Models.VertexBase.Equals(GraphX.Common.Interfaces.IGraphXVertex)
+  commentId: M:GraphX.Common.Models.VertexBase.Equals(GraphX.Common.Interfaces.IGraphXVertex)
+  parent: GraphX.Common.Models.VertexBase
+  isExternal: true
+  name: Equals(IGraphXVertex)
+  nameWithType: VertexBase.Equals(IGraphXVertex)
+  fullName: GraphX.Common.Models.VertexBase.Equals(GraphX.Common.Interfaces.IGraphXVertex)
+  spec.csharp:
+  - uid: GraphX.Common.Models.VertexBase.Equals(GraphX.Common.Interfaces.IGraphXVertex)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: GraphX.Common.Interfaces.IGraphXVertex
+    name: IGraphXVertex
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: GraphX.Common.Models.VertexBase.Equals(GraphX.Common.Interfaces.IGraphXVertex)
+    name: Equals
+    isExternal: true
+  - name: (
+  - uid: GraphX.Common.Interfaces.IGraphXVertex
+    name: IGraphXVertex
+    isExternal: true
+  - name: )
+- uid: GraphX.Common.Models.VertexBase.Angle
+  commentId: P:GraphX.Common.Models.VertexBase.Angle
+  parent: GraphX.Common.Models.VertexBase
+  isExternal: true
+  name: Angle
+  nameWithType: VertexBase.Angle
+  fullName: GraphX.Common.Models.VertexBase.Angle
+- uid: GraphX.Common.Models.VertexBase.GroupId
+  commentId: P:GraphX.Common.Models.VertexBase.GroupId
+  parent: GraphX.Common.Models.VertexBase
+  isExternal: true
+  name: GroupId
+  nameWithType: VertexBase.GroupId
+  fullName: GraphX.Common.Models.VertexBase.GroupId
+- uid: GraphX.Common.Models.VertexBase.SkipProcessing
+  commentId: P:GraphX.Common.Models.VertexBase.SkipProcessing
+  parent: GraphX.Common.Models.VertexBase
+  isExternal: true
+  name: SkipProcessing
+  nameWithType: VertexBase.SkipProcessing
+  fullName: GraphX.Common.Models.VertexBase.SkipProcessing
+- uid: GraphX.Common.Models.VertexBase.ID
+  commentId: P:GraphX.Common.Models.VertexBase.ID
+  parent: GraphX.Common.Models.VertexBase
+  isExternal: true
+  name: ID
+  nameWithType: VertexBase.ID
+  fullName: GraphX.Common.Models.VertexBase.ID
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: GraphX.Common.Models
+  commentId: N:GraphX.Common.Models
+  isExternal: true
+  name: GraphX.Common.Models
+  nameWithType: GraphX.Common.Models
+  fullName: GraphX.Common.Models
+  spec.csharp:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Models
+    name: Models
+    isExternal: true
+  spec.vb:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Models
+    name: Models
+    isExternal: true
+- uid: GraphX.Common.Interfaces
+  commentId: N:GraphX.Common.Interfaces
+  isExternal: true
+  name: GraphX.Common.Interfaces
+  nameWithType: GraphX.Common.Interfaces
+  fullName: GraphX.Common.Interfaces
+  spec.csharp:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Interfaces
+    name: Interfaces
+    isExternal: true
+  spec.vb:
+  - uid: GraphX
+    name: GraphX
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common
+    name: Common
+    isExternal: true
+  - name: .
+  - uid: GraphX.Common.Interfaces
+    name: Interfaces
+    isExternal: true
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: mosaic_libary.Vertex.block*
+  commentId: Overload:mosaic_libary.Vertex.block
+  href: mosaic_libary.Vertex.html#mosaic_libary_Vertex_block
+  name: block
+  nameWithType: Vertex.block
+  fullName: mosaic_libary.Vertex.block
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+- uid: mosaic_libary.Vertex.text*
+  commentId: Overload:mosaic_libary.Vertex.text
+  href: mosaic_libary.Vertex.html#mosaic_libary_Vertex_text
+  name: text
+  nameWithType: Vertex.text
+  fullName: mosaic_libary.Vertex.text
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: mosaic_libary.Vertex.ToString*
+  commentId: Overload:mosaic_libary.Vertex.ToString
+  href: mosaic_libary.Vertex.html#mosaic_libary_Vertex_ToString
+  name: ToString
+  nameWithType: Vertex.ToString
+  fullName: mosaic_libary.Vertex.ToString
+- uid: mosaic_libary.Vertex.#ctor*
+  commentId: Overload:mosaic_libary.Vertex.#ctor
+  href: mosaic_libary.Vertex.html#mosaic_libary_Vertex__ctor_mosaic_libary_Block_
+  name: Vertex
+  nameWithType: Vertex.Vertex
+  fullName: mosaic_libary.Vertex.Vertex
+  nameWithType.vb: Vertex.New
+  fullName.vb: mosaic_libary.Vertex.New
+  name.vb: New

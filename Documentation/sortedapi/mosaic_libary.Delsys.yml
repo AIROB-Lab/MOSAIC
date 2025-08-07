@@ -1,0 +1,2915 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Delsys
+  commentId: T:mosaic_libary.Delsys
+  id: Delsys
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Delsys.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  - mosaic_libary.Delsys.CollectionComplete(System.Object,DelsysAPI.Events.CollectionCompleteEvent)
+  - mosaic_libary.Delsys.CollectionDataReady(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  - mosaic_libary.Delsys.CollectionDataReady_emg_only(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  - mosaic_libary.Delsys.CollectionDataReady_emg_only_old(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  - mosaic_libary.Delsys.CollectionStarted(System.Object,DelsysAPI.Events.CollectionStartedEvent)
+  - mosaic_libary.Delsys.ComponentAdded(System.Object,DelsysAPI.Events.ComponentAddedEventArgs)
+  - mosaic_libary.Delsys.ComponentLost(System.Object,DelsysAPI.Events.ComponentLostEventArgs)
+  - mosaic_libary.Delsys.ComponentRemoved(System.Object,DelsysAPI.Events.ComponentRemovedEventArgs)
+  - mosaic_libary.Delsys.ComponentScanComplete(System.Object,DelsysAPI.Events.ComponentScanCompletedEventArgs)
+  - mosaic_libary.Delsys.ConfigureInputs
+  - mosaic_libary.Delsys.ConfigurePipeline
+  - mosaic_libary.Delsys.ExportData
+  - mosaic_libary.Delsys.InitalizeDataScouce
+  - mosaic_libary.Delsys.LoadDataSource
+  - mosaic_libary.Delsys.NTotalChannels
+  - mosaic_libary.Delsys.OnNewInput(mosaic_libary.Block,System.Object)
+  - mosaic_libary.Delsys.Pipeline
+  - mosaic_libary.Delsys.ResetPipeline
+  - mosaic_libary.Delsys.ResetUI
+  - mosaic_libary.Delsys.Scan
+  - mosaic_libary.Delsys.SelectedSensors
+  - mosaic_libary.Delsys.SensorIDMapping
+  - mosaic_libary.Delsys.SensorIDMapping2
+  - mosaic_libary.Delsys.StopStreamAsync
+  - mosaic_libary.Delsys.StreamInfo
+  - mosaic_libary.Delsys._data
+  - mosaic_libary.Delsys._desiredRate
+  - mosaic_libary.Delsys._deviceSource
+  - mosaic_libary.Delsys._emgSampleSize
+  - mosaic_libary.Delsys._frameThroughput
+  - mosaic_libary.Delsys._isStreaming
+  - mosaic_libary.Delsys._key
+  - mosaic_libary.Delsys._license
+  - mosaic_libary.Delsys._lowestFrequency
+  - mosaic_libary.Delsys._packetInterval
+  - mosaic_libary.Delsys._sampleRate
+  - mosaic_libary.Delsys._selectedSensorModes
+  - mosaic_libary.Delsys._streamTime
+  - mosaic_libary.Delsys._streaming
+  - mosaic_libary.Delsys._totalFrames
+  - mosaic_libary.Delsys._totalLostPackets
+  - mosaic_libary.Delsys.buffer
+  - mosaic_libary.Delsys.bufferCounter
+  - mosaic_libary.Delsys.bufferSize
+  - mosaic_libary.Delsys.interpolationFactor
+  - mosaic_libary.Delsys.sensorData
+  - mosaic_libary.Delsys.vector
+  langs:
+  - csharp
+  - vb
+  name: Delsys
+  nameWithType: Delsys
+  fullName: mosaic_libary.Delsys
+  type: Class
+  source:
+    id: Delsys
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 250
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Provides an interface for acquiring data from Delsys Trigno hardware using the Delsys SPI.
+
+    <p><b>Disclaimer:</b> This block requires a valid Delsys API license and key for use with Delsys hardware.
+
+    You must provide your unique key (<xref href="mosaic_libary.Delsys._key" data-throw-if-not-resolved="false"></xref>) and license (<xref href="mosaic_libary.Delsys._license" data-throw-if-not-resolved="false"></xref>) in the source code before using any Delsys device functionality.
+
+    </p>
+  remarks: >-
+    The block will initialize and manage a Delsys Trigno base, allow scanning and selection of sensors,
+
+    and provide live EMG data streaming as output vectors.
+
+    <p><b>Important:</b> You must enter your Delsys SPI key and license in the fields <code>_key</code> and <code>_license</code> in the source code.
+
+    </p>
+  example:
+  - >-
+    <p>
+
+    Example YAML configuration for a Delsys block:
+
+    </p>
+
+    <pre><code class="lang-csharp">delsysBlock:
+
+    {
+      Type: Delsys,
+      Inputs: [myTimer]
+    }</code></pre>
+
+    <p>
+
+    Explanation:
+
+    <ul><li><code>Type: Delsys</code> specifies that this block will stream EMG data from a Delsys Trigno system.
+        </li><li><code>Inputs: [myTimer]</code> specifies a timer block that triggers data acquisition.
+        </li></ul></p>
+  syntax:
+    content: 'public class Delsys : Block, IDisposable'
+    content.vb: Public Class Delsys Inherits Block Implements IDisposable
+  inheritance:
+  - System.Object
+  - mosaic_libary.Block
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - mosaic_libary.Block.Name
+  - mosaic_libary.Block.DesiredRate
+  - mosaic_libary.Block.Rate
+  - mosaic_libary.Block.IsLagging
+  - mosaic_libary.Block.IsIdle
+  - mosaic_libary.Block.IsStumbling
+  - mosaic_libary.Block.InputCfg
+  - mosaic_libary.Block.Params
+  - mosaic_libary.Block.InputBlocks
+  - mosaic_libary.Block.Ticks
+  - mosaic_libary.Block._dump
+  - mosaic_libary.Block._stumblingLock
+  - mosaic_libary.Block._onNewInputLock
+  - mosaic_libary.Block.Data
+  - mosaic_libary.Block.cp
+  - mosaic_libary.Block.Dispose
+  - mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  - mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  - mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  - mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  - mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  - mosaic_libary.Block.Output
+  - mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  - mosaic_libary.Block.ShowHideCp
+  - mosaic_libary.Block.MouseLeftClick
+  - mosaic_libary.Block.MouseRightClick
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.Delsys._key
+  commentId: F:mosaic_libary.Delsys._key
+  id: _key
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _key
+  nameWithType: Delsys._key
+  fullName: mosaic_libary.Delsys._key
+  type: Field
+  source:
+    id: _key
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 255
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Your Delsys API license key (must be provided).
+  example: []
+  syntax:
+    content: private string _key
+    return:
+      type: System.String
+    content.vb: Private _key As String
+- uid: mosaic_libary.Delsys._license
+  commentId: F:mosaic_libary.Delsys._license
+  id: _license
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _license
+  nameWithType: Delsys._license
+  fullName: mosaic_libary.Delsys._license
+  type: Field
+  source:
+    id: _license
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 260
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Your Delsys API license string (must be provided).
+  example: []
+  syntax:
+    content: private string _license
+    return:
+      type: System.String
+    content.vb: Private _license As String
+- uid: mosaic_libary.Delsys._deviceSource
+  commentId: F:mosaic_libary.Delsys._deviceSource
+  id: _deviceSource
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _deviceSource
+  nameWithType: Delsys._deviceSource
+  fullName: mosaic_libary.Delsys._deviceSource
+  type: Field
+  source:
+    id: _deviceSource
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 265
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Reference to the Delsys Base Station device.
+  example: []
+  syntax:
+    content: private IDelsysDevice _deviceSource
+    return:
+      type: DelsysAPI.DelsysDevices.IDelsysDevice
+    content.vb: Private _deviceSource As IDelsysDevice
+- uid: mosaic_libary.Delsys._data
+  commentId: F:mosaic_libary.Delsys._data
+  id: _data
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _data
+  nameWithType: Delsys._data
+  fullName: mosaic_libary.Delsys._data
+  type: Field
+  source:
+    id: _data
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 268
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private List<List<double>> _data
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+    content.vb: Private _data As List(Of List(Of Double))
+- uid: mosaic_libary.Delsys._totalFrames
+  commentId: F:mosaic_libary.Delsys._totalFrames
+  id: _totalFrames
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _totalFrames
+  nameWithType: Delsys._totalFrames
+  fullName: mosaic_libary.Delsys._totalFrames
+  type: Field
+  source:
+    id: _totalFrames
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 271
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int _totalFrames
+    return:
+      type: System.Int32
+    content.vb: Private _totalFrames As Integer
+- uid: mosaic_libary.Delsys._totalLostPackets
+  commentId: F:mosaic_libary.Delsys._totalLostPackets
+  id: _totalLostPackets
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _totalLostPackets
+  nameWithType: Delsys._totalLostPackets
+  fullName: mosaic_libary.Delsys._totalLostPackets
+  type: Field
+  source:
+    id: _totalLostPackets
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 272
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int _totalLostPackets
+    return:
+      type: System.Int32
+    content.vb: Private _totalLostPackets As Integer
+- uid: mosaic_libary.Delsys._frameThroughput
+  commentId: F:mosaic_libary.Delsys._frameThroughput
+  id: _frameThroughput
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _frameThroughput
+  nameWithType: Delsys._frameThroughput
+  fullName: mosaic_libary.Delsys._frameThroughput
+  type: Field
+  source:
+    id: _frameThroughput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 273
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int _frameThroughput
+    return:
+      type: System.Int32
+    content.vb: Private _frameThroughput As Integer
+- uid: mosaic_libary.Delsys._packetInterval
+  commentId: F:mosaic_libary.Delsys._packetInterval
+  id: _packetInterval
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _packetInterval
+  nameWithType: Delsys._packetInterval
+  fullName: mosaic_libary.Delsys._packetInterval
+  type: Field
+  source:
+    id: _packetInterval
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 274
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private double _packetInterval
+    return:
+      type: System.Double
+    content.vb: Private _packetInterval As Double
+- uid: mosaic_libary.Delsys._streamTime
+  commentId: F:mosaic_libary.Delsys._streamTime
+  id: _streamTime
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _streamTime
+  nameWithType: Delsys._streamTime
+  fullName: mosaic_libary.Delsys._streamTime
+  type: Field
+  source:
+    id: _streamTime
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 275
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private double _streamTime
+    return:
+      type: System.Double
+    content.vb: Private _streamTime As Double
+- uid: mosaic_libary.Delsys._isStreaming
+  commentId: F:mosaic_libary.Delsys._isStreaming
+  id: _isStreaming
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _isStreaming
+  nameWithType: Delsys._isStreaming
+  fullName: mosaic_libary.Delsys._isStreaming
+  type: Field
+  source:
+    id: _isStreaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 277
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private bool _isStreaming
+    return:
+      type: System.Boolean
+    content.vb: Private _isStreaming As Boolean
+- uid: mosaic_libary.Delsys._streaming
+  commentId: F:mosaic_libary.Delsys._streaming
+  id: _streaming
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _streaming
+  nameWithType: Delsys._streaming
+  fullName: mosaic_libary.Delsys._streaming
+  type: Field
+  source:
+    id: _streaming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 279
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private bool _streaming
+    return:
+      type: System.Boolean
+    content.vb: Private _streaming As Boolean
+- uid: mosaic_libary.Delsys.sensorData
+  commentId: F:mosaic_libary.Delsys.sensorData
+  id: sensorData
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: sensorData
+  nameWithType: Delsys.sensorData
+  fullName: mosaic_libary.Delsys.sensorData
+  type: Field
+  source:
+    id: sensorData
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 280
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private List<List<double>> sensorData
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+    content.vb: Private sensorData As List(Of List(Of Double))
+- uid: mosaic_libary.Delsys.vector
+  commentId: F:mosaic_libary.Delsys.vector
+  id: vector
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: vector
+  nameWithType: Delsys.vector
+  fullName: mosaic_libary.Delsys.vector
+  type: Field
+  source:
+    id: vector
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 281
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Vector<double> vector
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+    content.vb: Private vector As Vector(Of Double)
+- uid: mosaic_libary.Delsys.interpolationFactor
+  commentId: F:mosaic_libary.Delsys.interpolationFactor
+  id: interpolationFactor
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: interpolationFactor
+  nameWithType: Delsys.interpolationFactor
+  fullName: mosaic_libary.Delsys.interpolationFactor
+  type: Field
+  source:
+    id: interpolationFactor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 282
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private double interpolationFactor
+    return:
+      type: System.Double
+    content.vb: Private interpolationFactor As Double
+- uid: mosaic_libary.Delsys.buffer
+  commentId: F:mosaic_libary.Delsys.buffer
+  id: buffer
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: buffer
+  nameWithType: Delsys.buffer
+  fullName: mosaic_libary.Delsys.buffer
+  type: Field
+  source:
+    id: buffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 283
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private Vector<double>[] buffer
+    return:
+      type: MathNet.Numerics.LinearAlgebra.Vector{System.Double}[]
+    content.vb: Private buffer As Vector(Of Double)()
+- uid: mosaic_libary.Delsys.bufferSize
+  commentId: F:mosaic_libary.Delsys.bufferSize
+  id: bufferSize
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: bufferSize
+  nameWithType: Delsys.bufferSize
+  fullName: mosaic_libary.Delsys.bufferSize
+  type: Field
+  source:
+    id: bufferSize
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 284
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int bufferSize
+    return:
+      type: System.Int32
+    content.vb: Private bufferSize As Integer
+- uid: mosaic_libary.Delsys.bufferCounter
+  commentId: F:mosaic_libary.Delsys.bufferCounter
+  id: bufferCounter
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: bufferCounter
+  nameWithType: Delsys.bufferCounter
+  fullName: mosaic_libary.Delsys.bufferCounter
+  type: Field
+  source:
+    id: bufferCounter
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 285
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int bufferCounter
+    return:
+      type: System.Int32
+    content.vb: Private bufferCounter As Integer
+- uid: mosaic_libary.Delsys.NTotalChannels
+  commentId: F:mosaic_libary.Delsys.NTotalChannels
+  id: NTotalChannels
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: NTotalChannels
+  nameWithType: Delsys.NTotalChannels
+  fullName: mosaic_libary.Delsys.NTotalChannels
+  type: Field
+  source:
+    id: NTotalChannels
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 287
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int NTotalChannels
+    return:
+      type: System.Int32
+    content.vb: Private NTotalChannels As Integer
+- uid: mosaic_libary.Delsys._selectedSensorModes
+  commentId: F:mosaic_libary.Delsys._selectedSensorModes
+  id: _selectedSensorModes
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _selectedSensorModes
+  nameWithType: Delsys._selectedSensorModes
+  fullName: mosaic_libary.Delsys._selectedSensorModes
+  type: Field
+  source:
+    id: _selectedSensorModes
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 289
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private string[] _selectedSensorModes
+    return:
+      type: System.String[]
+    content.vb: Private _selectedSensorModes As String()
+- uid: mosaic_libary.Delsys._emgSampleSize
+  commentId: F:mosaic_libary.Delsys._emgSampleSize
+  id: _emgSampleSize
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _emgSampleSize
+  nameWithType: Delsys._emgSampleSize
+  fullName: mosaic_libary.Delsys._emgSampleSize
+  type: Field
+  source:
+    id: _emgSampleSize
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 290
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public int _emgSampleSize
+    return:
+      type: System.Int32
+    content.vb: Public _emgSampleSize As Integer
+- uid: mosaic_libary.Delsys._sampleRate
+  commentId: F:mosaic_libary.Delsys._sampleRate
+  id: _sampleRate
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _sampleRate
+  nameWithType: Delsys._sampleRate
+  fullName: mosaic_libary.Delsys._sampleRate
+  type: Field
+  source:
+    id: _sampleRate
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 291
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public double _sampleRate
+    return:
+      type: System.Double
+    content.vb: Public _sampleRate As Double
+- uid: mosaic_libary.Delsys._desiredRate
+  commentId: F:mosaic_libary.Delsys._desiredRate
+  id: _desiredRate
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _desiredRate
+  nameWithType: Delsys._desiredRate
+  fullName: mosaic_libary.Delsys._desiredRate
+  type: Field
+  source:
+    id: _desiredRate
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 292
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private double _desiredRate
+    return:
+      type: System.Double
+    content.vb: Private _desiredRate As Double
+- uid: mosaic_libary.Delsys._lowestFrequency
+  commentId: F:mosaic_libary.Delsys._lowestFrequency
+  id: _lowestFrequency
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: _lowestFrequency
+  nameWithType: Delsys._lowestFrequency
+  fullName: mosaic_libary.Delsys._lowestFrequency
+  type: Field
+  source:
+    id: _lowestFrequency
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 294
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private int _lowestFrequency
+    return:
+      type: System.Int32
+    content.vb: Private _lowestFrequency As Integer
+- uid: mosaic_libary.Delsys.Pipeline
+  commentId: F:mosaic_libary.Delsys.Pipeline
+  id: Pipeline
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: Pipeline
+  nameWithType: Delsys.Pipeline
+  fullName: mosaic_libary.Delsys.Pipeline
+  type: Field
+  source:
+    id: Pipeline
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 299
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Reference to the active Delsys pipeline.
+  example: []
+  syntax:
+    content: public Pipeline Pipeline
+    return:
+      type: DelsysAPI.Pipelines.Pipeline
+    content.vb: Public Pipeline As Pipeline
+- uid: mosaic_libary.Delsys.SelectedSensors
+  commentId: F:mosaic_libary.Delsys.SelectedSensors
+  id: SelectedSensors
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: SelectedSensors
+  nameWithType: Delsys.SelectedSensors
+  fullName: mosaic_libary.Delsys.SelectedSensors
+  type: Field
+  source:
+    id: SelectedSensors
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 304
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: List of currently selected Trigno sensors.
+  example: []
+  syntax:
+    content: public List<SensorTrignoRf> SelectedSensors
+    return:
+      type: System.Collections.Generic.List{DelsysAPI.Components.TrignoRf.SensorTrignoRf}
+    content.vb: Public SelectedSensors As List(Of SensorTrignoRf)
+- uid: mosaic_libary.Delsys.StreamInfo
+  commentId: F:mosaic_libary.Delsys.StreamInfo
+  id: StreamInfo
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: StreamInfo
+  nameWithType: Delsys.StreamInfo
+  fullName: mosaic_libary.Delsys.StreamInfo
+  type: Field
+  source:
+    id: StreamInfo
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 309
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Provides live stream information for the control panel.
+  example: []
+  syntax:
+    content: public StreamInfo StreamInfo
+    return:
+      type: mosaic_libary.StreamInfo
+    content.vb: Public StreamInfo As StreamInfo
+- uid: mosaic_libary.Delsys.SensorIDMapping
+  commentId: F:mosaic_libary.Delsys.SensorIDMapping
+  id: SensorIDMapping
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: SensorIDMapping
+  nameWithType: Delsys.SensorIDMapping
+  fullName: mosaic_libary.Delsys.SensorIDMapping
+  type: Field
+  source:
+    id: SensorIDMapping
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 314
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Dictionary mapping sensor IDs to data.
+  example: []
+  syntax:
+    content: public Dictionary<string, List<double>> SensorIDMapping
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.Double}}
+    content.vb: Public SensorIDMapping As Dictionary(Of String, List(Of Double))
+- uid: mosaic_libary.Delsys.SensorIDMapping2
+  commentId: F:mosaic_libary.Delsys.SensorIDMapping2
+  id: SensorIDMapping2
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: SensorIDMapping2
+  nameWithType: Delsys.SensorIDMapping2
+  fullName: mosaic_libary.Delsys.SensorIDMapping2
+  type: Field
+  source:
+    id: SensorIDMapping2
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 319
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Dictionary mapping sensor IDs to channel indices.
+  example: []
+  syntax:
+    content: public Dictionary<string, int> SensorIDMapping2
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.Int32}
+    content.vb: Public SensorIDMapping2 As Dictionary(Of String, Integer)
+- uid: mosaic_libary.Delsys.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  commentId: M:mosaic_libary.Delsys.#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)
+  id: '#ctor(System.String,System.Double,System.Collections.Generic.List{System.String},System.Collections.Generic.List{System.String},System.String)'
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: Delsys(string, double, List<string>, List<string>, string)
+  nameWithType: Delsys.Delsys(string, double, List<string>, List<string>, string)
+  fullName: mosaic_libary.Delsys.Delsys(string, double, System.Collections.Generic.List<string>, System.Collections.Generic.List<string>, string)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 329
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Initializes a new instance of the <xref href="mosaic_libary.Delsys" data-throw-if-not-resolved="false"></xref> block.
+  example: []
+  syntax:
+    content: public Delsys(string Name, double DesiredRate, List<string> InputCfg, List<string> Params, string Path)
+    parameters:
+    - id: Name
+      type: System.String
+      description: Block name.
+    - id: DesiredRate
+      type: System.Double
+      description: Desired output rate (Hz).
+    - id: InputCfg
+      type: System.Collections.Generic.List{System.String}
+      description: Input configuration (should be one Timer).
+    - id: Params
+      type: System.Collections.Generic.List{System.String}
+      description: Unused.
+    - id: Path
+      type: System.String
+      description: Path to dump raw Delsys data.
+    content.vb: Public Sub New(Name As String, DesiredRate As Double, InputCfg As List(Of String), Params As List(Of String), Path As String)
+  overload: mosaic_libary.Delsys.#ctor*
+  nameWithType.vb: Delsys.New(String, Double, List(Of String), List(Of String), String)
+  fullName.vb: mosaic_libary.Delsys.New(String, Double, System.Collections.Generic.List(Of String), System.Collections.Generic.List(Of String), String)
+  name.vb: New(String, Double, List(Of String), List(Of String), String)
+- uid: mosaic_libary.Delsys.ConfigureInputs
+  commentId: M:mosaic_libary.Delsys.ConfigureInputs
+  id: ConfigureInputs
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ConfigureInputs()
+  nameWithType: Delsys.ConfigureInputs()
+  fullName: mosaic_libary.Delsys.ConfigureInputs()
+  type: Method
+  source:
+    id: ConfigureInputs
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 337
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Configures the block input and initializes the Delsys system.
+  example: []
+  syntax:
+    content: public override void ConfigureInputs()
+    content.vb: Public Overrides Sub ConfigureInputs()
+  overridden: mosaic_libary.Block.ConfigureInputs
+  overload: mosaic_libary.Delsys.ConfigureInputs*
+- uid: mosaic_libary.Delsys.OnNewInput(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Delsys.OnNewInput(mosaic_libary.Block,System.Object)
+  id: OnNewInput(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: OnNewInput(Block, object)
+  nameWithType: Delsys.OnNewInput(Block, object)
+  fullName: mosaic_libary.Delsys.OnNewInput(mosaic_libary.Block, object)
+  type: Method
+  source:
+    id: OnNewInput
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 364
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Called when new input data is received (from timer). Outputs latest data vector if streaming.
+  example: []
+  syntax:
+    content: protected override void OnNewInput(Block sender, object value)
+    parameters:
+    - id: sender
+      type: mosaic_libary.Block
+      description: Input block.
+    - id: value
+      type: System.Object
+      description: Not used.
+    content.vb: Protected Overrides Sub OnNewInput(sender As Block, value As Object)
+  overridden: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  overload: mosaic_libary.Delsys.OnNewInput*
+  nameWithType.vb: Delsys.OnNewInput(Block, Object)
+  fullName.vb: mosaic_libary.Delsys.OnNewInput(mosaic_libary.Block, Object)
+  name.vb: OnNewInput(Block, Object)
+- uid: mosaic_libary.Delsys.InitalizeDataScouce
+  commentId: M:mosaic_libary.Delsys.InitalizeDataScouce
+  id: InitalizeDataScouce
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: InitalizeDataScouce()
+  nameWithType: Delsys.InitalizeDataScouce()
+  fullName: mosaic_libary.Delsys.InitalizeDataScouce()
+  type: Method
+  source:
+    id: InitalizeDataScouce
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 379
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Initializes the data source for the Delsys instance.
+  example: []
+  syntax:
+    content: public void InitalizeDataScouce()
+    content.vb: Public Sub InitalizeDataScouce()
+  overload: mosaic_libary.Delsys.InitalizeDataScouce*
+- uid: mosaic_libary.Delsys.LoadDataSource
+  commentId: M:mosaic_libary.Delsys.LoadDataSource
+  id: LoadDataSource
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: LoadDataSource()
+  nameWithType: Delsys.LoadDataSource()
+  fullName: mosaic_libary.Delsys.LoadDataSource()
+  type: Method
+  source:
+    id: LoadDataSource
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 399
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Sets up Connection to the Tirgno RF base, as well as the Pipeline and Collection events.
+  example: []
+  syntax:
+    content: private void LoadDataSource()
+    content.vb: Private Sub LoadDataSource()
+  overload: mosaic_libary.Delsys.LoadDataSource*
+- uid: mosaic_libary.Delsys.ConfigurePipeline
+  commentId: M:mosaic_libary.Delsys.ConfigurePipeline
+  id: ConfigurePipeline
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ConfigurePipeline()
+  nameWithType: Delsys.ConfigurePipeline()
+  fullName: mosaic_libary.Delsys.ConfigurePipeline()
+  type: Method
+  source:
+    id: ConfigurePipeline
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 439
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Configures the pipeline and sensor selection.
+  example: []
+  syntax:
+    content: public void ConfigurePipeline()
+    content.vb: Public Sub ConfigurePipeline()
+  overload: mosaic_libary.Delsys.ConfigurePipeline*
+- uid: mosaic_libary.Delsys.Scan
+  commentId: M:mosaic_libary.Delsys.Scan
+  id: Scan
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: Scan()
+  nameWithType: Delsys.Scan()
+  fullName: mosaic_libary.Delsys.Scan()
+  type: Method
+  source:
+    id: Scan
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 475
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Scans for paired sensors on the Trigno base station.
+  example: []
+  syntax:
+    content: public Task Scan()
+    return:
+      type: System.Threading.Tasks.Task
+      description: Awaitable task.
+    content.vb: Public Function Scan() As Task
+  overload: mosaic_libary.Delsys.Scan*
+- uid: mosaic_libary.Delsys.StopStreamAsync
+  commentId: M:mosaic_libary.Delsys.StopStreamAsync
+  id: StopStreamAsync
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: StopStreamAsync()
+  nameWithType: Delsys.StopStreamAsync()
+  fullName: mosaic_libary.Delsys.StopStreamAsync()
+  type: Method
+  source:
+    id: StopStreamAsync
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 501
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Stops the active pipeline data stream.
+  example: []
+  syntax:
+    content: public Task StopStreamAsync()
+    return:
+      type: System.Threading.Tasks.Task
+      description: Awaitable task.
+    content.vb: Public Function StopStreamAsync() As Task
+  overload: mosaic_libary.Delsys.StopStreamAsync*
+- uid: mosaic_libary.Delsys.ResetPipeline
+  commentId: M:mosaic_libary.Delsys.ResetPipeline
+  id: ResetPipeline
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ResetPipeline()
+  nameWithType: Delsys.ResetPipeline()
+  fullName: mosaic_libary.Delsys.ResetPipeline()
+  type: Method
+  source:
+    id: ResetPipeline
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 510
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Resets the pipeline and removes all components.
+  example: []
+  syntax:
+    content: public Task ResetPipeline()
+    return:
+      type: System.Threading.Tasks.Task
+      description: Awaitable task.
+    content.vb: Public Function ResetPipeline() As Task
+  overload: mosaic_libary.Delsys.ResetPipeline*
+- uid: mosaic_libary.Delsys.ExportData
+  commentId: M:mosaic_libary.Delsys.ExportData
+  id: ExportData
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ExportData()
+  nameWithType: Delsys.ExportData()
+  fullName: mosaic_libary.Delsys.ExportData()
+  type: Method
+  source:
+    id: ExportData
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 533
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Exports the data collected from the sensors to a CSV file.
+  example: []
+  syntax:
+    content: public void ExportData()
+    content.vb: Public Sub ExportData()
+  overload: mosaic_libary.Delsys.ExportData*
+- uid: mosaic_libary.Delsys.ResetUI
+  commentId: M:mosaic_libary.Delsys.ResetUI
+  id: ResetUI
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ResetUI()
+  nameWithType: Delsys.ResetUI()
+  fullName: mosaic_libary.Delsys.ResetUI()
+  type: Method
+  source:
+    id: ResetUI
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 614
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Helper method to reset the UI after a reset button was pressed and the pipeline was reset.
+  example: []
+  syntax:
+    content: private void ResetUI()
+    content.vb: Private Sub ResetUI()
+  overload: mosaic_libary.Delsys.ResetUI*
+- uid: mosaic_libary.Delsys.ComponentAdded(System.Object,DelsysAPI.Events.ComponentAddedEventArgs)
+  commentId: M:mosaic_libary.Delsys.ComponentAdded(System.Object,DelsysAPI.Events.ComponentAddedEventArgs)
+  id: ComponentAdded(System.Object,DelsysAPI.Events.ComponentAddedEventArgs)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ComponentAdded(object, ComponentAddedEventArgs)
+  nameWithType: Delsys.ComponentAdded(object, ComponentAddedEventArgs)
+  fullName: mosaic_libary.Delsys.ComponentAdded(object, DelsysAPI.Events.ComponentAddedEventArgs)
+  type: Method
+  source:
+    id: ComponentAdded
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 630
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void ComponentAdded(object sender, ComponentAddedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.ComponentAddedEventArgs
+    content.vb: Public Sub ComponentAdded(sender As Object, e As ComponentAddedEventArgs)
+  overload: mosaic_libary.Delsys.ComponentAdded*
+  nameWithType.vb: Delsys.ComponentAdded(Object, ComponentAddedEventArgs)
+  fullName.vb: mosaic_libary.Delsys.ComponentAdded(Object, DelsysAPI.Events.ComponentAddedEventArgs)
+  name.vb: ComponentAdded(Object, ComponentAddedEventArgs)
+- uid: mosaic_libary.Delsys.ComponentLost(System.Object,DelsysAPI.Events.ComponentLostEventArgs)
+  commentId: M:mosaic_libary.Delsys.ComponentLost(System.Object,DelsysAPI.Events.ComponentLostEventArgs)
+  id: ComponentLost(System.Object,DelsysAPI.Events.ComponentLostEventArgs)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ComponentLost(object, ComponentLostEventArgs)
+  nameWithType: Delsys.ComponentLost(object, ComponentLostEventArgs)
+  fullName: mosaic_libary.Delsys.ComponentLost(object, DelsysAPI.Events.ComponentLostEventArgs)
+  type: Method
+  source:
+    id: ComponentLost
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 635
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void ComponentLost(object sender, ComponentLostEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.ComponentLostEventArgs
+    content.vb: Public Sub ComponentLost(sender As Object, e As ComponentLostEventArgs)
+  overload: mosaic_libary.Delsys.ComponentLost*
+  nameWithType.vb: Delsys.ComponentLost(Object, ComponentLostEventArgs)
+  fullName.vb: mosaic_libary.Delsys.ComponentLost(Object, DelsysAPI.Events.ComponentLostEventArgs)
+  name.vb: ComponentLost(Object, ComponentLostEventArgs)
+- uid: mosaic_libary.Delsys.ComponentRemoved(System.Object,DelsysAPI.Events.ComponentRemovedEventArgs)
+  commentId: M:mosaic_libary.Delsys.ComponentRemoved(System.Object,DelsysAPI.Events.ComponentRemovedEventArgs)
+  id: ComponentRemoved(System.Object,DelsysAPI.Events.ComponentRemovedEventArgs)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ComponentRemoved(object, ComponentRemovedEventArgs)
+  nameWithType: Delsys.ComponentRemoved(object, ComponentRemovedEventArgs)
+  fullName: mosaic_libary.Delsys.ComponentRemoved(object, DelsysAPI.Events.ComponentRemovedEventArgs)
+  type: Method
+  source:
+    id: ComponentRemoved
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 640
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void ComponentRemoved(object sender, ComponentRemovedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.ComponentRemovedEventArgs
+    content.vb: Public Sub ComponentRemoved(sender As Object, e As ComponentRemovedEventArgs)
+  overload: mosaic_libary.Delsys.ComponentRemoved*
+  nameWithType.vb: Delsys.ComponentRemoved(Object, ComponentRemovedEventArgs)
+  fullName.vb: mosaic_libary.Delsys.ComponentRemoved(Object, DelsysAPI.Events.ComponentRemovedEventArgs)
+  name.vb: ComponentRemoved(Object, ComponentRemovedEventArgs)
+- uid: mosaic_libary.Delsys.ComponentScanComplete(System.Object,DelsysAPI.Events.ComponentScanCompletedEventArgs)
+  commentId: M:mosaic_libary.Delsys.ComponentScanComplete(System.Object,DelsysAPI.Events.ComponentScanCompletedEventArgs)
+  id: ComponentScanComplete(System.Object,DelsysAPI.Events.ComponentScanCompletedEventArgs)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: ComponentScanComplete(object, ComponentScanCompletedEventArgs)
+  nameWithType: Delsys.ComponentScanComplete(object, ComponentScanCompletedEventArgs)
+  fullName: mosaic_libary.Delsys.ComponentScanComplete(object, DelsysAPI.Events.ComponentScanCompletedEventArgs)
+  type: Method
+  source:
+    id: ComponentScanComplete
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 645
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void ComponentScanComplete(object sender, ComponentScanCompletedEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.ComponentScanCompletedEventArgs
+    content.vb: Public Sub ComponentScanComplete(sender As Object, e As ComponentScanCompletedEventArgs)
+  overload: mosaic_libary.Delsys.ComponentScanComplete*
+  nameWithType.vb: Delsys.ComponentScanComplete(Object, ComponentScanCompletedEventArgs)
+  fullName.vb: mosaic_libary.Delsys.ComponentScanComplete(Object, DelsysAPI.Events.ComponentScanCompletedEventArgs)
+  name.vb: ComponentScanComplete(Object, ComponentScanCompletedEventArgs)
+- uid: mosaic_libary.Delsys.CollectionStarted(System.Object,DelsysAPI.Events.CollectionStartedEvent)
+  commentId: M:mosaic_libary.Delsys.CollectionStarted(System.Object,DelsysAPI.Events.CollectionStartedEvent)
+  id: CollectionStarted(System.Object,DelsysAPI.Events.CollectionStartedEvent)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: CollectionStarted(object, CollectionStartedEvent)
+  nameWithType: Delsys.CollectionStarted(object, CollectionStartedEvent)
+  fullName: mosaic_libary.Delsys.CollectionStarted(object, DelsysAPI.Events.CollectionStartedEvent)
+  type: Method
+  source:
+    id: CollectionStarted
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 677
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void CollectionStarted(object sender, CollectionStartedEvent e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.CollectionStartedEvent
+    content.vb: Public Sub CollectionStarted(sender As Object, e As CollectionStartedEvent)
+  overload: mosaic_libary.Delsys.CollectionStarted*
+  nameWithType.vb: Delsys.CollectionStarted(Object, CollectionStartedEvent)
+  fullName.vb: mosaic_libary.Delsys.CollectionStarted(Object, DelsysAPI.Events.CollectionStartedEvent)
+  name.vb: CollectionStarted(Object, CollectionStartedEvent)
+- uid: mosaic_libary.Delsys.CollectionDataReady(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  commentId: M:mosaic_libary.Delsys.CollectionDataReady(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  id: CollectionDataReady(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: CollectionDataReady(object, ComponentDataReadyEventArgs)
+  nameWithType: Delsys.CollectionDataReady(object, ComponentDataReadyEventArgs)
+  fullName: mosaic_libary.Delsys.CollectionDataReady(object, DelsysAPI.Events.ComponentDataReadyEventArgs)
+  type: Method
+  source:
+    id: CollectionDataReady
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 733
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void CollectionDataReady(object sender, ComponentDataReadyEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.ComponentDataReadyEventArgs
+    content.vb: Public Sub CollectionDataReady(sender As Object, e As ComponentDataReadyEventArgs)
+  overload: mosaic_libary.Delsys.CollectionDataReady*
+  nameWithType.vb: Delsys.CollectionDataReady(Object, ComponentDataReadyEventArgs)
+  fullName.vb: mosaic_libary.Delsys.CollectionDataReady(Object, DelsysAPI.Events.ComponentDataReadyEventArgs)
+  name.vb: CollectionDataReady(Object, ComponentDataReadyEventArgs)
+- uid: mosaic_libary.Delsys.CollectionComplete(System.Object,DelsysAPI.Events.CollectionCompleteEvent)
+  commentId: M:mosaic_libary.Delsys.CollectionComplete(System.Object,DelsysAPI.Events.CollectionCompleteEvent)
+  id: CollectionComplete(System.Object,DelsysAPI.Events.CollectionCompleteEvent)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: CollectionComplete(object, CollectionCompleteEvent)
+  nameWithType: Delsys.CollectionComplete(object, CollectionCompleteEvent)
+  fullName: mosaic_libary.Delsys.CollectionComplete(object, DelsysAPI.Events.CollectionCompleteEvent)
+  type: Method
+  source:
+    id: CollectionComplete
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 791
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void CollectionComplete(object sender, CollectionCompleteEvent e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.CollectionCompleteEvent
+    content.vb: Public Sub CollectionComplete(sender As Object, e As CollectionCompleteEvent)
+  overload: mosaic_libary.Delsys.CollectionComplete*
+  nameWithType.vb: Delsys.CollectionComplete(Object, CollectionCompleteEvent)
+  fullName.vb: mosaic_libary.Delsys.CollectionComplete(Object, DelsysAPI.Events.CollectionCompleteEvent)
+  name.vb: CollectionComplete(Object, CollectionCompleteEvent)
+- uid: mosaic_libary.Delsys.CollectionDataReady_emg_only(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  commentId: M:mosaic_libary.Delsys.CollectionDataReady_emg_only(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  id: CollectionDataReady_emg_only(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: CollectionDataReady_emg_only(object, ComponentDataReadyEventArgs)
+  nameWithType: Delsys.CollectionDataReady_emg_only(object, ComponentDataReadyEventArgs)
+  fullName: mosaic_libary.Delsys.CollectionDataReady_emg_only(object, DelsysAPI.Events.ComponentDataReadyEventArgs)
+  type: Method
+  source:
+    id: CollectionDataReady_emg_only
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 803
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: This is the main entry point for data collection.
+  example: []
+  syntax:
+    content: public void CollectionDataReady_emg_only(object sender, ComponentDataReadyEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+      description: ''
+    - id: e
+      type: DelsysAPI.Events.ComponentDataReadyEventArgs
+      description: ''
+    content.vb: Public Sub CollectionDataReady_emg_only(sender As Object, e As ComponentDataReadyEventArgs)
+  overload: mosaic_libary.Delsys.CollectionDataReady_emg_only*
+  nameWithType.vb: Delsys.CollectionDataReady_emg_only(Object, ComponentDataReadyEventArgs)
+  fullName.vb: mosaic_libary.Delsys.CollectionDataReady_emg_only(Object, DelsysAPI.Events.ComponentDataReadyEventArgs)
+  name.vb: CollectionDataReady_emg_only(Object, ComponentDataReadyEventArgs)
+- uid: mosaic_libary.Delsys.CollectionDataReady_emg_only_old(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  commentId: M:mosaic_libary.Delsys.CollectionDataReady_emg_only_old(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  id: CollectionDataReady_emg_only_old(System.Object,DelsysAPI.Events.ComponentDataReadyEventArgs)
+  parent: mosaic_libary.Delsys
+  langs:
+  - csharp
+  - vb
+  name: CollectionDataReady_emg_only_old(object, ComponentDataReadyEventArgs)
+  nameWithType: Delsys.CollectionDataReady_emg_only_old(object, ComponentDataReadyEventArgs)
+  fullName: mosaic_libary.Delsys.CollectionDataReady_emg_only_old(object, DelsysAPI.Events.ComponentDataReadyEventArgs)
+  type: Method
+  source:
+    id: CollectionDataReady_emg_only_old
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\Delsys\Delsys.cs
+    startLine: 861
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public void CollectionDataReady_emg_only_old(object sender, ComponentDataReadyEventArgs e)
+    parameters:
+    - id: sender
+      type: System.Object
+    - id: e
+      type: DelsysAPI.Events.ComponentDataReadyEventArgs
+    content.vb: Public Sub CollectionDataReady_emg_only_old(sender As Object, e As ComponentDataReadyEventArgs)
+  overload: mosaic_libary.Delsys.CollectionDataReady_emg_only_old*
+  nameWithType.vb: Delsys.CollectionDataReady_emg_only_old(Object, ComponentDataReadyEventArgs)
+  fullName.vb: mosaic_libary.Delsys.CollectionDataReady_emg_only_old(Object, DelsysAPI.Events.ComponentDataReadyEventArgs)
+  name.vb: CollectionDataReady_emg_only_old(Object, ComponentDataReadyEventArgs)
+references:
+- uid: mosaic_libary.Delsys._key
+  commentId: F:mosaic_libary.Delsys._key
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys__key
+  name: _key
+  nameWithType: Delsys._key
+  fullName: mosaic_libary.Delsys._key
+- uid: mosaic_libary.Delsys._license
+  commentId: F:mosaic_libary.Delsys._license
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys__license
+  name: _license
+  nameWithType: Delsys._license
+  fullName: mosaic_libary.Delsys._license
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: mosaic_libary.Block
+  commentId: T:mosaic_libary.Block
+  parent: mosaic_libary
+  href: mosaic_libary.Block.html
+  name: Block
+  nameWithType: Block
+  fullName: mosaic_libary.Block
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.idisposable
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: mosaic_libary.Block.Name
+  commentId: P:mosaic_libary.Block.Name
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Name
+  name: Name
+  nameWithType: Block.Name
+  fullName: mosaic_libary.Block.Name
+- uid: mosaic_libary.Block.DesiredRate
+  commentId: P:mosaic_libary.Block.DesiredRate
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_DesiredRate
+  name: DesiredRate
+  nameWithType: Block.DesiredRate
+  fullName: mosaic_libary.Block.DesiredRate
+- uid: mosaic_libary.Block.Rate
+  commentId: P:mosaic_libary.Block.Rate
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Rate
+  name: Rate
+  nameWithType: Block.Rate
+  fullName: mosaic_libary.Block.Rate
+- uid: mosaic_libary.Block.IsLagging
+  commentId: P:mosaic_libary.Block.IsLagging
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsLagging
+  name: IsLagging
+  nameWithType: Block.IsLagging
+  fullName: mosaic_libary.Block.IsLagging
+- uid: mosaic_libary.Block.IsIdle
+  commentId: P:mosaic_libary.Block.IsIdle
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsIdle
+  name: IsIdle
+  nameWithType: Block.IsIdle
+  fullName: mosaic_libary.Block.IsIdle
+- uid: mosaic_libary.Block.IsStumbling
+  commentId: F:mosaic_libary.Block.IsStumbling
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsStumbling
+  name: IsStumbling
+  nameWithType: Block.IsStumbling
+  fullName: mosaic_libary.Block.IsStumbling
+- uid: mosaic_libary.Block.InputCfg
+  commentId: P:mosaic_libary.Block.InputCfg
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_InputCfg
+  name: InputCfg
+  nameWithType: Block.InputCfg
+  fullName: mosaic_libary.Block.InputCfg
+- uid: mosaic_libary.Block.Params
+  commentId: F:mosaic_libary.Block.Params
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Params
+  name: Params
+  nameWithType: Block.Params
+  fullName: mosaic_libary.Block.Params
+- uid: mosaic_libary.Block.InputBlocks
+  commentId: F:mosaic_libary.Block.InputBlocks
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_InputBlocks
+  name: InputBlocks
+  nameWithType: Block.InputBlocks
+  fullName: mosaic_libary.Block.InputBlocks
+- uid: mosaic_libary.Block.Ticks
+  commentId: F:mosaic_libary.Block.Ticks
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Ticks
+  name: Ticks
+  nameWithType: Block.Ticks
+  fullName: mosaic_libary.Block.Ticks
+- uid: mosaic_libary.Block._dump
+  commentId: F:mosaic_libary.Block._dump
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__dump
+  name: _dump
+  nameWithType: Block._dump
+  fullName: mosaic_libary.Block._dump
+- uid: mosaic_libary.Block._stumblingLock
+  commentId: F:mosaic_libary.Block._stumblingLock
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__stumblingLock
+  name: _stumblingLock
+  nameWithType: Block._stumblingLock
+  fullName: mosaic_libary.Block._stumblingLock
+- uid: mosaic_libary.Block._onNewInputLock
+  commentId: F:mosaic_libary.Block._onNewInputLock
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block__onNewInputLock
+  name: _onNewInputLock
+  nameWithType: Block._onNewInputLock
+  fullName: mosaic_libary.Block._onNewInputLock
+- uid: mosaic_libary.Block.Data
+  commentId: F:mosaic_libary.Block.Data
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Data
+  name: Data
+  nameWithType: Block.Data
+  fullName: mosaic_libary.Block.Data
+- uid: mosaic_libary.Block.cp
+  commentId: F:mosaic_libary.Block.cp
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_cp
+  name: cp
+  nameWithType: Block.cp
+  fullName: mosaic_libary.Block.cp
+- uid: mosaic_libary.Block.Dispose
+  commentId: M:mosaic_libary.Block.Dispose
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  name: Dispose()
+  nameWithType: Block.Dispose()
+  fullName: mosaic_libary.Block.Dispose()
+  spec.csharp:
+  - uid: mosaic_libary.Block.Dispose
+    name: Dispose
+    href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.Dispose
+    name: Dispose
+    href: mosaic_libary.Block.html#mosaic_libary_Block_Dispose
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  name: SubscribeTo(Block)
+  nameWithType: Block.SubscribeTo(Block)
+  fullName: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+    name: SubscribeTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.SubscribeTo(mosaic_libary.Block)
+    name: SubscribeTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SubscribeTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  name: UnsubscribeFrom(Block)
+  nameWithType: Block.UnsubscribeFrom(Block)
+  fullName: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+    name: UnsubscribeFrom
+    href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.UnsubscribeFrom(mosaic_libary.Block)
+    name: UnsubscribeFrom
+    href: mosaic_libary.Block.html#mosaic_libary_Block_UnsubscribeFrom_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  name: HasInput(Block)
+  nameWithType: Block.HasInput(Block)
+  fullName: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+    name: HasInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.HasInput(mosaic_libary.Block)
+    name: HasInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_HasInput_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  commentId: M:mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  name: IsSubscribedTo(Block)
+  nameWithType: Block.IsSubscribedTo(Block)
+  fullName: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+  spec.csharp:
+  - uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+    name: IsSubscribedTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.IsSubscribedTo(mosaic_libary.Block)
+    name: IsSubscribedTo
+    href: mosaic_libary.Block.html#mosaic_libary_Block_IsSubscribedTo_mosaic_libary_Block_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: )
+- uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  commentId: M:mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  name: SendOutput(object, bool)
+  nameWithType: Block.SendOutput(object, bool)
+  fullName: mosaic_libary.Block.SendOutput(object, bool)
+  nameWithType.vb: Block.SendOutput(Object, Boolean)
+  fullName.vb: mosaic_libary.Block.SendOutput(Object, Boolean)
+  name.vb: SendOutput(Object, Boolean)
+  spec.csharp:
+  - uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+    name: SendOutput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.SendOutput(System.Object,System.Boolean)
+    name: SendOutput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_SendOutput_System_Object_System_Boolean_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: mosaic_libary.Block.Output
+  commentId: E:mosaic_libary.Block.Output
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_Output
+  name: Output
+  nameWithType: Block.Output
+  fullName: mosaic_libary.Block.Output
+- uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  name: OnNewInputLocked(Block, object)
+  nameWithType: Block.OnNewInputLocked(Block, object)
+  fullName: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, object)
+  nameWithType.vb: Block.OnNewInputLocked(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block, Object)
+  name.vb: OnNewInputLocked(Block, Object)
+  spec.csharp:
+  - uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+    name: OnNewInputLocked
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.OnNewInputLocked(mosaic_libary.Block,System.Object)
+    name: OnNewInputLocked
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInputLocked_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: mosaic_libary.Block.ShowHideCp
+  commentId: M:mosaic_libary.Block.ShowHideCp
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  name: ShowHideCp()
+  nameWithType: Block.ShowHideCp()
+  fullName: mosaic_libary.Block.ShowHideCp()
+  spec.csharp:
+  - uid: mosaic_libary.Block.ShowHideCp
+    name: ShowHideCp
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.ShowHideCp
+    name: ShowHideCp
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ShowHideCp
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.MouseLeftClick
+  commentId: M:mosaic_libary.Block.MouseLeftClick
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  name: MouseLeftClick()
+  nameWithType: Block.MouseLeftClick()
+  fullName: mosaic_libary.Block.MouseLeftClick()
+  spec.csharp:
+  - uid: mosaic_libary.Block.MouseLeftClick
+    name: MouseLeftClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.MouseLeftClick
+    name: MouseLeftClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseLeftClick
+  - name: (
+  - name: )
+- uid: mosaic_libary.Block.MouseRightClick
+  commentId: M:mosaic_libary.Block.MouseRightClick
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  name: MouseRightClick()
+  nameWithType: Block.MouseRightClick()
+  fullName: mosaic_libary.Block.MouseRightClick()
+  spec.csharp:
+  - uid: mosaic_libary.Block.MouseRightClick
+    name: MouseRightClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.MouseRightClick
+    name: MouseRightClick
+    href: mosaic_libary.Block.html#mosaic_libary_Block_MouseRightClick
+  - name: (
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: DelsysAPI.DelsysDevices.IDelsysDevice
+  commentId: T:DelsysAPI.DelsysDevices.IDelsysDevice
+  parent: DelsysAPI.DelsysDevices
+  isExternal: true
+  name: IDelsysDevice
+  nameWithType: IDelsysDevice
+  fullName: DelsysAPI.DelsysDevices.IDelsysDevice
+- uid: DelsysAPI.DelsysDevices
+  commentId: N:DelsysAPI.DelsysDevices
+  isExternal: true
+  name: DelsysAPI.DelsysDevices
+  nameWithType: DelsysAPI.DelsysDevices
+  fullName: DelsysAPI.DelsysDevices
+  spec.csharp:
+  - uid: DelsysAPI
+    name: DelsysAPI
+    isExternal: true
+  - name: .
+  - uid: DelsysAPI.DelsysDevices
+    name: DelsysDevices
+    isExternal: true
+  spec.vb:
+  - uid: DelsysAPI
+    name: DelsysAPI
+    isExternal: true
+  - name: .
+  - uid: DelsysAPI.DelsysDevices
+    name: DelsysDevices
+    isExternal: true
+- uid: System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.List{System.Double}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<List<double>>
+  nameWithType: List<List<double>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.List<double>>
+  nameWithType.vb: List(Of List(Of Double))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.List(Of Double))
+  name.vb: List(Of List(Of Double))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector{System.Double}
+  parent: MathNet.Numerics.LinearAlgebra
+  definition: MathNet.Numerics.LinearAlgebra.Vector`1
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>
+  nameWithType: Vector<double>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>
+  nameWithType.vb: Vector(Of Double)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)
+  name.vb: Vector(Of Double)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra.Vector`1
+  commentId: T:MathNet.Numerics.LinearAlgebra.Vector`1
+  isExternal: true
+  name: Vector<T>
+  nameWithType: Vector<T>
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<T>
+  nameWithType.vb: Vector(Of T)
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of T)
+  name.vb: Vector(Of T)
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: MathNet.Numerics.LinearAlgebra
+  commentId: N:MathNet.Numerics.LinearAlgebra
+  isExternal: true
+  name: MathNet.Numerics.LinearAlgebra
+  nameWithType: MathNet.Numerics.LinearAlgebra
+  fullName: MathNet.Numerics.LinearAlgebra
+  spec.csharp:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+  spec.vb:
+  - uid: MathNet
+    name: MathNet
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics
+    name: Numerics
+    isExternal: true
+  - name: .
+  - uid: MathNet.Numerics.LinearAlgebra
+    name: LinearAlgebra
+    isExternal: true
+- uid: MathNet.Numerics.LinearAlgebra.Vector{System.Double}[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: Vector<double>[]
+  nameWithType: Vector<double>[]
+  fullName: MathNet.Numerics.LinearAlgebra.Vector<double>[]
+  nameWithType.vb: Vector(Of Double)()
+  fullName.vb: MathNet.Numerics.LinearAlgebra.Vector(Of Double)()
+  name.vb: Vector(Of Double)()
+  spec.csharp:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: MathNet.Numerics.LinearAlgebra.Vector`1
+    name: Vector
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: (
+  - name: )
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: DelsysAPI.Pipelines.Pipeline
+  commentId: T:DelsysAPI.Pipelines.Pipeline
+  parent: DelsysAPI.Pipelines
+  isExternal: true
+  name: Pipeline
+  nameWithType: Pipeline
+  fullName: DelsysAPI.Pipelines.Pipeline
+- uid: DelsysAPI.Pipelines
+  commentId: N:DelsysAPI.Pipelines
+  isExternal: true
+  name: DelsysAPI.Pipelines
+  nameWithType: DelsysAPI.Pipelines
+  fullName: DelsysAPI.Pipelines
+  spec.csharp:
+  - uid: DelsysAPI
+    name: DelsysAPI
+    isExternal: true
+  - name: .
+  - uid: DelsysAPI.Pipelines
+    name: Pipelines
+    isExternal: true
+  spec.vb:
+  - uid: DelsysAPI
+    name: DelsysAPI
+    isExternal: true
+  - name: .
+  - uid: DelsysAPI.Pipelines
+    name: Pipelines
+    isExternal: true
+- uid: System.Collections.Generic.List{DelsysAPI.Components.TrignoRf.SensorTrignoRf}
+  commentId: T:System.Collections.Generic.List{DelsysAPI.Components.TrignoRf.SensorTrignoRf}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<SensorTrignoRf>
+  nameWithType: List<SensorTrignoRf>
+  fullName: System.Collections.Generic.List<DelsysAPI.Components.TrignoRf.SensorTrignoRf>
+  nameWithType.vb: List(Of SensorTrignoRf)
+  fullName.vb: System.Collections.Generic.List(Of DelsysAPI.Components.TrignoRf.SensorTrignoRf)
+  name.vb: List(Of SensorTrignoRf)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: DelsysAPI.Components.TrignoRf.SensorTrignoRf
+    name: SensorTrignoRf
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: DelsysAPI.Components.TrignoRf.SensorTrignoRf
+    name: SensorTrignoRf
+    isExternal: true
+  - name: )
+- uid: mosaic_libary.StreamInfo
+  commentId: T:mosaic_libary.StreamInfo
+  parent: mosaic_libary
+  href: mosaic_libary.StreamInfo.html
+  name: StreamInfo
+  nameWithType: StreamInfo
+  fullName: mosaic_libary.StreamInfo
+- uid: System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.Double}}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Collections.Generic.List{System.Double}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, List<double>>
+  nameWithType: Dictionary<string, List<double>>
+  fullName: System.Collections.Generic.Dictionary<string, System.Collections.Generic.List<double>>
+  nameWithType.vb: Dictionary(Of String, List(Of Double))
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, System.Collections.Generic.List(Of Double))
+  name.vb: Dictionary(Of String, List(Of Double))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TKey
+  - name: ','
+  - name: " "
+  - name: TValue
+  - name: )
+- uid: System.Collections.Generic.Dictionary{System.String,System.Int32}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  name: Dictionary<string, int>
+  nameWithType: Dictionary<string, int>
+  fullName: System.Collections.Generic.Dictionary<string, int>
+  nameWithType.vb: Dictionary(Of String, Integer)
+  fullName.vb: System.Collections.Generic.Dictionary(Of String, Integer)
+  name.vb: Dictionary(Of String, Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.dictionary-2
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: mosaic_libary.Delsys
+  commentId: T:mosaic_libary.Delsys
+  parent: mosaic_libary
+  href: mosaic_libary.Delsys.html
+  name: Delsys
+  nameWithType: Delsys
+  fullName: mosaic_libary.Delsys
+- uid: mosaic_libary.Delsys.#ctor*
+  commentId: Overload:mosaic_libary.Delsys.#ctor
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys__ctor_System_String_System_Double_System_Collections_Generic_List_System_String__System_Collections_Generic_List_System_String__System_String_
+  name: Delsys
+  nameWithType: Delsys.Delsys
+  fullName: mosaic_libary.Delsys.Delsys
+  nameWithType.vb: Delsys.New
+  fullName.vb: mosaic_libary.Delsys.New
+  name.vb: New
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: mosaic_libary.Block.ConfigureInputs
+  commentId: M:mosaic_libary.Block.ConfigureInputs
+  parent: mosaic_libary.Block
+  href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  name: ConfigureInputs()
+  nameWithType: Block.ConfigureInputs()
+  fullName: mosaic_libary.Block.ConfigureInputs()
+  spec.csharp:
+  - uid: mosaic_libary.Block.ConfigureInputs
+    name: ConfigureInputs
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.ConfigureInputs
+    name: ConfigureInputs
+    href: mosaic_libary.Block.html#mosaic_libary_Block_ConfigureInputs
+  - name: (
+  - name: )
+- uid: mosaic_libary.Delsys.ConfigureInputs*
+  commentId: Overload:mosaic_libary.Delsys.ConfigureInputs
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ConfigureInputs
+  name: ConfigureInputs
+  nameWithType: Delsys.ConfigureInputs
+  fullName: mosaic_libary.Delsys.ConfigureInputs
+- uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  commentId: M:mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+  parent: mosaic_libary.Block
+  isExternal: true
+  href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  name: OnNewInput(Block, object)
+  nameWithType: Block.OnNewInput(Block, object)
+  fullName: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, object)
+  nameWithType.vb: Block.OnNewInput(Block, Object)
+  fullName.vb: mosaic_libary.Block.OnNewInput(mosaic_libary.Block, Object)
+  name.vb: OnNewInput(Block, Object)
+  spec.csharp:
+  - uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+    name: OnNewInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: mosaic_libary.Block.OnNewInput(mosaic_libary.Block,System.Object)
+    name: OnNewInput
+    href: mosaic_libary.Block.html#mosaic_libary_Block_OnNewInput_mosaic_libary_Block_System_Object_
+  - name: (
+  - uid: mosaic_libary.Block
+    name: Block
+    href: mosaic_libary.Block.html
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: mosaic_libary.Delsys.OnNewInput*
+  commentId: Overload:mosaic_libary.Delsys.OnNewInput
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_OnNewInput_mosaic_libary_Block_System_Object_
+  name: OnNewInput
+  nameWithType: Delsys.OnNewInput
+  fullName: mosaic_libary.Delsys.OnNewInput
+- uid: mosaic_libary.Delsys.InitalizeDataScouce*
+  commentId: Overload:mosaic_libary.Delsys.InitalizeDataScouce
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_InitalizeDataScouce
+  name: InitalizeDataScouce
+  nameWithType: Delsys.InitalizeDataScouce
+  fullName: mosaic_libary.Delsys.InitalizeDataScouce
+- uid: mosaic_libary.Delsys.LoadDataSource*
+  commentId: Overload:mosaic_libary.Delsys.LoadDataSource
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_LoadDataSource
+  name: LoadDataSource
+  nameWithType: Delsys.LoadDataSource
+  fullName: mosaic_libary.Delsys.LoadDataSource
+- uid: mosaic_libary.Delsys.ConfigurePipeline*
+  commentId: Overload:mosaic_libary.Delsys.ConfigurePipeline
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ConfigurePipeline
+  name: ConfigurePipeline
+  nameWithType: Delsys.ConfigurePipeline
+  fullName: mosaic_libary.Delsys.ConfigurePipeline
+- uid: mosaic_libary.Delsys.Scan*
+  commentId: Overload:mosaic_libary.Delsys.Scan
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_Scan
+  name: Scan
+  nameWithType: Delsys.Scan
+  fullName: mosaic_libary.Delsys.Scan
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: mosaic_libary.Delsys.StopStreamAsync*
+  commentId: Overload:mosaic_libary.Delsys.StopStreamAsync
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_StopStreamAsync
+  name: StopStreamAsync
+  nameWithType: Delsys.StopStreamAsync
+  fullName: mosaic_libary.Delsys.StopStreamAsync
+- uid: mosaic_libary.Delsys.ResetPipeline*
+  commentId: Overload:mosaic_libary.Delsys.ResetPipeline
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ResetPipeline
+  name: ResetPipeline
+  nameWithType: Delsys.ResetPipeline
+  fullName: mosaic_libary.Delsys.ResetPipeline
+- uid: mosaic_libary.Delsys.ExportData*
+  commentId: Overload:mosaic_libary.Delsys.ExportData
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ExportData
+  name: ExportData
+  nameWithType: Delsys.ExportData
+  fullName: mosaic_libary.Delsys.ExportData
+- uid: mosaic_libary.Delsys.ResetUI*
+  commentId: Overload:mosaic_libary.Delsys.ResetUI
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ResetUI
+  name: ResetUI
+  nameWithType: Delsys.ResetUI
+  fullName: mosaic_libary.Delsys.ResetUI
+- uid: mosaic_libary.Delsys.ComponentAdded*
+  commentId: Overload:mosaic_libary.Delsys.ComponentAdded
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ComponentAdded_System_Object_DelsysAPI_Events_ComponentAddedEventArgs_
+  name: ComponentAdded
+  nameWithType: Delsys.ComponentAdded
+  fullName: mosaic_libary.Delsys.ComponentAdded
+- uid: DelsysAPI.Events.ComponentAddedEventArgs
+  commentId: T:DelsysAPI.Events.ComponentAddedEventArgs
+  parent: DelsysAPI.Events
+  isExternal: true
+  name: ComponentAddedEventArgs
+  nameWithType: ComponentAddedEventArgs
+  fullName: DelsysAPI.Events.ComponentAddedEventArgs
+- uid: DelsysAPI.Events
+  commentId: N:DelsysAPI.Events
+  isExternal: true
+  name: DelsysAPI.Events
+  nameWithType: DelsysAPI.Events
+  fullName: DelsysAPI.Events
+  spec.csharp:
+  - uid: DelsysAPI
+    name: DelsysAPI
+    isExternal: true
+  - name: .
+  - uid: DelsysAPI.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: DelsysAPI
+    name: DelsysAPI
+    isExternal: true
+  - name: .
+  - uid: DelsysAPI.Events
+    name: Events
+    isExternal: true
+- uid: mosaic_libary.Delsys.ComponentLost*
+  commentId: Overload:mosaic_libary.Delsys.ComponentLost
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ComponentLost_System_Object_DelsysAPI_Events_ComponentLostEventArgs_
+  name: ComponentLost
+  nameWithType: Delsys.ComponentLost
+  fullName: mosaic_libary.Delsys.ComponentLost
+- uid: DelsysAPI.Events.ComponentLostEventArgs
+  commentId: T:DelsysAPI.Events.ComponentLostEventArgs
+  parent: DelsysAPI.Events
+  isExternal: true
+  name: ComponentLostEventArgs
+  nameWithType: ComponentLostEventArgs
+  fullName: DelsysAPI.Events.ComponentLostEventArgs
+- uid: mosaic_libary.Delsys.ComponentRemoved*
+  commentId: Overload:mosaic_libary.Delsys.ComponentRemoved
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ComponentRemoved_System_Object_DelsysAPI_Events_ComponentRemovedEventArgs_
+  name: ComponentRemoved
+  nameWithType: Delsys.ComponentRemoved
+  fullName: mosaic_libary.Delsys.ComponentRemoved
+- uid: DelsysAPI.Events.ComponentRemovedEventArgs
+  commentId: T:DelsysAPI.Events.ComponentRemovedEventArgs
+  parent: DelsysAPI.Events
+  isExternal: true
+  name: ComponentRemovedEventArgs
+  nameWithType: ComponentRemovedEventArgs
+  fullName: DelsysAPI.Events.ComponentRemovedEventArgs
+- uid: mosaic_libary.Delsys.ComponentScanComplete*
+  commentId: Overload:mosaic_libary.Delsys.ComponentScanComplete
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_ComponentScanComplete_System_Object_DelsysAPI_Events_ComponentScanCompletedEventArgs_
+  name: ComponentScanComplete
+  nameWithType: Delsys.ComponentScanComplete
+  fullName: mosaic_libary.Delsys.ComponentScanComplete
+- uid: DelsysAPI.Events.ComponentScanCompletedEventArgs
+  commentId: T:DelsysAPI.Events.ComponentScanCompletedEventArgs
+  parent: DelsysAPI.Events
+  isExternal: true
+  name: ComponentScanCompletedEventArgs
+  nameWithType: ComponentScanCompletedEventArgs
+  fullName: DelsysAPI.Events.ComponentScanCompletedEventArgs
+- uid: mosaic_libary.Delsys.CollectionStarted*
+  commentId: Overload:mosaic_libary.Delsys.CollectionStarted
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_CollectionStarted_System_Object_DelsysAPI_Events_CollectionStartedEvent_
+  name: CollectionStarted
+  nameWithType: Delsys.CollectionStarted
+  fullName: mosaic_libary.Delsys.CollectionStarted
+- uid: DelsysAPI.Events.CollectionStartedEvent
+  commentId: T:DelsysAPI.Events.CollectionStartedEvent
+  parent: DelsysAPI.Events
+  isExternal: true
+  name: CollectionStartedEvent
+  nameWithType: CollectionStartedEvent
+  fullName: DelsysAPI.Events.CollectionStartedEvent
+- uid: mosaic_libary.Delsys.CollectionDataReady*
+  commentId: Overload:mosaic_libary.Delsys.CollectionDataReady
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_CollectionDataReady_System_Object_DelsysAPI_Events_ComponentDataReadyEventArgs_
+  name: CollectionDataReady
+  nameWithType: Delsys.CollectionDataReady
+  fullName: mosaic_libary.Delsys.CollectionDataReady
+- uid: DelsysAPI.Events.ComponentDataReadyEventArgs
+  commentId: T:DelsysAPI.Events.ComponentDataReadyEventArgs
+  parent: DelsysAPI.Events
+  isExternal: true
+  name: ComponentDataReadyEventArgs
+  nameWithType: ComponentDataReadyEventArgs
+  fullName: DelsysAPI.Events.ComponentDataReadyEventArgs
+- uid: mosaic_libary.Delsys.CollectionComplete*
+  commentId: Overload:mosaic_libary.Delsys.CollectionComplete
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_CollectionComplete_System_Object_DelsysAPI_Events_CollectionCompleteEvent_
+  name: CollectionComplete
+  nameWithType: Delsys.CollectionComplete
+  fullName: mosaic_libary.Delsys.CollectionComplete
+- uid: DelsysAPI.Events.CollectionCompleteEvent
+  commentId: T:DelsysAPI.Events.CollectionCompleteEvent
+  parent: DelsysAPI.Events
+  isExternal: true
+  name: CollectionCompleteEvent
+  nameWithType: CollectionCompleteEvent
+  fullName: DelsysAPI.Events.CollectionCompleteEvent
+- uid: mosaic_libary.Delsys.CollectionDataReady_emg_only*
+  commentId: Overload:mosaic_libary.Delsys.CollectionDataReady_emg_only
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_CollectionDataReady_emg_only_System_Object_DelsysAPI_Events_ComponentDataReadyEventArgs_
+  name: CollectionDataReady_emg_only
+  nameWithType: Delsys.CollectionDataReady_emg_only
+  fullName: mosaic_libary.Delsys.CollectionDataReady_emg_only
+- uid: mosaic_libary.Delsys.CollectionDataReady_emg_only_old*
+  commentId: Overload:mosaic_libary.Delsys.CollectionDataReady_emg_only_old
+  href: mosaic_libary.Delsys.html#mosaic_libary_Delsys_CollectionDataReady_emg_only_old_System_Object_DelsysAPI_Events_ComponentDataReadyEventArgs_
+  name: CollectionDataReady_emg_only_old
+  nameWithType: Delsys.CollectionDataReady_emg_only_old
+  fullName: mosaic_libary.Delsys.CollectionDataReady_emg_only_old

@@ -1,0 +1,4794 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.GraphData
+  commentId: T:mosaic_libary.GraphData
+  id: GraphData
+  parent: mosaic_libary
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: GraphData
+  nameWithType: GraphData
+  fullName: mosaic_libary.GraphData
+  type: Class
+  source:
+    id: GraphData
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Visualisation\BlockTable.xaml.cs
+    startLine: 85
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: 'public class GraphData : BidirectionalGraph<Vertex, Edge>, IEdgeListAndIncidenceGraph<Vertex, Edge>, IMutableBidirectionalGraph<Vertex, Edge>, IBidirectionalGraph<Vertex, Edge>, IBidirectionalIncidenceGraph<Vertex, Edge>, IMutableVertexAndEdgeListGraph<Vertex, Edge>, IMutableVertexListGraph<Vertex, Edge>, IMutableIncidenceGraph<Vertex, Edge>, IVertexAndEdgeListGraph<Vertex, Edge>, IVertexListGraph<Vertex, Edge>, IIncidenceGraph<Vertex, Edge>, IImplicitGraph<Vertex, Edge>, IMutableVertexAndEdgeSet<Vertex, Edge>, IMutableVertexSet<Vertex>, IMutableEdgeListGraph<Vertex, Edge>, IEdgeListGraph<Vertex, Edge>, IEdgeSet<Vertex, Edge>, IVertexSet<Vertex>, IImplicitVertexSet<Vertex>, IMutableGraph<Vertex, Edge>, IGraph<Vertex, Edge>, ICloneable'
+    content.vb: Public Class GraphData Inherits BidirectionalGraph(Of Vertex, Edge) Implements IEdgeListAndIncidenceGraph(Of Vertex, Edge), IMutableBidirectionalGraph(Of Vertex, Edge), IBidirectionalGraph(Of Vertex, Edge), IBidirectionalIncidenceGraph(Of Vertex, Edge), IMutableVertexAndEdgeListGraph(Of Vertex, Edge), IMutableVertexListGraph(Of Vertex, Edge), IMutableIncidenceGraph(Of Vertex, Edge), IVertexAndEdgeListGraph(Of Vertex, Edge), IVertexListGraph(Of Vertex, Edge), IIncidenceGraph(Of Vertex, Edge), IImplicitGraph(Of Vertex, Edge), IMutableVertexAndEdgeSet(Of Vertex, Edge), IMutableVertexSet(Of Vertex), IMutableEdgeListGraph(Of Vertex, Edge), IEdgeListGraph(Of Vertex, Edge), IEdgeSet(Of Vertex, Edge), IVertexSet(Of Vertex), IImplicitVertexSet(Of Vertex), IMutableGraph(Of Vertex, Edge), IGraph(Of Vertex, Edge), ICloneable
+  inheritance:
+  - System.Object
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  implements:
+  - QuickGraph.IEdgeListAndIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IMutableBidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IBidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IBidirectionalIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IMutableVertexAndEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IMutableVertexListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IMutableIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IVertexAndEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IVertexListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IImplicitGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IMutableVertexAndEdgeSet{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IMutableVertexSet{mosaic_libary.Vertex}
+  - QuickGraph.IMutableEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IEdgeSet{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IVertexSet{mosaic_libary.Vertex}
+  - QuickGraph.IImplicitVertexSet{mosaic_libary.Vertex}
+  - QuickGraph.IMutableGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - QuickGraph.IGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  - System.ICloneable
+  inheritedMembers:
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsVertex(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsOutEdgesEmpty(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutDegree(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdges(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetInEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetOutEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdge(mosaic_libary.Vertex,System.Int32)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsInEdgesEmpty(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InDegree(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdges(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdge(mosaic_libary.Vertex,System.Int32)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Degree(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Vertex,mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdge(mosaic_libary.Vertex,mosaic_libary.Vertex,mosaic_libary.Edge@)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdges(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Edge)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertex(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertexRange(System.Collections.Generic.IEnumerable{mosaic_libary.Vertex})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexAdded(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertex(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexRemoved(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdge(mosaic_libary.Edge)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdge(mosaic_libary.Edge)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeAdded(mosaic_libary.Edge)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdge(mosaic_libary.Edge)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeRemoved(mosaic_libary.Edge)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdgeIf(QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveOutEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveInEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearOutEdges(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearInEdges(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearEdges(mosaic_libary.Vertex)
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TrimEdgeExcess
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clear
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertex(mosaic_libary.Vertex,QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex},QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clone
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.System#ICloneable#Clone
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeType
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeCapacity
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsDirected
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AllowParallelEdges
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsVerticesEmpty
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexCount
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Vertices
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsEdgesEmpty
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeCount
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Edges
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexAdded
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexRemoved
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeAdded
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeRemoved
+  - QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Cleared
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.BidirectionalGraph`2
+  href: mosaic_libary.Vertex.html
+  name: BidirectionalGraph<Vertex, Edge>
+  nameWithType: BidirectionalGraph<Vertex, Edge>
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: BidirectionalGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IEdgeListAndIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IEdgeListAndIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IEdgeListAndIncidenceGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IEdgeListAndIncidenceGraph<Vertex, Edge>
+  nameWithType: IEdgeListAndIncidenceGraph<Vertex, Edge>
+  fullName: QuickGraph.IEdgeListAndIncidenceGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IEdgeListAndIncidenceGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IEdgeListAndIncidenceGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IEdgeListAndIncidenceGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IEdgeListAndIncidenceGraph`2
+    name: IEdgeListAndIncidenceGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdgeListAndIncidenceGraph`2
+    name: IEdgeListAndIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IMutableBidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IMutableBidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableBidirectionalGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IMutableBidirectionalGraph<Vertex, Edge>
+  nameWithType: IMutableBidirectionalGraph<Vertex, Edge>
+  fullName: QuickGraph.IMutableBidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IMutableBidirectionalGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IMutableBidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IMutableBidirectionalGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableBidirectionalGraph`2
+    name: IMutableBidirectionalGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableBidirectionalGraph`2
+    name: IMutableBidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IBidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IBidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IBidirectionalGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IBidirectionalGraph<Vertex, Edge>
+  nameWithType: IBidirectionalGraph<Vertex, Edge>
+  fullName: QuickGraph.IBidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IBidirectionalGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IBidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IBidirectionalGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IBidirectionalGraph`2
+    name: IBidirectionalGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IBidirectionalGraph`2
+    name: IBidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IBidirectionalIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IBidirectionalIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IBidirectionalIncidenceGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IBidirectionalIncidenceGraph<Vertex, Edge>
+  nameWithType: IBidirectionalIncidenceGraph<Vertex, Edge>
+  fullName: QuickGraph.IBidirectionalIncidenceGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IBidirectionalIncidenceGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IBidirectionalIncidenceGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IBidirectionalIncidenceGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IBidirectionalIncidenceGraph`2
+    name: IBidirectionalIncidenceGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IBidirectionalIncidenceGraph`2
+    name: IBidirectionalIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IMutableVertexAndEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IMutableVertexAndEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableVertexAndEdgeListGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IMutableVertexAndEdgeListGraph<Vertex, Edge>
+  nameWithType: IMutableVertexAndEdgeListGraph<Vertex, Edge>
+  fullName: QuickGraph.IMutableVertexAndEdgeListGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IMutableVertexAndEdgeListGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IMutableVertexAndEdgeListGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IMutableVertexAndEdgeListGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexAndEdgeListGraph`2
+    name: IMutableVertexAndEdgeListGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexAndEdgeListGraph`2
+    name: IMutableVertexAndEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IMutableVertexListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IMutableVertexListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableVertexListGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IMutableVertexListGraph<Vertex, Edge>
+  nameWithType: IMutableVertexListGraph<Vertex, Edge>
+  fullName: QuickGraph.IMutableVertexListGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IMutableVertexListGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IMutableVertexListGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IMutableVertexListGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexListGraph`2
+    name: IMutableVertexListGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexListGraph`2
+    name: IMutableVertexListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IMutableIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IMutableIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableIncidenceGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IMutableIncidenceGraph<Vertex, Edge>
+  nameWithType: IMutableIncidenceGraph<Vertex, Edge>
+  fullName: QuickGraph.IMutableIncidenceGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IMutableIncidenceGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IMutableIncidenceGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IMutableIncidenceGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableIncidenceGraph`2
+    name: IMutableIncidenceGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableIncidenceGraph`2
+    name: IMutableIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IVertexAndEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IVertexAndEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IVertexAndEdgeListGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IVertexAndEdgeListGraph<Vertex, Edge>
+  nameWithType: IVertexAndEdgeListGraph<Vertex, Edge>
+  fullName: QuickGraph.IVertexAndEdgeListGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IVertexAndEdgeListGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IVertexAndEdgeListGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IVertexAndEdgeListGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IVertexAndEdgeListGraph`2
+    name: IVertexAndEdgeListGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IVertexAndEdgeListGraph`2
+    name: IVertexAndEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IVertexListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IVertexListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IVertexListGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IVertexListGraph<Vertex, Edge>
+  nameWithType: IVertexListGraph<Vertex, Edge>
+  fullName: QuickGraph.IVertexListGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IVertexListGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IVertexListGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IVertexListGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IVertexListGraph`2
+    name: IVertexListGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IVertexListGraph`2
+    name: IVertexListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IIncidenceGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IIncidenceGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IIncidenceGraph<Vertex, Edge>
+  nameWithType: IIncidenceGraph<Vertex, Edge>
+  fullName: QuickGraph.IIncidenceGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IIncidenceGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IIncidenceGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IIncidenceGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IIncidenceGraph`2
+    name: IIncidenceGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IIncidenceGraph`2
+    name: IIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IImplicitGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IImplicitGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IImplicitGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IImplicitGraph<Vertex, Edge>
+  nameWithType: IImplicitGraph<Vertex, Edge>
+  fullName: QuickGraph.IImplicitGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IImplicitGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IImplicitGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IImplicitGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IImplicitGraph`2
+    name: IImplicitGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IImplicitGraph`2
+    name: IImplicitGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IMutableVertexAndEdgeSet{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IMutableVertexAndEdgeSet{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableVertexAndEdgeSet`2
+  href: mosaic_libary.Vertex.html
+  name: IMutableVertexAndEdgeSet<Vertex, Edge>
+  nameWithType: IMutableVertexAndEdgeSet<Vertex, Edge>
+  fullName: QuickGraph.IMutableVertexAndEdgeSet<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IMutableVertexAndEdgeSet(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IMutableVertexAndEdgeSet(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IMutableVertexAndEdgeSet(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexAndEdgeSet`2
+    name: IMutableVertexAndEdgeSet
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexAndEdgeSet`2
+    name: IMutableVertexAndEdgeSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IMutableVertexSet{mosaic_libary.Vertex}
+  commentId: T:QuickGraph.IMutableVertexSet{mosaic_libary.Vertex}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableVertexSet`1
+  href: mosaic_libary.Vertex.html
+  name: IMutableVertexSet<Vertex>
+  nameWithType: IMutableVertexSet<Vertex>
+  fullName: QuickGraph.IMutableVertexSet<mosaic_libary.Vertex>
+  nameWithType.vb: IMutableVertexSet(Of Vertex)
+  fullName.vb: QuickGraph.IMutableVertexSet(Of mosaic_libary.Vertex)
+  name.vb: IMutableVertexSet(Of Vertex)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexSet`1
+    name: IMutableVertexSet
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexSet`1
+    name: IMutableVertexSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.IMutableEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IMutableEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableEdgeListGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IMutableEdgeListGraph<Vertex, Edge>
+  nameWithType: IMutableEdgeListGraph<Vertex, Edge>
+  fullName: QuickGraph.IMutableEdgeListGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IMutableEdgeListGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IMutableEdgeListGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IMutableEdgeListGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableEdgeListGraph`2
+    name: IMutableEdgeListGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableEdgeListGraph`2
+    name: IMutableEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IEdgeListGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IEdgeListGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IEdgeListGraph<Vertex, Edge>
+  nameWithType: IEdgeListGraph<Vertex, Edge>
+  fullName: QuickGraph.IEdgeListGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IEdgeListGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IEdgeListGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IEdgeListGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IEdgeListGraph`2
+    name: IEdgeListGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdgeListGraph`2
+    name: IEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IEdgeSet{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IEdgeSet{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IEdgeSet`2
+  href: mosaic_libary.Vertex.html
+  name: IEdgeSet<Vertex, Edge>
+  nameWithType: IEdgeSet<Vertex, Edge>
+  fullName: QuickGraph.IEdgeSet<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IEdgeSet(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IEdgeSet(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IEdgeSet(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IEdgeSet`2
+    name: IEdgeSet
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdgeSet`2
+    name: IEdgeSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IVertexSet{mosaic_libary.Vertex}
+  commentId: T:QuickGraph.IVertexSet{mosaic_libary.Vertex}
+  parent: QuickGraph
+  definition: QuickGraph.IVertexSet`1
+  href: mosaic_libary.Vertex.html
+  name: IVertexSet<Vertex>
+  nameWithType: IVertexSet<Vertex>
+  fullName: QuickGraph.IVertexSet<mosaic_libary.Vertex>
+  nameWithType.vb: IVertexSet(Of Vertex)
+  fullName.vb: QuickGraph.IVertexSet(Of mosaic_libary.Vertex)
+  name.vb: IVertexSet(Of Vertex)
+  spec.csharp:
+  - uid: QuickGraph.IVertexSet`1
+    name: IVertexSet
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IVertexSet`1
+    name: IVertexSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.IImplicitVertexSet{mosaic_libary.Vertex}
+  commentId: T:QuickGraph.IImplicitVertexSet{mosaic_libary.Vertex}
+  parent: QuickGraph
+  definition: QuickGraph.IImplicitVertexSet`1
+  href: mosaic_libary.Vertex.html
+  name: IImplicitVertexSet<Vertex>
+  nameWithType: IImplicitVertexSet<Vertex>
+  fullName: QuickGraph.IImplicitVertexSet<mosaic_libary.Vertex>
+  nameWithType.vb: IImplicitVertexSet(Of Vertex)
+  fullName.vb: QuickGraph.IImplicitVertexSet(Of mosaic_libary.Vertex)
+  name.vb: IImplicitVertexSet(Of Vertex)
+  spec.csharp:
+  - uid: QuickGraph.IImplicitVertexSet`1
+    name: IImplicitVertexSet
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IImplicitVertexSet`1
+    name: IImplicitVertexSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.IMutableGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IMutableGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IMutableGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IMutableGraph<Vertex, Edge>
+  nameWithType: IMutableGraph<Vertex, Edge>
+  fullName: QuickGraph.IMutableGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IMutableGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IMutableGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IMutableGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableGraph`2
+    name: IMutableGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableGraph`2
+    name: IMutableGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.IGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  commentId: T:QuickGraph.IGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  parent: QuickGraph
+  definition: QuickGraph.IGraph`2
+  href: mosaic_libary.Vertex.html
+  name: IGraph<Vertex, Edge>
+  nameWithType: IGraph<Vertex, Edge>
+  fullName: QuickGraph.IGraph<mosaic_libary.Vertex, mosaic_libary.Edge>
+  nameWithType.vb: IGraph(Of Vertex, Edge)
+  fullName.vb: QuickGraph.IGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: IGraph(Of Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.IGraph`2
+    name: IGraph
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IGraph`2
+    name: IGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: System.ICloneable
+  commentId: T:System.ICloneable
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  name: ICloneable
+  nameWithType: ICloneable
+  fullName: System.ICloneable
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsVertex(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsVertex(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.ContainsVertex(`0)
+  href: mosaic_libary.Vertex.html
+  name: ContainsVertex(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.ContainsVertex(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.ContainsVertex(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).ContainsVertex(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).ContainsVertex(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsVertex(mosaic_libary.Vertex)
+    name: ContainsVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsVertex(mosaic_libary.Vertex)
+    name: ContainsVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsOutEdgesEmpty(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsOutEdgesEmpty(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.IsOutEdgesEmpty(`0)
+  href: mosaic_libary.Vertex.html
+  name: IsOutEdgesEmpty(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.IsOutEdgesEmpty(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.IsOutEdgesEmpty(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).IsOutEdgesEmpty(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).IsOutEdgesEmpty(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsOutEdgesEmpty(mosaic_libary.Vertex)
+    name: IsOutEdgesEmpty
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsOutEdgesEmpty(mosaic_libary.Vertex)
+    name: IsOutEdgesEmpty
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutDegree(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutDegree(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.OutDegree(`0)
+  href: mosaic_libary.Vertex.html
+  name: OutDegree(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.OutDegree(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.OutDegree(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).OutDegree(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).OutDegree(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutDegree(mosaic_libary.Vertex)
+    name: OutDegree
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutDegree(mosaic_libary.Vertex)
+    name: OutDegree
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdges(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdges(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.OutEdges(`0)
+  href: mosaic_libary.Vertex.html
+  name: OutEdges(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.OutEdges(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.OutEdges(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).OutEdges(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).OutEdges(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdges(mosaic_libary.Vertex)
+    name: OutEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdges(mosaic_libary.Vertex)
+    name: OutEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetInEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetInEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.TryGetInEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+  href: mosaic_libary.Vertex.html
+  name: TryGetInEdges(Vertex, out IEnumerable<Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.TryGetInEdges(Vertex, out IEnumerable<Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.TryGetInEdges(mosaic_libary.Vertex, out System.Collections.Generic.IEnumerable<mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).TryGetInEdges(Vertex, IEnumerable(Of Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).TryGetInEdges(mosaic_libary.Vertex, System.Collections.Generic.IEnumerable(Of mosaic_libary.Edge))
+  name.vb: TryGetInEdges(Vertex, IEnumerable(Of Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetInEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+    name: TryGetInEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetInEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+    name: TryGetInEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetOutEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetOutEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.TryGetOutEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+  href: mosaic_libary.Vertex.html
+  name: TryGetOutEdges(Vertex, out IEnumerable<Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.TryGetOutEdges(Vertex, out IEnumerable<Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.TryGetOutEdges(mosaic_libary.Vertex, out System.Collections.Generic.IEnumerable<mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).TryGetOutEdges(Vertex, IEnumerable(Of Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).TryGetOutEdges(mosaic_libary.Vertex, System.Collections.Generic.IEnumerable(Of mosaic_libary.Edge))
+  name.vb: TryGetOutEdges(Vertex, IEnumerable(Of Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetOutEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+    name: TryGetOutEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetOutEdges(mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+    name: TryGetOutEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdge(mosaic_libary.Vertex,System.Int32)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdge(mosaic_libary.Vertex,System.Int32)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.OutEdge(`0,System.Int32)
+  href: mosaic_libary.Vertex.html
+  name: OutEdge(Vertex, int)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.OutEdge(Vertex, int)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.OutEdge(mosaic_libary.Vertex, int)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).OutEdge(Vertex, Integer)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).OutEdge(mosaic_libary.Vertex, Integer)
+  name.vb: OutEdge(Vertex, Integer)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdge(mosaic_libary.Vertex,System.Int32)
+    name: OutEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OutEdge(mosaic_libary.Vertex,System.Int32)
+    name: OutEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsInEdgesEmpty(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsInEdgesEmpty(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.IsInEdgesEmpty(`0)
+  href: mosaic_libary.Vertex.html
+  name: IsInEdgesEmpty(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.IsInEdgesEmpty(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.IsInEdgesEmpty(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).IsInEdgesEmpty(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).IsInEdgesEmpty(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsInEdgesEmpty(mosaic_libary.Vertex)
+    name: IsInEdgesEmpty
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsInEdgesEmpty(mosaic_libary.Vertex)
+    name: IsInEdgesEmpty
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InDegree(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InDegree(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.InDegree(`0)
+  href: mosaic_libary.Vertex.html
+  name: InDegree(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.InDegree(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.InDegree(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).InDegree(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).InDegree(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InDegree(mosaic_libary.Vertex)
+    name: InDegree
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InDegree(mosaic_libary.Vertex)
+    name: InDegree
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdges(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdges(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.InEdges(`0)
+  href: mosaic_libary.Vertex.html
+  name: InEdges(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.InEdges(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.InEdges(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).InEdges(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).InEdges(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdges(mosaic_libary.Vertex)
+    name: InEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdges(mosaic_libary.Vertex)
+    name: InEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdge(mosaic_libary.Vertex,System.Int32)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdge(mosaic_libary.Vertex,System.Int32)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.InEdge(`0,System.Int32)
+  href: mosaic_libary.Vertex.html
+  name: InEdge(Vertex, int)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.InEdge(Vertex, int)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.InEdge(mosaic_libary.Vertex, int)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).InEdge(Vertex, Integer)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).InEdge(mosaic_libary.Vertex, Integer)
+  name.vb: InEdge(Vertex, Integer)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdge(mosaic_libary.Vertex,System.Int32)
+    name: InEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.InEdge(mosaic_libary.Vertex,System.Int32)
+    name: InEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Degree(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Degree(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.Degree(`0)
+  href: mosaic_libary.Vertex.html
+  name: Degree(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.Degree(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.Degree(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).Degree(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).Degree(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Degree(mosaic_libary.Vertex)
+    name: Degree
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Degree(mosaic_libary.Vertex)
+    name: Degree
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Vertex,mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Vertex,mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.ContainsEdge(`0,`0)
+  href: mosaic_libary.Vertex.html
+  name: ContainsEdge(Vertex, Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.ContainsEdge(Vertex, Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.ContainsEdge(mosaic_libary.Vertex, mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).ContainsEdge(Vertex, Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).ContainsEdge(mosaic_libary.Vertex, mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Vertex,mosaic_libary.Vertex)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Vertex,mosaic_libary.Vertex)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdge(mosaic_libary.Vertex,mosaic_libary.Vertex,mosaic_libary.Edge@)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdge(mosaic_libary.Vertex,mosaic_libary.Vertex,mosaic_libary.Edge@)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.TryGetEdge(`0,`0,`1@)
+  href: mosaic_libary.Vertex.html
+  name: TryGetEdge(Vertex, Vertex, out Edge)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.TryGetEdge(Vertex, Vertex, out Edge)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.TryGetEdge(mosaic_libary.Vertex, mosaic_libary.Vertex, out mosaic_libary.Edge)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).TryGetEdge(Vertex, Vertex, Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).TryGetEdge(mosaic_libary.Vertex, mosaic_libary.Vertex, mosaic_libary.Edge)
+  name.vb: TryGetEdge(Vertex, Vertex, Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdge(mosaic_libary.Vertex,mosaic_libary.Vertex,mosaic_libary.Edge@)
+    name: TryGetEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdge(mosaic_libary.Vertex,mosaic_libary.Vertex,mosaic_libary.Edge@)
+    name: TryGetEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdges(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdges(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.TryGetEdges(`0,`0,System.Collections.Generic.IEnumerable{`1}@)
+  href: mosaic_libary.Vertex.html
+  name: TryGetEdges(Vertex, Vertex, out IEnumerable<Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.TryGetEdges(Vertex, Vertex, out IEnumerable<Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.TryGetEdges(mosaic_libary.Vertex, mosaic_libary.Vertex, out System.Collections.Generic.IEnumerable<mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).TryGetEdges(Vertex, Vertex, IEnumerable(Of Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).TryGetEdges(mosaic_libary.Vertex, mosaic_libary.Vertex, System.Collections.Generic.IEnumerable(Of mosaic_libary.Edge))
+  name.vb: TryGetEdges(Vertex, Vertex, IEnumerable(Of Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdges(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+    name: TryGetEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TryGetEdges(mosaic_libary.Vertex,mosaic_libary.Vertex,System.Collections.Generic.IEnumerable{mosaic_libary.Edge}@)
+    name: TryGetEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Edge)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Edge)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.ContainsEdge(`1)
+  href: mosaic_libary.Edge.html
+  name: ContainsEdge(Edge)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.ContainsEdge(Edge)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.ContainsEdge(mosaic_libary.Edge)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).ContainsEdge(Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).ContainsEdge(mosaic_libary.Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Edge)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ContainsEdge(mosaic_libary.Edge)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertex(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertex(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.AddVertex(`0)
+  href: mosaic_libary.Vertex.html
+  name: AddVertex(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.AddVertex(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.AddVertex(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).AddVertex(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).AddVertex(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertex(mosaic_libary.Vertex)
+    name: AddVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertex(mosaic_libary.Vertex)
+    name: AddVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertexRange(System.Collections.Generic.IEnumerable{mosaic_libary.Vertex})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertexRange(System.Collections.Generic.IEnumerable{mosaic_libary.Vertex})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.AddVertexRange(System.Collections.Generic.IEnumerable{`0})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: AddVertexRange(IEnumerable<Vertex>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.AddVertexRange(IEnumerable<Vertex>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.AddVertexRange(System.Collections.Generic.IEnumerable<mosaic_libary.Vertex>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).AddVertexRange(IEnumerable(Of Vertex))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).AddVertexRange(System.Collections.Generic.IEnumerable(Of mosaic_libary.Vertex))
+  name.vb: AddVertexRange(IEnumerable(Of Vertex))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertexRange(System.Collections.Generic.IEnumerable{mosaic_libary.Vertex})
+    name: AddVertexRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVertexRange(System.Collections.Generic.IEnumerable{mosaic_libary.Vertex})
+    name: AddVertexRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexAdded(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexAdded(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.OnVertexAdded(`0)
+  href: mosaic_libary.Vertex.html
+  name: OnVertexAdded(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.OnVertexAdded(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.OnVertexAdded(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).OnVertexAdded(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).OnVertexAdded(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexAdded(mosaic_libary.Vertex)
+    name: OnVertexAdded
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexAdded(mosaic_libary.Vertex)
+    name: OnVertexAdded
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertex(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertex(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.RemoveVertex(`0)
+  href: mosaic_libary.Vertex.html
+  name: RemoveVertex(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.RemoveVertex(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.RemoveVertex(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).RemoveVertex(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).RemoveVertex(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertex(mosaic_libary.Vertex)
+    name: RemoveVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertex(mosaic_libary.Vertex)
+    name: RemoveVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexRemoved(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexRemoved(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.OnVertexRemoved(`0)
+  href: mosaic_libary.Vertex.html
+  name: OnVertexRemoved(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.OnVertexRemoved(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.OnVertexRemoved(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).OnVertexRemoved(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).OnVertexRemoved(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexRemoved(mosaic_libary.Vertex)
+    name: OnVertexRemoved
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnVertexRemoved(mosaic_libary.Vertex)
+    name: OnVertexRemoved
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.RemoveVertexIf(QuickGraph.VertexPredicate{`0})
+  href: mosaic_libary.Vertex.html
+  name: RemoveVertexIf(VertexPredicate<Vertex>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.RemoveVertexIf(VertexPredicate<Vertex>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.RemoveVertexIf(QuickGraph.VertexPredicate<mosaic_libary.Vertex>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).RemoveVertexIf(VertexPredicate(Of Vertex))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).RemoveVertexIf(QuickGraph.VertexPredicate(Of mosaic_libary.Vertex))
+  name.vb: RemoveVertexIf(VertexPredicate(Of Vertex))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex})
+    name: RemoveVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex})
+    name: RemoveVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdge(mosaic_libary.Edge)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdge(mosaic_libary.Edge)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.AddEdge(`1)
+  href: mosaic_libary.Edge.html
+  name: AddEdge(Edge)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.AddEdge(Edge)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.AddEdge(mosaic_libary.Edge)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).AddEdge(Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).AddEdge(mosaic_libary.Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdge(mosaic_libary.Edge)
+    name: AddEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdge(mosaic_libary.Edge)
+    name: AddEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.AddEdgeRange(System.Collections.Generic.IEnumerable{`1})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: AddEdgeRange(IEnumerable<Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.AddEdgeRange(IEnumerable<Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.AddEdgeRange(System.Collections.Generic.IEnumerable<mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).AddEdgeRange(IEnumerable(Of Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).AddEdgeRange(System.Collections.Generic.IEnumerable(Of mosaic_libary.Edge))
+  name.vb: AddEdgeRange(IEnumerable(Of Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+    name: AddEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+    name: AddEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdge(mosaic_libary.Edge)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdge(mosaic_libary.Edge)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdge(`1)
+  href: mosaic_libary.Edge.html
+  name: AddVerticesAndEdge(Edge)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.AddVerticesAndEdge(Edge)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.AddVerticesAndEdge(mosaic_libary.Edge)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).AddVerticesAndEdge(Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).AddVerticesAndEdge(mosaic_libary.Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdge(mosaic_libary.Edge)
+    name: AddVerticesAndEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdge(mosaic_libary.Edge)
+    name: AddVerticesAndEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{`1})
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: AddVerticesAndEdgeRange(IEnumerable<Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.AddVerticesAndEdgeRange(IEnumerable<Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable<mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).AddVerticesAndEdgeRange(IEnumerable(Of Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable(Of mosaic_libary.Edge))
+  name.vb: AddVerticesAndEdgeRange(IEnumerable(Of Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+    name: AddVerticesAndEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{mosaic_libary.Edge})
+    name: AddVerticesAndEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeAdded(mosaic_libary.Edge)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeAdded(mosaic_libary.Edge)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.OnEdgeAdded(`1)
+  href: mosaic_libary.Edge.html
+  name: OnEdgeAdded(Edge)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.OnEdgeAdded(Edge)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.OnEdgeAdded(mosaic_libary.Edge)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).OnEdgeAdded(Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).OnEdgeAdded(mosaic_libary.Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeAdded(mosaic_libary.Edge)
+    name: OnEdgeAdded
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeAdded(mosaic_libary.Edge)
+    name: OnEdgeAdded
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdge(mosaic_libary.Edge)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdge(mosaic_libary.Edge)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.RemoveEdge(`1)
+  href: mosaic_libary.Edge.html
+  name: RemoveEdge(Edge)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.RemoveEdge(Edge)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.RemoveEdge(mosaic_libary.Edge)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).RemoveEdge(Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).RemoveEdge(mosaic_libary.Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdge(mosaic_libary.Edge)
+    name: RemoveEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdge(mosaic_libary.Edge)
+    name: RemoveEdge
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeRemoved(mosaic_libary.Edge)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeRemoved(mosaic_libary.Edge)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.OnEdgeRemoved(`1)
+  href: mosaic_libary.Edge.html
+  name: OnEdgeRemoved(Edge)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.OnEdgeRemoved(Edge)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.OnEdgeRemoved(mosaic_libary.Edge)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).OnEdgeRemoved(Edge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).OnEdgeRemoved(mosaic_libary.Edge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeRemoved(mosaic_libary.Edge)
+    name: OnEdgeRemoved
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.OnEdgeRemoved(mosaic_libary.Edge)
+    name: OnEdgeRemoved
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdgeIf(QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdgeIf(QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.RemoveEdgeIf(QuickGraph.EdgePredicate{`0,`1})
+  href: mosaic_libary.Vertex.html
+  name: RemoveEdgeIf(EdgePredicate<Vertex, Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.RemoveEdgeIf(EdgePredicate<Vertex, Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.RemoveEdgeIf(QuickGraph.EdgePredicate<mosaic_libary.Vertex, mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).RemoveEdgeIf(EdgePredicate(Of Vertex, Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).RemoveEdgeIf(QuickGraph.EdgePredicate(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: RemoveEdgeIf(EdgePredicate(Of Vertex, Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdgeIf(QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: RemoveEdgeIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveEdgeIf(QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: RemoveEdgeIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveOutEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveOutEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.RemoveOutEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+  href: mosaic_libary.Vertex.html
+  name: RemoveOutEdgeIf(Vertex, EdgePredicate<Vertex, Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.RemoveOutEdgeIf(Vertex, EdgePredicate<Vertex, Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.RemoveOutEdgeIf(mosaic_libary.Vertex, QuickGraph.EdgePredicate<mosaic_libary.Vertex, mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).RemoveOutEdgeIf(Vertex, EdgePredicate(Of Vertex, Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).RemoveOutEdgeIf(mosaic_libary.Vertex, QuickGraph.EdgePredicate(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: RemoveOutEdgeIf(Vertex, EdgePredicate(Of Vertex, Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveOutEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: RemoveOutEdgeIf
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveOutEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: RemoveOutEdgeIf
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveInEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveInEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.RemoveInEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+  href: mosaic_libary.Vertex.html
+  name: RemoveInEdgeIf(Vertex, EdgePredicate<Vertex, Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.RemoveInEdgeIf(Vertex, EdgePredicate<Vertex, Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.RemoveInEdgeIf(mosaic_libary.Vertex, QuickGraph.EdgePredicate<mosaic_libary.Vertex, mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).RemoveInEdgeIf(Vertex, EdgePredicate(Of Vertex, Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).RemoveInEdgeIf(mosaic_libary.Vertex, QuickGraph.EdgePredicate(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: RemoveInEdgeIf(Vertex, EdgePredicate(Of Vertex, Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveInEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: RemoveInEdgeIf
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.RemoveInEdgeIf(mosaic_libary.Vertex,QuickGraph.EdgePredicate{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: RemoveInEdgeIf
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearOutEdges(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearOutEdges(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.ClearOutEdges(`0)
+  href: mosaic_libary.Vertex.html
+  name: ClearOutEdges(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.ClearOutEdges(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.ClearOutEdges(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).ClearOutEdges(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).ClearOutEdges(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearOutEdges(mosaic_libary.Vertex)
+    name: ClearOutEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearOutEdges(mosaic_libary.Vertex)
+    name: ClearOutEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearInEdges(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearInEdges(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.ClearInEdges(`0)
+  href: mosaic_libary.Vertex.html
+  name: ClearInEdges(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.ClearInEdges(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.ClearInEdges(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).ClearInEdges(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).ClearInEdges(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearInEdges(mosaic_libary.Vertex)
+    name: ClearInEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearInEdges(mosaic_libary.Vertex)
+    name: ClearInEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearEdges(mosaic_libary.Vertex)
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearEdges(mosaic_libary.Vertex)
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.ClearEdges(`0)
+  href: mosaic_libary.Vertex.html
+  name: ClearEdges(Vertex)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.ClearEdges(Vertex)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.ClearEdges(mosaic_libary.Vertex)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).ClearEdges(Vertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).ClearEdges(mosaic_libary.Vertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearEdges(mosaic_libary.Vertex)
+    name: ClearEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.ClearEdges(mosaic_libary.Vertex)
+    name: ClearEdges
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TrimEdgeExcess
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TrimEdgeExcess
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.TrimEdgeExcess
+  name: TrimEdgeExcess()
+  nameWithType: BidirectionalGraph<Vertex, Edge>.TrimEdgeExcess()
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.TrimEdgeExcess()
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).TrimEdgeExcess()
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).TrimEdgeExcess()
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TrimEdgeExcess
+    name: TrimEdgeExcess
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.TrimEdgeExcess
+    name: TrimEdgeExcess
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clear
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clear
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.Clear
+  name: Clear()
+  nameWithType: BidirectionalGraph<Vertex, Edge>.Clear()
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.Clear()
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).Clear()
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).Clear()
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertex(mosaic_libary.Vertex,QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertex(mosaic_libary.Vertex,QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.MergeVertex(`0,QuickGraph.EdgeFactory{`0,`1})
+  href: mosaic_libary.Vertex.html
+  name: MergeVertex(Vertex, EdgeFactory<Vertex, Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.MergeVertex(Vertex, EdgeFactory<Vertex, Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.MergeVertex(mosaic_libary.Vertex, QuickGraph.EdgeFactory<mosaic_libary.Vertex, mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).MergeVertex(Vertex, EdgeFactory(Of Vertex, Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).MergeVertex(mosaic_libary.Vertex, QuickGraph.EdgeFactory(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: MergeVertex(Vertex, EdgeFactory(Of Vertex, Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertex(mosaic_libary.Vertex,QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: MergeVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertex(mosaic_libary.Vertex,QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: MergeVertex
+    isExternal: true
+  - name: (
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex},QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex},QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.MergeVertexIf(QuickGraph.VertexPredicate{`0},QuickGraph.EdgeFactory{`0,`1})
+  href: mosaic_libary.Vertex.html
+  name: MergeVertexIf(VertexPredicate<Vertex>, EdgeFactory<Vertex, Edge>)
+  nameWithType: BidirectionalGraph<Vertex, Edge>.MergeVertexIf(VertexPredicate<Vertex>, EdgeFactory<Vertex, Edge>)
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.MergeVertexIf(QuickGraph.VertexPredicate<mosaic_libary.Vertex>, QuickGraph.EdgeFactory<mosaic_libary.Vertex, mosaic_libary.Edge>)
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).MergeVertexIf(VertexPredicate(Of Vertex), EdgeFactory(Of Vertex, Edge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).MergeVertexIf(QuickGraph.VertexPredicate(Of mosaic_libary.Vertex), QuickGraph.EdgeFactory(Of mosaic_libary.Vertex, mosaic_libary.Edge))
+  name.vb: MergeVertexIf(VertexPredicate(Of Vertex), EdgeFactory(Of Vertex, Edge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex},QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: MergeVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: <
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.MergeVertexIf(QuickGraph.VertexPredicate{mosaic_libary.Vertex},QuickGraph.EdgeFactory{mosaic_libary.Vertex,mosaic_libary.Edge})
+    name: MergeVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: mosaic_libary.Vertex
+    name: Vertex
+    href: mosaic_libary.Vertex.html
+  - name: ','
+  - name: " "
+  - uid: mosaic_libary.Edge
+    name: Edge
+    href: mosaic_libary.Edge.html
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clone
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clone
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.Clone
+  name: Clone()
+  nameWithType: BidirectionalGraph<Vertex, Edge>.Clone()
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.Clone()
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).Clone()
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).Clone()
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clone
+    name: Clone
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Clone
+    name: Clone
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.System#ICloneable#Clone
+  commentId: M:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.System#ICloneable#Clone
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.System#ICloneable#Clone
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  name: ICloneable.Clone()
+  nameWithType: BidirectionalGraph<Vertex, Edge>.ICloneable.Clone()
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.System.ICloneable.Clone()
+  spec.csharp:
+  - uid: System.ICloneable
+    name: ICloneable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  - name: .
+  - uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.System#ICloneable#Clone
+    name: Clone
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeType
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeType
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.EdgeType
+  name: EdgeType
+  nameWithType: BidirectionalGraph<Vertex, Edge>.EdgeType
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.EdgeType
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).EdgeType
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).EdgeType
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeCapacity
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeCapacity
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.EdgeCapacity
+  name: EdgeCapacity
+  nameWithType: BidirectionalGraph<Vertex, Edge>.EdgeCapacity
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.EdgeCapacity
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).EdgeCapacity
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).EdgeCapacity
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsDirected
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsDirected
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.IsDirected
+  name: IsDirected
+  nameWithType: BidirectionalGraph<Vertex, Edge>.IsDirected
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.IsDirected
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).IsDirected
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).IsDirected
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AllowParallelEdges
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.AllowParallelEdges
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.AllowParallelEdges
+  name: AllowParallelEdges
+  nameWithType: BidirectionalGraph<Vertex, Edge>.AllowParallelEdges
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.AllowParallelEdges
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).AllowParallelEdges
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).AllowParallelEdges
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsVerticesEmpty
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsVerticesEmpty
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.IsVerticesEmpty
+  name: IsVerticesEmpty
+  nameWithType: BidirectionalGraph<Vertex, Edge>.IsVerticesEmpty
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.IsVerticesEmpty
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).IsVerticesEmpty
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).IsVerticesEmpty
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexCount
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexCount
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.VertexCount
+  name: VertexCount
+  nameWithType: BidirectionalGraph<Vertex, Edge>.VertexCount
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.VertexCount
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).VertexCount
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).VertexCount
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Vertices
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Vertices
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.Vertices
+  name: Vertices
+  nameWithType: BidirectionalGraph<Vertex, Edge>.Vertices
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.Vertices
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).Vertices
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).Vertices
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsEdgesEmpty
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.IsEdgesEmpty
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.IsEdgesEmpty
+  name: IsEdgesEmpty
+  nameWithType: BidirectionalGraph<Vertex, Edge>.IsEdgesEmpty
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.IsEdgesEmpty
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).IsEdgesEmpty
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).IsEdgesEmpty
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeCount
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeCount
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.EdgeCount
+  name: EdgeCount
+  nameWithType: BidirectionalGraph<Vertex, Edge>.EdgeCount
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.EdgeCount
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).EdgeCount
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).EdgeCount
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Edges
+  commentId: P:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Edges
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.Edges
+  name: Edges
+  nameWithType: BidirectionalGraph<Vertex, Edge>.Edges
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.Edges
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).Edges
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).Edges
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexAdded
+  commentId: E:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexAdded
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.VertexAdded
+  name: VertexAdded
+  nameWithType: BidirectionalGraph<Vertex, Edge>.VertexAdded
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.VertexAdded
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).VertexAdded
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).VertexAdded
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexRemoved
+  commentId: E:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.VertexRemoved
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.VertexRemoved
+  name: VertexRemoved
+  nameWithType: BidirectionalGraph<Vertex, Edge>.VertexRemoved
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.VertexRemoved
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).VertexRemoved
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).VertexRemoved
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeAdded
+  commentId: E:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeAdded
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.EdgeAdded
+  name: EdgeAdded
+  nameWithType: BidirectionalGraph<Vertex, Edge>.EdgeAdded
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.EdgeAdded
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).EdgeAdded
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).EdgeAdded
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeRemoved
+  commentId: E:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.EdgeRemoved
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.EdgeRemoved
+  name: EdgeRemoved
+  nameWithType: BidirectionalGraph<Vertex, Edge>.EdgeRemoved
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.EdgeRemoved
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).EdgeRemoved
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).EdgeRemoved
+- uid: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Cleared
+  commentId: E:QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}.Cleared
+  parent: QuickGraph.BidirectionalGraph{mosaic_libary.Vertex,mosaic_libary.Edge}
+  definition: QuickGraph.BidirectionalGraph`2.Cleared
+  name: Cleared
+  nameWithType: BidirectionalGraph<Vertex, Edge>.Cleared
+  fullName: QuickGraph.BidirectionalGraph<mosaic_libary.Vertex, mosaic_libary.Edge>.Cleared
+  nameWithType.vb: BidirectionalGraph(Of Vertex, Edge).Cleared
+  fullName.vb: QuickGraph.BidirectionalGraph(Of mosaic_libary.Vertex, mosaic_libary.Edge).Cleared
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: QuickGraph.BidirectionalGraph`2
+  commentId: T:QuickGraph.BidirectionalGraph`2
+  isExternal: true
+  name: BidirectionalGraph<TVertex, TEdge>
+  nameWithType: BidirectionalGraph<TVertex, TEdge>
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge)
+  name.vb: BidirectionalGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2
+    name: BidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph
+  commentId: N:QuickGraph
+  isExternal: true
+  name: QuickGraph
+  nameWithType: QuickGraph
+  fullName: QuickGraph
+- uid: QuickGraph.IEdgeListAndIncidenceGraph`2
+  commentId: T:QuickGraph.IEdgeListAndIncidenceGraph`2
+  isExternal: true
+  name: IEdgeListAndIncidenceGraph<TVertex, TEdge>
+  nameWithType: IEdgeListAndIncidenceGraph<TVertex, TEdge>
+  fullName: QuickGraph.IEdgeListAndIncidenceGraph<TVertex, TEdge>
+  nameWithType.vb: IEdgeListAndIncidenceGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IEdgeListAndIncidenceGraph(Of TVertex, TEdge)
+  name.vb: IEdgeListAndIncidenceGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IEdgeListAndIncidenceGraph`2
+    name: IEdgeListAndIncidenceGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdgeListAndIncidenceGraph`2
+    name: IEdgeListAndIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IMutableBidirectionalGraph`2
+  commentId: T:QuickGraph.IMutableBidirectionalGraph`2
+  isExternal: true
+  name: IMutableBidirectionalGraph<TVertex, TEdge>
+  nameWithType: IMutableBidirectionalGraph<TVertex, TEdge>
+  fullName: QuickGraph.IMutableBidirectionalGraph<TVertex, TEdge>
+  nameWithType.vb: IMutableBidirectionalGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IMutableBidirectionalGraph(Of TVertex, TEdge)
+  name.vb: IMutableBidirectionalGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableBidirectionalGraph`2
+    name: IMutableBidirectionalGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableBidirectionalGraph`2
+    name: IMutableBidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IBidirectionalGraph`2
+  commentId: T:QuickGraph.IBidirectionalGraph`2
+  isExternal: true
+  name: IBidirectionalGraph<TVertex, TEdge>
+  nameWithType: IBidirectionalGraph<TVertex, TEdge>
+  fullName: QuickGraph.IBidirectionalGraph<TVertex, TEdge>
+  nameWithType.vb: IBidirectionalGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IBidirectionalGraph(Of TVertex, TEdge)
+  name.vb: IBidirectionalGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IBidirectionalGraph`2
+    name: IBidirectionalGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IBidirectionalGraph`2
+    name: IBidirectionalGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IBidirectionalIncidenceGraph`2
+  commentId: T:QuickGraph.IBidirectionalIncidenceGraph`2
+  isExternal: true
+  name: IBidirectionalIncidenceGraph<TVertex, TEdge>
+  nameWithType: IBidirectionalIncidenceGraph<TVertex, TEdge>
+  fullName: QuickGraph.IBidirectionalIncidenceGraph<TVertex, TEdge>
+  nameWithType.vb: IBidirectionalIncidenceGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IBidirectionalIncidenceGraph(Of TVertex, TEdge)
+  name.vb: IBidirectionalIncidenceGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IBidirectionalIncidenceGraph`2
+    name: IBidirectionalIncidenceGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IBidirectionalIncidenceGraph`2
+    name: IBidirectionalIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IMutableVertexAndEdgeListGraph`2
+  commentId: T:QuickGraph.IMutableVertexAndEdgeListGraph`2
+  isExternal: true
+  name: IMutableVertexAndEdgeListGraph<TVertex, TEdge>
+  nameWithType: IMutableVertexAndEdgeListGraph<TVertex, TEdge>
+  fullName: QuickGraph.IMutableVertexAndEdgeListGraph<TVertex, TEdge>
+  nameWithType.vb: IMutableVertexAndEdgeListGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IMutableVertexAndEdgeListGraph(Of TVertex, TEdge)
+  name.vb: IMutableVertexAndEdgeListGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexAndEdgeListGraph`2
+    name: IMutableVertexAndEdgeListGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexAndEdgeListGraph`2
+    name: IMutableVertexAndEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IMutableVertexListGraph`2
+  commentId: T:QuickGraph.IMutableVertexListGraph`2
+  isExternal: true
+  name: IMutableVertexListGraph<TVertex, TEdge>
+  nameWithType: IMutableVertexListGraph<TVertex, TEdge>
+  fullName: QuickGraph.IMutableVertexListGraph<TVertex, TEdge>
+  nameWithType.vb: IMutableVertexListGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IMutableVertexListGraph(Of TVertex, TEdge)
+  name.vb: IMutableVertexListGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexListGraph`2
+    name: IMutableVertexListGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexListGraph`2
+    name: IMutableVertexListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IMutableIncidenceGraph`2
+  commentId: T:QuickGraph.IMutableIncidenceGraph`2
+  isExternal: true
+  name: IMutableIncidenceGraph<TVertex, TEdge>
+  nameWithType: IMutableIncidenceGraph<TVertex, TEdge>
+  fullName: QuickGraph.IMutableIncidenceGraph<TVertex, TEdge>
+  nameWithType.vb: IMutableIncidenceGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IMutableIncidenceGraph(Of TVertex, TEdge)
+  name.vb: IMutableIncidenceGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableIncidenceGraph`2
+    name: IMutableIncidenceGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableIncidenceGraph`2
+    name: IMutableIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IVertexAndEdgeListGraph`2
+  commentId: T:QuickGraph.IVertexAndEdgeListGraph`2
+  isExternal: true
+  name: IVertexAndEdgeListGraph<TVertex, TEdge>
+  nameWithType: IVertexAndEdgeListGraph<TVertex, TEdge>
+  fullName: QuickGraph.IVertexAndEdgeListGraph<TVertex, TEdge>
+  nameWithType.vb: IVertexAndEdgeListGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IVertexAndEdgeListGraph(Of TVertex, TEdge)
+  name.vb: IVertexAndEdgeListGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IVertexAndEdgeListGraph`2
+    name: IVertexAndEdgeListGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IVertexAndEdgeListGraph`2
+    name: IVertexAndEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IVertexListGraph`2
+  commentId: T:QuickGraph.IVertexListGraph`2
+  isExternal: true
+  name: IVertexListGraph<TVertex, TEdge>
+  nameWithType: IVertexListGraph<TVertex, TEdge>
+  fullName: QuickGraph.IVertexListGraph<TVertex, TEdge>
+  nameWithType.vb: IVertexListGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IVertexListGraph(Of TVertex, TEdge)
+  name.vb: IVertexListGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IVertexListGraph`2
+    name: IVertexListGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IVertexListGraph`2
+    name: IVertexListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IIncidenceGraph`2
+  commentId: T:QuickGraph.IIncidenceGraph`2
+  isExternal: true
+  name: IIncidenceGraph<TVertex, TEdge>
+  nameWithType: IIncidenceGraph<TVertex, TEdge>
+  fullName: QuickGraph.IIncidenceGraph<TVertex, TEdge>
+  nameWithType.vb: IIncidenceGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IIncidenceGraph(Of TVertex, TEdge)
+  name.vb: IIncidenceGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IIncidenceGraph`2
+    name: IIncidenceGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IIncidenceGraph`2
+    name: IIncidenceGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IImplicitGraph`2
+  commentId: T:QuickGraph.IImplicitGraph`2
+  isExternal: true
+  name: IImplicitGraph<TVertex, TEdge>
+  nameWithType: IImplicitGraph<TVertex, TEdge>
+  fullName: QuickGraph.IImplicitGraph<TVertex, TEdge>
+  nameWithType.vb: IImplicitGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IImplicitGraph(Of TVertex, TEdge)
+  name.vb: IImplicitGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IImplicitGraph`2
+    name: IImplicitGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IImplicitGraph`2
+    name: IImplicitGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IMutableVertexAndEdgeSet`2
+  commentId: T:QuickGraph.IMutableVertexAndEdgeSet`2
+  isExternal: true
+  name: IMutableVertexAndEdgeSet<TVertex, TEdge>
+  nameWithType: IMutableVertexAndEdgeSet<TVertex, TEdge>
+  fullName: QuickGraph.IMutableVertexAndEdgeSet<TVertex, TEdge>
+  nameWithType.vb: IMutableVertexAndEdgeSet(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IMutableVertexAndEdgeSet(Of TVertex, TEdge)
+  name.vb: IMutableVertexAndEdgeSet(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexAndEdgeSet`2
+    name: IMutableVertexAndEdgeSet
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexAndEdgeSet`2
+    name: IMutableVertexAndEdgeSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IMutableVertexSet`1
+  commentId: T:QuickGraph.IMutableVertexSet`1
+  isExternal: true
+  name: IMutableVertexSet<TVertex>
+  nameWithType: IMutableVertexSet<TVertex>
+  fullName: QuickGraph.IMutableVertexSet<TVertex>
+  nameWithType.vb: IMutableVertexSet(Of TVertex)
+  fullName.vb: QuickGraph.IMutableVertexSet(Of TVertex)
+  name.vb: IMutableVertexSet(Of TVertex)
+  spec.csharp:
+  - uid: QuickGraph.IMutableVertexSet`1
+    name: IMutableVertexSet
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableVertexSet`1
+    name: IMutableVertexSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.IMutableEdgeListGraph`2
+  commentId: T:QuickGraph.IMutableEdgeListGraph`2
+  isExternal: true
+  name: IMutableEdgeListGraph<TVertex, TEdge>
+  nameWithType: IMutableEdgeListGraph<TVertex, TEdge>
+  fullName: QuickGraph.IMutableEdgeListGraph<TVertex, TEdge>
+  nameWithType.vb: IMutableEdgeListGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IMutableEdgeListGraph(Of TVertex, TEdge)
+  name.vb: IMutableEdgeListGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableEdgeListGraph`2
+    name: IMutableEdgeListGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableEdgeListGraph`2
+    name: IMutableEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IEdgeListGraph`2
+  commentId: T:QuickGraph.IEdgeListGraph`2
+  isExternal: true
+  name: IEdgeListGraph<TVertex, TEdge>
+  nameWithType: IEdgeListGraph<TVertex, TEdge>
+  fullName: QuickGraph.IEdgeListGraph<TVertex, TEdge>
+  nameWithType.vb: IEdgeListGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IEdgeListGraph(Of TVertex, TEdge)
+  name.vb: IEdgeListGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IEdgeListGraph`2
+    name: IEdgeListGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdgeListGraph`2
+    name: IEdgeListGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IEdgeSet`2
+  commentId: T:QuickGraph.IEdgeSet`2
+  isExternal: true
+  name: IEdgeSet<TVertex, TEdge>
+  nameWithType: IEdgeSet<TVertex, TEdge>
+  fullName: QuickGraph.IEdgeSet<TVertex, TEdge>
+  nameWithType.vb: IEdgeSet(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IEdgeSet(Of TVertex, TEdge)
+  name.vb: IEdgeSet(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IEdgeSet`2
+    name: IEdgeSet
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IEdgeSet`2
+    name: IEdgeSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IVertexSet`1
+  commentId: T:QuickGraph.IVertexSet`1
+  isExternal: true
+  name: IVertexSet<TVertex>
+  nameWithType: IVertexSet<TVertex>
+  fullName: QuickGraph.IVertexSet<TVertex>
+  nameWithType.vb: IVertexSet(Of TVertex)
+  fullName.vb: QuickGraph.IVertexSet(Of TVertex)
+  name.vb: IVertexSet(Of TVertex)
+  spec.csharp:
+  - uid: QuickGraph.IVertexSet`1
+    name: IVertexSet
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IVertexSet`1
+    name: IVertexSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.IImplicitVertexSet`1
+  commentId: T:QuickGraph.IImplicitVertexSet`1
+  isExternal: true
+  name: IImplicitVertexSet<TVertex>
+  nameWithType: IImplicitVertexSet<TVertex>
+  fullName: QuickGraph.IImplicitVertexSet<TVertex>
+  nameWithType.vb: IImplicitVertexSet(Of TVertex)
+  fullName.vb: QuickGraph.IImplicitVertexSet(Of TVertex)
+  name.vb: IImplicitVertexSet(Of TVertex)
+  spec.csharp:
+  - uid: QuickGraph.IImplicitVertexSet`1
+    name: IImplicitVertexSet
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IImplicitVertexSet`1
+    name: IImplicitVertexSet
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.IMutableGraph`2
+  commentId: T:QuickGraph.IMutableGraph`2
+  isExternal: true
+  name: IMutableGraph<TVertex, TEdge>
+  nameWithType: IMutableGraph<TVertex, TEdge>
+  fullName: QuickGraph.IMutableGraph<TVertex, TEdge>
+  nameWithType.vb: IMutableGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IMutableGraph(Of TVertex, TEdge)
+  name.vb: IMutableGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IMutableGraph`2
+    name: IMutableGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IMutableGraph`2
+    name: IMutableGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.IGraph`2
+  commentId: T:QuickGraph.IGraph`2
+  isExternal: true
+  name: IGraph<TVertex, TEdge>
+  nameWithType: IGraph<TVertex, TEdge>
+  fullName: QuickGraph.IGraph<TVertex, TEdge>
+  nameWithType.vb: IGraph(Of TVertex, TEdge)
+  fullName.vb: QuickGraph.IGraph(Of TVertex, TEdge)
+  name.vb: IGraph(Of TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.IGraph`2
+    name: IGraph
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  spec.vb:
+  - uid: QuickGraph.IGraph`2
+    name: IGraph
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.ContainsVertex(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.ContainsVertex(`0)
+  isExternal: true
+  name: ContainsVertex(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.ContainsVertex(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.ContainsVertex(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).ContainsVertex(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).ContainsVertex(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.ContainsVertex(`0)
+    name: ContainsVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.ContainsVertex(`0)
+    name: ContainsVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.IsOutEdgesEmpty(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.IsOutEdgesEmpty(`0)
+  isExternal: true
+  name: IsOutEdgesEmpty(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.IsOutEdgesEmpty(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.IsOutEdgesEmpty(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).IsOutEdgesEmpty(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).IsOutEdgesEmpty(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.IsOutEdgesEmpty(`0)
+    name: IsOutEdgesEmpty
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.IsOutEdgesEmpty(`0)
+    name: IsOutEdgesEmpty
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.OutDegree(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.OutDegree(`0)
+  isExternal: true
+  name: OutDegree(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.OutDegree(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.OutDegree(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).OutDegree(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).OutDegree(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.OutDegree(`0)
+    name: OutDegree
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.OutDegree(`0)
+    name: OutDegree
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.OutEdges(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.OutEdges(`0)
+  isExternal: true
+  name: OutEdges(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.OutEdges(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.OutEdges(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).OutEdges(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).OutEdges(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.OutEdges(`0)
+    name: OutEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.OutEdges(`0)
+    name: OutEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.TryGetInEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+  commentId: M:QuickGraph.BidirectionalGraph`2.TryGetInEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: TryGetInEdges(TVertex, out IEnumerable<TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.TryGetInEdges(TVertex, out IEnumerable<TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.TryGetInEdges(TVertex, out System.Collections.Generic.IEnumerable<TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).TryGetInEdges(TVertex, IEnumerable(Of TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).TryGetInEdges(TVertex, System.Collections.Generic.IEnumerable(Of TEdge))
+  name.vb: TryGetInEdges(TVertex, IEnumerable(Of TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetInEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+    name: TryGetInEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetInEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+    name: TryGetInEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.TryGetOutEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+  commentId: M:QuickGraph.BidirectionalGraph`2.TryGetOutEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: TryGetOutEdges(TVertex, out IEnumerable<TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.TryGetOutEdges(TVertex, out IEnumerable<TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.TryGetOutEdges(TVertex, out System.Collections.Generic.IEnumerable<TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).TryGetOutEdges(TVertex, IEnumerable(Of TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).TryGetOutEdges(TVertex, System.Collections.Generic.IEnumerable(Of TEdge))
+  name.vb: TryGetOutEdges(TVertex, IEnumerable(Of TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetOutEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+    name: TryGetOutEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetOutEdges(`0,System.Collections.Generic.IEnumerable{`1}@)
+    name: TryGetOutEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.OutEdge(`0,System.Int32)
+  commentId: M:QuickGraph.BidirectionalGraph`2.OutEdge(`0,System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: OutEdge(TVertex, int)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.OutEdge(TVertex, int)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.OutEdge(TVertex, int)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).OutEdge(TVertex, Integer)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).OutEdge(TVertex, Integer)
+  name.vb: OutEdge(TVertex, Integer)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.OutEdge(`0,System.Int32)
+    name: OutEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.OutEdge(`0,System.Int32)
+    name: OutEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.IsInEdgesEmpty(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.IsInEdgesEmpty(`0)
+  isExternal: true
+  name: IsInEdgesEmpty(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.IsInEdgesEmpty(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.IsInEdgesEmpty(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).IsInEdgesEmpty(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).IsInEdgesEmpty(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.IsInEdgesEmpty(`0)
+    name: IsInEdgesEmpty
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.IsInEdgesEmpty(`0)
+    name: IsInEdgesEmpty
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.InDegree(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.InDegree(`0)
+  isExternal: true
+  name: InDegree(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.InDegree(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.InDegree(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).InDegree(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).InDegree(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.InDegree(`0)
+    name: InDegree
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.InDegree(`0)
+    name: InDegree
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.InEdges(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.InEdges(`0)
+  isExternal: true
+  name: InEdges(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.InEdges(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.InEdges(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).InEdges(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).InEdges(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.InEdges(`0)
+    name: InEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.InEdges(`0)
+    name: InEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.InEdge(`0,System.Int32)
+  commentId: M:QuickGraph.BidirectionalGraph`2.InEdge(`0,System.Int32)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: InEdge(TVertex, int)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.InEdge(TVertex, int)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.InEdge(TVertex, int)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).InEdge(TVertex, Integer)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).InEdge(TVertex, Integer)
+  name.vb: InEdge(TVertex, Integer)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.InEdge(`0,System.Int32)
+    name: InEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.InEdge(`0,System.Int32)
+    name: InEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.Degree(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.Degree(`0)
+  isExternal: true
+  name: Degree(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.Degree(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.Degree(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).Degree(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).Degree(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.Degree(`0)
+    name: Degree
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.Degree(`0)
+    name: Degree
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.ContainsEdge(`0,`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.ContainsEdge(`0,`0)
+  isExternal: true
+  name: ContainsEdge(TVertex, TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.ContainsEdge(TVertex, TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.ContainsEdge(TVertex, TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).ContainsEdge(TVertex, TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).ContainsEdge(TVertex, TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.ContainsEdge(`0,`0)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.ContainsEdge(`0,`0)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.TryGetEdge(`0,`0,`1@)
+  commentId: M:QuickGraph.BidirectionalGraph`2.TryGetEdge(`0,`0,`1@)
+  isExternal: true
+  name: TryGetEdge(TVertex, TVertex, out TEdge)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.TryGetEdge(TVertex, TVertex, out TEdge)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.TryGetEdge(TVertex, TVertex, out TEdge)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).TryGetEdge(TVertex, TVertex, TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).TryGetEdge(TVertex, TVertex, TEdge)
+  name.vb: TryGetEdge(TVertex, TVertex, TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetEdge(`0,`0,`1@)
+    name: TryGetEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - name: TEdge
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetEdge(`0,`0,`1@)
+    name: TryGetEdge
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.TryGetEdges(`0,`0,System.Collections.Generic.IEnumerable{`1}@)
+  commentId: M:QuickGraph.BidirectionalGraph`2.TryGetEdges(`0,`0,System.Collections.Generic.IEnumerable{`1}@)
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: TryGetEdges(TVertex, TVertex, out IEnumerable<TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.TryGetEdges(TVertex, TVertex, out IEnumerable<TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.TryGetEdges(TVertex, TVertex, out System.Collections.Generic.IEnumerable<TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).TryGetEdges(TVertex, TVertex, IEnumerable(Of TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).TryGetEdges(TVertex, TVertex, System.Collections.Generic.IEnumerable(Of TEdge))
+  name.vb: TryGetEdges(TVertex, TVertex, IEnumerable(Of TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetEdges(`0,`0,System.Collections.Generic.IEnumerable{`1}@)
+    name: TryGetEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: out
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.TryGetEdges(`0,`0,System.Collections.Generic.IEnumerable{`1}@)
+    name: TryGetEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.ContainsEdge(`1)
+  commentId: M:QuickGraph.BidirectionalGraph`2.ContainsEdge(`1)
+  isExternal: true
+  name: ContainsEdge(TEdge)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.ContainsEdge(TEdge)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.ContainsEdge(TEdge)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).ContainsEdge(TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).ContainsEdge(TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.ContainsEdge(`1)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.ContainsEdge(`1)
+    name: ContainsEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.AddVertex(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.AddVertex(`0)
+  isExternal: true
+  name: AddVertex(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.AddVertex(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.AddVertex(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).AddVertex(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).AddVertex(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVertex(`0)
+    name: AddVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVertex(`0)
+    name: AddVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.AddVertexRange(System.Collections.Generic.IEnumerable{`0})
+  commentId: M:QuickGraph.BidirectionalGraph`2.AddVertexRange(System.Collections.Generic.IEnumerable{`0})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: AddVertexRange(IEnumerable<TVertex>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.AddVertexRange(IEnumerable<TVertex>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.AddVertexRange(System.Collections.Generic.IEnumerable<TVertex>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).AddVertexRange(IEnumerable(Of TVertex))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).AddVertexRange(System.Collections.Generic.IEnumerable(Of TVertex))
+  name.vb: AddVertexRange(IEnumerable(Of TVertex))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVertexRange(System.Collections.Generic.IEnumerable{`0})
+    name: AddVertexRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVertexRange(System.Collections.Generic.IEnumerable{`0})
+    name: AddVertexRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.OnVertexAdded(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.OnVertexAdded(`0)
+  isExternal: true
+  name: OnVertexAdded(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.OnVertexAdded(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.OnVertexAdded(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).OnVertexAdded(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).OnVertexAdded(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.OnVertexAdded(`0)
+    name: OnVertexAdded
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.OnVertexAdded(`0)
+    name: OnVertexAdded
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.RemoveVertex(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.RemoveVertex(`0)
+  isExternal: true
+  name: RemoveVertex(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.RemoveVertex(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.RemoveVertex(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).RemoveVertex(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).RemoveVertex(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveVertex(`0)
+    name: RemoveVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveVertex(`0)
+    name: RemoveVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.OnVertexRemoved(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.OnVertexRemoved(`0)
+  isExternal: true
+  name: OnVertexRemoved(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.OnVertexRemoved(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.OnVertexRemoved(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).OnVertexRemoved(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).OnVertexRemoved(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.OnVertexRemoved(`0)
+    name: OnVertexRemoved
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.OnVertexRemoved(`0)
+    name: OnVertexRemoved
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.RemoveVertexIf(QuickGraph.VertexPredicate{`0})
+  commentId: M:QuickGraph.BidirectionalGraph`2.RemoveVertexIf(QuickGraph.VertexPredicate{`0})
+  isExternal: true
+  name: RemoveVertexIf(VertexPredicate<TVertex>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.RemoveVertexIf(VertexPredicate<TVertex>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.RemoveVertexIf(QuickGraph.VertexPredicate<TVertex>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).RemoveVertexIf(VertexPredicate(Of TVertex))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).RemoveVertexIf(QuickGraph.VertexPredicate(Of TVertex))
+  name.vb: RemoveVertexIf(VertexPredicate(Of TVertex))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveVertexIf(QuickGraph.VertexPredicate{`0})
+    name: RemoveVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveVertexIf(QuickGraph.VertexPredicate{`0})
+    name: RemoveVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.AddEdge(`1)
+  commentId: M:QuickGraph.BidirectionalGraph`2.AddEdge(`1)
+  isExternal: true
+  name: AddEdge(TEdge)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.AddEdge(TEdge)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.AddEdge(TEdge)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).AddEdge(TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).AddEdge(TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.AddEdge(`1)
+    name: AddEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.AddEdge(`1)
+    name: AddEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.AddEdgeRange(System.Collections.Generic.IEnumerable{`1})
+  commentId: M:QuickGraph.BidirectionalGraph`2.AddEdgeRange(System.Collections.Generic.IEnumerable{`1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: AddEdgeRange(IEnumerable<TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.AddEdgeRange(IEnumerable<TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.AddEdgeRange(System.Collections.Generic.IEnumerable<TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).AddEdgeRange(IEnumerable(Of TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).AddEdgeRange(System.Collections.Generic.IEnumerable(Of TEdge))
+  name.vb: AddEdgeRange(IEnumerable(Of TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.AddEdgeRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.AddEdgeRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdge(`1)
+  commentId: M:QuickGraph.BidirectionalGraph`2.AddVerticesAndEdge(`1)
+  isExternal: true
+  name: AddVerticesAndEdge(TEdge)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.AddVerticesAndEdge(TEdge)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.AddVerticesAndEdge(TEdge)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).AddVerticesAndEdge(TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).AddVerticesAndEdge(TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdge(`1)
+    name: AddVerticesAndEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdge(`1)
+    name: AddVerticesAndEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{`1})
+  commentId: M:QuickGraph.BidirectionalGraph`2.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{`1})
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: AddVerticesAndEdgeRange(IEnumerable<TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.AddVerticesAndEdgeRange(IEnumerable<TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable<TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).AddVerticesAndEdgeRange(IEnumerable(Of TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable(Of TEdge))
+  name.vb: AddVerticesAndEdgeRange(IEnumerable(Of TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddVerticesAndEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.AddVerticesAndEdgeRange(System.Collections.Generic.IEnumerable{`1})
+    name: AddVerticesAndEdgeRange
+    isExternal: true
+  - name: (
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.OnEdgeAdded(`1)
+  commentId: M:QuickGraph.BidirectionalGraph`2.OnEdgeAdded(`1)
+  isExternal: true
+  name: OnEdgeAdded(TEdge)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.OnEdgeAdded(TEdge)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.OnEdgeAdded(TEdge)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).OnEdgeAdded(TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).OnEdgeAdded(TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.OnEdgeAdded(`1)
+    name: OnEdgeAdded
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.OnEdgeAdded(`1)
+    name: OnEdgeAdded
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.RemoveEdge(`1)
+  commentId: M:QuickGraph.BidirectionalGraph`2.RemoveEdge(`1)
+  isExternal: true
+  name: RemoveEdge(TEdge)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.RemoveEdge(TEdge)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.RemoveEdge(TEdge)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).RemoveEdge(TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).RemoveEdge(TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveEdge(`1)
+    name: RemoveEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveEdge(`1)
+    name: RemoveEdge
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.OnEdgeRemoved(`1)
+  commentId: M:QuickGraph.BidirectionalGraph`2.OnEdgeRemoved(`1)
+  isExternal: true
+  name: OnEdgeRemoved(TEdge)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.OnEdgeRemoved(TEdge)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.OnEdgeRemoved(TEdge)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).OnEdgeRemoved(TEdge)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).OnEdgeRemoved(TEdge)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.OnEdgeRemoved(`1)
+    name: OnEdgeRemoved
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.OnEdgeRemoved(`1)
+    name: OnEdgeRemoved
+    isExternal: true
+  - name: (
+  - name: TEdge
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.RemoveEdgeIf(QuickGraph.EdgePredicate{`0,`1})
+  commentId: M:QuickGraph.BidirectionalGraph`2.RemoveEdgeIf(QuickGraph.EdgePredicate{`0,`1})
+  isExternal: true
+  name: RemoveEdgeIf(EdgePredicate<TVertex, TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.RemoveEdgeIf(EdgePredicate<TVertex, TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.RemoveEdgeIf(QuickGraph.EdgePredicate<TVertex, TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).RemoveEdgeIf(EdgePredicate(Of TVertex, TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).RemoveEdgeIf(QuickGraph.EdgePredicate(Of TVertex, TEdge))
+  name.vb: RemoveEdgeIf(EdgePredicate(Of TVertex, TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveEdgeIf(QuickGraph.EdgePredicate{`0,`1})
+    name: RemoveEdgeIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveEdgeIf(QuickGraph.EdgePredicate{`0,`1})
+    name: RemoveEdgeIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.RemoveOutEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+  commentId: M:QuickGraph.BidirectionalGraph`2.RemoveOutEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+  isExternal: true
+  name: RemoveOutEdgeIf(TVertex, EdgePredicate<TVertex, TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.RemoveOutEdgeIf(TVertex, EdgePredicate<TVertex, TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.RemoveOutEdgeIf(TVertex, QuickGraph.EdgePredicate<TVertex, TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).RemoveOutEdgeIf(TVertex, EdgePredicate(Of TVertex, TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).RemoveOutEdgeIf(TVertex, QuickGraph.EdgePredicate(Of TVertex, TEdge))
+  name.vb: RemoveOutEdgeIf(TVertex, EdgePredicate(Of TVertex, TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveOutEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+    name: RemoveOutEdgeIf
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveOutEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+    name: RemoveOutEdgeIf
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.RemoveInEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+  commentId: M:QuickGraph.BidirectionalGraph`2.RemoveInEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+  isExternal: true
+  name: RemoveInEdgeIf(TVertex, EdgePredicate<TVertex, TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.RemoveInEdgeIf(TVertex, EdgePredicate<TVertex, TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.RemoveInEdgeIf(TVertex, QuickGraph.EdgePredicate<TVertex, TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).RemoveInEdgeIf(TVertex, EdgePredicate(Of TVertex, TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).RemoveInEdgeIf(TVertex, QuickGraph.EdgePredicate(Of TVertex, TEdge))
+  name.vb: RemoveInEdgeIf(TVertex, EdgePredicate(Of TVertex, TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveInEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+    name: RemoveInEdgeIf
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.RemoveInEdgeIf(`0,QuickGraph.EdgePredicate{`0,`1})
+    name: RemoveInEdgeIf
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgePredicate`2
+    name: EdgePredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.ClearOutEdges(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.ClearOutEdges(`0)
+  isExternal: true
+  name: ClearOutEdges(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.ClearOutEdges(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.ClearOutEdges(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).ClearOutEdges(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).ClearOutEdges(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.ClearOutEdges(`0)
+    name: ClearOutEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.ClearOutEdges(`0)
+    name: ClearOutEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.ClearInEdges(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.ClearInEdges(`0)
+  isExternal: true
+  name: ClearInEdges(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.ClearInEdges(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.ClearInEdges(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).ClearInEdges(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).ClearInEdges(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.ClearInEdges(`0)
+    name: ClearInEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.ClearInEdges(`0)
+    name: ClearInEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.ClearEdges(`0)
+  commentId: M:QuickGraph.BidirectionalGraph`2.ClearEdges(`0)
+  isExternal: true
+  name: ClearEdges(TVertex)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.ClearEdges(TVertex)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.ClearEdges(TVertex)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).ClearEdges(TVertex)
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).ClearEdges(TVertex)
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.ClearEdges(`0)
+    name: ClearEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.ClearEdges(`0)
+    name: ClearEdges
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.TrimEdgeExcess
+  commentId: M:QuickGraph.BidirectionalGraph`2.TrimEdgeExcess
+  isExternal: true
+  name: TrimEdgeExcess()
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.TrimEdgeExcess()
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.TrimEdgeExcess()
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).TrimEdgeExcess()
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).TrimEdgeExcess()
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.TrimEdgeExcess
+    name: TrimEdgeExcess
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.TrimEdgeExcess
+    name: TrimEdgeExcess
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.Clear
+  commentId: M:QuickGraph.BidirectionalGraph`2.Clear
+  isExternal: true
+  name: Clear()
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.Clear()
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.Clear()
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).Clear()
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).Clear()
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.MergeVertex(`0,QuickGraph.EdgeFactory{`0,`1})
+  commentId: M:QuickGraph.BidirectionalGraph`2.MergeVertex(`0,QuickGraph.EdgeFactory{`0,`1})
+  isExternal: true
+  name: MergeVertex(TVertex, EdgeFactory<TVertex, TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.MergeVertex(TVertex, EdgeFactory<TVertex, TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.MergeVertex(TVertex, QuickGraph.EdgeFactory<TVertex, TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).MergeVertex(TVertex, EdgeFactory(Of TVertex, TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).MergeVertex(TVertex, QuickGraph.EdgeFactory(Of TVertex, TEdge))
+  name.vb: MergeVertex(TVertex, EdgeFactory(Of TVertex, TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.MergeVertex(`0,QuickGraph.EdgeFactory{`0,`1})
+    name: MergeVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.MergeVertex(`0,QuickGraph.EdgeFactory{`0,`1})
+    name: MergeVertex
+    isExternal: true
+  - name: (
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.MergeVertexIf(QuickGraph.VertexPredicate{`0},QuickGraph.EdgeFactory{`0,`1})
+  commentId: M:QuickGraph.BidirectionalGraph`2.MergeVertexIf(QuickGraph.VertexPredicate{`0},QuickGraph.EdgeFactory{`0,`1})
+  isExternal: true
+  name: MergeVertexIf(VertexPredicate<TVertex>, EdgeFactory<TVertex, TEdge>)
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.MergeVertexIf(VertexPredicate<TVertex>, EdgeFactory<TVertex, TEdge>)
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.MergeVertexIf(QuickGraph.VertexPredicate<TVertex>, QuickGraph.EdgeFactory<TVertex, TEdge>)
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).MergeVertexIf(VertexPredicate(Of TVertex), EdgeFactory(Of TVertex, TEdge))
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).MergeVertexIf(QuickGraph.VertexPredicate(Of TVertex), QuickGraph.EdgeFactory(Of TVertex, TEdge))
+  name.vb: MergeVertexIf(VertexPredicate(Of TVertex), EdgeFactory(Of TVertex, TEdge))
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.MergeVertexIf(QuickGraph.VertexPredicate{`0},QuickGraph.EdgeFactory{`0,`1})
+    name: MergeVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: '>'
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: <
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.MergeVertexIf(QuickGraph.VertexPredicate{`0},QuickGraph.EdgeFactory{`0,`1})
+    name: MergeVertexIf
+    isExternal: true
+  - name: (
+  - uid: QuickGraph.VertexPredicate`1
+    name: VertexPredicate
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: QuickGraph.EdgeFactory`2
+    name: EdgeFactory
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TVertex
+  - name: ','
+  - name: " "
+  - name: TEdge
+  - name: )
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.Clone
+  commentId: M:QuickGraph.BidirectionalGraph`2.Clone
+  isExternal: true
+  name: Clone()
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.Clone()
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.Clone()
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).Clone()
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).Clone()
+  spec.csharp:
+  - uid: QuickGraph.BidirectionalGraph`2.Clone
+    name: Clone
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: QuickGraph.BidirectionalGraph`2.Clone
+    name: Clone
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.System#ICloneable#Clone
+  commentId: M:QuickGraph.BidirectionalGraph`2.System#ICloneable#Clone
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  name: ICloneable.Clone()
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.ICloneable.Clone()
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.System.ICloneable.Clone()
+  spec.csharp:
+  - uid: System.ICloneable
+    name: ICloneable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.icloneable
+  - name: .
+  - uid: QuickGraph.BidirectionalGraph`2.System#ICloneable#Clone
+    name: Clone
+    isExternal: true
+  - name: (
+  - name: )
+- uid: QuickGraph.BidirectionalGraph`2.EdgeType
+  commentId: P:QuickGraph.BidirectionalGraph`2.EdgeType
+  isExternal: true
+  name: EdgeType
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.EdgeType
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.EdgeType
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).EdgeType
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).EdgeType
+- uid: QuickGraph.BidirectionalGraph`2.EdgeCapacity
+  commentId: P:QuickGraph.BidirectionalGraph`2.EdgeCapacity
+  isExternal: true
+  name: EdgeCapacity
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.EdgeCapacity
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.EdgeCapacity
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).EdgeCapacity
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).EdgeCapacity
+- uid: QuickGraph.BidirectionalGraph`2.IsDirected
+  commentId: P:QuickGraph.BidirectionalGraph`2.IsDirected
+  isExternal: true
+  name: IsDirected
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.IsDirected
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.IsDirected
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).IsDirected
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).IsDirected
+- uid: QuickGraph.BidirectionalGraph`2.AllowParallelEdges
+  commentId: P:QuickGraph.BidirectionalGraph`2.AllowParallelEdges
+  isExternal: true
+  name: AllowParallelEdges
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.AllowParallelEdges
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.AllowParallelEdges
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).AllowParallelEdges
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).AllowParallelEdges
+- uid: QuickGraph.BidirectionalGraph`2.IsVerticesEmpty
+  commentId: P:QuickGraph.BidirectionalGraph`2.IsVerticesEmpty
+  isExternal: true
+  name: IsVerticesEmpty
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.IsVerticesEmpty
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.IsVerticesEmpty
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).IsVerticesEmpty
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).IsVerticesEmpty
+- uid: QuickGraph.BidirectionalGraph`2.VertexCount
+  commentId: P:QuickGraph.BidirectionalGraph`2.VertexCount
+  isExternal: true
+  name: VertexCount
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.VertexCount
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.VertexCount
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).VertexCount
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).VertexCount
+- uid: QuickGraph.BidirectionalGraph`2.Vertices
+  commentId: P:QuickGraph.BidirectionalGraph`2.Vertices
+  isExternal: true
+  name: Vertices
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.Vertices
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.Vertices
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).Vertices
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).Vertices
+- uid: QuickGraph.BidirectionalGraph`2.IsEdgesEmpty
+  commentId: P:QuickGraph.BidirectionalGraph`2.IsEdgesEmpty
+  isExternal: true
+  name: IsEdgesEmpty
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.IsEdgesEmpty
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.IsEdgesEmpty
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).IsEdgesEmpty
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).IsEdgesEmpty
+- uid: QuickGraph.BidirectionalGraph`2.EdgeCount
+  commentId: P:QuickGraph.BidirectionalGraph`2.EdgeCount
+  isExternal: true
+  name: EdgeCount
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.EdgeCount
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.EdgeCount
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).EdgeCount
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).EdgeCount
+- uid: QuickGraph.BidirectionalGraph`2.Edges
+  commentId: P:QuickGraph.BidirectionalGraph`2.Edges
+  isExternal: true
+  name: Edges
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.Edges
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.Edges
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).Edges
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).Edges
+- uid: QuickGraph.BidirectionalGraph`2.VertexAdded
+  commentId: E:QuickGraph.BidirectionalGraph`2.VertexAdded
+  isExternal: true
+  name: VertexAdded
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.VertexAdded
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.VertexAdded
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).VertexAdded
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).VertexAdded
+- uid: QuickGraph.BidirectionalGraph`2.VertexRemoved
+  commentId: E:QuickGraph.BidirectionalGraph`2.VertexRemoved
+  isExternal: true
+  name: VertexRemoved
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.VertexRemoved
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.VertexRemoved
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).VertexRemoved
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).VertexRemoved
+- uid: QuickGraph.BidirectionalGraph`2.EdgeAdded
+  commentId: E:QuickGraph.BidirectionalGraph`2.EdgeAdded
+  isExternal: true
+  name: EdgeAdded
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.EdgeAdded
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.EdgeAdded
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).EdgeAdded
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).EdgeAdded
+- uid: QuickGraph.BidirectionalGraph`2.EdgeRemoved
+  commentId: E:QuickGraph.BidirectionalGraph`2.EdgeRemoved
+  isExternal: true
+  name: EdgeRemoved
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.EdgeRemoved
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.EdgeRemoved
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).EdgeRemoved
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).EdgeRemoved
+- uid: QuickGraph.BidirectionalGraph`2.Cleared
+  commentId: E:QuickGraph.BidirectionalGraph`2.Cleared
+  isExternal: true
+  name: Cleared
+  nameWithType: BidirectionalGraph<TVertex, TEdge>.Cleared
+  fullName: QuickGraph.BidirectionalGraph<TVertex, TEdge>.Cleared
+  nameWithType.vb: BidirectionalGraph(Of TVertex, TEdge).Cleared
+  fullName.vb: QuickGraph.BidirectionalGraph(Of TVertex, TEdge).Cleared

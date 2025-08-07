@@ -1,0 +1,153 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.HannesHand.ControlModality
+  commentId: T:mosaic_libary.HannesHand.ControlModality
+  id: HannesHand.ControlModality
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.HannesHand.ControlModality.EMC_TEST_CONTROL
+  - mosaic_libary.HannesHand.ControlModality.EMG_CONTROL
+  - mosaic_libary.HannesHand.ControlModality.HMI_CONTROL
+  - mosaic_libary.HannesHand.ControlModality.UNITY_CONTROL
+  langs:
+  - csharp
+  - vb
+  name: HannesHand.ControlModality
+  nameWithType: HannesHand.ControlModality
+  fullName: mosaic_libary.HannesHand.ControlModality
+  type: Enum
+  source:
+    id: ControlModality
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 334
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Commands for the different Control Modes to give to RefControl -&gt; REF_CONTROL_MODE
+  example: []
+  syntax:
+    content: public enum HannesHand.ControlModality
+    content.vb: Public Enum HannesHand.ControlModality
+- uid: mosaic_libary.HannesHand.ControlModality.EMG_CONTROL
+  commentId: F:mosaic_libary.HannesHand.ControlModality.EMG_CONTROL
+  id: EMG_CONTROL
+  parent: mosaic_libary.HannesHand.ControlModality
+  langs:
+  - csharp
+  - vb
+  name: EMG_CONTROL
+  nameWithType: HannesHand.ControlModality.EMG_CONTROL
+  fullName: mosaic_libary.HannesHand.ControlModality.EMG_CONTROL
+  type: Field
+  source:
+    id: EMG_CONTROL
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 336
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EMG_CONTROL = 0
+    return:
+      type: mosaic_libary.HannesHand.ControlModality
+- uid: mosaic_libary.HannesHand.ControlModality.HMI_CONTROL
+  commentId: F:mosaic_libary.HannesHand.ControlModality.HMI_CONTROL
+  id: HMI_CONTROL
+  parent: mosaic_libary.HannesHand.ControlModality
+  langs:
+  - csharp
+  - vb
+  name: HMI_CONTROL
+  nameWithType: HannesHand.ControlModality.HMI_CONTROL
+  fullName: mosaic_libary.HannesHand.ControlModality.HMI_CONTROL
+  type: Field
+  source:
+    id: HMI_CONTROL
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 337
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: HMI_CONTROL = 1
+    return:
+      type: mosaic_libary.HannesHand.ControlModality
+- uid: mosaic_libary.HannesHand.ControlModality.EMC_TEST_CONTROL
+  commentId: F:mosaic_libary.HannesHand.ControlModality.EMC_TEST_CONTROL
+  id: EMC_TEST_CONTROL
+  parent: mosaic_libary.HannesHand.ControlModality
+  langs:
+  - csharp
+  - vb
+  name: EMC_TEST_CONTROL
+  nameWithType: HannesHand.ControlModality.EMC_TEST_CONTROL
+  fullName: mosaic_libary.HannesHand.ControlModality.EMC_TEST_CONTROL
+  type: Field
+  source:
+    id: EMC_TEST_CONTROL
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 338
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: EMC_TEST_CONTROL = 2
+    return:
+      type: mosaic_libary.HannesHand.ControlModality
+- uid: mosaic_libary.HannesHand.ControlModality.UNITY_CONTROL
+  commentId: F:mosaic_libary.HannesHand.ControlModality.UNITY_CONTROL
+  id: UNITY_CONTROL
+  parent: mosaic_libary.HannesHand.ControlModality
+  langs:
+  - csharp
+  - vb
+  name: UNITY_CONTROL
+  nameWithType: HannesHand.ControlModality.UNITY_CONTROL
+  fullName: mosaic_libary.HannesHand.ControlModality.UNITY_CONTROL
+  type: Field
+  source:
+    id: UNITY_CONTROL
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 343
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Unity App Control. SO far, this is the only mode in which the commands for RefControl 
+
+    described in the Communication Protocol work.
+  example: []
+  syntax:
+    content: UNITY_CONTROL = 3
+    return:
+      type: mosaic_libary.HannesHand.ControlModality
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.HannesHand.ControlModality
+  commentId: T:mosaic_libary.HannesHand.ControlModality
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.ControlModality
+  nameWithType: HannesHand.ControlModality
+  fullName: mosaic_libary.HannesHand.ControlModality
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.ControlModality
+    name: ControlModality
+    href: mosaic_libary.HannesHand.ControlModality.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.ControlModality
+    name: ControlModality
+    href: mosaic_libary.HannesHand.ControlModality.html

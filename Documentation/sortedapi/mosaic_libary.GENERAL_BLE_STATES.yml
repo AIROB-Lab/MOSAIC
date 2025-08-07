@@ -1,0 +1,86 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.GENERAL_BLE_STATES
+  commentId: T:mosaic_libary.GENERAL_BLE_STATES
+  id: GENERAL_BLE_STATES
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.GENERAL_BLE_STATES.FOUND_DEVICES
+  - mosaic_libary.GENERAL_BLE_STATES.SCANNING
+  langs:
+  - csharp
+  - vb
+  name: GENERAL_BLE_STATES
+  nameWithType: GENERAL_BLE_STATES
+  fullName: mosaic_libary.GENERAL_BLE_STATES
+  type: Enum
+  source:
+    id: GENERAL_BLE_STATES
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 873
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Enum for general BLE states =&gt; for UI purpose
+  example: []
+  syntax:
+    content: public enum GENERAL_BLE_STATES
+    content.vb: Public Enum GENERAL_BLE_STATES
+- uid: mosaic_libary.GENERAL_BLE_STATES.FOUND_DEVICES
+  commentId: F:mosaic_libary.GENERAL_BLE_STATES.FOUND_DEVICES
+  id: FOUND_DEVICES
+  parent: mosaic_libary.GENERAL_BLE_STATES
+  langs:
+  - csharp
+  - vb
+  name: FOUND_DEVICES
+  nameWithType: GENERAL_BLE_STATES.FOUND_DEVICES
+  fullName: mosaic_libary.GENERAL_BLE_STATES.FOUND_DEVICES
+  type: Field
+  source:
+    id: FOUND_DEVICES
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 875
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: FOUND_DEVICES = 0
+    return:
+      type: mosaic_libary.GENERAL_BLE_STATES
+- uid: mosaic_libary.GENERAL_BLE_STATES.SCANNING
+  commentId: F:mosaic_libary.GENERAL_BLE_STATES.SCANNING
+  id: SCANNING
+  parent: mosaic_libary.GENERAL_BLE_STATES
+  langs:
+  - csharp
+  - vb
+  name: SCANNING
+  nameWithType: GENERAL_BLE_STATES.SCANNING
+  fullName: mosaic_libary.GENERAL_BLE_STATES.SCANNING
+  type: Field
+  source:
+    id: SCANNING
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\BluetoothLEManager.cs
+    startLine: 876
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: SCANNING = 1
+    return:
+      type: mosaic_libary.GENERAL_BLE_STATES
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.GENERAL_BLE_STATES
+  commentId: T:mosaic_libary.GENERAL_BLE_STATES
+  parent: mosaic_libary
+  href: mosaic_libary.GENERAL_BLE_STATES.html
+  name: GENERAL_BLE_STATES
+  nameWithType: GENERAL_BLE_STATES
+  fullName: mosaic_libary.GENERAL_BLE_STATES

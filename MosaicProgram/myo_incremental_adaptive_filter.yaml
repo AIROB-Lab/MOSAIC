@@ -1,0 +1,41 @@
+# ---------------------------------------------------------------------
+# simple example #5: incremental machine-learning-based myocontrol.
+# no cluster storage needed, since this is incremental learning.
+# ---------------------------------------------------------------------
+
+# timer, myo, x5, rectify, low-pass filter, subsample (same as in example #2, #3 and #4)
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ]}
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ]  }
+ARV_LPF1: {Type: AdaptiveFilter, Inputs: [ rectified_raw_EMG ], Params: [ 1, 0, 0, 0 ]}
+ARV_LPF2: {Type: AdaptiveFilter, Inputs: [ ARV_LPF1 ], Params: [ 0.7, 0, -4, 5 ]}
+#ARV_LPF: {
+#    Type: Filter,
+#    Inputs: [ rectified_raw_EMG ],
+    # II ord. Butterworth filter, LP@2Hz (assume Fs=200S/s). in matlab:
+    # format shortg; [num,den] = butter(2,2/(200/2),'low')
+    # in general, [num,den] = butter(ord,cutoff/(Fs/2),'low')
+#    Params: [ 0.00094469;0.0018894;0.00094469, 1;-1.9112;0.91498 ]
+#}
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF2, timer_subs ] }
+
+# this time, the Trigger sends the ground truth directly to the IncrementalPredictor - no Buffer required!
+capture_data: { Type: Trigger, Params: [
+      rest:0;0;0;0;0;0;0;0;0;0;0;0,
+     power:1;1;1;1;1;1;0;0;0;0;0;0,
+      flex:0;0;0;0;0;0;1;0;0;0;0;0,
+    extend:0;0;0;0;0;0;0;1;0;0;0;0,
+      pron:0;0;0;0;0;0;0;0;1;0;0;0,
+       sup:0;0;0;0;0;0;0;0;0;1;0;0
+    ]}
+
+# an incremental predictor: its input space is the ARV EMG (8d), its ground truth is the values received from the Trigger (12d)
+incr_learn: { Type: IncrementalPredictor, Inputs: [ ARV, capture_data ], Params: [ IncrementalRidgeRegression, 8, 12 ] }
+#incr_learn: { Type: IncrementalPredictor, Inputs: [ ARV, capture_data ], Params: [ IncrementalRFF, 8, 12 ] }
+ARV_LPF3: {Type: AdaptiveFilter, Inputs: [ incr_learn ], Params: [ 1, 0, -7, 8 ]}
+# control skin-textured Blender arm (prediction)
+blender_skin_arm_ctrl: { Type: BlenderArm, Inputs: [ ARV_LPF3 ], Params: [ localhost, 3334 ] }
+hannes_skin_arm_ctrl: { Type: HannesArm, Inputs: [ ARV_LPF3 ], Params: [ localhost, 8889 ] }
+

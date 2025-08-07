@@ -1,0 +1,240 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.HannesHand.JointsActivationIndex
+  commentId: T:mosaic_libary.HannesHand.JointsActivationIndex
+  id: HannesHand.JointsActivationIndex
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_3DIGIT
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_ELBOW
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_HAND
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_RSVD
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_SHOULDER
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_THUMB
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_FE
+  - mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_PS
+  langs:
+  - csharp
+  - vb
+  name: HannesHand.JointsActivationIndex
+  nameWithType: HannesHand.JointsActivationIndex
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex
+  type: Enum
+  source:
+    id: JointsActivationIndex
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 366
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Indices of the joints in the activation bitmask (given to RefControl -&gt; REF_JOINT_SET).
+  example: []
+  syntax:
+    content: public enum HannesHand.JointsActivationIndex
+    content.vb: Public Enum HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_RSVD
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_RSVD
+  id: JOINT_RSVD
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_RSVD
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_RSVD
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_RSVD
+  type: Field
+  source:
+    id: JOINT_RSVD
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 368
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_RSVD = 0
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_3DIGIT
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_3DIGIT
+  id: JOINT_3DIGIT
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_3DIGIT
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_3DIGIT
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_3DIGIT
+  type: Field
+  source:
+    id: JOINT_3DIGIT
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 369
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_3DIGIT = 1
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_THUMB
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_THUMB
+  id: JOINT_THUMB
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_THUMB
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_THUMB
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_THUMB
+  type: Field
+  source:
+    id: JOINT_THUMB
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 370
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_THUMB = 2
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_SHOULDER
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_SHOULDER
+  id: JOINT_SHOULDER
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_SHOULDER
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_SHOULDER
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_SHOULDER
+  type: Field
+  source:
+    id: JOINT_SHOULDER
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 371
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_SHOULDER = 3
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_ELBOW
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_ELBOW
+  id: JOINT_ELBOW
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_ELBOW
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_ELBOW
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_ELBOW
+  type: Field
+  source:
+    id: JOINT_ELBOW
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 372
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_ELBOW = 4
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_FE
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_FE
+  id: JOINT_WRIST_FE
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_WRIST_FE
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_WRIST_FE
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_FE
+  type: Field
+  source:
+    id: JOINT_WRIST_FE
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 373
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_WRIST_FE = 5
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_PS
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_PS
+  id: JOINT_WRIST_PS
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_WRIST_PS
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_WRIST_PS
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_WRIST_PS
+  type: Field
+  source:
+    id: JOINT_WRIST_PS
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 374
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_WRIST_PS = 6
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+- uid: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_HAND
+  commentId: F:mosaic_libary.HannesHand.JointsActivationIndex.JOINT_HAND
+  id: JOINT_HAND
+  parent: mosaic_libary.HannesHand.JointsActivationIndex
+  langs:
+  - csharp
+  - vb
+  name: JOINT_HAND
+  nameWithType: HannesHand.JointsActivationIndex.JOINT_HAND
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex.JOINT_HAND
+  type: Field
+  source:
+    id: JOINT_HAND
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 375
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: JOINT_HAND = 7
+    return:
+      type: mosaic_libary.HannesHand.JointsActivationIndex
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.HannesHand.JointsActivationIndex
+  commentId: T:mosaic_libary.HannesHand.JointsActivationIndex
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.JointsActivationIndex
+  nameWithType: HannesHand.JointsActivationIndex
+  fullName: mosaic_libary.HannesHand.JointsActivationIndex
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.JointsActivationIndex
+    name: JointsActivationIndex
+    href: mosaic_libary.HannesHand.JointsActivationIndex.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.JointsActivationIndex
+    name: JointsActivationIndex
+    href: mosaic_libary.HannesHand.JointsActivationIndex.html

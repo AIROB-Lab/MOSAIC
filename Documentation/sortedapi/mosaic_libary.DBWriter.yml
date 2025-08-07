@@ -1,0 +1,850 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.DBWriter
+  commentId: T:mosaic_libary.DBWriter
+  id: DBWriter
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.DBWriter.#ctor(System.String,System.Int32)
+  - mosaic_libary.DBWriter.Add(System.String)
+  - mosaic_libary.DBWriter.DumpBuffer(System.Collections.Generic.List{System.String})
+  - mosaic_libary.DBWriter.Flush
+  - mosaic_libary.DBWriter.UpdateBufferSize(System.Int32)
+  - mosaic_libary.DBWriter._buffer1
+  - mosaic_libary.DBWriter._buffer1IsActive
+  - mosaic_libary.DBWriter._buffer2
+  - mosaic_libary.DBWriter._bufferSize
+  - mosaic_libary.DBWriter._filename
+  - mosaic_libary.DBWriter._flushing
+  - mosaic_libary.DBWriter.dumpingBufferLock
+  langs:
+  - csharp
+  - vb
+  name: DBWriter
+  nameWithType: DBWriter
+  fullName: mosaic_libary.DBWriter
+  type: Class
+  source:
+    id: DBWriter
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 83
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Implements a double-buffered data writer. Uses two alternating buffers to store data as fast as possible.
+
+    Once buffer 1 is full, switches storing to buffer 2 and dumps buffer 1 to the disk.
+
+    If the dump file already exists, appends happily so that no data ever gets lost.
+  example: []
+  syntax:
+    content: public class DBWriter
+    content.vb: Public Class DBWriter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.DBWriter._filename
+  commentId: F:mosaic_libary.DBWriter._filename
+  id: _filename
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: _filename
+  nameWithType: DBWriter._filename
+  fullName: mosaic_libary.DBWriter._filename
+  type: Field
+  source:
+    id: _filename
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 88
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Path to which file to dump.
+  example: []
+  syntax:
+    content: private readonly string _filename
+    return:
+      type: System.String
+    content.vb: Private ReadOnly _filename As String
+- uid: mosaic_libary.DBWriter._bufferSize
+  commentId: F:mosaic_libary.DBWriter._bufferSize
+  id: _bufferSize
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: _bufferSize
+  nameWithType: DBWriter._bufferSize
+  fullName: mosaic_libary.DBWriter._bufferSize
+  type: Field
+  source:
+    id: _bufferSize
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 98
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Size (length) of each buffer.
+  example: []
+  syntax:
+    content: private int _bufferSize
+    return:
+      type: System.Int32
+    content.vb: Private _bufferSize As Integer
+- uid: mosaic_libary.DBWriter._buffer1
+  commentId: F:mosaic_libary.DBWriter._buffer1
+  id: _buffer1
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: _buffer1
+  nameWithType: DBWriter._buffer1
+  fullName: mosaic_libary.DBWriter._buffer1
+  type: Field
+  source:
+    id: _buffer1
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 103
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Buffers implemented as lists of strings.
+  example: []
+  syntax:
+    content: private List<string> _buffer1
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Private _buffer1 As List(Of String)
+- uid: mosaic_libary.DBWriter._buffer2
+  commentId: F:mosaic_libary.DBWriter._buffer2
+  id: _buffer2
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: _buffer2
+  nameWithType: DBWriter._buffer2
+  fullName: mosaic_libary.DBWriter._buffer2
+  type: Field
+  source:
+    id: _buffer2
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 103
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Buffers implemented as lists of strings.
+  example: []
+  syntax:
+    content: private List<string> _buffer2
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Private _buffer2 As List(Of String)
+- uid: mosaic_libary.DBWriter._buffer1IsActive
+  commentId: F:mosaic_libary.DBWriter._buffer1IsActive
+  id: _buffer1IsActive
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: _buffer1IsActive
+  nameWithType: DBWriter._buffer1IsActive
+  fullName: mosaic_libary.DBWriter._buffer1IsActive
+  type: Field
+  source:
+    id: _buffer1IsActive
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 108
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Indicates which buffer is active. True if buffer 1 is active, false if buffer 2 is active.
+  example: []
+  syntax:
+    content: private bool _buffer1IsActive
+    return:
+      type: System.Boolean
+    content.vb: Private _buffer1IsActive As Boolean
+- uid: mosaic_libary.DBWriter._flushing
+  commentId: F:mosaic_libary.DBWriter._flushing
+  id: _flushing
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: _flushing
+  nameWithType: DBWriter._flushing
+  fullName: mosaic_libary.DBWriter._flushing
+  type: Field
+  source:
+    id: _flushing
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 113
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: True if buffer is flushing.
+  example: []
+  syntax:
+    content: private bool _flushing
+    return:
+      type: System.Boolean
+    content.vb: Private _flushing As Boolean
+- uid: mosaic_libary.DBWriter.dumpingBufferLock
+  commentId: F:mosaic_libary.DBWriter.dumpingBufferLock
+  id: dumpingBufferLock
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: dumpingBufferLock
+  nameWithType: DBWriter.dumpingBufferLock
+  fullName: mosaic_libary.DBWriter.dumpingBufferLock
+  type: Field
+  source:
+    id: dumpingBufferLock
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 115
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private readonly object dumpingBufferLock
+    return:
+      type: System.Object
+    content.vb: Private ReadOnly dumpingBufferLock As Object
+- uid: mosaic_libary.DBWriter.#ctor(System.String,System.Int32)
+  commentId: M:mosaic_libary.DBWriter.#ctor(System.String,System.Int32)
+  id: '#ctor(System.String,System.Int32)'
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: DBWriter(string, int)
+  nameWithType: DBWriter.DBWriter(string, int)
+  fullName: mosaic_libary.DBWriter.DBWriter(string, int)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 122
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Initializes a new instance of the <xref href="mosaic_libary.DBWriter" data-throw-if-not-resolved="false"></xref> class.
+  example: []
+  syntax:
+    content: public DBWriter(string completeFilename, int bufferSize = 500)
+    parameters:
+    - id: completeFilename
+      type: System.String
+      description: The file path where data will be written to.
+    - id: bufferSize
+      type: System.Int32
+      description: Length of the Buffer.
+    content.vb: Public Sub New(completeFilename As String, bufferSize As Integer = 500)
+  overload: mosaic_libary.DBWriter.#ctor*
+  nameWithType.vb: DBWriter.New(String, Integer)
+  fullName.vb: mosaic_libary.DBWriter.New(String, Integer)
+  name.vb: New(String, Integer)
+- uid: mosaic_libary.DBWriter.UpdateBufferSize(System.Int32)
+  commentId: M:mosaic_libary.DBWriter.UpdateBufferSize(System.Int32)
+  id: UpdateBufferSize(System.Int32)
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: UpdateBufferSize(int)
+  nameWithType: DBWriter.UpdateBufferSize(int)
+  fullName: mosaic_libary.DBWriter.UpdateBufferSize(int)
+  type: Method
+  source:
+    id: UpdateBufferSize
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 141
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: >-
+    Updates the buffer size based on the desired rate to ensure the buffer capacity aligns with the rate at which data is expected to be processed. 
+
+    This adjustment is necessary because the desired rate of blocks may be determined by the blocks to which they are subscribed, which can occur after initial buffer setup.
+
+    This method recalculates the buffer size to maintain data for a fixed duration, typically 10 seconds, based on the newly set desired rate.
+  example: []
+  syntax:
+    content: public void UpdateBufferSize(int bufferSize = 500)
+    parameters:
+    - id: bufferSize
+      type: System.Int32
+      description: >-
+        The new buffer size, calculated to hold 10 seconds' worth of data at the current desired rate. 
+            This size is used to adjust the buffer's capacity to ensure 
+            it can accommodate the expected volume of incoming data without overflow or excessive memory usage.
+    content.vb: Public Sub UpdateBufferSize(bufferSize As Integer = 500)
+  overload: mosaic_libary.DBWriter.UpdateBufferSize*
+  nameWithType.vb: DBWriter.UpdateBufferSize(Integer)
+  fullName.vb: mosaic_libary.DBWriter.UpdateBufferSize(Integer)
+  name.vb: UpdateBufferSize(Integer)
+- uid: mosaic_libary.DBWriter.Add(System.String)
+  commentId: M:mosaic_libary.DBWriter.Add(System.String)
+  id: Add(System.String)
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: Add(string)
+  nameWithType: DBWriter.Add(string)
+  fullName: mosaic_libary.DBWriter.Add(string)
+  type: Method
+  source:
+    id: Add
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 154
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Adds data to the buffer for writing to the file.
+  example: []
+  syntax:
+    content: public void Add(string data)
+    parameters:
+    - id: data
+      type: System.String
+      description: The data to be added to the buffer.
+    content.vb: Public Sub Add(data As String)
+  overload: mosaic_libary.DBWriter.Add*
+  nameWithType.vb: DBWriter.Add(String)
+  fullName.vb: mosaic_libary.DBWriter.Add(String)
+  name.vb: Add(String)
+- uid: mosaic_libary.DBWriter.DumpBuffer(System.Collections.Generic.List{System.String})
+  commentId: M:mosaic_libary.DBWriter.DumpBuffer(System.Collections.Generic.List{System.String})
+  id: DumpBuffer(System.Collections.Generic.List{System.String})
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: DumpBuffer(List<string>)
+  nameWithType: DBWriter.DumpBuffer(List<string>)
+  fullName: mosaic_libary.DBWriter.DumpBuffer(System.Collections.Generic.List<string>)
+  type: Method
+  source:
+    id: DumpBuffer
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 181
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Dumps the buffer to the disk.
+  example: []
+  syntax:
+    content: private void DumpBuffer(List<string> buffer)
+    parameters:
+    - id: buffer
+      type: System.Collections.Generic.List{System.String}
+      description: The buffer to be dumped.
+    content.vb: Private Sub DumpBuffer(buffer As List(Of String))
+  overload: mosaic_libary.DBWriter.DumpBuffer*
+  nameWithType.vb: DBWriter.DumpBuffer(List(Of String))
+  fullName.vb: mosaic_libary.DBWriter.DumpBuffer(System.Collections.Generic.List(Of String))
+  name.vb: DumpBuffer(List(Of String))
+- uid: mosaic_libary.DBWriter.Flush
+  commentId: M:mosaic_libary.DBWriter.Flush
+  id: Flush
+  parent: mosaic_libary.DBWriter
+  langs:
+  - csharp
+  - vb
+  name: Flush()
+  nameWithType: DBWriter.Flush()
+  fullName: mosaic_libary.DBWriter.Flush()
+  type: Method
+  source:
+    id: Flush
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 202
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Flushes buffer after shutting down <xref href="mosaic_libary.DBWriter" data-throw-if-not-resolved="false"></xref> and dispose them.
+  example: []
+  syntax:
+    content: public Task Flush()
+    return:
+      type: System.Threading.Tasks.Task
+      description: A task representing the asynchronous flush operation.
+    content.vb: Public Function Flush() As Task
+  overload: mosaic_libary.DBWriter.Flush*
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<string>
+  nameWithType: List<string>
+  fullName: System.Collections.Generic.List<string>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: mosaic_libary.DBWriter
+  commentId: T:mosaic_libary.DBWriter
+  parent: mosaic_libary
+  href: mosaic_libary.DBWriter.html
+  name: DBWriter
+  nameWithType: DBWriter
+  fullName: mosaic_libary.DBWriter
+- uid: mosaic_libary.DBWriter.#ctor*
+  commentId: Overload:mosaic_libary.DBWriter.#ctor
+  href: mosaic_libary.DBWriter.html#mosaic_libary_DBWriter__ctor_System_String_System_Int32_
+  name: DBWriter
+  nameWithType: DBWriter.DBWriter
+  fullName: mosaic_libary.DBWriter.DBWriter
+  nameWithType.vb: DBWriter.New
+  fullName.vb: mosaic_libary.DBWriter.New
+  name.vb: New
+- uid: mosaic_libary.DBWriter.UpdateBufferSize*
+  commentId: Overload:mosaic_libary.DBWriter.UpdateBufferSize
+  href: mosaic_libary.DBWriter.html#mosaic_libary_DBWriter_UpdateBufferSize_System_Int32_
+  name: UpdateBufferSize
+  nameWithType: DBWriter.UpdateBufferSize
+  fullName: mosaic_libary.DBWriter.UpdateBufferSize
+- uid: mosaic_libary.DBWriter.Add*
+  commentId: Overload:mosaic_libary.DBWriter.Add
+  href: mosaic_libary.DBWriter.html#mosaic_libary_DBWriter_Add_System_String_
+  name: Add
+  nameWithType: DBWriter.Add
+  fullName: mosaic_libary.DBWriter.Add
+- uid: mosaic_libary.DBWriter.DumpBuffer*
+  commentId: Overload:mosaic_libary.DBWriter.DumpBuffer
+  href: mosaic_libary.DBWriter.html#mosaic_libary_DBWriter_DumpBuffer_System_Collections_Generic_List_System_String__
+  name: DumpBuffer
+  nameWithType: DBWriter.DumpBuffer
+  fullName: mosaic_libary.DBWriter.DumpBuffer
+- uid: mosaic_libary.DBWriter.Flush*
+  commentId: Overload:mosaic_libary.DBWriter.Flush
+  href: mosaic_libary.DBWriter.html#mosaic_libary_DBWriter_Flush
+  name: Flush
+  nameWithType: DBWriter.Flush
+  fullName: mosaic_libary.DBWriter.Flush
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks

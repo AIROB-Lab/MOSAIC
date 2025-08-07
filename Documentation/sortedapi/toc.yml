@@ -1,0 +1,301 @@
+### YamlMmosaic_libarye:TableOfContent
+items:
+- uid: mosaic_libary
+  name: Mosaic Class Libary
+- uid: sortedapi/mosaic_libary
+  name: Block Libary
+  items:
+  - name: Enums
+    items:
+    - uid: mosaic_libary.DOAs
+      name: DOAs (Degrees of Actuation)
+    - uid: mosaic_libary.Algorithms
+      name: Control Algorithms
+    - uid: mosaic_libary.SPECIFIC_BLE_STATES
+      name: Specific BLE Stats
+    - uid: mosaic_libary.GENERAL_BLE_STATS
+      name: General BLE Stats
+
+  - name: Blocks
+    items:
+        - name: Control Algorithm
+          items:
+            - uid: mosaic_libary.ControlAlgorithm
+              name: ControlAlgorithm
+            - uid: mosaic_libary.IControlAlgorithmStrategy
+              name: ControlAlgorithm Strategy Interface
+              items:
+                - uid: mosaic_libary.DirectControlStrategy
+                  name: Direct Control Strategy
+                - uid: mosaic_libary.StepwiseControlStrategy
+                  name: Stepwise Control Strategy
+
+        - name: Devices
+          items: 
+            - uid: mosaic_libary.BlenderArm
+              name: BlenderArm
+            - uid: mosaic_libary.BluetoothLEManager
+              name: BluetoothLEManager
+              items:
+              - uid: mosaic_libary.SPECIFIC_BLE_STATES
+                name: SPECIFIC_BLE_STATES
+              - uid: mosaic_libary.GENERAL_BLE_STATS
+                name: GENERAL_BLE_STATS
+            - uid: mosaic_libary.Delsys
+              name: Delsys
+              items:
+              - uid: mosaic_libary.CpDelsys
+                name: cpDelsys
+              - uid: mosaic_libary.SensorItem
+                name: SensorItem
+            #   name: DelsysStream
+            #   items:
+            #       - uid: mosaic_libary.cpDelsysStream
+            #         name: cpDelsysStream 
+            - uid: mosaic_libary.DLR_ADCBT
+              name: DLR_ADCBT 
+              items:
+                  - uid: mosaic_libary.cpDLR_ADCBT
+                    name: cpDLR_ADCBT
+            - uid: mosaic_libary.HannesGUI
+              name: HannesGUI
+            - uid: mosaic_libary.HannesHand
+              name: HannesHand
+              items: 
+                - uid: mosaic_libary.cpHannesHand
+                  name: cpHannesHand
+            - uid: mosaic_libary.Muovi
+              name: Muovi
+              items: 
+                - uid: mosaic_libary.cpMuovi
+                  name: cpMuovi
+            - uid: mosaic_libary.MuoviSingleProbe
+              name: MuoviSingleProbe
+              items: 
+                - uid: mosaic_libary.cpMuoviSingleProbe
+                  name: cpMuoviSingleProbe
+            - uid: mosaic_libary.Myo
+              name: Myo
+              items: 
+                - uid: mosaic_libary.cpMyo
+                  name: cpMyo
+            - uid: mosaic_libary.NilsPod
+              name: NilsPod
+              items: 
+                - uid: mosaic_libary.cpNilsPod
+                  name: cpNilsPod
+            - uid: mosaic_libary.SinGenerator
+              name: SinGenerator
+              items: 
+                - uid: mosaic_libary.cpSinGenerator
+                  name: cpSinGenerator
+            - uid: mosaic_libary.Stimulus
+              name: Stimulus
+              items: 
+                - uid: mosaic_libary.cpStimulus
+                  name: cpStimulus 
+            - uid: mosaic_libary.UDP_StreamlinedSender
+              name: UDP_StreamlinedSender
+              items: 
+                - uid: mosaic_libary.UdpPayload
+                  name: UDP Payload Organising Class
+
+        - name: FlowControl
+          items: 
+            - uid: mosaic_libary.Buffer
+              name: Buffer
+              items: 
+                  - uid: mosaic_libary.cpBuffer
+                    name: cpBuffer
+            - uid: mosaic_libary.FilePlayer
+              name: FilePlayer
+              items:
+                - uid: mosaic_libary.CpFilePlayer
+                  name: cpFilePlayer
+            - uid: mosaic_libary.MeanAverageValue
+              name: MeanAverageValue
+              items: 
+                - uid: mosaic_libary.cpMeanAverageValue
+                  name: cpMeanAverageValue
+            - uid: mosaic_libary.Projector
+              name: Projector
+            - uid: mosaic_libary.Selector
+              name: Selector
+            - uid: mosaic_libary.SlidingWindow
+              name: SlidingWindow
+              items:
+                - uid: cpSlidingWindow
+                  name: cpSlidingWindow
+            - uid: mosaic_libary.SlopeSignChanges
+              name: SlopeSignChange
+              items:
+                - uid: mosaic_libary.cpSlopeSignChanges
+                  name: SlopeSignChanges
+            - uid: mosaic_libary.StimTrigger
+              name: StimTrigger
+            - uid: mosaic_libary.Switch
+              name: Switch
+              items: 
+                - uid: mosaic_libary.cpSwitch
+                  name: cpSwitch
+            - uid: mosaic_libary.Trigger
+              name: Trigger
+              items: 
+                - uid: mosaic_libary.cpTrigger
+                  name: cpTrigger
+            - uid: mosaic_libary.WaveformLength
+              name: WaveformLength
+              items:
+                - uid: mosaic_libary.cpWaveformLength
+                  name: cpWaveformLength
+            - uid: mosaic_libary.ZeroCrossings
+              name: ZeroCrossing 
+              items:
+                - uid: mosaic_libary.cpZeroCrossings
+                  name: cpZeroCrossings
+        - name: Learning
+          items:
+          - uid: mosaic_libary.BatchPredictor
+            name: BatchPredictor
+            items: 
+              - uid: mosaic_libary.cpBatchPredictor
+                name: cpBatchPredictor
+          - uid: mosaic_libary.IncrementalPredictor
+            name: IncrementalPredictor
+            items: 
+              - uid: mosaic_libary.cpIncrementalPredictor
+                name: cpIncrementalPredictor
+          - uid: mosaic_libary.TAC
+            name: TAC (Target Achievment Control)
+            items: 
+              - uid: mosaic_libary.cpTAC
+                name: cpTAC
+        - name: Timers
+          items: 
+          - uid: mosaic_libary.DecimatorTimer
+            name: DecimatorTimer
+          - uid: mosaic_libary.ScheduledTimer
+            name: ScheduledTimer
+            items: 
+              - uid: mosaic_libary.cpScheduledTimer
+                name: cpScheduledTimer
+          - uid: mosaic_libary.Timer
+            name: Timer 
+        - uid: mosaic_libary.AdaptiveFilter
+          name: AdaptiveFilter
+          items:
+            - uid: mosaic_libary.cpAdaptiveFilter
+              name: cpAdaptiveFilter
+        - uid: mosaic_libary.ControlAlgorithm
+          name: ControlAlgorithm
+          items:
+            - uid: mosaic_libary.DOAs
+              name: DOAs (Degrees of Actuation)
+            - uid: mosaic_libary.Algorithms
+              name: Algorithms
+        - uid: mosaic_libary.Filter
+          name: Filter
+          items:
+            - uid: mosaic_libary.cpFilter
+              name: cpFilter
+        - uid: mosaic_libary.Function
+          name: Function
+          items:
+            - uid: mosaic_libary.cpFunction
+              name: cpFunction
+        - uid: mosaic_libary.Joiner
+          name: Joiner
+        - uid: mosaic_libary.Resampler
+          name: Resampler
+          items:
+            - uid: mosaic_libary.cpResampler
+              name: cpResampler
+        - uid: mosaic_libary.ROS
+          name: ROS
+        - uid: mosaic_libary.VectorialFunction
+          name: VectorialFunction
+          items:
+            - uid: mosaic_libary.cpVectorialFunction
+              name: cpVectorialFunction
+              
+        - name: Visualisation
+          items:
+          - uid: mosaic_libary.BlockTable
+            name: BlockTable
+            items:
+            - uid: mosaic_libary.BlockTable_window
+              name: Window
+            - uid: mosaic_libary.BlockTableArea
+              name: Area
+          - uid: mosaic_libary.ControlPanel
+            name: ControlPanel
+          - uid: mosaic_libary.HeatMapMonitor
+            name: HeatMapMonitor
+          - uid: mosaic_libary.Monitor
+            name: Monitor
+          - uid: mosaic_libary.ScopeMonitor
+            name: ScopeMonitor
+          - uid: mosaic_libary.Smosaic_libarypleProgressBar
+            name: Smosaic_libarypleProgressBar
+          - uid: mosaic_libary.SpiderPlot
+            name: SpiderPlot
+        
+  - name: Basics
+    items:
+    - uid: mosaic_libary.Scheduler
+      name: Scheduler
+      items:
+      - uid: mosaic_libary.Scheduler.Entry
+        name: Entry
+    - uid: mosaic_libary.Block
+      name: Block
+      items:
+      - uid: mosaic_libary.Block.OutputHandler
+        name: OutputHandler
+    - uid: mosaic_libary.Blocks
+      name: Blocks
+    - uid: mosaic_libary.CfgParser
+      name: CfgParser
+      items:
+        - uid: mosaic_libary.CfgParser.CfgBlock
+          name: CfgBlock
+
+  - name: Learning
+    items:
+    - uid: mosaic_libary.PredictingMachine
+      name: PredictingMachine
+    - uid: mosaic_libary.BatchLearningMachine
+      name: BatchLearningMachine
+    - uid: mosaic_libary.IncrementalLearningMachine
+      name: IncrementalLearningMachine
+    - uid: mosaic_libary.RidgeRegression
+      name: RidgeRegression
+    - uid: mosaic_libary.RR_RFF
+      name: RR_RFF
+    - uid: mosaic_libary.IncrementalRidgeRegression
+      name: IncrementalRidgeRegression
+    - uid: mosaic_libary.IncrementalRFF
+      name: IncrementalRFF
+
+  - name: Utils
+    items:
+    - uid: mosaic_libary.CircularBuffer`1
+      name: CircularBuffer<T>
+    - uid: mosaic_libary.DBWriter
+      name: DBWriter
+    - uid: mosaic_libary.StreamManager
+      name: StreamManager
+    - uid: mosaic_libary.Utils
+      name: Utils
+
+
+          
+          
+          
+
+
+
+        
+            
+            
+memberLayout: SamePage

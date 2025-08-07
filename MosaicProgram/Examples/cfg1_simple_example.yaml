@@ -1,0 +1,17 @@
+﻿# -------------------------------------
+# Example 1: Sinusoid Processing with Optional Subscription
+# -------------------------------------
+# - Generates a 10D sinusoidal signal at 200 Hz using a decimated 2 kHz timer.
+# - Processes the signal by squaring and doubling it via Function blocks.
+# - The '-' prefix in Inputs (e.g., for doubledSignal) means "do not subscribe" automatically.
+#   → Try removing '-' to enable automatic updates.
+# - Set 'Path' to dump block outputs to files (e.g., 'C:\temp').
+# -------------------------------------
+timerFast: { Type: ScheduledTimer, DesiredRate: 2000 }
+timerSlow: { Type: DecimatorTimer, DesiredRate: 200, Inputs: [ timerFast ] }
+sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 10 ] }
+# sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 10 ], Path: 'C:\temp' }
+squaredSignal: { Type: Function, Inputs: [ sinusoidSignal ], Params: [ power:2 ] }
+# squaredSignal: { Type: Function, Inputs: [ sinusoidSignal ], Params: [ power:2 ], Path: 'C:\temp' }
+doubledSignal: { Type: Function, Inputs: [ -sinusoidSignal ], Params: [ multiply:2 ] }
+

@@ -1,0 +1,33 @@
+# timer, myo, x5, rectify, low-pass filter, subsample (same as in example #2, #3 and #4)
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ], Params: [ df:68:f3:9a:ed:0e ] }
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ]  }
+# ---------------
+#ARV_LPF: {
+#    Type: Filter,
+#    Inputs: [ rectified_raw_EMG ],
+#    Params: [ 0.00002206;0.00004412;0.00002206, 1;-1.9867;0.9868 ] # Butt(2o,LP@0.3Hz,Fs=200S/s)
+#}
+# -----
+ARV_LPF_: { Type: AdaptiveFilter, Inputs: [ rectified_raw_EMG ],  Params: [ 1,-1,0,0 ] }
+ARV_LPF: { Type: AdaptiveFilter, Inputs: [ ARV_LPF_ ],  Params: [ 0.7,0,-7,8 ] }
+# ---------------
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# this time, the Trigger sends the ground truth directly to the IncrementalPredictor - no Buffer required!
+capture_data: { Type: Trigger, Params: [
+      rest:0;0;0;0;0;0;0;0;0;0;0;0,
+     power:1;1;1;1;1;1;0;0;0;0;0;0,
+      flex:0;0;0;0;0;0;1;0;0;0;0;0,
+    extend:0;0;0;0;0;0;0;1;0;0;0;0,
+      pron:0;0;0;0;0;0;0;0;1;0;0;0,
+       sup:0;0;0;0;0;0;0;0;0;1;0;0
+    ]}
+
+# an incremental predictor: its input space is the ARV EMG (8d), its ground truth is the stimulus values (12d)
+incr_learn: { Type: IncrementalPredictor, Inputs: [ ARV, capture_data ], Params: [ IncrementalRFF, 8, 12 ] }
+
+# control skin-textured Blender arm (prediction)
+blender_skin_arm_ctrl: { Type: BlenderArm, Inputs: [ incr_learn ], Params: [ localhost, 3334 ] }

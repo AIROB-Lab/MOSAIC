@@ -1,0 +1,436 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.Scheduler.Entry
+  commentId: T:mosaic_libary.Scheduler.Entry
+  id: Scheduler.Entry
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.Scheduler.Entry.#ctor(System.Threading.TimerCallback,System.Double)
+  - mosaic_libary.Scheduler.Entry.Callback
+  - mosaic_libary.Scheduler.Entry.DeltaT
+  - mosaic_libary.Scheduler.Entry.T
+  langs:
+  - csharp
+  - vb
+  name: Scheduler.Entry
+  nameWithType: Scheduler.Entry
+  fullName: mosaic_libary.Scheduler.Entry
+  type: Class
+  source:
+    id: Entry
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 34
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: private class Scheduler.Entry
+    content.vb: Private Class Scheduler.Entry
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: mosaic_libary.Scheduler.Entry.T
+  commentId: F:mosaic_libary.Scheduler.Entry.T
+  id: T
+  parent: mosaic_libary.Scheduler.Entry
+  langs:
+  - csharp
+  - vb
+  name: T
+  nameWithType: Scheduler.Entry.T
+  fullName: mosaic_libary.Scheduler.Entry.T
+  type: Field
+  source:
+    id: T
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 36
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public double T
+    return:
+      type: System.Double
+    content.vb: Public T As Double
+- uid: mosaic_libary.Scheduler.Entry.DeltaT
+  commentId: F:mosaic_libary.Scheduler.Entry.DeltaT
+  id: DeltaT
+  parent: mosaic_libary.Scheduler.Entry
+  langs:
+  - csharp
+  - vb
+  name: DeltaT
+  nameWithType: Scheduler.Entry.DeltaT
+  fullName: mosaic_libary.Scheduler.Entry.DeltaT
+  type: Field
+  source:
+    id: DeltaT
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 36
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public double DeltaT
+    return:
+      type: System.Double
+    content.vb: Public DeltaT As Double
+- uid: mosaic_libary.Scheduler.Entry.Callback
+  commentId: F:mosaic_libary.Scheduler.Entry.Callback
+  id: Callback
+  parent: mosaic_libary.Scheduler.Entry
+  langs:
+  - csharp
+  - vb
+  name: Callback
+  nameWithType: Scheduler.Entry.Callback
+  fullName: mosaic_libary.Scheduler.Entry.Callback
+  type: Field
+  source:
+    id: Callback
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 37
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public TimerCallback Callback
+    return:
+      type: System.Threading.TimerCallback
+    content.vb: Public Callback As TimerCallback
+- uid: mosaic_libary.Scheduler.Entry.#ctor(System.Threading.TimerCallback,System.Double)
+  commentId: M:mosaic_libary.Scheduler.Entry.#ctor(System.Threading.TimerCallback,System.Double)
+  id: '#ctor(System.Threading.TimerCallback,System.Double)'
+  parent: mosaic_libary.Scheduler.Entry
+  langs:
+  - csharp
+  - vb
+  name: Entry(TimerCallback, double)
+  nameWithType: Scheduler.Entry.Entry(TimerCallback, double)
+  fullName: mosaic_libary.Scheduler.Entry.Entry(System.Threading.TimerCallback, double)
+  type: Constructor
+  source:
+    id: .ctor
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Basics.cs
+    startLine: 38
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: public Entry(TimerCallback Cb, double Rate)
+    parameters:
+    - id: Cb
+      type: System.Threading.TimerCallback
+    - id: Rate
+      type: System.Double
+    content.vb: Public Sub New(Cb As TimerCallback, Rate As Double)
+  overload: mosaic_libary.Scheduler.Entry.#ctor*
+  nameWithType.vb: Scheduler.Entry.New(TimerCallback, Double)
+  fullName.vb: mosaic_libary.Scheduler.Entry.New(System.Threading.TimerCallback, Double)
+  name.vb: New(TimerCallback, Double)
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: System.Threading.TimerCallback
+  commentId: T:System.Threading.TimerCallback
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.timercallback
+  name: TimerCallback
+  nameWithType: TimerCallback
+  fullName: System.Threading.TimerCallback
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: mosaic_libary.Scheduler.Entry.#ctor*
+  commentId: Overload:mosaic_libary.Scheduler.Entry.#ctor
+  href: mosaic_libary.Scheduler.Entry.html#mosaic_libary_Scheduler_Entry__ctor_System_Threading_TimerCallback_System_Double_
+  name: Entry
+  nameWithType: Scheduler.Entry.Entry
+  fullName: mosaic_libary.Scheduler.Entry.Entry
+  nameWithType.vb: Scheduler.Entry.New
+  fullName.vb: mosaic_libary.Scheduler.Entry.New
+  name.vb: New

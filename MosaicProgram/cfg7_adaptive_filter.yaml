@@ -1,0 +1,22 @@
+# -------------------------------------
+# simple example #1:
+# generate 8D sinusoidal signal at 2kHz, double it.
+# -------------------------------------
+
+# each block is declared as follows:
+# <name>: {
+#    Type: string,
+#    DesiredRate: double,
+#    Path: string,
+#    Inputs: [ string,...,string ],
+#    Params: [ string,...,string ],
+#    OutputType: string
+# }
+
+timerA: { Type: Timer, DesiredRate: 2000 }
+# further specifying a path will cause any block to dump its data to Path\name.txt:
+#timerA: { Type: Timer, DesiredRate: 2000, Path: 'C:\tmp' }
+sinGen1: { Type: SinGenerator, Inputs: [ timerA ], Params: [ 8 ], OutputType: 8d }
+x2: { Type: Func_Multiplier, Inputs: [ sinGen1 ], Params: [ 2 ] }
+af1: { Type: AdaptiveFilter, Inputs: [ x2 ],  Params: [ '0,7', '-0,5', '-3', '10'], OutputType: 8d }
+subs_fast: { Type: Resampler, Inputs: [ af1, timerA ], OutputType: 8d }

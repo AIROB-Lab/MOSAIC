@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.StreamManager.DataReceivedHandler
+  commentId: T:mosaic_libary.StreamManager.DataReceivedHandler
+  id: StreamManager.DataReceivedHandler
+  parent: mosaic_libary
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: StreamManager.DataReceivedHandler
+  nameWithType: StreamManager.DataReceivedHandler
+  fullName: mosaic_libary.StreamManager.DataReceivedHandler
+  type: Delegate
+  source:
+    id: DataReceivedHandler
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Utils.cs
+    startLine: 326
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Event handler delegate for when data is received.
+  example: []
+  syntax:
+    content: public delegate void StreamManager.DataReceivedHandler(byte[] Receivedbytes)
+    parameters:
+    - id: Receivedbytes
+      type: System.Byte[]
+    content.vb: Public Delegate Sub StreamManager.DataReceivedHandler(Receivedbytes As Byte())
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )

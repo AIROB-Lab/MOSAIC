@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.WindowType
+  commentId: T:mosaic_libary.WindowType
+  id: WindowType
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.WindowType.Hamming
+  - mosaic_libary.WindowType.Hann
+  - mosaic_libary.WindowType.Rectangular
+  langs:
+  - csharp
+  - vb
+  name: WindowType
+  nameWithType: WindowType
+  fullName: mosaic_libary.WindowType
+  type: Enum
+  source:
+    id: WindowType
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 41
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Available enums for Window types, selectable in <xref href="mosaic_libary.SlidingWindow" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public enum WindowType
+    content.vb: Public Enum WindowType
+- uid: mosaic_libary.WindowType.Rectangular
+  commentId: F:mosaic_libary.WindowType.Rectangular
+  id: Rectangular
+  parent: mosaic_libary.WindowType
+  langs:
+  - csharp
+  - vb
+  name: Rectangular
+  nameWithType: WindowType.Rectangular
+  fullName: mosaic_libary.WindowType.Rectangular
+  type: Field
+  source:
+    id: Rectangular
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 43
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Rectangular = 0
+    return:
+      type: mosaic_libary.WindowType
+- uid: mosaic_libary.WindowType.Hamming
+  commentId: F:mosaic_libary.WindowType.Hamming
+  id: Hamming
+  parent: mosaic_libary.WindowType
+  langs:
+  - csharp
+  - vb
+  name: Hamming
+  nameWithType: WindowType.Hamming
+  fullName: mosaic_libary.WindowType.Hamming
+  type: Field
+  source:
+    id: Hamming
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 44
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Hamming = 1
+    return:
+      type: mosaic_libary.WindowType
+- uid: mosaic_libary.WindowType.Hann
+  commentId: F:mosaic_libary.WindowType.Hann
+  id: Hann
+  parent: mosaic_libary.WindowType
+  langs:
+  - csharp
+  - vb
+  name: Hann
+  nameWithType: WindowType.Hann
+  fullName: mosaic_libary.WindowType.Hann
+  type: Field
+  source:
+    id: Hann
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Resources\AllEnums.cs
+    startLine: 45
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  syntax:
+    content: Hann = 2
+    return:
+      type: mosaic_libary.WindowType
+references:
+- uid: mosaic_libary.SlidingWindow
+  commentId: T:mosaic_libary.SlidingWindow
+  parent: mosaic_libary
+  href: mosaic_libary.SlidingWindow.html
+  name: SlidingWindow
+  nameWithType: SlidingWindow
+  fullName: mosaic_libary.SlidingWindow
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.WindowType
+  commentId: T:mosaic_libary.WindowType
+  parent: mosaic_libary
+  href: mosaic_libary.WindowType.html
+  name: WindowType
+  nameWithType: WindowType
+  fullName: mosaic_libary.WindowType

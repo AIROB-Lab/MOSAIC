@@ -1,0 +1,3 @@
+apiRules:
+  exclude:
+    - uid: System.Object.*

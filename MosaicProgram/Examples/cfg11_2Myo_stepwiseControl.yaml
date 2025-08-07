@@ -1,0 +1,52 @@
+# ---------------------------------------------------------------------
+# Example 11: Stepwise Control with 16-Channel EMG from Two Myo Devices
+# ---------------------------------------------------------------------
+
+# ----------- Timer and dual Myo acquisition (upper and lower armband)
+timer_hannes: { Type: ScheduledTimer, DesiredRate: 200 }
+
+# Read raw EMG from two Myo devices (each 8 channels)
+raw_EMG15_upper: { Type: Myo, Inputs: [ timer_hannes ], Path: 'c:\temp' }
+raw_EMG16_lower: { Type: Myo, Inputs: [ timer_hannes ], Path: 'c:\temp' }
+
+# Combine both Myo signals into a 16-channel stream
+joiner: { Type: Joiner, Inputs: [ raw_EMG15_upper, raw_EMG16_lower ], Params: [ timerBlockName: raw_EMG15_upper ] }
+
+# ----------- EMG preprocessing: amplification, rectification, smoothing
+amplified_raw_EMG: { Type: Function, Inputs: [ joiner ], Params: [ multiply:5 ] }
+rectified_raw_EMG:  { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+# Low-pass filter: Butterworth 2nd order, 0.3 Hz cutoff, for smoother ARV signals
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  Params: [ 0.00002206; 0.00004412; 0.00002206, 1; -1.9867; 0.9868 ]
+}
+
+# Downsample to 25 Hz for further processing
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_hannes ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# ----------- Trigger for labeling and incremental predictor (16D input, 13D output)
+# Targets include common hand/wrist functions and an 'open' gesture
+# [ th_flex, th_rot, index, middle, ring, little, wr_flex, wr_ext, wr_pron, wr_sup, wr_ulnar, wr_radial, open ]
+ground_truth: { Type: Trigger, Params: [
+    rest:   0;0;0;0;0;0;0;0;0;0;0;0;0,
+    power:  1;1;1;1;1;1;0;0;0;0;0;0;0,
+    flex:   0;0;0;0;0;0;1;0;0;0;0;0;0,
+    extend: 0;0;0;0;0;0;0;1;0;0;0;0;0,
+    pron:   0;0;0;0;0;0;0;0;1;0;0;0;0,
+    sup:    0;0;0;0;0;0;0;0;0;1;0;0;0,
+    open:   0;0;0;0;0;0;0;0;0;0;0;0;1
+]}
+
+# Train an incremental learning model with 16 EMG inputs, 13 control outputs
+incr_learn_prediction: { Type: IncrementalPredictor, Inputs: [ ARV, ground_truth ], Params: [ IncrementalRidgeRegression, 16, 13 ] }
+
+# Apply stepwise control strategy to map predictions to discrete command transitions
+controlAlgorithm: { Type: ControlAlgorithm, Inputs: [ incr_learn_prediction ], Params: [ algorithm: StepwiseControl ] }
+
+# Control the skin-textured Blender arm with processed predictions
+blender_skin_arm_ctrl: { Type: BlenderArm, Inputs: [ controlAlgorithm ], Params: [ localhost, 3334 ] }
+
+

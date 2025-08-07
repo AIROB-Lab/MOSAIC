@@ -1,0 +1,29 @@
+﻿# -------------------------------------
+# Example 2: EMG to ARV processing
+# -------------------------------------
+# - Raw EMG sampled at 200 Hz (Myo limit)
+# - Amplify ×5 → rectify → low-pass filter @2 Hz → ARV
+# - ARV is downsampled to 5 Hz and 25 Hz using decimator timers
+# - Saves timers: instead of 3 separate ones, we use 1 scheduled + 2 decimators
+# -------------------------------------
+
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ] }
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  # 2nd-order Butterworth LP @ 2Hz (Fs=200 Hz)
+  # MATLAB: [b,a] = butter(2, 2/(200/2), 'low')
+  Params: [ 0.00094469;0.0018894;0.00094469, 1;-1.9112;0.91498 ]
+}
+
+# ARV downsampled to 5 Hz
+timer_slow: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 5 }
+ARV_slow: { Type: Resampler, Inputs: [ ARV_LPF, timer_slow ] }
+
+# ARV downsampled to 25 Hz
+timer_fast: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV_fast: { Type: Resampler, Inputs: [ ARV_LPF, timer_fast ] }

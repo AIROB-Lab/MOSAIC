@@ -1,0 +1,256 @@
+### YamlMime:ManagedReference
+items:
+- uid: mosaic_libary.HannesHand.RefTable
+  commentId: T:mosaic_libary.HannesHand.RefTable
+  id: HannesHand.RefTable
+  parent: mosaic_libary
+  children:
+  - mosaic_libary.HannesHand.RefTable.REF_3DDIGIT
+  - mosaic_libary.HannesHand.RefTable.REF_CONTROL_MODE
+  - mosaic_libary.HannesHand.RefTable.REF_ELBOW
+  - mosaic_libary.HannesHand.RefTable.REF_HAND
+  - mosaic_libary.HannesHand.RefTable.REF_JOINT_SET
+  - mosaic_libary.HannesHand.RefTable.REF_THUMB
+  - mosaic_libary.HannesHand.RefTable.REF_WRIST_FE
+  - mosaic_libary.HannesHand.RefTable.REF_WRIST_PS
+  langs:
+  - csharp
+  - vb
+  name: HannesHand.RefTable
+  nameWithType: HannesHand.RefTable
+  fullName: mosaic_libary.HannesHand.RefTable
+  type: Enum
+  source:
+    id: RefTable
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 295
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Contains the indices of the use options of the RefControl Command.
+  example: []
+  syntax:
+    content: public enum HannesHand.RefTable
+    content.vb: Public Enum HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_JOINT_SET
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_JOINT_SET
+  id: REF_JOINT_SET
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_JOINT_SET
+  nameWithType: HannesHand.RefTable.REF_JOINT_SET
+  fullName: mosaic_libary.HannesHand.RefTable.REF_JOINT_SET
+  type: Field
+  source:
+    id: REF_JOINT_SET
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 300
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: To set the joints to be activated.
+  example: []
+  syntax:
+    content: REF_JOINT_SET = 0
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_HAND
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_HAND
+  id: REF_HAND
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_HAND
+  nameWithType: HannesHand.RefTable.REF_HAND
+  fullName: mosaic_libary.HannesHand.RefTable.REF_HAND
+  type: Field
+  source:
+    id: REF_HAND
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 304
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Option to set the value of the Hand Open/Close DOF.
+  example: []
+  syntax:
+    content: REF_HAND = 1
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_WRIST_PS
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_WRIST_PS
+  id: REF_WRIST_PS
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_WRIST_PS
+  nameWithType: HannesHand.RefTable.REF_WRIST_PS
+  fullName: mosaic_libary.HannesHand.RefTable.REF_WRIST_PS
+  type: Field
+  source:
+    id: REF_WRIST_PS
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 308
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Option to set the value of the Wrist Pronation/Supination DOF.
+  example: []
+  syntax:
+    content: REF_WRIST_PS = 2
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_WRIST_FE
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_WRIST_FE
+  id: REF_WRIST_FE
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_WRIST_FE
+  nameWithType: HannesHand.RefTable.REF_WRIST_FE
+  fullName: mosaic_libary.HannesHand.RefTable.REF_WRIST_FE
+  type: Field
+  source:
+    id: REF_WRIST_FE
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 312
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Option to set the value of the Wrist Flexion/Extension DOF.
+  example: []
+  syntax:
+    content: REF_WRIST_FE = 3
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_ELBOW
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_ELBOW
+  id: REF_ELBOW
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_ELBOW
+  nameWithType: HannesHand.RefTable.REF_ELBOW
+  fullName: mosaic_libary.HannesHand.RefTable.REF_ELBOW
+  type: Field
+  source:
+    id: REF_ELBOW
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 316
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Option to set the value of the Elbow DOF (Does not apply for now).
+  example: []
+  syntax:
+    content: REF_ELBOW = 4
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_CONTROL_MODE
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_CONTROL_MODE
+  id: REF_CONTROL_MODE
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_CONTROL_MODE
+  nameWithType: HannesHand.RefTable.REF_CONTROL_MODE
+  fullName: mosaic_libary.HannesHand.RefTable.REF_CONTROL_MODE
+  type: Field
+  source:
+    id: REF_CONTROL_MODE
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 320
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Option to set the control mode (see ControlModality).
+  example: []
+  syntax:
+    content: REF_CONTROL_MODE = 5
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_THUMB
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_THUMB
+  id: REF_THUMB
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_THUMB
+  nameWithType: HannesHand.RefTable.REF_THUMB
+  fullName: mosaic_libary.HannesHand.RefTable.REF_THUMB
+  type: Field
+  source:
+    id: REF_THUMB
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 324
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Option to set the value of the Thumb Rotation DOF.
+  example: []
+  syntax:
+    content: REF_THUMB = 6
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+- uid: mosaic_libary.HannesHand.RefTable.REF_3DDIGIT
+  commentId: F:mosaic_libary.HannesHand.RefTable.REF_3DDIGIT
+  id: REF_3DDIGIT
+  parent: mosaic_libary.HannesHand.RefTable
+  langs:
+  - csharp
+  - vb
+  name: REF_3DDIGIT
+  nameWithType: HannesHand.RefTable.REF_3DDIGIT
+  fullName: mosaic_libary.HannesHand.RefTable.REF_3DDIGIT
+  type: Field
+  source:
+    id: REF_3DDIGIT
+    path: C:\Users\ma19mony\Desktop\MOSAIC\MOSAIC\MosaicLibary\Blocks\Devices\HannesHand.cs
+    startLine: 328
+  assemblies:
+  - iM
+  namespace: mosaic_libary
+  summary: Option to set the 3D Digit (Does not apply for now).
+  example: []
+  syntax:
+    content: REF_3DDIGIT = 7
+    return:
+      type: mosaic_libary.HannesHand.RefTable
+references:
+- uid: mosaic_libary
+  commentId: N:mosaic_libary
+  href: mosaic_libary.html
+  name: mosaic_libary
+  nameWithType: mosaic_libary
+  fullName: mosaic_libary
+- uid: mosaic_libary.HannesHand.RefTable
+  commentId: T:mosaic_libary.HannesHand.RefTable
+  parent: mosaic_libary
+  href: mosaic_libary.HannesHand.html
+  name: HannesHand.RefTable
+  nameWithType: HannesHand.RefTable
+  fullName: mosaic_libary.HannesHand.RefTable
+  spec.csharp:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.RefTable
+    name: RefTable
+    href: mosaic_libary.HannesHand.RefTable.html
+  spec.vb:
+  - uid: mosaic_libary.HannesHand
+    name: HannesHand
+    href: mosaic_libary.HannesHand.html
+  - name: .
+  - uid: mosaic_libary.HannesHand.RefTable
+    name: RefTable
+    href: mosaic_libary.HannesHand.RefTable.html

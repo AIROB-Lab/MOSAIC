@@ -1,0 +1,87 @@
+﻿# ---------------------------------------------------------------------
+# Example 7: Incremental Myocontrol with Target Achievement Control (TAC) Test
+# ---------------------------------------------------------------------
+# - Extends incremental myocontrol with a formal performance evaluation step
+# - Uses a stronger LPF (cutoff at 0.3 Hz) to improve stability during prediction
+# - Uses IncrementalRidgeRegression to allow smooth action combination
+# ---------------------------------------------------------------------
+
+# ----------- EMG acquisition and preprocessing
+timer_myo: { Type: ScheduledTimer, DesiredRate: 200 }
+raw_EMG: { Type: Myo, Inputs: [ timer_myo ] }
+# Alternative: specify Myo MAC address
+# raw_EMG: { Type: Myo, Inputs: [ timer_myo ], Params: [ df:68:f3:9a:ed:0e ] }
+
+amplified_raw_EMG: { Type: Function, Inputs: [ raw_EMG ], Params: [ multiply:5 ] }
+rectified_raw_EMG: { Type: Function, Inputs: [ amplified_raw_EMG ], Params: [ abs:0 ] }
+
+ARV_LPF: {
+  Type: Filter,
+  Inputs: [ rectified_raw_EMG ],
+  # 2nd-order Butterworth LP @ 0.3 Hz (Fs = 200 Hz)
+  # MATLAB: [b,a] = butter(2, 0.3 / (200/2), 'low')
+  Params: [ 0.00002206;0.00004412;0.00002206, 1;-1.9867;0.9868 ]
+}
+
+# Downsample ARV to 25 Hz
+timer_subs: { Type: DecimatorTimer, Inputs: [ timer_myo ], DesiredRate: 25 }
+ARV: { Type: Resampler, Inputs: [ ARV_LPF, timer_subs ] }
+
+# ----------- Incremental learner and live control (Blender arm)
+# Trigger provides 12D ground truth labels for incremental learning
+ground_truth: {
+  Type: Trigger,
+  Params: [
+    rest:    0;0;0;0;0;0;0;0;0;0;0;0,
+    power:   1;1;1;1;1;1;0;0;0;0;0;0,
+    flex:    0;0;0;0;0;0;1;0;0;0;0;0,
+    extend:  0;0;0;0;0;0;0;1;0;0;0;0,
+    pron:    0;0;0;0;0;0;0;0;1;0;0;0
+  ]
+}
+
+# Incremental predictor (8 input features → 12 output targets)
+incr_learn_prediction: {
+  Type: IncrementalPredictor,
+  Inputs: [ ARV, ground_truth ],
+  Params: [ IncrementalRidgeRegression, 8, 12 ]
+}
+
+# Apply prediction to control the skin-textured Blender arm
+controlAlgorithm1: { Type: ControlAlgorithm, Inputs: [ incr_learn_prediction ], Params: [ algorithm:DirectControl ] }
+blender_skin_arm_ctrl: { Type: BlenderArm, Inputs: [ controlAlgorithm1 ], Params: [ localhost, 3334 ] }
+
+# ----------- Visual stimulus for target tasks (white Blender arm)
+# Stimulus provides a predefined sequence of activation targets
+# Each task lasts 20s — serves as a target holding window for TAC
+TAC_stim: {
+  Type: Stimulus,
+  Inputs: [ -timer_subs ],
+  Params: [ 20.0,
+    0.8;0.8;0.8;0.8;0.8;0.8;0;0;0;0;0;0,
+    0;0;0;0;0;0;0.8;0;0;0;0;0,
+    0;0;0;0;0;0;0;0.8;0;0;0;0,
+    0.5;0.5;0.5;0.5;0.5;0.5;0;0;0;0;0;0,
+    0;0;0;0;0;0;0.5;0;0;0;0;0,
+    0;0;0;0;0;0;0;0.5;0;0;0;0,
+    0.7;0.7;0.7;0.7;0.7;0.7;0.5;0;0;0;0;0,
+    0.7;0.7;0.7;0.7;0.7;0.7;0;0.5;0;0;0;0,
+    0.5;0.5;0.5;0.5;0.5;0.5;0.3;0;0;0;0;0,
+    0.5;0.5;0.5;0.5;0.5;0.5;0;0.3;0;0;0;0
+  ]
+}
+
+# Send stimulus target to white Blender arm for visualization
+TAC_stim_tv: { Type: Selector, Inputs: [ TAC_stim ] }
+controlAlgorithm2: { Type: ControlAlgorithm, Inputs: [ TAC_stim_tv ], Params: [ algorithm:DirectControl ] }
+blender_white_arm_ctrl: { Type: BlenderArm, Inputs: [ controlAlgorithm2 ], Params: [ localhost, 3333 ] }
+
+# ----------- Target Achievement Control (TAC) Test
+# Compares user predictions against stimulus targets
+# Params: [ stimulus block name, success threshold, tolerance margin ]
+increm_learning_TAC: {
+  Type: TAC,
+  Inputs: [ TAC_stim_tv, incr_learn_prediction ],
+  Params: [ TAC_stim, 2.0, 0.2 ]
+}
+
