@@ -6,7 +6,10 @@
 - 🧩 API docs: https://airob-lab.github.io/sortedapi/
 - 📄 Paper (IEEE Xplore): https://ieeexplore.ieee.org/document/11299857
 
----
+
+
+<img width="945" height="422" alt="image" src="https://github.com/user-attachments/assets/1e289e24-67d0-43f3-a35a-7bae64ae9209" />
+
 
 ## About the paper
 
