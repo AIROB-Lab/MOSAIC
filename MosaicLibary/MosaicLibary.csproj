@@ -98,6 +98,31 @@
     <Compile Include="Blocks\FlowControl\MeanAverageValue.Designer.cs">
       <DependentUpon>MeanAverageValue.cs</DependentUpon>
     </Compile>
+    <Compile Include="Blocks\Learning\iNMF.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Learning\iNMF.Designer.cs">
+      <DependentUpon>iNMF.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Learning\PythonNetLearning.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Learning\PythonNetLearning.designer.cs">
+      <DependentUpon>PythonNetLearning.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\Learning\SimplePyTorch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\Learning\SimplePyTorch.designer.cs">
+      <DependentUpon>SimplePyTorch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Blocks\PythonNetFiltUC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Blocks\PythonNetFiltUC.designer.cs">
+      <DependentUpon>PythonNetFiltUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PythonNetManager.cs" />
     <Compile Include="Resources\AllEnums.cs" />
     <Compile Include="Blocks\ControlAlgorithms\DirectControlStrategy.cs" />
     <Compile Include="Blocks\ControlAlgorithms\IControlAlgorithmStrategy.cs" />
@@ -364,11 +389,23 @@
       <DependentUpon>BatchPredictor.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Learning\iNMF.resx">
+      <DependentUpon>iNMF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Learning\PythonNetLearning.resx">
+      <DependentUpon>PythonNetLearning.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\Learning\SimplePyTorch.resx">
+      <DependentUpon>SimplePyTorch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Blocks\Learning\TAC.resx">
       <DependentUpon>TAC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Blocks\Learning\IncrementalPredictor.resx">
       <DependentUpon>IncrementalPredictor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Blocks\PythonNetFiltUC.resx">
+      <DependentUpon>PythonNetFiltUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Blocks\Resampler.resx">
       <DependentUpon>Resampler.cs</DependentUpon>
@@ -443,6 +480,9 @@
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="pythonnet">
+      <Version>3.0.5</Version>
     </PackageReference>
     <PackageReference Include="Signals">
       <Version>1.0.0.9</Version>

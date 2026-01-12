@@ -1,0 +1,24 @@
+
+
+timerFast: { Type: ScheduledTimer, DesiredRate: 2000 }
+timerSlow: { Type: DecimatorTimer, DesiredRate: 200, Inputs: [ timerFast ] }
+
+sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 10 ] }
+
+#####
+
+# Params[0] is g in the code, g = 0 Means the user chose Butterworth Filter, // g = 1 Means the user chose Notch Filter
+# Params[1] is num1 in the code which is Quality factor or Order of the filter               
+# Params[2] is num2 in the code which is the critical frequency or frequencies for the notch filter (2 * critical frequencies / fs)
+# Params[3] is the path to the python dll file on your system.
+# Params[4] is the path to the python code that you want to compile in C#.
+# Params[5] is fs in the code which is the sampling rate usually = 200
+
+
+PythonNetTestWGUI: {
+	Type: PythonNetFiltUC,
+	Inputs: [ sinusoidSignal ], 
+	# Last Parameter can be the poetrySitePackagesPath
+	Params: [ 1, 2 , 3, '..\..\..\iM-Python\Scripts\FilterCoef.py', 200]
+} 
+Filtered_sinusoidSignal: { Type: Function, Inputs: [ PythonNetTestWGUI ], Params: [ multiply:1 ] }

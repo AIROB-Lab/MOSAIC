@@ -1,0 +1,11 @@
+timerSlow: { Type: ScheduledTimer, DesiredRate: 200}
+
+sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 5 ] }
+
+
+SimplePyTorch: {
+    Type: SimplePyTorch,
+    Inputs: [ sinusoidSignal ]
+} 
+Output_Visualizer: { Type: Function, Inputs: [ SimplePyTorch ], Params: [ multiply:1 ] }
+

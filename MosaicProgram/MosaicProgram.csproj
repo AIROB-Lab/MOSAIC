@@ -83,13 +83,15 @@
     <None Include="Examples\cfg5_incremental_myocontrol.yaml" />
     <None Include="Examples\cfg7_incremental_with_TAC_6s.yaml" />
     <None Include="Examples\cfg7_incremental_with_TAC.yaml" />
-    <None Include="Examples\Elbow_test.yaml" />
     <None Include="Examples\cfg9_1Myo_stepwiseControl.yaml" />
     <None Include="Examples\cfg11_2Myo_stepwiseControl.yaml" />
     <None Include="Examples\cfg10_2Myo_directControl.yaml" />
     <None Include="Examples\cfg8_1Myo_directControl.yaml" />
     <None Include="Examples\cfg_example_StreamlinedSender+2Myo.yaml" />
     <None Include="Examples\cfg_ROS_Example.yaml" />
+    <None Include="PythonNetExamples\PythonNetFiltering.yaml" />
+    <None Include="PythonNetExamples\PythonNetLearning.yaml" />
+    <None Include="PythonNetExamples\PythonNetPytorch.yaml" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Delsys.Drivers">
@@ -109,6 +111,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Windows.SDK.Contracts">
       <Version>10.0.22621.755</Version>
+    </PackageReference>
+    <PackageReference Include="pythonnet">
+      <Version>3.0.5</Version>
     </PackageReference>
     <PackageReference Include="Signals">
       <Version>1.0.0.9</Version>

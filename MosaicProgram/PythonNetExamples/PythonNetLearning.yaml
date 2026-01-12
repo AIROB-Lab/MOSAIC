@@ -1,0 +1,18 @@
+timerSlow: { Type: ScheduledTimer, DesiredRate: 200}
+
+sinusoidSignal: { Type: SinGenerator, Inputs: [ timerSlow ], Params: [ 8 ] }
+
+
+capture_data: { Type: Trigger, Params: [ rest:1, flex_wrist:2, extend_wrist:3] }
+# the "cluster_storage" Buffer stores the data in a public list of <vector,matrix> pairs simply called dB.
+# vector is the target value or label (0,1,2 in this case), matrix contains the related data cluster.
+cluster_storage: { Type: Buffer, Inputs: [ capture_data, -sinusoidSignal ]}
+
+
+PythonNetModel: {
+    Type: PythonNetLearning,
+    Inputs: [ sinusoidSignal ],
+    Params: [ cluster_storage]
+} 
+Output_Visualizer: { Type: Function, Inputs: [ PythonNetModel ], Params: [ multiply:1 ] }
+

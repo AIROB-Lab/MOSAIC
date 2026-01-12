@@ -1,0 +1,350 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\inmf.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\inmf.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\inmf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\inmf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\inmf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\inmf.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\pythonnetfiltuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\pythonnetfiltuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\pythonnetfiltuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\pythonnetfiltuc.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\function.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\adaptivefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\adaptivefilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\pythonnetfiltuc.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\pythonnetfiltuc.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\pythonnetfiltuc.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\pythonnetfiltuc.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\pythonnetlearning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\pythonnetlearning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\pythonnetlearning.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\pythonnetlearning.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\simplepytorch.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\simplepytorch.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\simplepytorch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\simplepytorch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\simplepytorch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\simplepytorch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\pythonnetlearning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\pythonnetlearning.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\pythonnetmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\pythonnetmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\filter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|c:\\users\\ma19mony\\desktop\\github_im\\mosaic2\\mosaiclibary\\blocks\\learning\\incrementalpredictor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F134B8FB-A3E0-4345-920F-185C9D729F71}|MosaicLibary\\MosaicLibary.csproj|solutionrelative:mosaiclibary\\blocks\\learning\\incrementalpredictor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "iNMF.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\iNMF.Designer.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\iNMF.Designer.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\iNMF.Designer.cs*",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\iNMF.Designer.cs*",
+              "ViewState": "AgIAAHQAAAAAAAAAAAAuwFMAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:49:39.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "iNMF.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\iNMF.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\iNMF.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\iNMF.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\iNMF.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:49:18.851Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "iNMF.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\iNMF.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\iNMF.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\iNMF.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\iNMF.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:48:06.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PythonNetFiltUC.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\PythonNetFiltUC.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\PythonNetFiltUC.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:46:27.733Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Function.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Function.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Function.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Function.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Function.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:46:23.287Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdaptiveFilter.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\AdaptiveFilter.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\AdaptiveFilter.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\AdaptiveFilter.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\AdaptiveFilter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:46:16.089Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PythonNetFiltUC.resx",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.resx",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\PythonNetFiltUC.resx",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.resx",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\PythonNetFiltUC.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-01-12T10:46:02.264Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PythonNetFiltUC.designer.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.designer.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\PythonNetFiltUC.designer.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.designer.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\PythonNetFiltUC.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:45:42.146Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PythonNetFiltUC.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\PythonNetFiltUC.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\PythonNetFiltUC.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\PythonNetFiltUC.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAmwGEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:45:17.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PythonNetLearning.designer.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\PythonNetLearning.designer.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\PythonNetLearning.designer.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\PythonNetLearning.designer.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\PythonNetLearning.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:42:48.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "SimplePyTorch.designer.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\SimplePyTorch.designer.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\SimplePyTorch.designer.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\SimplePyTorch.designer.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\SimplePyTorch.designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:42:41.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "SimplePyTorch.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:42:31.644Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SimplePyTorch.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\SimplePyTorch.cs",
+              "ViewState": "AgIAAEQAAAAAAAAAAAAwwCUAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:42:02.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "PythonNetLearning.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:41:45.824Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PythonNetLearning.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\PythonNetLearning.cs",
+              "ViewState": "AgIAAOIAAAAAAAAAAAAwwAYBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:41:27.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Filter.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Filter.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Filter.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Filter.cs",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Filter.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:40:45.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Filter.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Filter.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Filter.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Filter.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Filter.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:40:43.727Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IncrementalPredictor.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\IncrementalPredictor.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\Blocks\\Learning\\IncrementalPredictor.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\Blocks\\Learning\\IncrementalPredictor.cs [Design]",
+              "RelativeToolTip": "MosaicLibary\\Blocks\\Learning\\IncrementalPredictor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:40:24.027Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PythonNetManager.cs",
+              "DocumentMoniker": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\PythonNetManager.cs",
+              "RelativeDocumentMoniker": "MosaicLibary\\PythonNetManager.cs",
+              "ToolTip": "C:\\Users\\ma19mony\\Desktop\\GITHUB_IM\\MOSAIC2\\MosaicLibary\\PythonNetManager.cs",
+              "RelativeToolTip": "MosaicLibary\\PythonNetManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-12T10:26:07.462Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
