@@ -1,21 +1,28 @@
-# MOSAIC
+# MOSAIC — Legacy Repository
 
-**MOSAIC** is a modular, open-source software suite for assistive intelligent control and real-time biosignal-driven pipelines (e.g., sEMG-based control, rapid prototyping of signal processing + ML + controllers).
+> [!IMPORTANT]
+> This repository is no longer actively maintained and will not receive further updates or bug fixes.
+>
+> Development has moved to **[MOSAIC 2.0](https://github.com/AIROB-Lab/MOSAIC-2.0)**. Please use the new repository for the latest source code and documentation.
 
-- 📚 Documentation (setup, usage, examples, API): https://airob-lab.github.io/
-- 🧩 API docs: https://airob-lab.github.io/sortedapi/
-- 📄 Paper (IEEE Xplore): https://ieeexplore.ieee.org/document/11299857
+## Current version
 
+- 🚀 [MOSAIC 2.0 repository](https://github.com/AIROB-Lab/MOSAIC-2.0)
+- 📚 [MOSAIC 2.0 documentation](https://airob-lab.github.io/MOSAIC-2.0/)
+- 🧩 [MOSAIC 2.0 API reference](https://airob-lab.github.io/MOSAIC-2.0/api/)
+- 📄 [MOSAIC paper on IEEE Xplore](https://ieeexplore.ieee.org/document/11299857)
 
+## About MOSAIC
 
-<img width="945" height="422" alt="image" src="https://github.com/user-attachments/assets/1e289e24-67d0-43f3-a35a-7bae64ae9209" />
+**MOSAIC** is a modular, open-source software suite for assistive intelligent control and real-time biosignal-driven pipelines, including sEMG-based control and rapid prototyping of signal-processing, machine-learning, and control pipelines.
 
+This repository contains the original version of MOSAIC and remains available as a historical reference. New users should start with [MOSAIC 2.0](https://github.com/AIROB-Lab/MOSAIC-2.0).
+
+![MOSAIC interface](https://github.com/user-attachments/assets/1e289e24-67d0-43f3-a35a-7bae64ae9209)
 
 ## About the paper
 
-This repository accompanies the IEEE Access publication describing MOSAIC’s design principles and research use-cases.
-
-If you use MOSAIC in academic work, please cite:
+MOSAIC’s design principles and research use cases are described in the following IEEE Access publication:
 
 ```bibtex
 @article{braun2025mosaic,
@@ -27,9 +34,9 @@ If you use MOSAIC in academic work, please cite:
 }
 ```
 
-## Maintainers / Lab
+## Maintainers
 
-Developed and maintained by the **Assistive Intelligent Robotics (AIROB) Lab** at FAU Erlangen–Nürnberg.
+Developed and maintained by the **Assistive Intelligent Robotics (AIROB) Lab** at Friedrich-Alexander-Universität Erlangen-Nürnberg.
 
-- Lab: https://www.airob.tf.fau.de/
-- Documentation: https://airob-lab.github.io/
+- [AIROB Lab](https://www.airob.tf.fau.de/)
+- [Current MOSAIC repository](https://github.com/AIROB-Lab/MOSAIC-2.0)
